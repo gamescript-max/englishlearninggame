@@ -1,0 +1,172 @@
+{
+  "encoder": "sharp lossless WebP, exact:true, effort:6; original PNGs retained byte-for-byte",
+  "sourceBytes": 28199227,
+  "bytes": 20102392,
+  "records": [
+    {
+      "source": "/images/adventure-snakes-v1.png",
+      "url": "/images/adventure-snakes-v1-web-1cab0b9c5936.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 1646866,
+      "bytes": 1094894,
+      "sourceSha256": "f84c405cef15425d0b5177501239894c2de315015a49dd3479fe00cceb3206f9",
+      "sha256": "1cab0b9c5936e4af4280dd63178b3ec56355f00a7fdd888cbb87bf16e20c4ccb",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/words.png",
+      "url": "/images/words-web-4995502d3e2b.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2147205,
+      "bytes": 1502238,
+      "sourceSha256": "af058b9e0eed27267d3b647cbbc1e22ea9ee3deeb5238e8b3ba2908770e20c86",
+      "sha256": "4995502d3e2b128290d59c2c90427918ba0fb0f6f74d91a993b590c6786b383a",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/archipelago-ocean-v1.png",
+      "url": "/images/archipelago-ocean-v1-web-37ea9766146a.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2009589,
+      "bytes": 1498756,
+      "sourceSha256": "fdff08955f483c1679c7b286d8cbc654e572156346558cc5e1d575ff2e1a3ddd",
+      "sha256": "37ea9766146a7621806cde7b8a1bfccbffdede060af453dda635686825ff11ee",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/snake-breeds-flat-v3.png",
+      "url": "/images/snake-breeds-flat-v3-web-1b06be9fb7df.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 1552915,
+      "bytes": 1140138,
+      "sourceSha256": "0585de9b79e80b60c666f569e1086dcbf47eba5d9ac80ec41de15d2bcb1276f3",
+      "sha256": "1b06be9fb7dfd270f3142f42866f44d5c2c7e8f888a1234f4300f75b522ddbcf",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/adventure-cards-v2.png",
+      "url": "/images/adventure-cards-v2-web-7b4a51f7d346.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2090354,
+      "bytes": 1444988,
+      "sourceSha256": "050793d4475d40e979988e9ab5467f78a9333e3d6729d58524ae37d3f31732f6",
+      "sha256": "7b4a51f7d346fef41ef03c36e9496f7198aeaa9db5403c95038c36b3064c6b37",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/expanded-words-base.png",
+      "url": "/images/expanded-words-base-web-75d0ee5f5282.webp",
+      "width": 1586,
+      "height": 992,
+      "sourceBytes": 1660119,
+      "bytes": 1284694,
+      "sourceSha256": "731bddfb18a5baa1f7619f4f5d9af68411d64033a429a188d5f74e705facfb89",
+      "sha256": "75d0ee5f5282c592799a954bb79d258d2f6179b9fa6d8b9d7d4f6c2232f64b61",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-ocean-a-v1.png",
+      "url": "/images/natural-ocean-a-v1-web-dd8885e77611.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2102862,
+      "bytes": 1490688,
+      "sourceSha256": "6a9fd889fe8fde9a51052dda489af23c0c98d780fcc87c2cb9465949dfc8f7c2",
+      "sha256": "dd8885e77611b1e7049f46f14369ee2cdeed2f3322f38e12777170c942fae163",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-ocean-b-v1.png",
+      "url": "/images/natural-ocean-b-v1-web-85ed9390a3f6.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2065276,
+      "bytes": 1428508,
+      "sourceSha256": "683fb4d6d7c484df484d0f54c39d83d9c213675bd575606a253a874fa6aa08e4",
+      "sha256": "85ed9390a3f614defb07df7f1e3d0abae707edae436b4cb255cbd146bde0a327",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-ocean-c-v1.png",
+      "url": "/images/natural-ocean-c-v1-web-3e39f1525ade.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2030234,
+      "bytes": 1434332,
+      "sourceSha256": "b74255f59c0d2b0614544fcff308d9cd138fc752c8a09921a3144de546b6dc9f",
+      "sha256": "3e39f1525adeed43cdf6daf4cb2eadec26bcf24278ebb22949fba0e3cb72b971",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-ocean-d-v1.png",
+      "url": "/images/natural-ocean-d-v1-web-d88ec36bfc4a.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2165119,
+      "bytes": 1504506,
+      "sourceSha256": "e663b7deecdb3183dba1e77690448958aa0d3515b42734833715a8033fc972e7",
+      "sha256": "d88ec36bfc4ab60f0e7def6b214e5d8fdc7a25ab90a38500823e910d27bb41f1",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-ocean-colors-v1.png",
+      "url": "/images/natural-ocean-colors-v1-web-03fcb12742e3.webp",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 1103160,
+      "bytes": 806564,
+      "sourceSha256": "f2a25818bf59cc28f5f76395865f877bc0480222662d44c3f90468bb44be9da8",
+      "sha256": "03fcb12742e39e4e8939f11322355d303ea31aa06b88bddda6d372124ca2b4d5",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/ocean-giants-v1.png",
+      "url": "/images/ocean-giants-v1-web-3ff9cb5a77e9.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 1633841,
+      "bytes": 1114250,
+      "sourceSha256": "a25f622f597647a64b2ec0d838db43bedbf5aff6d9354d943e41882b9ba8c91f",
+      "sha256": "3ff9cb5a77e9ac0b83b52c8e4ed1514a4db9fd1991d113ac2ec8dc42bd1f85da",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/natural-seabed-plants-v2.png",
+      "url": "/images/natural-seabed-plants-v2-web-4ca54118b840.webp",
+      "width": 1223,
+      "height": 1286,
+      "sourceBytes": 2396924,
+      "bytes": 1733484,
+      "sourceSha256": "b06a8c1cb5381c5ad094be2174c0788e6779432d3bed22828644389de93202a7",
+      "sha256": "4ca54118b840598354cea84b2f6d78de48fad2f33b622e11367ced553bd47790",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/destination-islands-v1.png",
+      "url": "/images/destination-islands-v1-web-ead9f3f34130.webp",
+      "width": 1536,
+      "height": 1024,
+      "sourceBytes": 2513418,
+      "bytes": 1903700,
+      "sourceSha256": "5f7b48393055e94a4642b439d33d8f7153dc7a381caa493531fb5899e6d34b25",
+      "sha256": "ead9f3f34130dd4c57a8416fd645629937965619f35a8ee0414eb6e69cdbd5e4",
+      "rgbaExact": true
+    },
+    {
+      "source": "/images/fox.png",
+      "url": "/images/fox-web-a9172181c3f0.webp",
+      "width": 1254,
+      "height": 1254,
+      "sourceBytes": 1081345,
+      "bytes": 720652,
+      "sourceSha256": "48604f91d339ca520eb69e348df1cad68505277b707fd7b9d3bfc70488dc2fb7",
+      "sha256": "a9172181c3f049708b5fcff3dedd79b231c0175ccf671ce5530f19def45ee838",
+      "rgbaExact": true
+    }
+  ]
+}

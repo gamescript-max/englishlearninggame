@@ -1,5 +1,7 @@
 "use client";
 
+import { gameImageURL } from "@/lib/game-image-assets";
+
 import { useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import type { PlantId, PlaygroundTask } from "@/lib/playground-content";
 import type { PlaygroundGameProps } from "@/components/playground-types";
@@ -118,7 +120,7 @@ export function GardenGame({ task, state, hinted, disabled, onAnswer, onInteract
         })}
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element -- Shared static mascot works in both the public and offline builds. */}
-      <img src="/images/fox.png" className="garden-fox" alt="乐乐看着花园" draggable={false}/>
+      <img src={gameImageURL("/images/fox.png")} className="garden-fox" alt="乐乐看着花园" draggable={false}/>
       <span className="garden-butterfly garden-butterfly-one" aria-hidden="true"><i/><i/></span>
       <span className="garden-butterfly garden-butterfly-two" aria-hidden="true"><i/><i/></span>
       <span className="garden-flower garden-flower-one" aria-hidden="true">✿</span><span className="garden-flower garden-flower-two" aria-hidden="true">✿</span>

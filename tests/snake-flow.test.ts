@@ -34,6 +34,7 @@ function mount(lessonId = "animals-10") {
   const ui = (names: string[]) => Object.fromEntries(names.map(name => [name, name]));
   const host = componentHost(new URL("../components/game-app.tsx", import.meta.url), "default", {}, react => ({
     "@/lib/course": course, "@/lib/progress": domain,
+    "@/lib/game-image-assets": { gameImageURL: (source: string) => source },
     "@/lib/use-progress": { useProgress() {
       const [progress, setProgress] = react.useState(initial);
       const current = react.useRef(progress) as { current: domain.Progress };

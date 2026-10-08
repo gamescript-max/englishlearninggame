@@ -1,5 +1,7 @@
 "use client";
 
+import { gameImageURL } from "@/lib/game-image-assets";
+
 import { useEffect, useRef, useState, type PointerEvent } from "react";
 import { ArrowLeft, Box, Brain, CaseLower, Check, CheckCircle2, CircleDot, Clock3, Compass, Crown, Download, Hand, Headphones, HelpCircle, Images, Leaf, Link2, LockKeyhole, Mic, Music2, Package, PawPrint, Play, RefreshCw, Settings2, ShieldCheck, Sparkles, Star, Table2, Trash2, Upload, Utensils, Volume2, Worm } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -56,7 +58,7 @@ const growthNames = ["小小探险家", "森林好朋友", "勇敢探险家"];
 function Fox({ stage = 1, large = false }: { stage?: number; large?: boolean }) {
   // The bundled transparent PNG is already sized for this character slot.
   // eslint-disable-next-line @next/next/no-img-element
-  return <div className={`fox-wrap ${large ? "large-fox" : ""} fox-stage-${stage}`}><img src="/images/fox.png" className="fox-image" alt="橙色狐狸乐乐背着青绿色的小背包，微笑着向你挥手" />{stage > 1 && <span className="fox-badge" aria-label="伙伴成长徽章">{stage === 3 ? <Crown size={25}/> : <Sparkles size={25}/>}</span>}<span className="fox-name">乐乐 · {growthNames[stage - 1]}</span></div>;
+  return <div className={`fox-wrap ${large ? "large-fox" : ""} fox-stage-${stage}`}><img src={gameImageURL("/images/fox.png")} className="fox-image" alt="橙色狐狸乐乐背着青绿色的小背包，微笑着向你挥手" />{stage > 1 && <span className="fox-badge" aria-label="伙伴成长徽章">{stage === 3 ? <Crown size={25}/> : <Sparkles size={25}/>}</span>}<span className="fox-name">乐乐 · {growthNames[stage - 1]}</span></div>;
 }
 
 function PositionDiagram({ position, wordId = "ball" }: { position: string; wordId?: string }) {

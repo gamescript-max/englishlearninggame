@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { gameImageURL } from "@/lib/game-image-assets";
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <head><link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials"/></head>
+      <head><link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials"/>{["archipelago-ocean-v1", "destination-islands-v1", "fox"].map(name => <link key={name} rel="preload" as="image" href={gameImageURL(`/images/${name}.png`)} fetchPriority="high"/>)}</head>
       <body className="antialiased">{children}</body>
     </html>
   );

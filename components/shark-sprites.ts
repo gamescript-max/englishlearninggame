@@ -2,6 +2,7 @@ import { naturalOceanArt } from "@/lib/natural-ocean-art";
 import { createSwimState, fishFinRows, fishStrip, sampleSwim, swimProfileFor } from "@/lib/adventure-motion";
 import { mouthGeometry } from "@/lib/adventure-feeding";
 import { loadOceanSceneryImages, type OceanSceneryImages } from "./ocean-scenery-sprites";
+import { loadGameImage } from "@/lib/game-image-loader";
 
 export const SHARK_ART_INDEX = 70;
 // Preserve each species' natural colour: orange goldfish, red betta, blue/red
@@ -19,12 +20,8 @@ export function loadSharkImages(): Promise<SharkImages> {
   return imageLoading;
 }
 async function prepareSharkImages(): Promise<SharkImages> {
-  const scenery = await loadOceanSceneryImages();
   const indices = [SHARK_ART_INDEX, ...SHARK_PREY_ART], sources = [...new Set(indices.map(index => naturalOceanArt(index).src))];
-  const loaded = await Promise.all(sources.map(src => new Promise<HTMLImageElement>((resolve, reject) => {
-    const image = new Image(); image.onload = () => resolve(image);
-    image.onerror = () => reject(new Error("海洋小伙伴的图片还没加载好。")); image.src = src;
-  })));
+  const [scenery, loaded] = await Promise.all([loadOceanSceneryImages(), Promise.all(sources.map(src => loadGameImage(src)))]);
   const atlases = new Map(sources.map((src, index) => [src, loaded[index]])), sprites = new Map<number, SharkSprite>();
   for (const index of indices) {
     const rect = naturalOceanArt(index), canvas = document.createElement("canvas");
@@ -39,8 +36,7 @@ async function prepareSharkImages(): Promise<SharkImages> {
     ctx.drawImage(atlases.get(rect.src)!, rect.x, rect.y, rect.w, rect.h, 0, 0, rect.w, rect.h); ctx.restore();
     sprites.set(index, { image: canvas, w: rect.w, h: rect.h, species: rect.id ?? "sardine" });
   }
-  // Release decoded atlas images after copying their small crops.
-  for (const image of loaded) { image.onload = null; image.onerror = null; image.src = ""; }
+  // Shared decoded atlases also serve map previews and the other ocean game.
   return { sprites, scenery };
 }
 

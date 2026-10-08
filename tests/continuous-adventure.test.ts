@@ -19,10 +19,12 @@ function deferred(): Deferred {
   const promise = new Promise<void>((yes, no) => { resolve = yes; reject = no; });
   return { resolve, reject, promise };
 }
-function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, existing?: Progress) {
+function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, existing?: Progress, options: { deferredImages?: boolean } = {}) {
   let progress = existing ?? createProgress(); progress.adventure = state.startAdventure(progress.adventure, mode);
   let now = 0, nextRAF = 0, world!: engine.AdventureWorld, currentSpeech: Deferred | null = null;
-  let rejectCommit = false, backCount = 0;
+  let rejectCommit = false, backCount = 0, paints = 0, unlocks = 0, imageLoads = 0, advances = 0;
+  const imageRequests: Deferred[] = [];
+  const imageModes: content.AdventureMode[] = [];
   const commits: Progress[] = [];
   const raf = new Map<number, (time: number) => void>(), speeches: string[] = [], effects: string[] = [], eats: number[] = [], unlock = deferred();
   const inputTarget = { matches: () => false, closest: () => null };
@@ -32,7 +34,11 @@ function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, exis
   };
   let props = { mode, progress, commit, onBack: () => { backCount++; progress = { ...progress, adventure: state.leaveAdventure(progress.adventure) }; }, onSettings() {}, suspended: false };
   const host = componentHost(new URL("../components/continuous-adventure.tsx", import.meta.url), "ContinuousAdventureSession", props, () => ({
-    "@/lib/adventure-engine": { ...engine, createAdventureWorld(...args: Parameters<typeof engine.createAdventureWorld>) { world = engine.createAdventureWorld(...args); return world; } },
+    "@/lib/adventure-engine": {
+      ...engine,
+      createAdventureWorld(...args: Parameters<typeof engine.createAdventureWorld>) { world = engine.createAdventureWorld(...args); return world; },
+      advanceAdventure(...args: Parameters<typeof engine.advanceAdventure>) { advances++; return engine.advanceAdventure(...args); },
+    },
     "@/lib/adventure-content": content, "@/lib/adventure-progress": state,
     "@/lib/adventure-catalog": catalog, "@/lib/ecology-art.json": {default:ecologyArt},
     "@/lib/ocean-treasure":treasure,
@@ -41,11 +47,20 @@ function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, exis
     "@/components/ui/dialog":{Dialog:"Dialog",DialogContent:"DialogContent",DialogTitle:"h2",DialogDescription:"p"},
     "@/lib/snake-flat-art.json": {default:flatSnakeArt},
     "@/lib/natural-ocean-art":naturalArt,
+    "@/lib/game-image-assets": { gameImageURL: (source: string) => source },
     "@/lib/adventure-art.json": { default: { fish: Array.from({ length: 6 }, () => ({ x: 0, y: 0, w: 100, h: 100 })), snake: [{ x: 0, y: 0, w: 100, h: 100 }] } },
-    "./adventure-renderer": { async loadAdventureImages() { return {}; }, paintAdventure() {} },
+    "./adventure-renderer": {
+      loadAdventureImages(requestedMode: content.AdventureMode) {
+        imageModes.push(requestedMode);
+        imageLoads++;
+        if (!options.deferredImages) return Promise.resolve({});
+        const request = deferred(); imageRequests.push(request); return request.promise.then(() => ({}));
+      },
+      paintAdventure() { paints++; },
+    },
     "./ocean-volume-layer": { createOceanVolumeLayer() { return null; } },
     "@/lib/audio": {
-      unlockAudio: () => delayedUnlock ? unlock.promise : Promise.resolve(),
+      unlockAudio: () => { unlocks++; return delayedUnlock ? unlock.promise : Promise.resolve(); },
       playSpeech(text: string) { speeches.push(text); currentSpeech = deferred(); return currentSpeech.promise; },
       stopSpeech() { currentSpeech?.resolve(); currentSpeech = null; },
       playAdventureEffect(effect: string) { effects.push(effect); },
@@ -56,6 +71,10 @@ function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, exis
     requestAnimationFrame(callback: (time: number) => void) { const id = ++nextRAF; raf.set(id, callback); return id; },
     cancelAnimationFrame(id: number) { raf.delete(id); },
   });
+  const canvasNode = host.nodes().find(node => node.type === "canvas")!;
+  (canvasNode.props.ref as { current: unknown }).current = { width: 0, height: 0, getContext: () => ({ setTransform() {} }) };
+  const frameNode = host.byClass("adventure-world")[0];
+  (frameNode.props.ref as { current: unknown }).current = { getBoundingClientRect: () => ({ left: 0, top: 0, width: 900, height: 540 }) };
   function sync() { props = { ...props, progress }; host.update(props); }
   function click(label: string) { host.click(host.button(label)); sync(); }
   function key(key = "ArrowRight", target = inputTarget) { host.event("window", "keydown", { key, target, preventDefault() {} }); sync(); }
@@ -66,10 +85,18 @@ function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, exis
       const frames = [...raf.values()]; raf.clear(); for (const callback of frames) callback(now); sync();
     }
   }
+  async function flush() { await host.flush(); sync(); }
   return {
     host, speeches, effects, eats, commits, world: () => world, progress: () => progress, backCount: () => backCount, rafCount: () => raf.size,
     click, key, advance,
-    async flush() { await host.flush(); sync(); },
+    pointer() {
+      (frameNode.props.onPointerDown as (event: unknown) => void)({ pointerId: 1, clientX: 700, clientY: 300, target: inputTarget, currentTarget: { setPointerCapture() {} } }); sync();
+    },
+    flush,
+    async ready() { await flush(); advance(1000 / 30); await flush(); },
+    paints: () => paints, unlocks: () => unlocks, imageLoads: () => imageLoads, advances: () => advances, imageModes,
+    async resolveImages(index = imageRequests.length - 1) { imageRequests[index].resolve(); await flush(); },
+    async rejectImages(index = imageRequests.length - 1) { imageRequests[index].reject(new Error("图片暂时离线")); await flush(); },
     update(next: Partial<typeof props>) { props = { ...props, ...next }; host.update(props); },
     replaceProgress(next: Progress, render = true) { progress = next; if (render) sync(); },
     async endSpeech() { currentSpeech?.resolve(); await host.flush(); sync(); },
@@ -81,9 +108,77 @@ function mount(mode: content.AdventureMode = "fish", delayedUnlock = false, exis
   };
 }
 
+test("fish and snake wait for all images and the first presented map before accepting play", async () => {
+  for (const mode of ["fish", "snake"] as const) {
+    const session = mount(mode, false, undefined, { deferredImages: true });
+    assert.deepEqual(session.imageModes, [mode], "the loader prepares only the selected game's assets");
+    assert.ok(nodeText(session.host.byClass("adventure-loading-card")[0]).includes("正在准备冒险地图"));
+    assert.equal(session.host.nodes().find(node => node.type === "canvas")!.props["aria-busy"], true);
+    const position = { x: session.world().player.x, y: session.world().player.y };
+    session.key(); session.pointer(); session.click("向右"); session.click("重听英语目标"); session.click("乐乐提示"); session.click("成长图鉴");
+    session.snack("cat"); session.collectCurrent(); session.advance(12000); await session.flush();
+    assert.deepEqual({ x: session.world().player.x, y: session.world().player.y }, position);
+    assert.equal(session.world().elapsed, 0); assert.equal(session.advances(), 0); assert.equal(session.paints(), 0);
+    assert.equal(session.progress().adventure.modes[mode].xp, 0);
+    assert.equal(session.progress().adventure.modes[mode].totalSeconds, 0);
+    assert.equal(session.unlocks(), 0); assert.equal(session.speeches.length, 0); assert.equal(session.eats.length, 0); assert.equal(session.effects.length, 0);
+    await session.resolveImages();
+    assert.ok(nodeText(session.host.byClass("adventure-loading-card")[0]).includes("正在画出冒险地图"));
+    session.key(); session.advance(1000 / 60); await session.flush();
+    assert.ok(session.paints() > 0); assert.equal(session.host.byClass("adventure-loading-overlay").length, 1);
+    assert.equal(session.world().elapsed, 0); assert.equal(session.speeches.length, 0);
+    session.advance(1000 / 60); await session.flush();
+    assert.equal(session.host.byClass("adventure-loading-overlay").length, 0);
+    assert.ok(nodeText(session.host.byClass("adventure-overlay")[0]).includes("拖动地图或按方向键出发"));
+    assert.equal(session.host.nodes().some(node => node.type === "button" && nodeText(node).includes("继续游动")), false);
+    assert.equal(session.world().elapsed, 0, "loading and first drawing never count as play time");
+    session.key(); await session.flush(); session.advance(50);
+    assert.ok(session.world().elapsed > 0); assert.equal(session.speeches.length, 1);
+    session.host.unmount();
+  }
+});
+
+test("an image failure blocks play and a successful retry presents the map without losing readiness", async () => {
+  const session = mount("fish", false, undefined, { deferredImages: true });
+  await session.rejectImages();
+  assert.ok(nodeText(session.host.byClass("adventure-loading-card")[0]).includes("图片还没准备好"));
+  assert.equal(session.host.nodes().find(node => node.type === "canvas")!.props["aria-busy"], false);
+  session.key(); session.snack("tree"); session.advance(5000); await session.flush();
+  assert.equal(session.world().elapsed, 0); assert.equal(session.unlocks(), 0); assert.equal(session.progress().adventure.modes.fish.xp, 0);
+  session.click("重试图片"); assert.equal(session.imageLoads(), 2);
+  assert.ok(nodeText(session.host.byClass("adventure-loading-card")[0]).includes("正在准备冒险地图"));
+  await session.resolveImages(); await session.ready();
+  assert.equal(session.host.byClass("adventure-loading-overlay").length, 0);
+  session.pointer(); await session.flush(); session.advance(50);
+  assert.ok(session.world().elapsed > 0); assert.equal(session.speeches.length, 1);
+  session.host.unmount();
+});
+
+test("image completion cannot draw or unlock play after leaving or unmounting", async () => {
+  const leaving = mount("fish", false, undefined, { deferredImages: true });
+  leaving.click("收好冒险返回地图"); await leaving.resolveImages(); leaving.advance(100);
+  assert.equal(leaving.paints(), 0); assert.equal(leaving.rafCount(), 0); assert.equal(leaving.unlocks(), 0); leaving.host.unmount();
+  const unmounted = mount("snake", false, undefined, { deferredImages: true });
+  unmounted.host.unmount(); await unmounted.resolveImages(); unmounted.advance(100);
+  assert.equal(unmounted.paints(), 0); assert.equal(unmounted.rafCount(), 0); assert.equal(unmounted.unlocks(), 0);
+  const presenting = mount("fish", false, undefined, { deferredImages: true });
+  await presenting.resolveImages(); presenting.advance(1000 / 60); assert.ok(presenting.rafCount() >= 2);
+  presenting.host.unmount(); presenting.advance(100); await presenting.flush();
+  assert.equal(presenting.rafCount(), 0); assert.equal(presenting.host.byClass("adventure-loading-overlay").length, 1, "the late presentation callback cannot publish readiness");
+});
+
+test("settings during loading keep the prepared map paused until an explicit input", async () => {
+  const session = mount("fish", false, undefined, { deferredImages: true });
+  session.update({ suspended: true }); await session.resolveImages(); await session.ready();
+  session.key(); session.advance(1000); assert.equal(session.world().elapsed, 0); assert.equal(session.unlocks(), 0);
+  session.update({ suspended: false }); session.advance(1000); assert.equal(session.world().elapsed, 0);
+  session.key(); await session.flush(); session.advance(50); assert.ok(session.world().elapsed > 0);
+  session.host.unmount();
+});
+
 test("fish and snake fullscreen switches preserve the live world, current task and paused state",async()=>{
   for(const mode of ["fish","snake"] as const) {
-    const session=mount(mode);await session.flush();session.key();await session.flush();await session.endSpeech();session.advance(200);
+    const session=mount(mode);await session.ready();session.key();await session.flush();await session.endSpeech();session.advance(200);
     assert.equal(session.host.byClass("adventure-fullscreen").length,1,"both games enter with a full map");
     session.click("退出全屏地图");assert.equal(session.host.byClass("adventure-fullscreen").length,0);
     session.key("ArrowDown");assert.equal(session.host.byClass("adventure-fullscreen").length,0,"moving after a manual exit does not re-enter fullscreen");
@@ -105,7 +200,7 @@ test("fish and snake fullscreen switches preserve the live world, current task a
 });
 
 test("fish card collection earns an optional box, saves one draw and resumes safely after hearing the prize",async()=>{
-  const session=mount();await session.flush();session.key();await session.flush();await session.endSpeech();
+  const session=mount();await session.ready();session.key();await session.flush();await session.endSpeech();
   for(const id of ["cat","dog","tree","bus","apple"]) {session.snack(id);await session.flush();await session.endSpeech();}
   assert.equal(session.progress().adventure.oceanTreasure.earned,1);
   assert.equal(session.host.byClass("ocean-treasure-dialog").length,0,"reaching five never interrupts with an automatic popup");
@@ -122,14 +217,14 @@ test("fish card collection earns an optional box, saves one draw and resumes saf
 test("a rejected treasure save preserves the ticket and cannot show or speak an unsaved prize",async()=>{
   const existing=createProgress();
   for(let i=0;i<5;i++)existing.adventure.oceanTreasure=treasure.collectOceanCard(existing.adventure.oceanTreasure,["cat","dog","tree","bus","apple"][i],`old-${i}`);
-  const session=mount("fish",false,existing);await session.flush();session.click("开启海洋宝箱，可开1个");
+  const session=mount("fish",false,existing);await session.ready();session.click("开启海洋宝箱，可开1个");
   session.rejectNextCommit();session.click("打开宝箱抽贴纸 · 剩余1个");await session.flush();
   assert.equal(session.progress().adventure.oceanTreasure.opened,0);assert.equal(session.speeches.length,0);
   assert.ok(nodeText(session.host.byClass("adventure-status")[0]).includes("学习记录已更新"));session.host.unmount();
 });
 
 test("live keyboard gates prevent movement through a book/settings dialog and never intercept typing", async () => {
-  const session = mount(); await session.flush(); session.key(); await session.flush(); session.advance(200);
+  const session = mount(); await session.ready(); session.key(); await session.flush(); session.advance(200);
   session.click("成长图鉴"); const stopped = session.world().elapsed;
   session.key("ArrowUp"); session.advance(500); assert.equal(session.world().elapsed, stopped);
   session.click("收好图鉴"); session.advance(300); assert.equal(session.world().elapsed, stopped, "closing a book does not silently resume");
@@ -145,13 +240,13 @@ test("live keyboard gates prevent movement through a book/settings dialog and ne
 
 test("replay/hint start exactly one narration; canceled unlock cannot speak after backgrounding", async () => {
   for (const action of ["重听英语目标", "乐乐提示"]) {
-    const session = mount(); await session.flush(); session.click(action); await session.flush();
+    const session = mount(); await session.ready(); session.click(action); await session.flush();
     assert.equal(session.speeches.length, 1);
     assert.equal(session.progress().adventure.modes.fish.listenCount, 1);
     if (action === "乐乐提示") assert.equal(session.progress().adventure.modes.fish.hints, 1);
     session.host.unmount();
   }
-  const delayed = mount("fish", true); await delayed.flush(); delayed.click("听乐乐讲怎么玩");
+  const delayed = mount("fish", true); await delayed.ready(); delayed.click("听乐乐讲怎么玩");
   delayed.host.visibility(true); await delayed.unlock();
   assert.equal(delayed.speeches.length, 0, "late audio unlock cannot start the Chinese introduction behind a paused screen");
   const stopped = delayed.world().elapsed; delayed.host.visibility(false); delayed.advance(1500);
@@ -160,7 +255,7 @@ test("replay/hint start exactly one narration; canceled unlock cannot speak afte
 });
 
 test("audio failure leaves safe free motion but cannot record answers until a successful retry", async () => {
-  const session = mount(); await session.flush(); session.key(); await session.flush(); await session.failSpeech();
+  const session = mount(); await session.ready(); session.key(); await session.flush(); await session.failSpeech();
   const before = session.world().elapsed; session.collectCurrent();
   assert.equal(session.progress().adventure.modes.fish.completedTasks, 0);
   assert.ok(session.world().elapsed > before);
@@ -175,7 +270,7 @@ test("audio failure leaves safe free motion but cannot record answers until a su
 });
 
 test("pausing between targets clears the old replay deadline and cannot double-play after resume", async () => {
-  const session = mount(); await session.flush(); session.key(); await session.flush(); await session.endSpeech(); session.collectCurrent();
+  const session = mount(); await session.ready(); session.key(); await session.flush(); await session.endSpeech(); session.collectCurrent();
   assert.equal(session.progress().adventure.modes.fish.taskIndex, 1);
   session.click("暂停冒险"); session.advance(2000);
   session.click("继续冒险"); await session.flush(); session.advance(900); await session.flush();
@@ -184,7 +279,7 @@ test("pausing between targets clears the old replay deadline and cannot double-p
 });
 
 test("snacks save growth immediately, elapsed time is saved once, and navigation cannot resurrect an active mode", async () => {
-  const session = mount("snake"); await session.flush(); session.key(); await session.flush(); await session.endSpeech(); session.snack("cat");
+  const session = mount("snake"); await session.ready(); session.key(); await session.flush(); await session.endSpeech(); session.snack("cat");
   assert.equal(session.progress().adventure.modes.snake.xp, 50);
   assert.deepEqual(session.progress().adventure.modes.snake.collectedWords, ["cat"]);
   assert.equal(session.progress().adventure.modes.snake.completedTasks, 0);
@@ -200,7 +295,7 @@ test("snacks save growth immediately, elapsed time is saved once, and navigation
 
 test("both games read each sparse collected card after the task sentence without recording an answer",async()=>{
   for(const mode of ["fish","snake"] as const){
-    const s=mount(mode);await s.flush();s.key();await s.flush();
+    const s=mount(mode);await s.ready();s.key();await s.flush();
     const first=s.speeches[0];s.world().boostRngState=1000;s.snack("cat");await s.flush();assert.deepEqual(s.speeches,[first],"a word cannot interrupt the complete task sentence");
     await s.endSpeech();s.advance(50);await s.flush();assert.equal(s.speeches.at(-1),"cat");
     const x=s.world().player.x, normal=structuredClone(s.world());
@@ -213,7 +308,7 @@ test("both games read each sparse collected card after the task sentence without
 });
 
 test("a correct task card reads its name before automatically speaking the next task",async()=>{
-  const s=mount("snake");await s.flush();s.key();await s.flush();await s.endSpeech();s.collectCurrent();await s.flush();
+  const s=mount("snake");await s.ready();s.key();await s.flush();await s.endSpeech();s.collectCurrent();await s.flush();
   assert.equal(s.progress().adventure.modes.snake.completedTasks,1);assert.equal(s.speeches.at(-1),"cat");
   s.advance(1400);await s.flush();assert.equal(s.speeches.length,2,"the transition deadline cannot cut off cat");
   await s.endSpeech();s.advance(50);await s.flush();assert.equal(s.speeches.at(-1),"Listen and find the dog.");
@@ -221,7 +316,7 @@ test("a correct task card reads its name before automatically speaking the next 
 });
 
 test("failed card audio waits for retry, keeps the word and cancels safely on background or manual replay",async()=>{
-  const s=mount("fish");await s.flush();s.key();await s.flush();await s.endSpeech();s.snack("flower");await s.flush();await s.failSpeech();
+  const s=mount("fish");await s.ready();s.key();await s.flush();await s.endSpeech();s.snack("flower");await s.flush();await s.failSpeech();
   s.advance(1200);await s.flush();assert.equal(s.speeches.length,2);
   s.click("点我重试");await s.flush();assert.equal(s.speeches[2],s.speeches[0]);await s.endSpeech();assert.equal(s.speeches.at(-1),"flower","retry keeps the failed card");
   s.click("重听英语目标");await s.flush();const count=s.speeches.length;await s.endSpeech();assert.equal(s.speeches.length,count+1);assert.equal(s.speeches.at(-1),"flower","a canceled old worker cannot shift away the retried word");
@@ -230,7 +325,7 @@ test("failed card audio waits for retry, keeps the word and cancels safely on ba
 
 test("boost status follows active play time, survives pause, and clears after six seconds without slowing narration", async () => {
   for (const mode of ["fish", "snake"] as const) {
-    const session = mount(mode); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+    const session = mount(mode); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
     session.world().boostRngState = 2000; session.snack("cat"); await session.flush(); session.advance(160);
     assert.ok(nodeText(session.host.byClass("speed-boost-status")[0]).includes("4 倍速度"));
     assert.ok(nodeText(session.host.byClass("adventure-mission")[0]).includes("继续游"));
@@ -250,7 +345,7 @@ test("boost status follows active play time, survives pause, and clears after si
 });
 
 test("a storage conflict freezes the stale world and stops late saves from replacing a newer record", async () => {
-  const session = mount("snake"); await session.flush(); session.key(); await session.flush(); await session.endSpeech(); session.world().boostRngState = 2000; session.rejectNextCommit(); session.snack("dog");
+  const session = mount("snake"); await session.ready(); session.key(); await session.flush(); await session.endSpeech(); session.world().boostRngState = 2000; session.rejectNextCommit(); session.snack("dog");
   assert.equal(session.progress().adventure.modes.snake.xp, 0, "the rejected update does not leak old growth into the newer profile");
   const stopped = session.world().elapsed; session.key("ArrowDown"); session.advance(1000);
   assert.equal(session.world().elapsed, stopped);
@@ -259,7 +354,7 @@ test("a storage conflict freezes the stale world and stops late saves from repla
 });
 
 test("delayed local snapshots cannot pause continuous snake play or roll back its live task", async () => {
-  const s = mount("snake"); await s.flush(); s.key(); await s.flush(); await s.endSpeech();
+  const s = mount("snake"); await s.ready(); s.key(); await s.flush(); await s.endSpeech();
   const older = s.progress(); s.collectCurrent(); await s.flush(); const latest = s.progress();
   s.update({ progress: older }); s.update({ progress: latest });
   assert.ok(!nodeText(s.host.byClass("adventure-status")[0]).includes("学习记录已更新"));
@@ -272,13 +367,13 @@ test("delayed local snapshots cannot pause continuous snake play or roll back it
 
 test("snake play has no terminal form after its historical growth milestones", async () => {
   const p = createProgress(); p.adventure = state.saveAdventureGrowth(p.adventure, "snake", 10000, [], 0, Date.now(), 300);
-  const s = mount("snake", false, p); await s.flush(); s.key(); await s.flush(); await s.endSpeech(); s.snack();
+  const s = mount("snake", false, p); await s.ready(); s.key(); await s.flush(); await s.endSpeech(); s.snack();
   assert.ok(s.world().player.length > 300);
   assert.ok(!nodeText(s.host.byClass("adventure-growth")[0]).includes("最高形态")); s.host.unmount();
 });
 
 test("targets left behind remain reachable as separated edge navigation buttons, without submitting an answer", async () => {
-  const session = mount(); await session.flush(); session.key(); await session.flush();
+  const session = mount(); await session.ready(); session.key(); await session.flush();
   session.world().player.x = session.world().width-200; session.advance(300);
   const edgeButtons = session.host.byClass("offscreen");
   assert.equal(edgeButtons.length, new Set(session.world().actors.filter(actor => actor.kind === "mission").map(actor => actor.choiceId)).size, "far copies share one reachable navigator per English choice");
@@ -298,7 +393,7 @@ test("targets left behind remain reachable as separated edge navigation buttons,
 });
 
 test("English choices reveal the Chinese answer only after an explicit hint", async () => {
-  const session = mount(); await session.flush();
+  const session = mount(); await session.ready();
   const answerZh = state.getCurrentAdventureTask(session.progress().adventure, "fish").promptZh;
   assert.ok(!nodeText(session.host.byClass("adventure-mission")[0]).includes(answerZh));
   session.key(); await session.flush(); await session.endSpeech();
@@ -312,7 +407,7 @@ test("English choices reveal the Chinese answer only after an explicit hint", as
 test("restoring a snake uses the complete repeated body-picture queue instead of its unique-word collection", async () => {
   const saved = createProgress(); saved.adventure = state.saveAdventureGrowth(saved.adventure, "snake", 3, ["cat", "dog", "cat"]);
   assert.equal(saved.adventure.modes.snake.collectedWords.length, 2);
-  const restored = mount("snake", false, saved); await restored.flush();
+  const restored = mount("snake", false, saved); await restored.ready();
   assert.deepEqual(restored.world().player.collectedWords, ["cat", "dog", "cat"]);
   assert.equal(restored.world().player.body.length, 4);
   restored.host.unmount();
@@ -320,7 +415,7 @@ test("restoring a snake uses the complete repeated body-picture queue instead of
 
 test("same-task external XP/body updates freeze before cleanup, while audio settings preserve the running session", async () => {
   for (const render of [true, false]) {
-    const session = mount("snake"); await session.flush(); session.key(); await session.flush(); session.snack("cat"); session.advance(1300);
+    const session = mount("snake"); await session.ready(); session.key(); await session.flush(); session.snack("cat"); session.advance(1300);
     const beforeTask = state.getCurrentAdventureTask(session.progress().adventure, "snake").instanceKey;
     const external = createProgress(); external.adventure = state.saveAdventureGrowth(external.adventure, "snake", 99, ["dog", "dog", "cat"], 15);
     assert.equal(state.getCurrentAdventureTask(external.adventure, "snake").instanceKey, beforeTask);
@@ -332,7 +427,7 @@ test("same-task external XP/body updates freeze before cleanup, while audio sett
     assert.deepEqual(session.progress().adventure.modes.snake.bodyWords, ["dog", "dog", "cat"]);
     assert.equal(session.progress().adventure.modes.snake.totalSeconds, 15, "the old world must not add its time into the replacement");
   }
-  const settings = mount(); await settings.flush(); settings.key(); await settings.flush(); settings.advance(200);
+  const settings = mount(); await settings.ready(); settings.key(); await settings.flush(); settings.advance(200);
   const old = settings.progress(), before = settings.world().elapsed;
   settings.replaceProgress({ ...old, settings: { ...old.settings, volume: .4 } });
   settings.advance(300); assert.ok(settings.world().elapsed > before, "changing audio settings preserves the exact adventure reference");
@@ -340,7 +435,7 @@ test("same-task external XP/body updates freeze before cleanup, while audio sett
 });
 
 test("the fish catalog and plant cards speak inside a paused book and cancel when it closes", async () => {
-  const session=mount(); await session.flush(); session.click("成长图鉴"); session.click(`${catalog.oceanSpecies.length} 位水世界伙伴`);
+  const session=mount(); await session.ready(); session.click("成长图鉴"); session.click(`${catalog.oceanSpecies.length} 位水世界伙伴`);
   assert.equal(session.host.nodes().filter(node=>node.type==="article").length,catalog.oceanSpecies.length);
   session.click("听英文 Plankton"); await session.flush(); assert.equal(session.speeches.at(-1),"Plankton");
   const stopped=session.world().elapsed; session.advance(300); assert.equal(session.world().elapsed,stopped);
@@ -354,7 +449,7 @@ test("the fish catalog and plant cards speak inside a paused book and cancel whe
 
 test("player death saves a one-segment life immediately while retaining learned cards and lifetime growth", async () => {
   const existing=createProgress(); existing.adventure=state.saveAdventureGrowth(existing.adventure,"snake",80,["cat","flower"],0,10,5);
-  const session=mount("snake",false,existing); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+  const session=mount("snake",false,existing); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
   const world=session.world(); world.protectionUntil=0;
   world.actors=[{id:"large-neighbor",kind:"bot",color:"green",x:world.player.x+2,y:world.player.y,radius:25,heading:0,length:50,body:[],trail:[{x:world.player.x+2,y:world.player.y}],breedId:"green-tree-python",spawnIndex:1}];
   session.advance(1000/30);
@@ -368,7 +463,7 @@ test("player death saves a one-segment life immediately while retaining learned 
 });
 
 test("each ocean English card adds fifty growth, including repeat words; ordinary food adds one", async () => {
-  const session = mount("fish"); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+  const session = mount("fish"); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
   session.snack("cat"); await session.flush(); await session.endSpeech();
   session.snack("cat"); await session.flush(); await session.endSpeech();
   const saved = session.progress().adventure;
@@ -385,7 +480,7 @@ test("each ocean English card adds fifty growth, including repeat words; ordinar
 });
 
 test("a correct shell target carrying an English card earns both rewards and one eating sound", async () => {
-  const session = mount("fish"); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+  const session = mount("fish"); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
   const target = session.world().actors.find(actor => actor.kind === "mission" && actor.choiceId === session.world().mission!.answer)!;
   target.wordId = "cat"; target.card = true;
   session.collectCurrent(); await session.flush();
@@ -405,7 +500,7 @@ test("a correct shell target carrying an English card earns both rewards and one
 });
 
 test("same-frame card growth and target completion are saved in a single valid snapshot", async () => {
-  const session=mount("fish");await session.flush();session.key();await session.flush();await session.endSpeech();
+  const session=mount("fish");await session.ready();session.key();await session.flush();await session.endSpeech();
   const world=session.world(),target=world.actors.find(a=>a.kind==="mission"&&a.choiceId===world.mission!.answer)!;
   const card=world.actors.find(a=>a.kind==="food")!;
   target.x=card.x=world.player.x+2;target.y=card.y=world.player.y;card.wordId="cat";card.card=true;
@@ -429,7 +524,7 @@ test("a three-fish counting target gives one hundred growth only when its entire
     const task = state.getCurrentAdventureTask(existing.adventure, "fish");
     existing.adventure = state.recordAdventureChoice(existing.adventure, "fish", task, task.answer);
   }
-  const session = mount("fish", false, existing); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+  const session = mount("fish", false, existing); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
   const before = session.progress().adventure.modes.fish.xp;
   const completed = session.progress().adventure.modes.fish.completedTasks, xp = session.progress().adventure.modes.fish.xp;
   for (let collected = 1; collected <= 3; collected++) {
@@ -447,7 +542,7 @@ test("a three-fish counting target gives one hundred growth only when its entire
 });
 
 test("wrong or unheard shell targets do not earn growth or play successful eating audio", async () => {
-  const session = mount("fish"); await session.flush(); session.key(); await session.flush();
+  const session = mount("fish"); await session.ready(); session.key(); await session.flush();
   session.collectCurrent();
   assert.equal(session.progress().adventure.modes.fish.completedTasks, 0);
   assert.equal(session.eats.length, 0, "the listening gate prevents eating the answer early");
@@ -466,7 +561,7 @@ test("wrong or unheard shell targets do not earn growth or play successful eatin
 
 test("rejected fish card and shell-target commits cannot add growth to a newer profile", async () => {
   for (const pickup of ["card", "target"] as const) {
-    const session = mount("fish"); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+    const session = mount("fish"); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
     session.world().boostRngState = 2000; session.rejectNextCommit();
     if (pickup === "card") session.snack("cat"); else session.collectCurrent();
     const saved = session.progress().adventure;
@@ -487,7 +582,7 @@ test("rejected fish card and shell-target commits cannot add growth to a newer p
 });
 
 test("snake meals retain their existing feedback and do not affect ocean points", async () => {
-  const session = mount("snake"); await session.flush(); session.key(); await session.flush(); await session.endSpeech();
+  const session = mount("snake"); await session.ready(); session.key(); await session.flush(); await session.endSpeech();
   session.snack("cat"); await session.flush(); await session.endSpeech(); session.collectCurrent();
   const saved = session.progress().adventure;
   assert.equal(saved.modes.snake.completedTasks, 1);

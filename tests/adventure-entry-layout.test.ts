@@ -17,6 +17,7 @@ test("the side rail keeps additional entries with both existing games and disabl
     "@/components/ui/dialog": {}, "@/lib/adventure-engine": {}, "@/lib/adventure-content": {},
     "@/lib/adventure-progress": adventureProgress, "@/lib/audio": {}, "./adventure-renderer": {},
     "@/lib/natural-ocean-art": {}, "@/lib/ecology-art.json": { default: {} },
+    "@/lib/game-image-assets": { gameImageURL: (source: string) => source },
     "@/lib/snake-flat-art.json": { default: {} }, "@/lib/adventure-catalog": {},
     "@/lib/ocean-treasure": {}, "@/lib/adventure-fullscreen": {},
   }));
@@ -41,6 +42,7 @@ test("the homepage mounts one compact shark entry inside its rail and preserves 
   const initial = domain.createProgress();
   const host = componentHost(new URL("../components/game-app.tsx", import.meta.url), "default", {}, react => ({
     "@/lib/course": course, "@/lib/progress": domain, "@/lib/destinations": destinations,
+    "@/lib/game-image-assets": { gameImageURL: (source: string) => source },
     "@/lib/adventure-progress": adventureProgress, "@/lib/playground-content": playgroundContent,
     "@/lib/use-progress": { useProgress() {
       const [progress, setProgress] = react.useState(initial);

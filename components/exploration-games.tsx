@@ -1,5 +1,7 @@
 "use client";
 
+import { gameImageURL } from "@/lib/game-image-assets";
+
 import { useEffect, useRef, useState, type PointerEvent } from "react";
 import { Check, Circle, PackageCheck, RotateCcw, Sparkles, Undo2 } from "lucide-react";
 import { WordArt } from "@/components/word-art";
@@ -70,7 +72,7 @@ export function DeliveryGame({ exercise, disabled, busy, suspended, hinted, onAn
     </div><button className="fox-delivery-target" data-delivery-target="true" disabled={locked || tray.length !== required} onClick={deliver} aria-label="送给乐乐，检查整张订单">
       {/* Existing original mascot is a local bundled asset. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/fox.png" alt="等着收订单的小狐狸乐乐"/><span><PackageCheck size={21}/>送给乐乐</span>
+      <img src={gameImageURL("/images/fox.png")} alt="等着收订单的小狐狸乐乐"/><span><PackageCheck size={21}/>送给乐乐</span>
     </button></div>
     <div className="delivery-tools"><button className="text-button" disabled={locked || !tray.length} onClick={() => update([])}><RotateCcw size={19}/>重新装盘</button><p className="mini-game-note" role="status">{message || "点图卡装盘，点托盘拿回。装满后点乐乐，也可以拖托盘过去。"}</p></div>
   </div>;

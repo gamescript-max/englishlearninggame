@@ -1,4 +1,5 @@
 import atlas from './natural-ocean-art.json';
+import { gameImageURL } from './game-image-assets';
 
 // Display masks remove neighbouring silhouettes caught by the atlas crop; PNG pixels stay intact.
 const exclusions: Record<number, {x:number;y:number;w:number;h:number}[]> = {
@@ -23,12 +24,12 @@ export function naturalSpriteClip(rect: {w:number;h:number;exclusions?:{x:number
 export function naturalOceanArt(index: number) {
   const rect = atlas.ocean[index];
   const image = atlas.atlases[rect.atlas];
-  return { ...rect, src: image.src, imageWidth: image.width, imageHeight: image.height, exclusions: exclusions[index] ?? [], exclusionPaths:exclusionPaths(index,rect) };
+  return { ...rect, src: gameImageURL(image.src), sourceSrc: image.src, imageWidth: image.width, imageHeight: image.height, exclusions: exclusions[index] ?? [], exclusionPaths:exclusionPaths(index,rect) };
 }
 export function naturalColorArt(color: string) {
   const index = Math.max(0, ['red', 'blue', 'yellow', 'green'].indexOf(color));
   const rect = atlas.colors[index];
   const image = atlas.atlases[rect.atlas];
-  return { ...rect, src: image.src, imageWidth: image.width, imageHeight: image.height };
+  return { ...rect, src: gameImageURL(image.src), sourceSrc: image.src, imageWidth: image.width, imageHeight: image.height };
 }
 export const naturalOceanAtlases = atlas.atlases;

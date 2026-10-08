@@ -1,5 +1,7 @@
 "use client";
 
+import { gameImageURL } from "@/lib/game-image-assets";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Footprints, Lightbulb, MessageCircle, PencilLine, RotateCcw, Volume2 } from "lucide-react";
 import { playEffect, playSpeech, stopAllAudio, stopSpeech, unlockAudio } from "@/lib/audio";
@@ -234,7 +236,7 @@ export function LearningStudio({ progress, commit, onBack, initialUnit = null }:
 
     {view === "hub" && <>
       {/* eslint-disable-next-line @next/next/no-img-element -- The shared static mascot must also load from the public and offline asset packs. */}
-      <div className="learning-hero"><div><p className="learning-eyebrow">每天一点点，自己会表达</p><h1>乐乐的学习探索站</h1><p>听一听、找一找、拼一拼，再把今天会的英语告诉家人。</p><span className="learning-level-pill">Pre-A1 基础 → A1 衔接</span></div><img src="/images/fox.png" alt="小狐狸乐乐" /></div>
+      <div className="learning-hero"><div><p className="learning-eyebrow">每天一点点，自己会表达</p><h1>乐乐的学习探索站</h1><p>听一听、找一找、拼一拼，再把今天会的英语告诉家人。</p><span className="learning-level-pill">Pre-A1 基础 → A1 衔接</span></div><img src={gameImageURL("/images/fox.png")} alt="小狐狸乐乐" /></div>
       {run && <div className="learning-resume"><span>上次的小路还没走完 · 已完成 {run.index} / {run.taskIds.length}</span><button className="learning-button" onClick={() => { const found = getLearningActivity(run.activityId); if (found) beginActivity(found); }}>继续这次探险 <ArrowRight size={20} /></button></div>}
       <div className="learning-daily"><h2>今天的 10–15 分钟小冒险</h2><div className="learning-daily-grid">
         <button className={`learning-daily-card ${daily.review ? "is-done" : ""}`} onClick={() => beginActivity(recallActivity)}><span className="learning-daily-number">{daily.review ? <Check size={26} /> : "1"}</span><strong>回忆旧朋友</strong><small>{dueWords.length ? `${dueWords.length} 个词等你再认一次` : Object.keys(learning.cards).length ? "今天没有到期词，也可以温习" : "先认识新词，明天开始复习"}</small><span>2–4 分钟</span></button>

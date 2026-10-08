@@ -16,10 +16,12 @@ function deferred(): Deferred {
   return { promise, resolve, reject };
 }
 
-function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?: boolean } = {}) {
+function mount(options: { welcome?: boolean; unlockFails?: boolean; deferImages?: boolean; canvasFails?: boolean } = {}) {
   let progress = createProgress(), now = 0, nextRaf = 0, world!: engine.SharkWorld, currentSpeech: Deferred | null = null;
   if (!options.welcome) progress.shark = { ...progress.shark, lastAt: 1 };
-  let imageFails = !!options.imageFails, imageLoads = 0;
+  let imageLoads = 0;
+  let canvasFails = !!options.canvasFails;
+  const imageRequests: Deferred[] = [], imagePaints: boolean[] = [];
   let unlockFails = !!options.unlockFails, stops = 0, unlocks = 0, paints = 0, disconnects = 0, backs = 0, duplicateNext = false, retrySaves = 0, backups = 0;
   const raf = new Map<number, (time: number) => void>(), listeners = new Map<string, Set<(event: unknown) => void>>();
   const speeches: { text: string; language: string; completion: Deferred }[] = [], controls: engine.SharkControl[] = [], bites: number[] = [], commits: Progress[] = [];
@@ -48,7 +50,14 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?:
         return result;
       },
     },
-    "./shark-renderer": { loadSharkImages() { imageLoads++; return imageFails ? Promise.reject(new Error("offline")) : Promise.resolve({ sprites: new Map() }); }, paintSharkWorld(_context: unknown, _world: unknown, _width: number, _height: number, options: { hudRects: typeof paintedRects }) { paints++; paintedRects = options.hudRects; return renderedLabels; } }, "./shark-feast.css": {},
+    "./shark-renderer": {
+      loadSharkImages() {
+        imageLoads++;
+        if (options.deferImages) { const request = deferred(); imageRequests.push(request); return request.promise.then(() => ({ sprites: new Map() })); }
+        return Promise.resolve({ sprites: new Map() });
+      },
+      paintSharkWorld(_context: unknown, _world: unknown, _width: number, _height: number, options: { hudRects: typeof paintedRects; images?: unknown }) { paints++; imagePaints.push(!!options.images); paintedRects = options.hudRects; return renderedLabels; },
+    }, "./shark-feast.css": {},
     "@/lib/audio": {
       unlockAudio() { unlocks++; return unlockFails ? Promise.reject(new Error("声音没有开启")) : Promise.resolve(); },
       playSpeech(text: string, language = "en") { currentSpeech = deferred(); speeches.push({ text, language, completion: currentSpeech }); return currentSpeech.promise; },
@@ -62,7 +71,7 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?:
     cancelAnimationFrame(id: number) { raf.delete(id); },
   });
   const canvas = {
-    width: 0, height: 0, getContext: () => ({ setTransform() {} }),
+    width: 0, height: 0, getContext: () => canvasFails ? null : ({ setTransform() {} }),
     getBoundingClientRect: () => ({ left: 100, top: 40, width: 900, height: 600 }),
     setPointerCapture() {}, releasePointerCapture() {}, hasPointerCapture: () => false,
   };
@@ -85,11 +94,12 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?:
   function key(key = "ArrowRight") { fire("document", "keydown", { key, target: new InputTarget(), preventDefault() {} }); }
   function click(label: string) { host.click(host.button(label)); sync(); }
   async function flush() { await host.flush(); sync(); }
+  async function ready() { await flush(); advance(1000 / 60); await flush(); assert.equal(host.byClass("shark-loading-overlay").length, 0, "images and the initial canvas frame must finish before playing"); }
   return {
     host, speeches, controls, bites, commits, document, canvas, world: () => world, progress: () => progress,
     paints: () => paints, paintedRects: () => paintedRects, disconnects: () => disconnects, stops: () => stops, unlocks: () => unlocks, backs: () => backs, retrySaves: () => retrySaves, backups: () => backups,
     rafCount: () => raf.size, listenerCount: () => [...listeners.values()].reduce((sum, set) => sum + set.size, 0),
-    key, click, fire, advance, flush,
+    key, click, fire, advance, flush, ready, imagePaints,
     update(change: Partial<typeof props>) { props = { ...props, ...change }; host.update(props); },
     replaceProgress(next: Progress, render = true) { progress = next; if (render) sync(); },
     spaceOnButton() {
@@ -99,7 +109,10 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?:
       return prevented;
     },
     unlockWorks() { unlockFails = false; },
-    imagesWork() { imageFails = false; }, imageLoads: () => imageLoads,
+    imageLoads: () => imageLoads,
+    resolveImages(index = imageRequests.length - 1) { imageRequests[index].resolve(); },
+    rejectImages(index = imageRequests.length - 1) { imageRequests[index].reject(new Error("offline")); },
+    canvasWorks() { canvasFails = false; },
     duplicateNext() { duplicateNext = true; },
     labels(rectangles: SharkFoodLabelRect[]) { renderedLabels = rectangles; },
     async endSpeech() { const pending = currentSpeech; currentSpeech = null; pending?.resolve(); await flush(); },
@@ -124,7 +137,7 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?:
 }
 
 test("a pickup saves immediately once and serial English listens count only completed playback", async () => {
-  const session = mount(); session.key(); session.advance(40);
+  const session = mount(); await session.ready(); session.key(); session.advance(40);
   session.duplicateNext(); session.collect("A"); session.collect("B"); await session.flush();
   assert.equal(session.progress().shark.letters, 2); assert.equal(session.progress().shark.recentPickups.length, 2);
   assert.equal(session.progress().shark.listenCount, 0, "queued and playing English is not a completed listen");
@@ -138,7 +151,7 @@ test("a pickup saves immediately once and serial English listens count only comp
 });
 
 test("three pending voices gate new collection without dropping English or slowing swimming", async () => {
-  const session = mount(); session.key(); session.advance(40);
+  const session = mount(); await session.ready(); session.key(); session.advance(40);
   for (const letter of ["A", "B", "C", "D"]) session.collect(letter);
   session.collect("E"); assert.equal(session.progress().shark.letters, 4);
   assert.equal(session.controls.at(-1)!.canCollect, false);
@@ -152,7 +165,7 @@ test("three pending voices gate new collection without dropping English or slowi
 });
 
 test("background pauses discard no pending English and settings closing requires explicit continue", async () => {
-  const session = mount(); session.key(); session.advance(40); session.collect("A"); session.collect("B");
+  const session = mount(); await session.ready(); session.key(); session.advance(40); session.collect("A"); session.collect("B");
   const elapsed = session.world().elapsed, old = session.speeches[0].completion;
   session.fire("window", "native-background"); session.fire("window", "pagehide"); await session.flush(); session.advance(12000);
   assert.equal(session.world().elapsed, elapsed); assert.equal(session.rafCount(), 0); assert.equal(session.progress().shark.listenCount, 0);
@@ -166,19 +179,20 @@ test("background pauses discard no pending English and settings closing requires
 });
 
 test("external records freeze the old world and cleanup cannot overwrite a newly imported record", async () => {
-  const session = mount(); session.key(); session.advance(10400); session.collect("A");
+  const session = mount(); await session.ready(); session.key(); session.advance(10400); session.collect("A");
   const imported = { ...createProgress(), shark: { ...state.createSharkProgress(), totalSeconds: 777, lastAt: 100 } };
   session.replaceProgress(imported); const elapsed = session.world().elapsed; await session.flush(); session.advance(3000);
   assert.equal(session.world().elapsed, elapsed); assert.equal(session.progress(), imported);
   assert.ok(nodeText(session.host.byClass("shark-pause-card")[0]).includes("记录"));
   session.host.unmount(); assert.equal(session.progress(), imported);
 
-  const cleanup = mount(); cleanup.key(); cleanup.advance(5300); cleanup.replaceProgress(imported, false); cleanup.host.unmount();
+  const cleanup = mount(); await cleanup.ready(); cleanup.key(); cleanup.advance(5300); cleanup.replaceProgress(imported, false); cleanup.host.unmount();
   assert.equal(cleanup.progress(), imported, "a parent import just before unmount is protected by the commit guard");
 });
 
 test("unmount cancels RAF, speech, all listeners and body fullscreen overflow without late narration", async () => {
   const session = mount({ welcome: true });
+  await session.ready();
   assert.equal(session.document.body.style.overflow, "hidden"); assert.equal(session.canvas.width, 1800); assert.equal(session.canvas.height, 1200);
   assert.deepEqual(JSON.parse(JSON.stringify(session.paintedRects())), [{ x: 300, y: 16, w: 350, h: 100 }], "renderer exclusions use actual HUD bounds relative to the scene");
   session.key(); session.advance(40); session.collect("A"); const oldGuide = session.speeches[0].completion;
@@ -190,7 +204,7 @@ test("unmount cancels RAF, speech, all listeners and body fullscreen overflow wi
 });
 
 test("audio unlock failure before any pickup can be retried, and a failed English item retains its queue", async () => {
-  const session = mount({ unlockFails: true }); session.key(); await session.flush();
+  const session = mount({ unlockFails: true }); await session.ready(); session.key(); await session.flush();
   assert.equal(session.progress().shark.letters, 0); assert.equal(session.host.byClass("shark-audio-error").length, 1);
   const unlocks = session.unlocks(); session.unlockWorks(); session.click("重试声音"); await session.flush();
   assert.ok(session.unlocks() > unlocks); assert.equal(session.host.byClass("shark-audio-error").length, 0);
@@ -202,7 +216,7 @@ test("audio unlock failure before any pickup can be retried, and a failed Englis
 });
 
 test("pointer and direction controls start freely, fullscreen Escape retains the world, and welcome runs once", async () => {
-  const session = mount({ welcome: true }); session.pointer(775, 490); session.advance(50); await session.flush();
+  const session = mount({ welcome: true }); await session.ready(); session.pointer(775, 490); session.advance(50); await session.flush();
   const world = session.world(); assert.ok(world.elapsed > 0); assert.ok(session.controls.some(control => !!control.target));
   assert.equal(session.speeches[0].text, content.sharkGuides.welcome);
   session.fire("document", "keydown", { key: "Escape", defaultPrevented: false });
@@ -214,7 +228,7 @@ test("pointer and direction controls start freely, fullscreen Escape retains the
 });
 
 test("tapping moving prey follows its live position, while dragging or arrows immediately take control", async () => {
-  const session = mount(); const prey = session.prey("A"); session.pointer(750, 40 + engine.sharkWorldToScreen(session.world().player, engine.sharkCamera(session.world(), 900, 600)).y); session.release(); session.advance(200);
+  const session = mount(); await session.ready(); const prey = session.prey("A"); session.pointer(750, 40 + engine.sharkWorldToScreen(session.world().player, engine.sharkCamera(session.world(), 900, 600)).y); session.release(); session.advance(200);
   assert.ok(prey.x > 1800); assert.ok(session.controls.at(-1)!.target!.x > 1800, "a tap follows the swimming prey instead of its old click position");
   session.advance(1100); await session.flush(); assert.equal(session.progress().shark.letters, 1, "a six-year-old can collect a moving letter with one tap");
   session.world().foods = []; session.prey("B"); session.pointer(750, 40 + engine.sharkWorldToScreen(session.world().player, engine.sharkCamera(session.world(), 900, 600)).y); session.drag(500, 500); session.advance(50);
@@ -224,9 +238,9 @@ test("tapping moving prey follows its live position, while dragging or arrows im
   session.host.unmount(); assert.equal(session.rafCount(), 0); assert.equal(session.listenerCount(), 0);
 });
 
-test("tapping a displaced English label follows its live prey and dragging releases it", () => {
+test("tapping a displaced English label follows its live prey and dragging releases it", async () => {
   for (const tokenId of ["cat", "sentence-like-read"]) {
-    const session = mount(), prey = session.prey(tokenId);
+    const session = mount(); await session.ready(); const prey = session.prey(tokenId);
     session.labels([{ foodId: prey.id, x: 300, y: 430, w: 150, h: 60 }]);
     session.pointer(475, 500); session.release(); session.advance(200);
     assert.ok(session.controls.at(-1)!.target!.x > 1800, "a label outside the body radius follows the moving prey");
@@ -238,9 +252,9 @@ test("tapping a displaced English label follows its live prey and dragging relea
   }
 });
 
-test("label hit areas cannot select removed, hidden, offscreen or oversized prey", () => {
+test("label hit areas cannot select removed, hidden, offscreen or oversized prey", async () => {
   for (const invalid of ["removed", "hidden", "offscreen", "oversized", "locked"]) {
-    const session = mount(), prey = session.prey("A"), world = session.world();
+    const session = mount(); await session.ready(); const prey = session.prey("A"), world = session.world();
     session.labels([{ foodId: prey.id, x: 300, y: 430, w: 150, h: 60 }]);
     if (invalid === "removed") world.foods = [];
     if (invalid === "hidden") world.nearbyFoodIds = [];
@@ -256,7 +270,7 @@ test("label hit areas cannot select removed, hidden, offscreen or oversized prey
 });
 
 test("fullscreen storage failure stays visible with retry and backup, and pause never falsely claims saved growth", async () => {
-  const session = mount({ unlockFails: true }); session.key(); await session.flush();
+  const session = mount({ unlockFails: true }); await session.ready(); session.key(); await session.flush();
   session.update({ storageError: "设备空间不足，请先导出备份。" });
   assert.equal(session.host.byClass("shark-feast-expanded").length, 1);
   assert.equal(session.host.byClass("shark-alert-stack").length, 1);
@@ -273,7 +287,7 @@ test("fullscreen storage failure stays visible with retry and backup, and pause 
 
 
 test("touch jump and Space start swimming, rise above the water, freeze on pause, and resume to a splash", async () => {
-  const session = mount(); session.click("跃出海面"); await session.flush();
+  const session = mount(); await session.ready(); session.click("跃出海面"); await session.flush();
   assert.ok(session.rafCount() > 0, "the jump button starts play without a Start step");
   assert.equal(session.world().jump.phase, "approach");
   session.advance(300); assert.equal(session.world().jump.phase, "air");
@@ -288,18 +302,113 @@ test("touch jump and Space start swimming, rise above the water, freeze on pause
   session.host.unmount(); assert.equal(session.rafCount(), 0);
 });
 
-test("image loading failure can retry while current growth and controls stay available", async () => {
-  const session = mount({ imageFails: true }); await session.flush();
+test("deferred images block every play input until the first loaded canvas frame", async () => {
+  const session = mount({ deferImages: true, welcome: true }), initial = session.progress(), player = { ...session.world().player };
+  assert.ok(nodeText(session.host.byClass("shark-loading-card")[0]).includes("正在准备"));
+  assert.equal(nodeText(session.host.byClass("shark-loading-card")[0]).includes("%"), false);
+  assert.equal(session.host.byClass("shark-first-guide").length, 0);
+  session.key(); session.pointer(775, 490); session.drag(500, 500); session.release(); session.click("向下游"); session.click("跃出海面");
+  session.fire("document", "keydown", { key: " ", code: "Space", target: {}, preventDefault() {} });
+  session.collect("A"); session.advance(12000); await session.flush();
+  assert.equal(session.world().elapsed, 0); assert.deepEqual(session.world().player, player); assert.equal(session.world().jump.phase, "idle");
+  assert.equal(session.controls.length, 0); assert.equal(session.speeches.length, 0); assert.equal(session.unlocks(), 0); assert.equal(session.bites.length, 0);
+  assert.equal(session.progress(), initial); assert.equal(session.commits.length, 0); assert.equal(session.paints(), 0); assert.equal(session.rafCount(), 0);
+
+  session.resolveImages(); await session.flush();
+  assert.ok(session.paints() > 0); assert.ok(session.imagePaints.every(Boolean), "the initial canvas uses the loaded art");
+  assert.ok(nodeText(session.host.byClass("shark-loading-card")[0]).includes("正在画出海洋"));
+  assert.deepEqual(session.host.nodes().filter(node => node.type === "li" && node.props["data-state"]).map(node => node.props["data-state"]), ["done", "current"]);
+  session.key(); session.pointer(775, 490); session.release(); session.click("向下游");
+  assert.equal(session.world().elapsed, 0); assert.equal(session.controls.length, 0); assert.equal(session.unlocks(), 0);
+  await session.ready();
+  session.advance(1000); assert.equal(session.world().elapsed, 0, "early inputs never queue a later start");
+  assert.equal(session.host.byClass("shark-first-guide").length, 1);
+  session.key(); session.advance(40); await session.flush();
+  assert.ok(session.world().elapsed > 0); assert.equal(session.speeches[0].text, content.sharkGuides.welcome);
+  session.collect("A"); assert.equal(session.progress().shark.letters, 1);
+  session.host.unmount();
+});
+
+test("deferred image failure holds growth and sound until retry loads and paints the ocean", async () => {
+  const session = mount({ deferImages: true, welcome: true }), initial = session.progress();
+  session.rejectImages(); await session.flush();
   assert.equal(session.imageLoads(), 1); assert.ok(session.host.button("重试图片"));
-  session.key(); session.collect("A"); assert.equal(session.progress().shark.letters, 1);
-  session.imagesWork(); session.click("重试图片"); await session.flush();
-  assert.equal(session.imageLoads(), 2); assert.equal(session.host.byClass("shark-alert-stack").length, 0);
-  assert.equal(session.progress().shark.letters, 1); session.host.unmount();
+  assert.equal(session.host.byClass("shark-feast-canvas")[0].props["aria-busy"], false, "an error has stopped loading and exposes its retry action");
+  assert.ok(nodeText(session.host.byClass("shark-loading-card")[0]).includes("还没准备好"));
+  session.key(); session.pointer(775, 490); session.release(); session.click("向上游"); session.click("跃出海面"); session.collect("A"); session.advance(12000);
+  assert.equal(session.progress(), initial); assert.equal(session.world().elapsed, 0); assert.equal(session.controls.length, 0);
+  assert.equal(session.speeches.length, 0); assert.equal(session.unlocks(), 0); assert.equal(session.bites.length, 0); assert.equal(session.paints(), 0);
+  session.click("重试图片"); assert.equal(session.imageLoads(), 2);
+  assert.equal(session.host.byClass("shark-feast-canvas")[0].props["aria-busy"], true);
+  assert.ok(nodeText(session.host.byClass("shark-loading-card")[0]).includes("正在准备"));
+  session.key(); session.advance(2000); assert.equal(session.world().elapsed, 0);
+  session.resolveImages(); await session.ready();
+  assert.equal(session.progress(), initial); assert.equal(session.world().elapsed, 0);
+  session.click("向下游"); session.advance(40); session.collect("A");
+  assert.equal(session.progress().shark.letters, 1); assert.ok(session.unlocks() > 0);
+  session.host.unmount();
+});
+
+test("an unavailable canvas stays blocked with the completed image phase and can retry", async () => {
+  const session = mount({ deferImages: true, canvasFails: true });
+  session.resolveImages(); await session.flush();
+  const steps = session.host.nodes().filter(node => node.type === "li" && node.props["data-state"]);
+  assert.deepEqual(steps.map(node => node.props["data-state"]), ["done", "error"]);
+  assert.ok(nodeText(session.host.byClass("shark-loading-card")[0]).includes("画面还没画好"));
+  session.key(); session.advance(2000); assert.equal(session.controls.length, 0); assert.equal(session.paints(), 0);
+  session.canvasWorks(); session.click("重试图片"); session.resolveImages(); await session.ready();
+  session.key(); session.advance(40); assert.ok(session.world().elapsed > 0);
+  session.host.unmount();
+});
+
+test("leaving or unmounting ignores late image success and failure and cancels the readiness frame", async () => {
+  for (const exit of ["leave", "unmount"]) for (const result of ["success", "failure"]) {
+    const session = mount({ deferImages: true });
+    const before = nodeText(session.host.byClass("shark-loading-card")[0]);
+    if (exit === "leave") session.click("返回地图"); else session.host.unmount();
+    if (result === "success") session.resolveImages(); else session.rejectImages();
+    await session.flush(); session.advance(2000);
+    assert.equal(session.paints(), 0); assert.equal(session.rafCount(), 0); assert.equal(session.controls.length, 0);
+    assert.equal(session.unlocks(), 0); assert.equal(nodeText(session.host.byClass("shark-loading-card")[0]), before);
+    if (exit === "leave") { assert.equal(session.backs(), 1); session.host.unmount(); }
+    assert.equal(session.listenerCount(), 0); assert.equal(session.document.body.style.overflow, "scroll");
+  }
+  for (const exit of ["leave", "unmount"]) {
+    const session = mount({ deferImages: true }); session.resolveImages(); await session.flush();
+    assert.equal(session.rafCount(), 1); const paints = session.paints();
+    if (exit === "leave") session.click("返回地图"); else session.host.unmount();
+    assert.equal(session.rafCount(), 0); session.advance(2000); await session.flush();
+    assert.equal(session.paints(), paints); assert.equal(session.controls.length, 0); assert.equal(session.unlocks(), 0);
+    assert.equal(session.host.byClass("shark-first-guide").length, 0, "a canceled readiness callback never opens gameplay");
+    if (exit === "leave") session.host.unmount();
+  }
+});
+
+test("loading completion preserves suspension, background pause and record conflict gates", async () => {
+  for (const gate of ["settings", "background"]) {
+    const session = mount({ deferImages: true });
+    if (gate === "settings") session.update({ suspended: true }); else session.fire("window", "native-background");
+    if (gate === "settings") {
+      session.rejectImages(); await session.flush();
+      assert.equal(session.host.byClass("shark-loading-overlay").length, 1, "loading failures remain reachable while settings pause the game");
+      session.click("重试图片"); assert.equal(session.imageLoads(), 2);
+    }
+    session.resolveImages(); await session.ready(); session.key(); session.advance(2000);
+    assert.equal(session.world().elapsed, 0); assert.equal(session.unlocks(), 0); assert.equal(session.host.byClass("shark-pause-overlay").length, 1);
+    if (gate === "settings") { session.click("继续游"); assert.equal(session.unlocks(), 0); session.update({ suspended: false }); }
+    session.click("继续游"); session.advance(40); assert.ok(session.world().elapsed > 0);
+    session.host.unmount();
+  }
+  const session = mount({ deferImages: true });
+  const imported = { ...createProgress(), shark: { ...state.createSharkProgress(), totalSeconds: 777, lastAt: 100 } };
+  session.replaceProgress(imported); session.resolveImages(); await session.ready(); session.key(); session.advance(2000);
+  assert.equal(session.progress(), imported); assert.equal(session.world().elapsed, 0); assert.equal(session.unlocks(), 0);
+  assert.ok(nodeText(session.host.byClass("shark-pause-card")[0]).includes("记录")); session.host.unmount(); assert.equal(session.progress(), imported);
 });
 
 
-test("Space leaves focused UI buttons to their native activation instead of hijacking a jump", () => {
-  const session = mount(); session.key(); session.advance(40);
+test("Space leaves focused UI buttons to their native activation instead of hijacking a jump", async () => {
+  const session = mount(); await session.ready(); session.key(); session.advance(40);
   assert.equal(session.spaceOnButton(), false);
   assert.equal(session.world().jump.phase, "idle");
   session.click("暂停游玩"); assert.equal(session.rafCount(), 0);

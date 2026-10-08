@@ -47,7 +47,12 @@ await writeFile(htmlPath, html.replace("<!-- GAME_PRERENDER -->", initialMarkup)
 await copyFile(path.join(root, "THIRD_PARTY_NOTICES.txt"), path.join(output, "THIRD_PARTY_NOTICES.txt"));
 await writeFile(path.join(output, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /*?*demo=\nSitemap: ${origin}/sitemap.xml\n`);
 await writeFile(path.join(output, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>\n`);
-await writeFile(path.join(output, "_headers"), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n\n/offline/*\n  X-Robots-Tag: noindex, nofollow\n\n/sw.js\n  Cache-Control: no-cache\n\n/offline-pack.json\n  Cache-Control: no-cache\n\n/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n`);
+const optimizedImages = JSON.parse(await readFile(path.join(root, "lib", "optimized-game-images.json"), "utf8"));
+const optimizedURLs = [...new Set(Object.values(optimizedImages))].sort();
+if (optimizedURLs.some(url => typeof url !== "string" || !/^\/images\/[a-z0-9-]+-web-[a-f0-9]{12}\.webp$/.test(url))) throw new Error("优化图片清单包含无效的内容哈希资源路径。");
+// Only byte-addressed image URLs receive immutable caching; original PNG URLs stay available.
+const imageHeaders = optimizedURLs.map(url => `${url}\n  Cache-Control: public, max-age=31536000, immutable\n`).join("\n");
+await writeFile(path.join(output, "_headers"), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n\n/\n  Cache-Control: no-cache\n\n/index.html\n  Cache-Control: no-cache\n\n/offline/*\n  X-Robots-Tag: noindex, nofollow\n\n/sw.js\n  Cache-Control: no-cache\n\n/offline-pack.json\n  Cache-Control: no-cache\n\n/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n\n${imageHeaders}`);
 await writeFile(path.join(output, "404.html"), `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>找不到这个小岛 · 英语探索岛</title></head><body><h1>找不到这个小岛</h1><p><a href="/">回到探索地图</a></p></body></html>\n`);
 
 async function filesIn(directory) {

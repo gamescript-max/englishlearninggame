@@ -150,7 +150,7 @@
 }
 
 /* Each destination has its own original island; routes stay behind the cards. */
-.archipelago-map{height:clamp(820px,74vw,1160px);aspect-ratio:auto;background:#4bc6dd url('/images/archipelago-ocean-v1.png') center/cover no-repeat}
+.archipelago-map{height:clamp(820px,74vw,1160px);aspect-ratio:auto;background:#4bc6dd url('/images/archipelago-ocean-v1-web-37ea9766146a.webp') center/cover no-repeat}
 .map-location-note{display:flex;align-items:center;gap:10px;flex-shrink:0;padding:12px 16px;border:2px solid #f4dea2;border-radius:20px;background:#fff7db;color:#766030}
 .map-location-note>div{display:flex;flex-direction:column;gap:4px}
 .map-location-note small{font-size:12px;color:#96814e}

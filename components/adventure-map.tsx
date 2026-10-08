@@ -9,10 +9,13 @@ import { destinationLessons, destinations, type DestinationId } from "@/lib/dest
 import { getLesson, getTopic } from "@/lib/course";
 import { isLessonUnlocked, type Progress } from "@/lib/progress";
 import { gameMapRoute, getCurrentMapDestination, mainMapRoute, mapIslands, type MapIslandId } from "@/lib/world-map";
+import { gameImageURL } from "@/lib/game-image-assets";
+import { loadGameImage } from "@/lib/game-image-loader";
+import { loadOceanSceneryImages } from "@/components/ocean-scenery-sprites";
 
 function IslandArt({ sprite }: { sprite: number }) {
   const x = sprite % 4 * 384, y = [35,350,670][Math.floor(sprite / 4)];
-  return <svg className="destination-island-art" viewBox={`${x} ${y} 384 325`} aria-hidden="true"><image href="/images/destination-islands-v1.png" x="0" y="0" width="1536" height="1024" /></svg>;
+  return <svg className="destination-island-art" viewBox={`${x} ${y} 384 325`} aria-hidden="true"><image href={gameImageURL("/images/destination-islands-v1.png")} x="0" y="0" width="1536" height="1024" /></svg>;
 }
 
 function MapRoutes({ route, kind }: { route: MapIslandId[]; kind: "learning" | "game" }) {
@@ -28,6 +31,13 @@ export function WorldMap({ progress, ready, onOpen, onLearn }: { progress: Progr
   const scroll = useRef<HTMLDivElement>(null);
   const focus = getCurrentMapDestination(progress);
   const currentIsland=mapIslands.find(island=>island.id===focus.id)!;
+  useEffect(() => {
+    let mounted = true;
+    // Finish the visible map first; the shared plant preparation warms both games.
+    void Promise.all(["archipelago-ocean-v1", "destination-islands-v1", "fox"].map(name => loadGameImage(`/images/${name}.png`, "high")))
+      .then(() => mounted ? loadOceanSceneryImages() : undefined).catch(() => { /* Game entry offers an explicit retry. */ });
+    return () => { mounted = false; };
+  }, []);
   useEffect(()=>{
     const element=scroll.current;
     if(!ready||!element)return;
@@ -47,7 +57,7 @@ export function WorldMap({ progress, ready, onOpen, onLearn }: { progress: Progr
         <div className="map-scroll-buttons"><button aria-label="地图向左滑动" onClick={() => scroll.current?.scrollBy({ left: -500, behavior: "smooth" })}><ArrowLeft/></button><span>左右滑动去探索</span><button aria-label="地图向右滑动" onClick={() => scroll.current?.scrollBy({ left: 500, behavior: "smooth" })}><ArrowRight/></button></div></div>
     <div className="map-route-legend"><span><i className="legend-learning" aria-hidden="true"/>1–8 建议学习路径</span><span><i className="legend-game" aria-hidden="true"/><Star size={16}/>自由趣味游览线</span><small>点一座小岛，就能走进它的闯关路线</small></div>
     <div className="world-map-scroll" ref={scroll} tabIndex={0} role="region" aria-label="完整探索岛地图">
-      <div className="world-island-art archipelago-map">
+      <div className="world-island-art archipelago-map" style={{backgroundImage:`url('${gameImageURL("/images/archipelago-ocean-v1.png")}')`}}>
         <svg className="ocean-routes" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><MapRoutes route={mainMapRoute} kind="learning"/><MapRoutes route={gameMapRoute} kind="game"/></svg>
         {mapIslands.map(island => {
           const unit=island.kind==="learning"?learningUnits.find(unit=>unit.id===island.id):undefined;
@@ -56,7 +66,7 @@ export function WorldMap({ progress, ready, onOpen, onLearn }: { progress: Progr
           const completed=entries.filter(item=>unit?progress.learning.completed[item.id]:progress.completed[item.id]).length;
           const here=focus.id===island.id,done=completed===entries.length;
           return <button className={`archipelago-destination ${island.kind} ${available?"":"locked"} ${here?"is-current":""} ${done?"is-complete":""}`} key={island.id} data-map-island={island.id} disabled={!ready} style={{left:`${island.x}%`,top:`${island.y}%`}} onClick={()=>unit?onLearn(island.id):onOpen(island.id as DestinationId)} aria-current={here?"location":undefined} aria-label={`${island.step?`学习小路第${island.step}站，`:"趣味支线，"}${island.title}，已完成${completed}/${entries.length}${unit?"站":"关"}，${here?"乐乐在这里，":""}进入闯关地图`}>
-            <span className="island-picture"><IslandArt sprite={island.sprite}/><span className="island-step" aria-hidden="true">{island.step??<Star size={17} fill="currentColor"/>}</span>{here&&<img className="map-roaming-fox" src="/images/fox.png" alt="乐乐站在当前学习的小岛上"/>}</span>
+            <span className="island-picture"><IslandArt sprite={island.sprite}/><span className="island-step" aria-hidden="true">{island.step??<Star size={17} fill="currentColor"/>}</span>{here&&<img className="map-roaming-fox" src={gameImageURL("/images/fox.png")} alt="乐乐站在当前学习的小岛上"/>}</span>
             <span className="island-nameplate"><strong>{island.title}</strong><small>{completed}/{entries.length} {unit?"站 · 听说读写":"关 · 游戏冒险"}</small><span className="island-state">{here?<><span aria-hidden="true">●</span> 乐乐在这里</>:done?<><Check size={14}/>已经走过啦</>:available?<><Play size={12} fill="currentColor"/>点我出发</>:<><LockKeyhole size={13}/>看看小路</>}</span></span>
           </button>;
         })}

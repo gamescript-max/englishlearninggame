@@ -12,6 +12,7 @@ function mount(name: "BubbleGame" | "DeliveryGame" | "ConnectionGame", exercise:
   let props: ExplorationGameProps & { completedWordIds: string[] } = { exercise, disabled: false, busy: false, suspended: false, hinted: false, completedWordIds: [], onAnswer: answer => answers.push(answer) };
   const host = componentHost(new URL("../components/exploration-games.tsx", import.meta.url), name, props, () => ({
     "@/lib/course": course, "@/components/word-art": { WordArt: "WordArt" },
+    "@/lib/game-image-assets": { gameImageURL: (source: string) => source },
   }));
   return { ...host, answers, update(next: Partial<typeof props>) { props = { ...props, ...next }; host.update(props); } };
 }
