@@ -1,4 +1,4 @@
-import { cameraForWorld, type AdventureActor, type AdventureWorld } from "@/lib/adventure-engine";
+import { cameraForWorld, FISH_DRAW_FACTOR, type AdventureActor, type AdventureWorld } from "@/lib/adventure-engine";
 import { getAdventureWord, getOceanSpecies, oceanEvolution, snakeBreeds } from "@/lib/adventure-catalog";
 import art from "@/lib/adventure-art.json";
 import ecologyArt from "@/lib/ecology-art.json";
@@ -6,6 +6,7 @@ import flatSnakeArt from "@/lib/snake-flat-art.json";
 import { advanceSwimState, createSwimState, fishFinRows, fishStrip, sampleSwim, softBodyRow, swimProfileFor, swimStripCount, swimVisualReach, type SwimState } from "@/lib/adventure-motion";
 import { naturalColorArt, naturalOceanArt, naturalOceanAtlases } from "@/lib/natural-ocean-art";
 import { feedingOpen, mouthGeometry, mouthProfile } from "@/lib/adventure-feeding";
+import { paintOceanScenery } from "./ocean-scenery";
 
 export interface AdventureImages {
   snake: HTMLImageElement; words: HTMLImageElement; sea: HTMLImageElement;
@@ -46,34 +47,31 @@ export function paintAdventure(ctx: CanvasRenderingContext2D, world: AdventureWo
   const previewStart = process.env.NODE_ENV === "development" ? performance.now() : undefined;
   const camera = cameraForWorld(world, width, height);
   ctx.clearRect(0, 0, width, height); ctx.fillStyle = "#71d8e7"; ctx.fillRect(0, 0, width, height);
-  ctx.save(); ctx.scale(camera.zoom, camera.zoom); ctx.translate(-camera.x, -camera.y);
   const viewWidth = width / camera.zoom, viewHeight = height / camera.zoom;
+  if (world.mode === "fish") {
+    ctx.drawImage(images.sea, camera.x / world.width * images.sea.width, camera.y / world.height * images.sea.height, viewWidth / world.width * images.sea.width, viewHeight / world.height * images.sea.height, 0, 0, width, height);
+    ctx.fillStyle = "#20b7d712"; ctx.fillRect(0, 0, width, height);
+    paintOceanScenery(ctx, {width, height, cameraX:camera.x, cameraY:camera.y, zoom:camera.zoom, elapsed:world.elapsed, reducedMotion, islands:true});
+  }
+  ctx.save(); ctx.scale(camera.zoom, camera.zoom); ctx.translate(-camera.x, -camera.y);
   let swimRecords = swimming.get(world);
   if (!swimRecords) { swimRecords = new Map(); swimming.set(world,swimRecords); }
   if (swimRecords.size > 180) { const alive = new Set(["player",...world.actors.filter(a=>!a.consumed).map(a=>a.id)]); for (const id of swimRecords.keys()) if (!alive.has(id)) swimRecords.delete(id); }
   const inView = (x: number, y: number, margin: number) => x + margin >= camera.x && x - margin <= camera.x + viewWidth && y + margin >= camera.y && y - margin <= camera.y + viewHeight;
   const seenNames = new Set<string>(), namedActors = new Set<string>();
   const fishNeighbors = world.actors.filter(actor => !actor.consumed && actor.speciesId && !actor.wordId && actor.kind !== "mission" && inView(actor.x,actor.y,0)).sort((a,b) => Math.hypot(a.x-world.player.x,a.y-world.player.y)-Math.hypot(b.x-world.player.x,b.y-world.player.y));
-  const finActors = new Set(fishNeighbors.filter(actor => actor.radius * 2.7 * camera.zoom >= 85 && ["tail", "flap"].includes(swimProfileFor(actor.speciesId!).family)).slice(0, 3).map(actor => actor.id));
+  const finActors = new Set(fishNeighbors.filter(actor => actor.radius * FISH_DRAW_FACTOR.ambient * camera.zoom >= 85 && ["tail", "flap"].includes(swimProfileFor(actor.speciesId!).family)).slice(0, 3).map(actor => actor.id));
   for (const larger of [false,true]) {
     let count = 0;
     for (const actor of fishNeighbors) {
       if ((actor.radius >= world.player.radius*.88) !== larger || seenNames.has(actor.speciesId!)) continue;
       namedActors.add(actor.id); seenNames.add(actor.speciesId!);
-      if (++count >= (larger ? 3 : 5)) break;
+      if (++count >= (larger ? 2 : 5)) break;
     }
   }
-  ctx.drawImage(images.sea, camera.x / world.width * images.sea.width, camera.y / world.height * images.sea.height, viewWidth / world.width * images.sea.width, viewHeight / world.height * images.sea.height, camera.x, camera.y, viewWidth, viewHeight);
-  ctx.fillStyle = world.mode === "fish" ? "#20b7d726" : "#73d6a636"; ctx.fillRect(camera.x, camera.y, viewWidth, viewHeight);
-  // Slow water light stays below every creature and freezes with the simulation.
-  if (world.mode === "fish") {
-    ctx.save(); ctx.strokeStyle = "#dbffff18"; ctx.lineWidth = 2 / camera.zoom;
-    for (let row=0;row<6;row++) {
-      ctx.beginPath();
-      for (let point=0;point<=18;point++) { const x=camera.x+point*viewWidth/18,y=camera.y+(row+.5)*viewHeight/6+Math.sin(x*.012+world.elapsed*.55+row)*14; if(point===0)ctx.moveTo(x,y);else ctx.lineTo(x,y); }
-      ctx.stroke();
-    }
-    ctx.restore();
+  if (world.mode === "snake") {
+    ctx.drawImage(images.sea, camera.x / world.width * images.sea.width, camera.y / world.height * images.sea.height, viewWidth / world.width * images.sea.width, viewHeight / world.height * images.sea.height, camera.x, camera.y, viewWidth, viewHeight);
+    ctx.fillStyle = "#73d6a636"; ctx.fillRect(camera.x, camera.y, viewWidth, viewHeight);
   }
   ctx.strokeStyle = "#ffffff70"; ctx.lineWidth = 5; ctx.strokeRect(4, 4, world.width - 8, world.height - 8);
   function sprite(image: CanvasImageSource, rect: Rect & {flipX?:boolean}, x: number, y: number, radius: number, heading = 0, factor = 2.5) {
@@ -253,7 +251,7 @@ export function paintAdventure(ctx: CanvasRenderingContext2D, world: AdventureWo
     if (species) {
       const rect = naturalOceanArt(species.artIndex);
       const isolated = images.oceanSprites?.get(species.artIndex);
-      swimmingSprite(isolated??images.ocean[rect.atlas],isolated?{...rect,x:0,y:0}:rect,actor,actor.id,species.id,2.7);
+      swimmingSprite(isolated??images.ocean[rect.atlas],isolated?{...rect,x:0,y:0}:rect,actor,actor.id,species.id,FISH_DRAW_FACTOR.ambient);
       const smaller = actor.radius < world.player.radius * .88;
       if (namedActors.has(actor.id)) label(`${smaller ? `+${actor.kind === "food" ? 1 : 3} 成长` : "比我大"} · ${species.en}`, actor.x, actor.y - actor.radius * 1.3 - 18, smaller ? "edible" : "larger");
     } else {
@@ -286,7 +284,7 @@ export function paintAdventure(ctx: CanvasRenderingContext2D, world: AdventureWo
     const species = getOceanSpecies(player.speciesId ?? oceanEvolution[player.stage].speciesId)!;
     const rect = naturalOceanArt(species.artIndex);
     const isolated = images.oceanSprites?.get(species.artIndex);
-    swimmingSprite(isolated??images.ocean[rect.atlas],isolated?{...rect,x:0,y:0}:rect,player,"player",species.id,3.2,true);
+    swimmingSprite(isolated??images.ocean[rect.atlas],isolated?{...rect,x:0,y:0}:rect,player,"player",species.id,FISH_DRAW_FACTOR.player,true);
     label(`你 · ${species.en} · ${player.xp} 成长`, player.x, player.y - player.radius * 1.7 - 13, "neutral", 16);
   } else { snake(player.x, player.y, player.radius, player.heading, player.body, "red", player.collectedWords, player.breedId); label(`你 · ${player.length} 节`, player.x, player.y - player.radius * 1.8 - 8); }
   paintLabels();ctx.restore();

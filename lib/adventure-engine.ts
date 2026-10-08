@@ -77,6 +77,8 @@ export interface AdventureWorld {
   cardCursor?: number;
   /** Camera annotation lets repopulation happen outside the visible rectangle. */
   viewBounds?: Bounds;
+  /** Actual prey budget follows the device viewport; cards use a separate quota. */
+  oceanPreyBudget?: number;
 }
 export type AdventureEvent = {
   kind: "mission" | "eat" | "bump" | "death";
@@ -90,6 +92,8 @@ export type AdventureEvent = {
 };
 export const adventureStageThresholds = oceanEvolution.map(stage => stage.xp);
 export const ADVENTURE_MOVE_SPEED = { fish: 300, snake: 330 } as const;
+/** Shared sprite-width factors keep the larger-fish game rule visibly larger. */
+export const FISH_DRAW_FACTOR = { player: 3.2, ambient: 2.7 } as const;
 export const CARD_GROWTH = 50;
 export const SHELL_TASK_GROWTH = 100;
 export const CARD_BOOST_SECONDS = 6;
@@ -99,8 +103,14 @@ const stepSeconds = 1 / 120;
 const maxBodyLength = 160;
 const maxLogicalLength = 1_000_000;
 const maxActors = 180;
-const foodCount = (mode: AdventureMode) => mode === "fish" ? 112 : 116;
-const botCount = (mode: AdventureMode) => mode === "fish" ? 28 : 14;
+const oceanCardCount = 10;
+const oceanPreyCount = 12;
+const oceanPhonePreyCount = 8;
+const oceanLargerRadiusMin = 1.36;
+const oceanLargerRadiusMax = 1.41;
+const foodCount = (mode: AdventureMode) => mode === "fish" ? oceanCardCount + oceanPreyCount : 116;
+const hazardCount = (world: AdventureWorld) => world.mode === "fish" && world.player.stage < oceanEvolution.length - 1 ? 1 : 0;
+const botCount = (world: AdventureWorld) => world.mode === "snake" ? 14 : hazardCount(world);
 const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value));
 const distance = (a: Vec, b: Vec) => Math.hypot(a.x - b.x, a.y - b.y);
 const distanceSquared = (a: Vec, b: Vec) => (a.x - b.x) ** 2 + (a.y - b.y) ** 2;
@@ -140,19 +150,22 @@ function freePosition(world: AdventureWorld, radius: number, nearby = false, ini
   for (let attempt = 0; attempt < (avoidBodies ? 80 : 42); attempt++) {
     let point: Vec;
     if (initial && nearby) {
-      const angle = random(world) * Math.PI * 2, range = world.player.radius + radius + 75 + random(world) * initialSpread;
-      point = { x: world.player.x + Math.cos(angle) * range, y: world.player.y + Math.sin(angle) * range };
+      if (world.mode === "fish" && !card && !avoidBodies) point = { x: world.player.x - 350 + random(world) * 700, y: world.player.y - 245 + random(world) * 490 };
+      else {
+        const angle = random(world) * Math.PI * 2, range = world.player.radius + radius + 75 + random(world) * initialSpread;
+        point = { x: world.player.x + Math.cos(angle) * range, y: world.player.y + Math.sin(angle) * range };
+      }
     } else if (nearby && attempt < 42) {
       const directionX = Math.cos(world.player.heading), directionY = Math.sin(world.player.heading);
       const side = forward && attempt < 24 ? Math.abs(directionX) > Math.abs(directionY) ? directionX < 0 ? 0 : 1 : directionY < 0 ? 2 : 3 : Math.floor(random(world) * 4);
-      const offset = radius + 45 + random(world) * 80;
+      const offset = forward && world.mode === "fish" ? radius + 14 + random(world) * 35 : radius + 45 + random(world) * 80;
       point = side < 2
         ? { x: side === 0 ? view.left - offset : view.right + offset, y: view.top + random(world) * (view.bottom - view.top) }
         : { x: view.left + random(world) * (view.right - view.left), y: side === 2 ? view.top - offset : view.bottom + offset };
     } else point = worldPosition(world, radius + 12);
     point = { x: clamp(point.x, radius + 12, world.width - radius - 12), y: clamp(point.y, radius + 12, world.height - radius - 12) };
     if (!initial && insideView(world, point, radius + 12)) continue;
-    let space = distance(point, world.player) - world.player.radius - radius - 70;
+    let space = distance(point, world.player) - world.player.radius - radius - (initial && world.mode === "fish" && !card && !avoidBodies ? 28 : 70);
     for (const actor of world.actors) {
       if (actor.consumed) continue;
       const separation = card && actor.wordId ? 150 : actor.kind === "mission" ? 35 : actor.kind === "food" ? 8 : 25;
@@ -190,38 +203,49 @@ function fishSpecies(world: AdventureWorld, larger: boolean) {
   const stage = world.player.stage;
   const candidates = oceanSpecies.filter(species => {
     const level = oceanSizeLevel(species.id);
-    return Math.abs(level - stage) <= 2 && (larger ? level >= stage : level <= stage);
+    // Every earlier species remains eligible, including the first tiny animals.
+    // The first form has juvenile neighbours from its own size level.
+    return larger ? level > stage && level <= stage + 2 : level < stage || stage === 0 && level === 0;
   });
-  return candidates[Math.floor(random(world) * candidates.length)] ?? oceanSpecies[0];
+  return candidates.length ? candidates[Math.floor(random(world) * candidates.length)] : undefined;
+}
+function preyRadius(world: AdventureWorld, speciesId: string) {
+  // Old tiny species stay tiny after the player grows; later prey never fills the screen.
+  return Math.min(40, 8 + oceanSizeLevel(speciesId) * 1.4) * (.8 + random(world) * .2);
+}
+function largerRadius(world: AdventureWorld) {
+  return world.player.radius * (oceanLargerRadiusMin + random(world) * (oceanLargerRadiusMax - oceanLargerRadiusMin));
 }
 function cardWord(world: AdventureWorld) {
   world.cardCursor ??= Math.floor(random(world) * adventureCardWordIds.length);
   return adventureCardWordIds[world.cardCursor++ % adventureCardWordIds.length];
 }
-function addFood(world: AdventureWorld, index = 0, initial = false, forward = false) {
-  const radius = world.mode === "fish" ? 7 + random(world) * Math.max(7, world.player.radius * .48) : 10 + random(world) * 4;
-  const quota = world.mode === "fish" ? 10 : 14;
+function addFood(world: AdventureWorld, index = 0, initial = false, forward = false, fishCard = false) {
+  const species = world.mode === "fish" ? fishSpecies(world, false)! : undefined;
+  const radius = species ? preyRadius(world, species.id) : 10 + random(world) * 4;
+  const quota = world.mode === "fish" ? oceanCardCount : 14;
   const liveCards = world.actors.filter(actor => actor.kind === "food" && actor.card && !actor.remnant && !actor.consumed).length;
-  const card = !forward && liveCards < quota && (initial ? index % 12 === 0 : random(world) < .18);
-  const position = freePosition(world, radius, initial ? index < (world.mode === "fish" ? 48 : 62) : true, initial, card ? 580 : world.mode === "fish" ? world.player.stage >= 20 ? 300 : 450 : 320, false, card, forward);
-  const species = world.mode === "fish" ? fishSpecies(world, false) : undefined;
+  const card = world.mode === "fish" ? fishCard : !forward && liveCards < quota && (initial ? index % 12 === 0 : random(world) < .18);
+  const nearby = initial ? world.mode === "fish" ? card ? index < 4 : index < oceanCardCount + 10 : index < 62 : true;
+  let position = freePosition(world, radius, nearby, initial, card ? 580 : 320, false, card, forward);
+  if (world.mode === "fish" && initial && !card && !nearby) position = freePosition(world, radius);
   world.actors.push({ ...position, id: id(world, "food"), kind: "food", color: colors[index % colors.length], radius, heading: random(world) * Math.PI * 2, wander: random(world) * Math.PI * 2, ...(species ? { speciesId: species.id, tier: species.tier } : {}), ...(card ? { card: true, wordId: cardWord(world) } : {}) });
 }
 function addBot(world: AdventureWorld, index = 0, initial = false) {
   const mode = world.mode;
-  const larger = index % 4 !== 0;
-  const radius = mode === "snake" ? 15 + index % 4 * 2 : world.player.radius * (larger ? 1.25 + (index % 3) * .19 : .58);
+  const species = mode === "fish" ? fishSpecies(world, true) : undefined;
+  if (mode === "fish" && !species) return;
+  const radius = mode === "snake" ? 15 + index % 4 * 2 : largerRadius(world);
   let position = freePosition(world, radius, index < (mode === "snake" ? 8 : 20), initial, 480, true);
   if (mode === "snake" && initial && index < 2) {
     // At least two neighbours are visible on a tablet's first frame. Their tails
     // extend away from the child, and the English choices use a closer ring.
     position = { x: world.player.x + (index === 0 ? -1 : 1) * 335, y: world.player.y + (index === 0 ? -1 : 1) * 90 };
   }
-  if (mode === "fish" && initial && (index === 1 || index === 2)) position = { x: world.player.x + (index === 1 ? -1 : 1) * 400, y: world.player.y + (index === 1 ? -1 : 1) * 70 };
+  if (mode === "fish" && initial) position = { x: world.player.x - 430, y: world.player.y - 60 };
   // Bodies point away from the player at spawn rather than silently crossing its head.
   const heading = Math.atan2(world.player.y - position.y, world.player.x - position.x);
   const breed = snakeBreeds[index % snakeBreeds.length];
-  const species = mode === "fish" ? fishSpecies(world, larger) : undefined;
   const length = mode === "snake" ? 3 + index % 12 : 1;
   const actor: AdventureActor = { ...position, id: id(world, "bot"), kind: "bot", color: colors[index % colors.length], radius, heading, stage: index % 6, spawnIndex: index, wander: random(world) * Math.PI * 2, body: [], length, collectedWords: [], trail: [{ ...position }], ...(species ? { speciesId: species.id, tier: species.tier } : { breedId: breed.id }) };
   actor.body = bodyAlongTrail(actor, length, radius * 1.65, world);
@@ -229,8 +253,10 @@ function addBot(world: AdventureWorld, index = 0, initial = false) {
   world.actors.push(actor);
 }
 function addHazard(world: AdventureWorld, index: number, initial = false) {
-  const radius = world.player.radius * (1.55 + index % 3 * .22);
-  const position = freePosition(world, radius, !initial || index < 6, initial), species = fishSpecies(world, true);
+  const species = fishSpecies(world, true);
+  if (!species) return;
+  const radius = largerRadius(world);
+  const position = initial ? { x: world.player.x + 430, y: world.player.y + 60 } : freePosition(world, radius, true);
   world.actors.push({ ...position, id: id(world, "hazard"), kind: "hazard", color: colors[index % colors.length], radius, heading: random(world) * Math.PI * 2, wander: random(world) * Math.PI * 2, stage: world.player.stage + 1, speciesId: species.id, tier: species.tier });
 }
 export function createAdventureWorld(mode: AdventureMode, seed = 1, xp = 0, collectedWords: string[] = [], runLength?: number): AdventureWorld {
@@ -241,12 +267,13 @@ export function createAdventureWorld(mode: AdventureMode, seed = 1, xp = 0, coll
   updatePlayerSpecies(world);
   player.body = bodyAlongTrail(player, player.length, player.radius * 1.65, world);
   player.bounds = bodyBounds(player.body);
-  // Reserve two larger neighbours first, then put plentiful small prey around
-  // them. Even the last fantasy form shares the view with something larger.
-  if (mode === "fish") { addBot(world, 1, true); addBot(world, 2, true); }
-  for (let index = 0; index < foodCount(mode); index++) addFood(world, index, true);
-  for (let index = 0; index < botCount(mode); index++) if (mode !== "fish" || index !== 1 && index !== 2) addBot(world, index, true);
-  if (mode === "fish") for (let index = 0; index < 8; index++) addHazard(world, index, true);
+  // Two larger individuals is the whole ocean's cap; the final form has none.
+  if (mode === "fish") {
+    for (let index = 0; index < botCount(world); index++) addBot(world, index, true);
+    for (let index = 0; index < hazardCount(world); index++) addHazard(world, index, true);
+  }
+  for (let index = 0; index < foodCount(mode); index++) addFood(world, index, true, false, mode === "fish" && index < oceanCardCount);
+  if (mode === "snake") for (let index = 0; index < botCount(world); index++) addBot(world, index, true);
   return world;
 }
 /** Multiple copies are spread over the sea; one of each option stays reachable. */
@@ -317,9 +344,13 @@ function grow(world: AdventureWorld, wordId?: string, amount = 1, lengthAmount =
   world.player.xp = Math.min(maxGrowth, world.player.xp + amount); world.sessionXP = Math.min(maxGrowth, world.sessionXP + amount); world.player.stage = stageForXP(world.player.xp, world.mode); world.player.radius = playerRadius(world.mode, world.player.stage);
   updatePlayerSpecies(world);
   if (world.mode === "fish" && previousStage !== world.player.stage) {
-    // Keep the actual animals within the new five-band neighbourhood, including
-    // old generations. Mission choices and English cards retain their task state.
-    for (const actor of world.actors) if (actor.speciesId && !actor.wordId && actor.kind !== "mission" && Math.abs(oceanSizeLevel(actor.speciesId) - world.player.stage) > 2) actor.consumed = true;
+    // Earlier prey remains in the sea. Refresh only the two larger neighbours
+    // when their species no longer belongs to a later size level.
+    for (const actor of world.actors) if ((actor.kind === "bot" || actor.kind === "hazard") && actor.speciesId) {
+      const level = oceanSizeLevel(actor.speciesId);
+      if (level <= world.player.stage || level > world.player.stage + 2) actor.consumed = true;
+      else actor.radius = Math.max(actor.radius, world.player.radius * oceanLargerRadiusMin);
+    }
   }
   world.player.x = clamp(world.player.x, world.player.radius + 4, world.width - world.player.radius - 4); world.player.y = clamp(world.player.y, world.player.radius + 4, world.height - world.player.radius - 4);
   if (world.mode === "snake") world.player.length = Math.min(maxLogicalLength, world.player.length + lengthAmount);
@@ -459,29 +490,50 @@ function trimActors(world: AdventureWorld) {
 }
 function replenish(world: AdventureWorld) {
   world.actors = world.actors.filter(actor => !actor.consumed);
+  if (world.mode === "fish") { replenishOcean(world); return; }
   const due = world.pendingRespawns.filter(entry => entry.at <= world.elapsed);
   world.pendingRespawns = world.pendingRespawns.filter(entry => entry.at > world.elapsed);
   for (const entry of due) addBot(world, entry.slot);
   const occupied = new Set([...world.actors.filter(actor => actor.kind === "bot").map(actor => actor.spawnIndex), ...world.pendingRespawns.map(entry => entry.slot)]);
-  for (let slot = 0; slot < botCount(world.mode); slot++) if (!occupied.has(slot)) addBot(world, slot);
+  for (let slot = 0; slot < botCount(world); slot++) if (!occupied.has(slot)) addBot(world, slot);
   const missing = foodCount(world.mode) - world.actors.filter(actor => actor.kind === "food").length;
   for (let index = 0; index < missing; index++) addFood(world, world.nextId + index);
-  if (world.mode === "fish") {
-    const missingHazards = 8 - world.actors.filter(actor => actor.kind === "hazard").length;
-    for (let index = 0; index < missingHazards; index++) addHazard(world, index);
-  }
   if (world.elapsed >= world.nextEcologyAt) {
-    world.nextEcologyAt = world.elapsed + (world.mode === "fish" ? getAdventureSpeedBoost(world).multiplier > 1 ? .15 : .3 : 1);
+    world.nextEcologyAt = world.elapsed + 1;
     // Far-away ordinary life recycles outside the camera; existing visible fish never blink away.
-    const reserve = world.mode === "fish" && world.viewBounds && world.actors.filter(actor => actor.kind === "food" && !actor.wordId && insideView(world, actor)).length < 20;
-    const farFoods = world.actors.filter(actor => actor.kind === "food" && !actor.wordId && (!actor.remnant || world.elapsed - (actor.bornAt ?? 0) > 20) && (reserve || distanceSquared(actor, world.player) > 1200 ** 2) && !insideView(world, actor, actor.radius));
-    for (const actor of farFoods.slice(0, reserve ? 12 : 8)) { world.actors = world.actors.filter(other => other.id !== actor.id); addFood(world, world.nextId, false, Boolean(reserve)); }
-    if (world.mode === "fish") {
-      const largerNearby = world.actors.filter(actor => (actor.kind === "bot" || actor.kind === "hazard") && actor.radius > world.player.radius * 1.12 && distanceSquared(actor, world.player) < 1100 ** 2);
-      if (largerNearby.length < 6) {
-        const farHazards = world.actors.filter(actor => actor.kind === "hazard" && !insideView(world, actor, actor.radius) && (distanceSquared(actor, world.player) > 1100 ** 2 || actor.radius <= world.player.radius * 1.12));
-        for (const actor of farHazards.slice(0, 6 - largerNearby.length)) { world.actors = world.actors.filter(other => other.id !== actor.id); addHazard(world, world.nextId); }
-      }
+    const farFoods = world.actors.filter(actor => actor.kind === "food" && !actor.wordId && (!actor.remnant || world.elapsed - (actor.bornAt ?? 0) > 20) && distanceSquared(actor, world.player) > 1200 ** 2 && !insideView(world, actor, actor.radius));
+    for (const actor of farFoods.slice(0, 8)) { world.actors = world.actors.filter(other => other.id !== actor.id); addFood(world, world.nextId); }
+  }
+  trimActors(world);
+}
+function setOceanPreyBudget(world: AdventureWorld, budget: number) {
+  world.oceanPreyBudget = budget;
+  const prey = world.actors.filter(actor => actor.kind === "food" && !actor.wordId);
+  if (prey.length <= budget) return;
+  // A viewport resize lowers the actual population, removing distant prey first.
+  const remove = new Set(prey.sort((a, b) => distanceSquared(b, world.player) - distanceSquared(a, world.player)).slice(0, prey.length - budget).map(actor => actor.id));
+  world.actors = world.actors.filter(actor => !remove.has(actor.id));
+}
+function replenishOcean(world: AdventureWorld) {
+  const budget = world.oceanPreyBudget ?? oceanPreyCount;
+  setOceanPreyBudget(world, budget);
+  for (let index = world.actors.filter(actor => actor.kind === "bot").length; index < botCount(world); index++) addBot(world, index);
+  for (let index = world.actors.filter(actor => actor.kind === "hazard").length; index < hazardCount(world); index++) addHazard(world, index);
+  const missingCards = oceanCardCount - world.actors.filter(actor => actor.kind === "food" && actor.wordId).length;
+  for (let index = 0; index < missingCards; index++) addFood(world, world.nextId, false, false, true);
+  const missingPrey = budget - world.actors.filter(actor => actor.kind === "food" && !actor.wordId).length;
+  for (let index = 0; index < missingPrey; index++) addFood(world, world.nextId, false, true);
+  if (world.elapsed >= world.nextEcologyAt) {
+    world.nextEcologyAt = world.elapsed + (getAdventureSpeedBoost(world).multiplier > 1 ? .1 : .2);
+    // A small off-screen reserve enters ahead of the child. Recycling never
+    // increases the global budget or removes a currently visible animal.
+    const nearbyTarget = budget - 2;
+    const nearPrey = world.actors.filter(actor => actor.kind === "food" && !actor.wordId && insideView(world, actor)).length;
+    const farPrey = world.actors.filter(actor => actor.kind === "food" && !actor.wordId && !insideView(world, actor, actor.radius) && (nearPrey < nearbyTarget || distanceSquared(actor, world.player) > 1200 ** 2));
+    for (const actor of farPrey.slice(0, Math.min(3, Math.max(0, nearbyTarget - nearPrey)))) { world.actors = world.actors.filter(other => other.id !== actor.id); addFood(world, world.nextId, false, true); }
+    for (const actor of world.actors.filter(actor => (actor.kind === "bot" || actor.kind === "hazard") && !insideView(world, actor, actor.radius) && distanceSquared(actor, world.player) > 1100 ** 2)) {
+      world.actors = world.actors.filter(other => other.id !== actor.id);
+      if (actor.kind === "bot") addBot(world, actor.spawnIndex); else addHazard(world, world.nextId);
     }
   }
   trimActors(world);
@@ -513,5 +565,9 @@ export function cameraForWorld(world: AdventureWorld, viewportW: number, viewpor
   const zoom = Math.max(clamp(Math.min(width / 780, height / 560, 1.15), .42, 1.15), width / world.width, height / world.height), visibleWidth = width / zoom, visibleHeight = height / zoom;
   const x = clamp(world.player.x - visibleWidth / 2, 0, Math.max(0, world.width - visibleWidth)), y = clamp(world.player.y - visibleHeight / 2, 0, Math.max(0, world.height - visibleHeight));
   world.viewBounds = { left: x, right: x + visibleWidth, top: y, bottom: y + visibleHeight };
+  if (world.mode === "fish") {
+    const budget = Math.min(width, height) < 500 ? oceanPhonePreyCount : oceanPreyCount;
+    if (world.oceanPreyBudget !== budget) setOceanPreyBudget(world, budget);
+  }
   return { x, y, zoom };
 }

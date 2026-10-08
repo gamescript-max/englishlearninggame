@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { advanceAdventure, adventureStageThresholds, cameraForWorld, createAdventureWorld, setWorldMission, stageForXP, type AdventureActor, type AdventureEvent, type AdventureWorld, type MissionSpec } from "../lib/adventure-engine";
-import { adventureVocabulary, getOceanSpecies, oceanEvolution, oceanSizeLevel, snakeBreeds } from "../lib/adventure-catalog";
+import { advanceAdventure, adventureStageThresholds, cameraForWorld, createAdventureWorld, FISH_DRAW_FACTOR, setWorldMission, stageForXP, type AdventureActor, type AdventureEvent, type AdventureWorld, type MissionSpec } from "../lib/adventure-engine";
+import { adventureVocabulary, getOceanSpecies, oceanEvolution, oceanSizeLevel, oceanSpecies, snakeBreeds } from "../lib/adventure-catalog";
 
 const safeGates = { answerEnabled: true, safe: true };
 const moveRight = { direction: { x: 1, y: 0 }, moving: true };
@@ -12,6 +12,21 @@ function eatNormal(world: AdventureWorld, wordId?: string) {
   touchesHead(world, food);
   if (wordId) food.wordId = wordId;
   return advanceAdventure(world, 1 / 60, moveRight, safeGates);
+}
+function ordinaryFish(world: AdventureWorld) {
+  return world.actors.filter(actor => !actor.consumed && actor.kind !== "mission" && !actor.wordId);
+}
+function assertOceanPopulation(world: AdventureWorld, phone = false) {
+  const fish = ordinaryFish(world), prey = fish.filter(actor => actor.kind === "food"), larger = fish.filter(actor => actor.kind !== "food");
+  assert.ok(fish.length <= (phone ? 10 : 14), "the actual population stays sparse, including off-screen fish");
+  assert.ok(larger.length <= 2, "only two larger individuals may exist in the whole ocean");
+  assert.ok(new Set(larger.map(actor => actor.speciesId)).size <= 2, "larger fish use at most two species");
+  assert.ok(prey.every(actor => actor.radius < world.player.radius / 1.12 && actor.radius <= 40), "all ordinary prey is edible and its own size stays bounded");
+  assert.ok(prey.every(actor => oceanSizeLevel(actor.speciesId!) < world.player.stage || world.player.stage === 0 && oceanSizeLevel(actor.speciesId!) === 0), "prey comes from any earlier size level, with juveniles at the first form");
+  assert.ok(larger.every(actor => oceanSizeLevel(actor.speciesId!) > world.player.stage && oceanSizeLevel(actor.speciesId!) <= world.player.stage + 2 && actor.radius > world.player.radius * 1.12 && actor.radius <= world.player.radius * 1.42), "later species and their visible sizes agree with their larger role");
+  const playerWidth = world.player.radius * FISH_DRAW_FACTOR.player;
+  assert.ok(larger.every(actor => actor.radius * FISH_DRAW_FACTOR.ambient >= playerWidth * 1.14 && actor.radius * FISH_DRAW_FACTOR.ambient <= playerWidth * 1.2), "every dangerous fish visibly exceeds the player's width without becoming much larger");
+  assert.equal(world.actors.filter(actor => actor.kind === "food" && actor.wordId).length, 10, "English cards keep their separate quota");
 }
 
 test("only successful fish bites start a feeding animation, including each partial counting target",()=>{
@@ -146,7 +161,7 @@ test("missions stay nearby and reachable at map edges; bots consume snacks but n
     const events: AdventureEvent[] = [];
     for (let index = 0; index < 800 && !world.missionComplete; index++) events.push(...advanceAdventure(world, 1 / 60, { followId: target.id, moving: true }, safeGates));
     assert.ok(events.some(event => event.kind === "mission" && event.choiceId === "blue" && event.complete), "a small player can reach and collect the marked big target");
-    assert.equal(world.actors.filter(actor => actor.kind === "bot").length + world.pendingRespawns.length, mode === "snake" ? 14 : 28);
+    assert.equal(world.actors.filter(actor => actor.kind === "bot").length + world.pendingRespawns.length, mode === "snake" ? 14 : 1);
   }
   const world = createAdventureWorld("snake", 27);
   const bot = world.actors.find(actor => actor.kind === "bot")!;
@@ -233,7 +248,7 @@ test("a big snake can swallow a shorter computer snake; one starting segment can
   assert.ok(large.pendingRespawns.some(entry => entry.slot === shortBot.spawnIndex), "replacement waits briefly before swimming in off screen");
 });
 
-test("every ocean growth form has many edible species and visibly larger neighbours", () => {
+test("every ocean growth form starts with sparse edible prey and at most two later neighbours", () => {
   assert.equal(adventureStageThresholds.length, 28);
   for (const seed of [1, 31, 20261005]) for (const xp of adventureStageThresholds) {
     const world = createAdventureWorld("fish", seed, xp), camera = cameraForWorld(world, 1180, 600);
@@ -241,25 +256,93 @@ test("every ocean growth form has many edible species and visibly larger neighbo
     assert.equal(world.player.speciesId, oceanEvolution[world.player.stage].speciesId);
     assert.ok(getOceanSpecies(world.player.speciesId!)?.en);
     const visible = world.actors.filter(actor => actor.x >= camera.x && actor.x <= camera.x + 1180 / camera.zoom && actor.y >= camera.y && actor.y <= camera.y + 600 / camera.zoom);
-    assert.ok(visible.filter(actor => actor.radius < world.player.radius / 1.12).length >= 10, `small prey remain available at XP ${xp}`);
-    assert.ok(visible.filter(actor => actor.radius > world.player.radius * 1.12).length >= 2, `larger neighbours remain visible at XP ${xp}`);
+    assert.ok(visible.filter(actor => actor.kind === "food" && !actor.wordId).length >= 10, `small prey remain available at XP ${xp}`);
+    assert.equal(visible.filter(actor => actor.kind === "bot" || actor.kind === "hazard").length, world.player.stage < oceanEvolution.length - 1 ? 2 : 0, `later neighbours match the remaining catalogue at XP ${xp}`);
+    assertOceanPopulation(world);
     assert.ok(world.actors.filter(actor => actor.kind !== "mission").every(actor => actor.speciesId && getOceanSpecies(actor.speciesId)), "all ocean life is a named species");
     assert.ok(world.actors.every(actor => Math.hypot(actor.x - world.player.x, actor.y - world.player.y) >= world.player.radius + actor.radius), "safe spawn keeps heads separate");
-    assert.ok(world.actors.filter(actor => !actor.wordId).every(actor => Math.abs(oceanSizeLevel(actor.speciesId!) - world.player.stage) <= 2), "only the current growth band and two adjacent bands appear");
   }
   assert.equal(stageForXP(11500, "fish"), 19);
   assert.equal(stageForXP(11500, "snake"), 5, "snake visual stage stays in its six-level artwork range");
 });
 
-test("ocean growth removes old species beyond two bands and replenishes nearby levels", () => {
+test("growth keeps old small species and replenishes only the capped later neighbours", () => {
   for (const threshold of adventureStageThresholds.slice(1)) {
     const world = createAdventureWorld("fish", 72, threshold - 1);
+    const oldPrey = world.actors.filter(actor => actor.kind === "food" && !actor.wordId).at(-1)!;
+    oldPrey.x = 100; oldPrey.y = 100;
+    const before = { id: oldPrey.id, speciesId: oldPrey.speciesId, radius: oldPrey.radius };
     eatNormal(world);
     assert.equal(world.player.stage, stageForXP(threshold));
-    assert.ok(world.actors.filter(actor => !actor.consumed && actor.speciesId && !actor.wordId).every(actor => Math.abs(oceanSizeLevel(actor.speciesId!) - world.player.stage) <= 2));
+    const retained = world.actors.find(actor => actor.id === before.id)!;
+    assert.ok(retained, "growth alone does not cull an earlier prey species");
+    assert.equal(retained.speciesId, before.speciesId); assert.equal(retained.radius, before.radius);
+    assertOceanPopulation(world);
   }
   const start = createAdventureWorld("fish", 4);
   assert.ok(start.actors.every(actor => getOceanSpecies(actor.speciesId!)!.tier <= 2), "large species are absent at the start");
+});
+
+test("the complete earlier-species pool can reappear in mid and late oceans", () => {
+  for (const xp of [11500, 75000]) {
+    const stage = stageForXP(xp), eligible = oceanSpecies.filter(species => oceanSizeLevel(species.id) < stage), sampled = new Set<string>();
+    for (let seed = 1; seed <= 256; seed++) {
+      const world = createAdventureWorld("fish", seed, xp);
+      for (const actor of ordinaryFish(world).filter(actor => actor.kind === "food")) sampled.add(actor.speciesId!);
+    }
+    assert.deepEqual([...sampled].sort(), eligible.map(species => species.id).sort(), "random prey is not restricted to the latest two size levels");
+    for (const id of ["plankton", "fish-eggs", "fish-fry", "guppy"]) assert.ok(sampled.has(id), `${id} remains available after substantial growth`);
+  }
+});
+
+test("phone and resized cameras lower the real population while preserving English learning objects", () => {
+  const world = createAdventureWorld("fish", 84, 11500);
+  cameraForWorld(world, 1180, 600);
+  setWorldMission(world, { ...blueMission, requiredCount: 2 });
+  const cards = world.actors.filter(actor => actor.kind === "food" && actor.wordId).map(actor => [actor.id, actor.wordId]);
+  const targets = world.actors.filter(actor => actor.kind === "mission").map(actor => actor.id);
+  cameraForWorld(world, 390, 700);
+  assert.equal(ordinaryFish(world).filter(actor => actor.kind === "food").length, 8);
+  assertOceanPopulation(world, true);
+  assert.deepEqual(world.actors.filter(actor => actor.kind === "food" && actor.wordId).map(actor => [actor.id, actor.wordId]), cards);
+  assert.deepEqual(world.actors.filter(actor => actor.kind === "mission").map(actor => actor.id), targets);
+  assert.equal(world.missionProgress, 0);
+  cameraForWorld(world, 1180, 600);
+  const before = new Set(world.actors.map(actor => actor.id));
+  advanceAdventure(world, 1 / 120, moveRight, { ...safeGates, answerEnabled: false, cardEnabled: false });
+  assert.equal(ordinaryFish(world).filter(actor => actor.kind === "food").length, 12);
+  for (const actor of ordinaryFish(world).filter(actor => !before.has(actor.id))) {
+    const view = world.viewBounds!;
+    assert.ok(actor.x < view.left || actor.x > view.right || actor.y < view.top || actor.y > view.bottom, "an enlarged viewport receives new prey from outside the view");
+  }
+  assertOceanPopulation(world);
+});
+
+test("card and shell growth keep their rewards and population rules across multi-stage jumps", () => {
+  for (const xp of [19, 74850]) {
+    const world = createAdventureWorld("fish", 68, xp);
+    cameraForWorld(world, 1180, 600);
+    world.boostRngState = 1000;
+    const oldPrey = ordinaryFish(world).filter(actor => actor.kind === "food").at(-1)!;
+    oldPrey.x = 100; oldPrey.y = 100;
+    const card = world.actors.find(actor => actor.kind === "food" && actor.wordId)!;
+    touchesHead(world, card);
+    const events = advanceAdventure(world, 1 / 120, moveRight, safeGates);
+    assert.ok(events.some(event => event.kind === "eat" && event.pickupId === card.id && event.amount === 50));
+    assert.equal(world.player.xp, xp + 50);
+    assertOceanPopulation(world);
+    setWorldMission(world, { ...blueMission, requiredCount: 2 });
+    const targets = world.actors.filter(actor => actor.choiceId === "blue");
+    touchesHead(world, targets[0]);
+    advanceAdventure(world, 1 / 120, moveRight, safeGates);
+    assert.equal(world.player.xp, xp + 50, "a partial shell collection still waits for task completion");
+    touchesHead(world, targets[1]);
+    const completed = advanceAdventure(world, 1 / 120, moveRight, safeGates);
+    assert.ok(completed.some(event => event.kind === "mission" && event.complete));
+    assert.equal(world.player.xp, xp + 150, "the completed shell task still grants one hundred growth");
+    assert.ok(world.actors.some(actor => actor.id === oldPrey.id), "earlier small prey survives both growth jumps");
+    assertOceanPopulation(world);
+  }
 });
 
 test("both worlds have diverse English cards in several regions, without counting task answers", () => {
@@ -362,24 +445,28 @@ test("logical snake growth continues after the bounded 160-segment drawing limit
   assert.equal(world.player.collectedWords[0], "tree");
 });
 
-test("a moving camera meets changing larger neighbours without fixed followers or visible respawn teleporting", () => {
-  for (const xp of [0, 11500]) {
-    const world = createAdventureWorld("fish", 57, xp);
-    const encountered = new Set<string>();
-    let largeFrames = 0;
-    for (let frame = 0; frame < 2400; frame++) {
-      const camera = cameraForWorld(world, 1180, 600), before = new Set(world.actors.map(actor => actor.id));
-      advanceAdventure(world, 1 / 60, { moving: true, direction: { x: Math.cos(frame / 700), y: Math.sin(frame / 700) } }, safeGates);
-      const visible = world.actors.filter(actor => actor.x >= camera.x && actor.x <= camera.x + 1180 / camera.zoom && actor.y >= camera.y && actor.y <= camera.y + 600 / camera.zoom);
-      assert.ok(visible.filter(actor => actor.radius < world.player.radius / 1.12).length >= 6, "prey remains present while swimming across the larger map");
-      const large = visible.filter(actor => actor.radius > world.player.radius * 1.12);
-      for (const actor of large) encountered.add(actor.id);
-      if (large.length) largeFrames++;
+test("early, mid and final routes remain sparse and stocked as desktop and phone cameras move", () => {
+  for (const xp of [0, 11500, 75000]) for (const seed of [57, 91]) for (const [width, height] of [[1180, 600], [390, 700]]) {
+    const world = createAdventureWorld("fish", seed, xp), phone = width < 500;
+    const encountered = new Set<string>(), preySpecies = new Set<string>();
+    let preyFrames = 0, stockedFrames = 0;
+    for (let frame = 0; frame < 1200; frame++) {
+      const camera = cameraForWorld(world, width, height), before = new Set(world.actors.map(actor => actor.id));
+      advanceAdventure(world, 1 / 60, { moving: true, direction: { x: Math.cos(frame / 700), y: Math.sin(frame / 700) } }, { ...safeGates, cardEnabled: false });
+      const visible = ordinaryFish(world).filter(actor => actor.x >= camera.x && actor.x <= camera.x + width / camera.zoom && actor.y >= camera.y && actor.y <= camera.y + height / camera.zoom);
+      const prey = visible.filter(actor => actor.kind === "food");
+      assert.ok(prey.length > 0, `the camera never crosses an empty feeding area at XP ${xp}, seed ${seed}, width ${width}`);
+      preyFrames += prey.length; if (prey.length >= 3) stockedFrames++;
+      for (const actor of prey) preySpecies.add(actor.speciesId!);
+      for (const actor of visible.filter(actor => actor.kind !== "food")) encountered.add(actor.id);
       assert.ok(visible.every(actor => before.has(actor.id)), "new creatures enter from outside the current view");
-      assert.ok(world.actors.length <= 180);
+      assertOceanPopulation(world, phone);
     }
-    assert.ok(largeFrames > 1200, "larger neighbours are often seen, but may swim out of sight");
-    assert.ok(encountered.size >= 8, "the larger neighbours change as the child explores");
+    assert.ok(preyFrames / 1200 >= (phone ? 4 : 7), "nearby edible prey remains available across the whole route");
+    assert.ok(stockedFrames >= 1200 * .94, "turning does not leave prolonged feeding gaps");
+    assert.ok(preySpecies.size >= (xp ? 6 : 3), "the route encounters varied small species");
+    if (xp < 75000) assert.ok(encountered.size >= 2, "larger individuals also change during exploration");
+    else assert.equal(encountered.size, 0, "the final form has no artificially enlarged catalogue species");
   }
 });
 
@@ -395,24 +482,47 @@ test("all ambient fish follow their own route regardless of the player's positio
     if (!other) continue;
     assert.deepEqual([actor.x, actor.y, actor.heading], [other.x, other.y, other.heading], `${actor.id} does not steer toward a player-relative waypoint`);
   }
-  const velocities = first.actors.filter(actor => actor.kind === "bot").map(actor => Math.hypot(actor.x - before.get(actor.id)!.x, actor.y - before.get(actor.id)!.y));
+  const velocities = first.actors.filter(actor => actor.kind === "bot" || actor.kind === "hazard").map(actor => Math.hypot(actor.x - before.get(actor.id)!.x, actor.y - before.get(actor.id)!.y));
   assert.ok(Math.max(...velocities) - Math.min(...velocities) > .1, "fish cruise at different individual speeds");
 });
 
+test("quadruple-speed ecology preserves the low population cap and a nearby prey supply", () => {
+  for (const xp of [0, 11500, 75000]) for (const [width, height] of [[1180, 600], [390, 700]]) {
+    const world = createAdventureWorld("fish", 91, xp), phone = width < 500;
+    world.speedBoost = { multiplier: 4, expiresAt: 6 };
+    let preyFrames = 0, emptyFrames = 0, longestGap = 0;
+    for (let frame = 0; frame < 360; frame++) {
+      const camera = cameraForWorld(world, width, height);
+      advanceAdventure(world, 1 / 60, { moving: true, direction: { x: Math.cos(frame / 300), y: Math.sin(frame / 300) } }, { ...safeGates, cardEnabled: false });
+      const prey = ordinaryFish(world).filter(actor => actor.kind === "food" && actor.x >= camera.x && actor.x <= camera.x + width / camera.zoom && actor.y >= camera.y && actor.y <= camera.y + height / camera.zoom).length;
+      preyFrames += prey; emptyFrames = prey ? 0 : emptyFrames + 1; longestGap = Math.max(longestGap, emptyFrames);
+      assertOceanPopulation(world, phone);
+    }
+    assert.ok(preyFrames / 360 >= (phone ? 3 : 5), "a speed boost still passes enough edible fish");
+    assert.ok(longestGap < 60, "even a fast turn has no prolonged empty feeding area");
+  }
+});
+
 test("replacement large fish enter near the viewport from outside, even with a high entity index", () => {
-  const world = createAdventureWorld("fish", 61);
-  world.nextEcologyAt = 0;
-  cameraForWorld(world, 1180, 600);
-  const oldIds = new Set(world.actors.map(actor => actor.id));
-  for (const actor of world.actors.filter(actor => actor.kind === "bot" || actor.kind === "hazard")) { actor.x = 80; actor.y = 80; }
-  world.nextId = 9999;
-  advanceAdventure(world, 1 / 120, moveRight, safeGates);
-  const fresh = world.actors.filter(actor => actor.kind === "hazard" && !oldIds.has(actor.id));
-  assert.ok(fresh.length >= 4);
-  const view = world.viewBounds!;
-  for (const actor of fresh) {
-    assert.ok(actor.x < view.left || actor.x > view.right || actor.y < view.top || actor.y > view.bottom);
-    assert.ok(Math.hypot(actor.x - world.player.x, actor.y - world.player.y) < 1150);
+  for (const xp of [0, 11500, 60000]) {
+    const world = createAdventureWorld("fish", 61, xp);
+    world.nextEcologyAt = 0;
+    cameraForWorld(world, 1180, 600);
+    const oldIds = new Set(world.actors.map(actor => actor.id));
+    for (const actor of world.actors.filter(actor => actor.kind === "bot" || actor.kind === "hazard")) { actor.x = 80; actor.y = 80; }
+    world.nextId = 9999;
+    advanceAdventure(world, 1 / 120, moveRight, safeGates);
+    const fresh = world.actors.filter(actor => (actor.kind === "bot" || actor.kind === "hazard") && !oldIds.has(actor.id));
+    assert.equal(fresh.length, 2, "recycling replaces the two larger neighbours rather than adding more");
+    const view = world.viewBounds!;
+    for (const actor of fresh) {
+      assert.ok(actor.x < view.left || actor.x > view.right || actor.y < view.top || actor.y > view.bottom);
+      assert.ok(Math.hypot(actor.x - world.player.x, actor.y - world.player.y) < 1150);
+    }
+    assertOceanPopulation(world);
+    for (const actor of fresh) actor.consumed = true;
+    advanceAdventure(world, 1 / 120, moveRight, safeGates);
+    assertOceanPopulation(world);
   }
 });
 

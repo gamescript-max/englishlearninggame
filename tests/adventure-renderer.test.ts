@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { paintAdventure, prepareOceanSprite, type AdventureImages } from "../components/adventure-renderer";
-import { createAdventureWorld } from "../lib/adventure-engine";
+import { cameraForWorld, createAdventureWorld } from "../lib/adventure-engine";
 import art from "../lib/adventure-art.json";
 import ecologyArt from "../lib/ecology-art.json";
 import { getAdventureWord, getOceanSpecies, oceanEvolution } from "../lib/adventure-catalog";
@@ -10,14 +10,34 @@ import { swimProfileFor } from "../lib/adventure-motion";
 
 function canvasProbe() {
   const draws: unknown[][] = [], rotations: number[] = [], scales: number[][] = [], transforms: number[][] = [];
+  const scenery: number[][] = [], gradients: number[][] = [];
   const context = {
     clearRect() {}, fillRect() {}, save() {}, restore() {}, scale(x: number,y: number) { scales.push([x,y]); }, translate() {}, strokeRect() {},
     beginPath() {}, closePath() {}, clip() {}, roundRect() {}, fill() {}, setLineDash() {}, arc() {}, stroke() {}, fillText() {}, transform(...matrix:number[]) {transforms.push(matrix);}, moveTo() {}, lineTo() {},
+    createLinearGradient(...points:number[]) { gradients.push(points); return {addColorStop() {}}; }, ellipse(...points:number[]) { scenery.push(points); }, bezierCurveTo() {}, quadraticCurveTo() {},
     rotate(angle: number) { rotations.push(angle); }, drawImage(...args: unknown[]) { draws.push(args); },
   } as unknown as CanvasRenderingContext2D;
   const images = {...Object.fromEntries(["snake", "words", "sea", "snakeBreeds", "cards", "expandedWords"].map(id => [id, { id, width: 1536, height: 1024 }])),ocean:naturalOceanAtlases.map((atlas,index)=>({id:`ocean-${index}`,width:atlas.width,height:atlas.height}))} as unknown as AdventureImages;
-  return { context, images, draws, rotations, scales, transforms };
+  return { context, images, draws, rotations, scales, transforms, scenery, gradients };
 }
+
+test("ocean scenery is below creatures, stays out of snake mode and does not change simulation state", () => {
+  for (const mode of ["fish", "snake"] as const) {
+    const world = createAdventureWorld(mode, 18), probe = canvasProbe();
+    world.actors = [];
+    cameraForWorld(world,800,600);
+    const before = structuredClone(world);
+    paintAdventure(probe.context, world, probe.images, 800, 600, false, undefined, true);
+    assert.deepEqual(world, before, "scenery cannot consume RNG, move fish, or alter progress");
+    assert.equal(probe.gradients.length > 0, mode === "fish");
+    assert.equal(probe.scenery.length > 0, mode === "fish");
+    if (mode === "fish") {
+      const sea = probe.draws.find(call => call[0] === probe.images.sea)!;
+      assert.deepEqual(sea.slice(5), [0,0,800,600], "the ocean backdrop keeps CSS-pixel scenery aligned at every camera zoom");
+      assert.ok(probe.draws.some(call => probe.images.ocean.includes(call[0] as HTMLImageElement)), "original fish sprites remain visible above the scene");
+    }
+  }
+});
 
 test("snake body displays the consumed word pictures in head-to-tail order and follows vertical turns", () => {
   const world = createAdventureWorld("snake", 1);

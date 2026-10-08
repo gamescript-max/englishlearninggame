@@ -2,6 +2,7 @@ import { SHARK_SURFACE_Y, sharkCamera, sharkIsOcean, sharkSurfaceScreenY, sharkW
 import { getSharkToken, stageForShark } from "@/lib/shark-content";
 
 import { drawNaturalSwimmer, SHARK_ART_INDEX, SHARK_PREY_ART, type SharkImages } from "./shark-sprites";
+import { paintOceanScenery } from "./ocean-scenery";
 export { loadSharkImages, type SharkImages } from "./shark-sprites";
 
 export interface SharkHudRect { x: number; y: number; w: number; h: number }
@@ -14,7 +15,7 @@ type FoodView = { food: SharkFood; x: number; y: number; radius: number };
 const memories = new WeakMap<SharkWorld, PaintMemory>();
 const tau = Math.PI * 2;
 const fontFamily = '"Trebuchet MS", "Arial Rounded MT Bold", Arial, sans-serif';
-const foodColors = ["#aebcc8", "#a2b5bc", "#ced3d0", "#85999d", "#9ea69b", "#94a6b3"];
+const foodColors = ["#d89149", "#af6371", "#4a9eaa", "#c8ad5f", "#8db6bd", "#96a5b0"];
 const clamp = (value: number, low: number, high: number) => Math.min(high, Math.max(low, value));
 
 function hash(value: string): number {
@@ -40,7 +41,7 @@ function glow(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numbe
 }
 function stroke(ctx: CanvasRenderingContext2D, color: string, width: number) { ctx.strokeStyle = color; ctx.lineWidth = width; ctx.stroke(); }
 
-function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, time: number) {
+function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, time: number, reducedMotion: boolean) {
   const horizon = sharkSurfaceScreenY(height), offset = world.player.x * .024;
   ctx.fillStyle = linear(ctx, 0, 0, 0, horizon, [[0, "#86bcdc"], [.65, "#c4dfeb"], [1, "#eaf1ef"]]); ctx.fillRect(0, 0, width, horizon + 5);
   const sun = ctx.createRadialGradient(width * .77, horizon * .34, 1, width * .77, horizon * .34, Math.max(34, horizon * .55));
@@ -54,6 +55,16 @@ function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: num
     const cx = ((coast * width * .51 + 42 - offset) % (width + 180) + width + 180) % (width + 180) - 90;
     ctx.fillStyle = coast === 1 ? "#819ca266" : "#a0b4b566"; ctx.beginPath(); ctx.moveTo(cx - 100, horizon + 1);
     ctx.lineTo(cx - 78, horizon - 4); ctx.lineTo(cx - 42, horizon - 12 - stage * 2); ctx.lineTo(cx - 10, horizon - 9); ctx.lineTo(cx + 17, horizon - 23); ctx.lineTo(cx + 38, horizon - 15); ctx.lineTo(cx + 81, horizon - 6); ctx.lineTo(cx + 110, horizon + 2); ctx.closePath(); ctx.fill();
+    // Small unlabelled islands sit behind the waterline, separate from edible targets.
+    if (coast !== 1) {
+      const ix = cx + 52, iy = horizon - 2;
+      ellipse(ctx, ix, iy, 36, 7, "#ead7a38f");
+      ellipse(ctx, ix + 3, iy - 4, 26, 8, "#588f798c");
+      ctx.beginPath(); ctx.moveTo(ix + 9, iy - 5); ctx.quadraticCurveTo(ix + 5, iy - 20, ix + 1, iy - 29); stroke(ctx, "#7b776499", 2.6);
+      for (const [dx, dy] of [[-17, 3], [-12, -8], [2, -10], [14, -6], [19, 4]]) {
+        ctx.beginPath(); ctx.moveTo(ix + 1, iy - 29); ctx.quadraticCurveTo(ix + dx * .5, iy - 36 + dy * .4, ix + dx, iy - 29 + dy); stroke(ctx, "#408978a6", 3.1);
+      }
+    }
   }
   ctx.fillStyle = linear(ctx, 0, horizon, 0, height, [[0, "#5ca9bb"], [.09, "#278ca9"], [.48, "#1a7396"], [1, stage === 1 || stage === 3 ? "#174f72" : "#1d6181"]]);
   ctx.beginPath(); ctx.moveTo(0, horizon);
@@ -75,6 +86,8 @@ function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: num
     }
   }
   ctx.restore();
+  const camera = sharkCamera(world, width, height);
+  paintOceanScenery(ctx, { width, height, cameraX: camera.x, cameraY: camera.y, elapsed: time, reducedMotion, surfaceY: horizon, islands: false });
   // Small whitecaps stay on the surface instead of suggesting an ocean-floor reef.
   ctx.lineCap = "round";
   for (let crest = 0; crest < 15; crest++) {
@@ -143,7 +156,7 @@ function paintSpace(ctx: CanvasRenderingContext2D, world: SharkWorld, width: num
 
 function paintBackground(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, reducedMotion: boolean) {
   const time = reducedMotion ? 0 : world.elapsed;
-  if (stage < 6) paintOcean(ctx, world, width, height, stage, time);
+  if (stage < 6) paintOcean(ctx, world, width, height, stage, time, reducedMotion);
   else paintSpace(ctx, world, width, height, stage, time, reducedMotion);
 }
 

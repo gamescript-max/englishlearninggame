@@ -3,7 +3,9 @@ import { createSwimState, fishFinRows, fishStrip, sampleSwim, swimProfileFor } f
 import { mouthGeometry } from "@/lib/adventure-feeding";
 
 export const SHARK_ART_INDEX = 70;
-export const SHARK_PREY_ART = [27, 28, 29, 45, 48, 67] as const;
+// Preserve each species' natural colour: orange goldfish, red betta, blue/red
+// tetras and yellow croaker share the water with a few silver coastal fish.
+export const SHARK_PREY_ART = [9, 11, 12, 15, 16, 26, 27, 48] as const;
 export interface SharkSprite { image: CanvasImageSource; w: number; h: number; species: string }
 export interface SharkImages { readonly sprites: ReadonlyMap<number, SharkSprite> }
 type Point = { x: number; y: number };
