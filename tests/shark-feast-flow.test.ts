@@ -4,6 +4,7 @@ import * as engine from "../lib/shark-engine";
 import * as content from "../lib/shark-content";
 import * as state from "../lib/shark-progress";
 import * as fullscreen from "../lib/adventure-fullscreen";
+import * as naturalArt from "../lib/natural-ocean-art";
 import { createProgress, type Progress } from "../lib/progress";
 import type { SharkFoodLabelRect } from "../components/shark-renderer";
 import { componentHost, nodeText } from "./helpers/component-host";
@@ -15,9 +16,10 @@ function deferred(): Deferred {
   return { promise, resolve, reject };
 }
 
-function mount(options: { welcome?: boolean; unlockFails?: boolean } = {}) {
+function mount(options: { welcome?: boolean; unlockFails?: boolean; imageFails?: boolean } = {}) {
   let progress = createProgress(), now = 0, nextRaf = 0, world!: engine.SharkWorld, currentSpeech: Deferred | null = null;
   if (!options.welcome) progress.shark = { ...progress.shark, lastAt: 1 };
+  let imageFails = !!options.imageFails, imageLoads = 0;
   let unlockFails = !!options.unlockFails, stops = 0, unlocks = 0, paints = 0, disconnects = 0, backs = 0, duplicateNext = false, retrySaves = 0, backups = 0;
   const raf = new Map<number, (time: number) => void>(), listeners = new Map<string, Set<(event: unknown) => void>>();
   const speeches: { text: string; language: string; completion: Deferred }[] = [], controls: engine.SharkControl[] = [], bites: number[] = [], commits: Progress[] = [];
@@ -36,7 +38,7 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean } = {}) {
   const commit = (change: Progress | ((previous: Progress) => Progress)) => { progress = typeof change === "function" ? change(progress) : change; commits.push(progress); return progress; };
   let props = { progress, commit, onBack: () => { backs++; }, onSettings() {}, suspended: false, storageError: "", onRetryStorage: () => { retrySaves++; }, onBackup: () => { backups++; } };
   const host = componentHost(new URL("../components/shark-feast.tsx", import.meta.url), "SharkFeast", props, () => ({
-    "@/lib/shark-content": content, "@/lib/shark-progress": state, "@/lib/adventure-fullscreen": fullscreen,
+    "@/lib/natural-ocean-art": naturalArt, "@/lib/shark-content": content, "@/lib/shark-progress": state, "@/lib/adventure-fullscreen": fullscreen,
     "@/lib/shark-engine": {
       ...engine,
       createSharkWorld(saved: state.SharkProgress) { world = engine.createSharkWorld(saved, 123456); world.foods = []; return world; },
@@ -46,7 +48,7 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean } = {}) {
         return result;
       },
     },
-    "./shark-renderer": { paintSharkWorld(_context: unknown, _world: unknown, _width: number, _height: number, options: { hudRects: typeof paintedRects }) { paints++; paintedRects = options.hudRects; return renderedLabels; } }, "./shark-feast.css": {},
+    "./shark-renderer": { loadSharkImages() { imageLoads++; return imageFails ? Promise.reject(new Error("offline")) : Promise.resolve({ sprites: new Map() }); }, paintSharkWorld(_context: unknown, _world: unknown, _width: number, _height: number, options: { hudRects: typeof paintedRects }) { paints++; paintedRects = options.hudRects; return renderedLabels; } }, "./shark-feast.css": {},
     "@/lib/audio": {
       unlockAudio() { unlocks++; return unlockFails ? Promise.reject(new Error("声音没有开启")) : Promise.resolve(); },
       playSpeech(text: string, language = "en") { currentSpeech = deferred(); speeches.push({ text, language, completion: currentSpeech }); return currentSpeech.promise; },
@@ -90,7 +92,14 @@ function mount(options: { welcome?: boolean; unlockFails?: boolean } = {}) {
     key, click, fire, advance, flush,
     update(change: Partial<typeof props>) { props = { ...props, ...change }; host.update(props); },
     replaceProgress(next: Progress, render = true) { progress = next; if (render) sync(); },
+    spaceOnButton() {
+      const target = Object.assign(new InputTarget(), { closest(selector: string) { return selector.includes("button") ? {} : null; } });
+      let prevented = false;
+      fire("document", "keydown", { key: " ", code: "Space", target, preventDefault() { prevented = true; } });
+      return prevented;
+    },
     unlockWorks() { unlockFails = false; },
+    imagesWork() { imageFails = false; }, imageLoads: () => imageLoads,
     duplicateNext() { duplicateNext = true; },
     labels(rectangles: SharkFoodLabelRect[]) { renderedLabels = rectangles; },
     async endSpeech() { const pending = currentSpeech; currentSpeech = null; pending?.resolve(); await flush(); },
@@ -205,10 +214,10 @@ test("pointer and direction controls start freely, fullscreen Escape retains the
 });
 
 test("tapping moving prey follows its live position, while dragging or arrows immediately take control", async () => {
-  const session = mount(); const prey = session.prey("A"); session.pointer(750, 340); session.release(); session.advance(200);
+  const session = mount(); const prey = session.prey("A"); session.pointer(750, 40 + engine.sharkWorldToScreen(session.world().player, engine.sharkCamera(session.world(), 900, 600)).y); session.release(); session.advance(200);
   assert.ok(prey.x > 1800); assert.ok(session.controls.at(-1)!.target!.x > 1800, "a tap follows the swimming prey instead of its old click position");
   session.advance(1100); await session.flush(); assert.equal(session.progress().shark.letters, 1, "a six-year-old can collect a moving letter with one tap");
-  session.world().foods = []; session.prey("B"); session.pointer(750, 340); session.drag(500, 500); session.advance(50);
+  session.world().foods = []; session.prey("B"); session.pointer(750, 40 + engine.sharkWorldToScreen(session.world().player, engine.sharkCamera(session.world(), 900, 600)).y); session.drag(500, 500); session.advance(50);
   const manualTarget = session.controls.at(-1)!.target!.x; session.advance(50);
   assert.equal(session.controls.at(-1)!.target!.x, manualTarget, "a deliberate drag releases the tracked prey");
   session.key("ArrowUp"); session.advance(50); assert.equal(session.controls.at(-1)!.target, undefined); assert.equal(session.controls.at(-1)!.direction!.y, -1);
@@ -241,7 +250,7 @@ test("label hit areas cannot select removed, hidden, offscreen or oversized prey
     session.pointer(475, 500); session.release(); session.advance(50);
     const target = session.controls.at(-1)!.target!;
     assert.equal(target.x, 1525, `${invalid} labels keep the ordinary water target`);
-    assert.equal(target.y, 1160);
+    assert.equal(target.y, 460 + engine.sharkCamera(world, 900, 600).y);
     session.host.unmount();
   }
 });
@@ -260,4 +269,39 @@ test("fullscreen storage failure stays visible with retry and backup, and pause 
   session.click("重试保存"); assert.equal(session.retrySaves(), 2, "saving remains reachable from the fullscreen paused scene");
   session.update({ storageError: "" }); assert.equal(session.host.byClass("shark-storage-error").length, 0);
   assert.ok(nodeText(session.host.byClass("shark-pause-card")[0]).includes("已经保存")); session.host.unmount();
+});
+
+
+test("touch jump and Space start swimming, rise above the water, freeze on pause, and resume to a splash", async () => {
+  const session = mount(); session.click("跃出海面"); await session.flush();
+  assert.ok(session.rafCount() > 0, "the jump button starts play without a Start step");
+  assert.equal(session.world().jump.phase, "approach");
+  session.advance(300); assert.equal(session.world().jump.phase, "air");
+  assert.ok(session.world().player.y < engine.SHARK_SURFACE_Y);
+  session.click("暂停游玩"); const height = session.world().player.y;
+  session.advance(600); assert.equal(session.world().player.y, height);
+  session.fire("document", "keydown", { key: " ", code: "Space", target: {}, preventDefault() {} });
+  assert.equal(session.world().player.y, height, "Space cannot start a paused world");
+  session.click("继续游"); session.advance(1100); assert.equal(session.world().jump.splash, 1);
+  session.fire("document", "keydown", { key: " ", code: "Space", repeat: false, target: {}, preventDefault() {} });
+  assert.equal(session.world().jump.phase, "approach");
+  session.host.unmount(); assert.equal(session.rafCount(), 0);
+});
+
+test("image loading failure can retry while current growth and controls stay available", async () => {
+  const session = mount({ imageFails: true }); await session.flush();
+  assert.equal(session.imageLoads(), 1); assert.ok(session.host.button("重试图片"));
+  session.key(); session.collect("A"); assert.equal(session.progress().shark.letters, 1);
+  session.imagesWork(); session.click("重试图片"); await session.flush();
+  assert.equal(session.imageLoads(), 2); assert.equal(session.host.byClass("shark-alert-stack").length, 0);
+  assert.equal(session.progress().shark.letters, 1); session.host.unmount();
+});
+
+
+test("Space leaves focused UI buttons to their native activation instead of hijacking a jump", () => {
+  const session = mount(); session.key(); session.advance(40);
+  assert.equal(session.spaceOnButton(), false);
+  assert.equal(session.world().jump.phase, "idle");
+  session.click("暂停游玩"); assert.equal(session.rafCount(), 0);
+  session.host.unmount();
 });

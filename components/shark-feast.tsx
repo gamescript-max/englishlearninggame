@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { useEffect, useId, useRef, useState, type PointerEvent } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Maximize2, Minimize2, Pause, Play, Settings2, Volume2 } from "lucide-react";
 import type { Progress } from "@/lib/progress";
 import { createAdventureFullscreen } from "@/lib/adventure-fullscreen";
 import { playAdventureEat, playSpeech, stopAllAudio, unlockAudio } from "@/lib/audio";
 import { getSharkToken, sharkGuides, sharkStages, stageForShark, type SharkToken } from "@/lib/shark-content";
-import { createSharkWorld, ensureSharkViewport, sharkCamera, sharkDistance, sharkScreenToWorld, sharkWorldToScreen, stepSharkWorld, type SharkControl, type SharkPickup, type SharkPoint } from "@/lib/shark-engine";
+import { createSharkWorld, ensureSharkViewport, requestSharkJump, sharkIsOcean, sharkCamera, sharkScreenToWorld, sharkWorldToScreen, stepSharkWorld, type SharkControl, type SharkPickup, type SharkPoint } from "@/lib/shark-engine";
 import { recordSharkListen, recordSharkPickup, recordSharkTime, sharkTotal } from "@/lib/shark-progress";
-import { paintSharkWorld, type SharkFoodLabelRect } from "./shark-renderer";
+import { naturalOceanArt, naturalSpriteClip } from "@/lib/natural-ocean-art";
+import { loadSharkImages, paintSharkWorld, type SharkFoodLabelRect, type SharkImages } from "./shark-renderer";
 import "./shark-feast.css";
 
 type Commit = (next: Progress | ((progress: Progress) => Progress)) => Progress;
@@ -19,33 +20,23 @@ const directionKeys: Record<string, SharkPoint> = {
   w: { x: 0, y: -1 }, s: { x: 0, y: 1 }, a: { x: -1, y: 0 }, d: { x: 1, y: 0 },
 };
 
-/** An original, friendly shark illustration, shared by the home entry and pause card. */
+/** The same naturally coloured shark used by the moving game sprites. */
 export function SharkFeastArt({ className = "" }: { className?: string }) {
-  return <svg className={`shark-feast-art ${className}`} viewBox="0 0 230 170" aria-hidden="true">
-    <circle cx="191" cy="36" r="22" fill="#ebd3fa"/><ellipse cx="191" cy="36" rx="31" ry="9" fill="none" stroke="#c594e5" strokeWidth="4" transform="rotate(-22 191 36)"/><circle cx="185" cy="29" r="4" fill="#fff4ff"/>
-    <path d="m27 80-20-29 7 46-7 38 28-24" fill="#3b95bb" stroke="#216a91" strokeWidth="4" strokeLinejoin="round"/>
-    <path d="M34 77Q62 43 94 58L103 25Q126 42 130 65Q174 67 197 100Q176 132 103 131Q65 132 34 108Z" fill="#53c4db" stroke="#216a91" strokeWidth="4" strokeLinejoin="round"/>
-    <path d="M45 108Q94 95 149 108Q174 110 187 103Q178 127 105 129Q65 130 45 108" fill="#ddf7f6"/>
-    <path d="m89 119 30 31 10-27" fill="#41a8cb" stroke="#216a91" strokeWidth="4" strokeLinejoin="round"/>
-    <circle cx="160" cy="86" r="11" fill="white"/><circle cx="164" cy="86" r="6" fill="#244b68"/><circle cx="166" cy="83" r="2" fill="white"/>
-    <path d="M168 108q12 8 24-5" fill="none" stroke="#244b68" strokeWidth="4" strokeLinecap="round"/><path d="m175 111 4 6 3-6" fill="white"/><path d="M120 88q-6 9-2 17m-9-19q-6 9-2 17" fill="none" stroke="#2c91b2" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="196" cy="137" r="5" fill="#a7e9ec"/><circle cx="207" cy="122" r="3" fill="#a7e9ec"/>
-    <g fontFamily="system-ui, sans-serif" fontWeight="900" fontSize="19" textAnchor="middle"><circle cx="40" cy="33" r="16" fill="#ffe3aa"/><text x="40" y="40" fill="#88601e">A</text><circle cx="73" cy="19" r="14" fill="#ffd2d5"/><text x="73" y="26" fill="#a04c59">B</text><circle cx="17" cy="151" r="13" fill="#d1edbf"/><text x="17" y="158" fill="#4c7742">C</text></g>
-  </svg>;
+  const clipId = useId(), source = naturalOceanArt(70);
+  return <svg className={`shark-feast-art ${className}`} viewBox={`0 0 ${source.w} ${source.h}`} aria-hidden="true"><defs><clipPath id={clipId}><path d={naturalSpriteClip(source)} clipRule="evenodd"/></clipPath></defs><g transform={source.flipX ? `translate(${source.w},0) scale(-1,1)` : undefined}><g clipPath={`url(#${clipId})`}><image href={source.src} x={-source.x} y={-source.y} width={source.imageWidth} height={source.imageHeight}/></g></g></svg>;
 }
 
-export function SharkFeastEntry({ progress, ready = true, onOpen }: { progress: Progress; ready?: boolean; onOpen: () => void }) {
-  const total = sharkTotal(progress.shark);
-  const stage = stageForShark(total);
-  return <button className="shark-feast-entry" disabled={!ready} onClick={onOpen} aria-label="打开鲨鱼英语大餐">
-    <SharkFeastArt/><span className="shark-entry-copy"><small>自由游 · 听英语</small><strong>鲨鱼英语大餐</strong><span>{total ? `${stage.title} · 继续长大` : "从小鱼，一路吃到宇宙"}</span></span><span className="shark-entry-go"><Play size={19} fill="currentColor"/>出发</span>
+export function SharkFeastEntry({ progress, ready = true, onOpen, compact = false }: { progress: Progress; ready?: boolean; onOpen: () => void; compact?: boolean }) {
+  const total = sharkTotal(progress.shark), stage = stageForShark(total);
+  return <button className={compact ? "adventure-entry entry-shark" : "shark-feast-entry"} disabled={!ready} onClick={onOpen} aria-label="打开鲨鱼英语吞吞乐">
+    <SharkFeastArt className={compact ? "adventure-sprite" : ""}/>{compact ? <span><strong>鲨鱼英语吞吞乐</strong><b>{total ? "继续长大" : "吃字母出发"}</b></span> : <><span className="shark-entry-copy"><small>自由游 · 听英语</small><strong>鲨鱼英语吞吞乐</strong><span>{total ? `${stage.title} · 继续长大` : "从小鱼，一路吃到宇宙"}</span></span><span className="shark-entry-go"><Play size={19} fill="currentColor"/>出发</span></>}
   </button>;
 }
 
 export function SharkFeastReport({ progress }: { progress: Progress }) {
   const state = progress.shark, total = sharkTotal(state);
   return <section className="shark-feast-report" aria-label="鲨鱼英语接触记录">
-    <div><strong>鲨鱼英语大餐</strong><span>{stageForShark(total).title}</span></div>
+    <div><strong>鲨鱼英语吞吞乐</strong><span>{stageForShark(total).title}</span></div>
     <dl><div><dt>字母接触</dt><dd>{state.letters}</dd></div><div><dt>单词接触</dt><dd>{state.words}</dd></div><div><dt>句子接触</dt><dd>{state.sentences}</dd></div><div><dt>完整听读</dt><dd>{state.listenCount}</dd></div><div><dt>接触内容</dt><dd>{state.learned.length}<small> 种</small></dd></div><div><dt>游玩时间</dt><dd>{Math.floor(state.totalSeconds / 60)}<small> 分</small></dd></div></dl>
     <p>这是收集和重复听读的接触记录，不是 A1 测试，也不代表已经掌握。收集记录与完整听读分别统计；可以重听最近吃到的英语。</p>
   </section>;
@@ -63,6 +54,7 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
   const size = useRef({ width: 900, height: 600, dpr: 1 }), reducedMotion = useRef(false);
   const hudRects = useRef<{ x: number; y: number; w: number; h: number }[]>([]);
   const foodLabels = useRef<SharkFoodLabelRect[]>([]);
+  const images = useRef<SharkImages | null>(null), retryImages = useRef<() => void>(() => {});
   const mounted = useRef(true), leaving = useRef(false), conflict = useRef(false), paused = useRef(false), active = useRef(false);
   const gates = useRef({ suspended }), fullscreen = useRef<ReturnType<typeof createAdventureFullscreen> | null>(null);
   const startFrame = useRef<() => void>(() => {}), paintFrame = useRef<() => void>(() => {});
@@ -72,11 +64,12 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
   const guideUsed = useRef(progress.shark.lastAt !== 0), lastEaten = useRef<string | null>(null), failedSpeech = useRef<SpeechItem | null>(null);
   const [started, setStarted] = useState(false), [isPaused, setPaused] = useState(false), [expanded, setExpanded] = useState(true);
   const [hasConflict, setConflict] = useState(false);
-  const [hud, setHud] = useState({ total: sharkTotal(progress.shark), seconds: progress.shark.totalSeconds, now: 0 });
+  const [hud, setHud] = useState({ total: sharkTotal(progress.shark), seconds: progress.shark.totalSeconds, now: 0, jumpPhase: initialWorld.jump.phase });
   const [eatenId, setEatenId] = useState<string | null>(null), [readingId, setReadingId] = useState<string | null>(null);
   const [isReading, setReading] = useState(false), [audioError, setAudioError] = useState("");
   const [recent, setRecent] = useState<{ ids: string[]; until: number }>({ ids: [], until: 0 });
   const [notice, setNotice] = useState("");
+  const [imageError, setImageError] = useState("");
 
   function canInteract() { return mounted.current && !leaving.current && !conflict.current && !gates.current.suspended && !document.hidden; }
   function cancelNarration(preserve = false) {
@@ -175,6 +168,13 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
     followingFood.current = null;
     control.current = { moving: true, direction };
   }
+  function jump() {
+    if (!sharkIsOcean(world.current) || !startSwimming()) return;
+    if (!requestSharkJump(world.current)) return;
+    followingFood.current = null;
+    control.current = { moving: true, direction: { x: Math.cos(world.current.player.angle) < 0 ? -1 : 1, y: 0 } };
+    setHud(previous => ({ ...previous, jumpPhase: world.current.jump.phase }));
+  }
   function resume() {
     if (!canInteract()) return;
     paused.current = false; active.current = true; setPaused(false); setStarted(true); setNotice("");
@@ -232,18 +232,20 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
   }
   function beginPointer(event: PointerEvent<HTMLCanvasElement>) {
     if (event.button !== 0 || pointer.current !== null || !startSwimming()) return;
+    event.currentTarget.focus?.({ preventScroll: true });
     event.preventDefault(); pointer.current = event.pointerId; dragStart.current = { x: event.clientX, y: event.clientY }; event.currentTarget.setPointerCapture(event.pointerId);
     paintFrame.current();
     const bounds = event.currentTarget.getBoundingClientRect();
     const screenPoint = { x: (event.clientX - bounds.left) * size.current.width / bounds.width, y: (event.clientY - bounds.top) * size.current.height / bounds.height };
-    const camera = sharkCamera(world.current, size.current.width, size.current.height), point = sharkScreenToWorld(screenPoint, camera);
+    const camera = sharkCamera(world.current, size.current.width, size.current.height);
     const eligible = world.current.foods.filter(item => {
       if (!item.edible || item.size >= world.current.player.size * .9 || (world.current.nearbyFoodIds && !world.current.nearbyFoodIds.includes(item.id))) return false;
       const at = sharkWorldToScreen(item, camera), radius = Math.max(21, item.size);
       return at.x >= -radius && at.x <= size.current.width + radius && at.y >= -radius && at.y <= size.current.height + radius;
     });
     const label = [...foodLabels.current].reverse().find(rect => screenPoint.x >= rect.x && screenPoint.x <= rect.x + rect.w && screenPoint.y >= rect.y && screenPoint.y <= rect.y + rect.h && eligible.some(item => item.id === rect.foodId));
-    const food = eligible.find(item => item.id === label?.foodId) ?? eligible.filter(item => sharkDistance(item, point) <= item.size + 30).sort((a, b) => sharkDistance(a, point) - sharkDistance(b, point))[0];
+    const screenDistance = (item: SharkPoint) => { const at = sharkWorldToScreen(item, camera); return Math.hypot(at.x - screenPoint.x, at.y - screenPoint.y); };
+    const food = eligible.find(item => item.id === label?.foodId) ?? eligible.filter(item => screenDistance(item) <= item.size + 30).sort((a, b) => screenDistance(a) - screenDistance(b))[0];
     followingFood.current = food?.id ?? null;
     if (food) control.current = { moving: true, target: { x: food.x, y: food.y } };
     else movePointer(event);
@@ -286,7 +288,7 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
       const element = scene.current;
       if (!element || typeof element.querySelectorAll !== "function") { hudRects.current = []; return; }
       const bounds = element.getBoundingClientRect();
-      const nodes = element.querySelectorAll<HTMLElement>(".shark-caption,.shark-growth,.shark-next-peek,.shark-top-left,.shark-top-right,.shark-direction-pad,.shark-recent,.shark-first-guide,.shark-alert-stack");
+      const nodes = element.querySelectorAll<HTMLElement>(".shark-caption,.shark-growth,.shark-next-peek,.shark-top-left,.shark-top-right,.shark-direction-pad,.shark-recent,.shark-first-guide,.shark-alert-stack,.shark-jump-control");
       hudRects.current = Array.from(nodes, node => {
         const rectangle = node.getBoundingClientRect();
         return { x: rectangle.left - bounds.left, y: rectangle.top - bounds.top, w: rectangle.width, h: rectangle.height };
@@ -298,7 +300,7 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
       if (!context) { foodLabels.current = []; return; }
       if (measure || world.current.elapsed * 1000 - measuredAt >= 120) measureHud();
       context.setTransform(size.current.dpr, 0, 0, size.current.dpr, 0, 0);
-      foodLabels.current = paintSharkWorld(context, world.current, size.current.width, size.current.height, { reducedMotion: reducedMotion.current, hudRects: hudRects.current }) ?? [];
+      foodLabels.current = paintSharkWorld(context, world.current, size.current.width, size.current.height, { reducedMotion: reducedMotion.current, hudRects: hudRects.current, images: images.current ?? undefined }) ?? [];
     };
     paintFrame.current = () => paint(true);
     const resize = () => {
@@ -320,19 +322,33 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
         if (food) control.current = { moving: true, target: { x: food.x, y: food.y } };
         else { followingFood.current = null; control.current = { moving: true, direction: { x: Math.cos(world.current.player.angle), y: Math.sin(world.current.player.angle) } }; }
       }
-      if (!followingFood.current && control.current.target && sharkDistance(control.current.target, world.current.player) < 16) control.current = { moving: true, direction: { x: Math.cos(world.current.player.angle), y: Math.sin(world.current.player.angle) } };
+      if (!followingFood.current && control.current.target) {
+        const camera = sharkCamera(world.current, size.current.width, size.current.height), target = sharkWorldToScreen(control.current.target, camera), player = sharkWorldToScreen(world.current.player, camera);
+        if (Math.hypot(target.x - player.x, target.y - player.y) < 16) control.current = { moving: true, direction: { x: Math.cos(world.current.player.angle), y: Math.sin(world.current.player.angle) } };
+      }
       const result = stepSharkWorld(world.current, { ...control.current, canCollect: speechQueue.current.length < 3 && !failedSpeech.current }, dt);
       for (const event of result.pickups) { pickup(event); if (conflict.current) break; }
       if (world.current.elapsed - savedElapsed.current >= 10) saveTime();
       paint();
       if (now - lastHud.current >= 120) {
-        lastHud.current = now; setHud({ total: world.current.total, seconds: props.current.progress.shark.totalSeconds + Math.floor(world.current.elapsed - savedElapsed.current), now: Date.now() });
+        lastHud.current = now; setHud({ total: world.current.total, seconds: props.current.progress.shark.totalSeconds + Math.floor(world.current.elapsed - savedElapsed.current), now: Date.now(), jumpPhase: world.current.jump.phase });
       }
       if (!paused.current && canInteract() && active.current) frame.current = requestAnimationFrame(tick);
     };
     startFrame.current = () => { if (frame.current === null && canInteract() && active.current && !paused.current) { lastFrame.current = 0; frame.current = requestAnimationFrame(tick); } };
     const observer = new ResizeObserver(resize); if (scene.current) observer.observe(scene.current);
     window.addEventListener("resize", resize); resize();
+    let imageAttempt = 0;
+    const loadImages = () => {
+      const attempt = ++imageAttempt; setImageError("");
+      void loadSharkImages().then(loaded => {
+        if (!mounted.current || leaving.current || attempt !== imageAttempt) return;
+        images.current = loaded; paint(true);
+      }).catch(() => {
+        if (mounted.current && !leaving.current && attempt === imageAttempt) setImageError("鱼的图片暂时没加载出来，成长记录会保留。");
+      });
+    };
+    retryImages.current = loadImages; loadImages();
     const keyDirection = () => {
       const direction = { x: 0, y: 0 };
       for (const key of heldKeys.current) { direction.x += directionKeys[key].x; direction.y += directionKeys[key].y; }
@@ -342,7 +358,10 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
       if (event.target instanceof HTMLElement && event.target.closest("input,textarea,select,[contenteditable=true]")) return;
       const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
       if (directionKeys[key]) { if (!canInteract() || paused.current) return; event.preventDefault(); heldKeys.current.add(key); keyDirection(); }
-      if (event.code === "Space" && active.current && !paused.current && canInteract()) { event.preventDefault(); pause(); }
+      if (event.code === "Space" && !event.repeat && !paused.current && canInteract()) {
+        if (event.target instanceof HTMLElement && event.target.closest("button,a,[role=button]")) return;
+        event.preventDefault(); jump();
+      }
     };
     const keyUp = (event: KeyboardEvent) => { const key = event.key.length === 1 ? event.key.toLowerCase() : event.key; heldKeys.current.delete(key); keyDirection(); };
     const hidden = () => { if (document.hidden) pause("离开了一会儿。点继续游，再出发。") };
@@ -351,7 +370,7 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
     document.addEventListener("keydown", keyDown); document.addEventListener("keyup", keyUp); document.addEventListener("visibilitychange", hidden);
     window.addEventListener("pagehide", background); window.addEventListener("native-background", background); window.addEventListener("learning-pause", learningPause); window.addEventListener("blur", background);
     return () => {
-      mounted.current = false; saveTime(); leaving.current = true; stopFrames(); cancelNarration();
+      mounted.current = false; imageAttempt++; images.current = null; saveTime(); leaving.current = true; stopFrames(); cancelNarration();
       controller.dispose(); if (fullscreen.current === controller) fullscreen.current = null;
       observer.disconnect(); dprMedia?.removeEventListener("change", resize); media.removeEventListener("change", motionChange); window.removeEventListener("resize", resize);
       document.removeEventListener("keydown", keyDown); document.removeEventListener("keyup", keyUp); document.removeEventListener("visibilitychange", hidden);
@@ -362,7 +381,7 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
   }, []);
   useEffect(() => {
     paintFrame.current();
-  }, [started, isPaused, eatenId, readingId, audioError, storageError, recent, hud.total]);
+  }, [started, isPaused, eatenId, readingId, audioError, storageError, imageError, recent, hud.total]);
 
   const stage = stageForShark(hud.total), nextStage = sharkStages[stage.stageIndex + 1];
   const fraction = Math.max(0, Math.min(1, (hud.total - stage.currentAt) / (stage.nextAt - stage.currentAt)));
@@ -370,23 +389,27 @@ export function SharkFeast({ progress, commit, onBack, onSettings, suspended = f
   const goal = hud.total < 26 ? `再吃 ${26 - hud.total} 个字母，解锁单词` : hud.total < 46 ? `再吃 ${46 - hud.total} 个单词，解锁句子` : `再吃 ${remaining} 句英语，${nextStage ? `长大吃${nextStage.title.replace(/大餐|也能吃/g, "")}` : "去下一片宇宙"}`;
   const displayToken: SharkToken | undefined = getSharkToken(readingId ?? eatenId ?? "");
   const preview = stage.tier === "letters" ? { en: "A · B · C", zh: "字母 → 单词 → 短句" } : stage.tier === "words" ? { en: "cat · dog", zh: "猫 · 狗" } : { en: "I can run.", zh: "我会跑。" };
-  return <section className={`shark-feast ${expanded ? "shark-feast-expanded" : ""}`} aria-label="鲨鱼英语大餐">
+  return <section className={`shark-feast ${expanded ? "shark-feast-expanded" : ""}`} aria-label="鲨鱼英语吞吞乐">
     <div className="shark-feast-scene" ref={scene}>
-      <canvas ref={canvas} className="shark-feast-canvas" aria-label="自由游动的鲨鱼，点击或拖动海面，方向键和 W A S D 也可以控制" onPointerDown={beginPointer} onPointerMove={movePointer} onPointerUp={endPointer} onPointerCancel={endPointer} onLostPointerCapture={endPointer}/>
-      <div className="shark-top-left"><button className="shark-tool" onClick={leave} aria-label="返回地图" title="返回地图"><ArrowLeft/></button><span className="shark-game-name">英语大餐</span></div>
+      <canvas ref={canvas} tabIndex={0} className="shark-feast-canvas" aria-label="自由游动的鲨鱼，点击或拖动海面，方向键和 W A S D 也可以控制，空格键跃出海面" onPointerDown={beginPointer} onPointerMove={movePointer} onPointerUp={endPointer} onPointerCancel={endPointer} onLostPointerCapture={endPointer}/>
+      <div className="shark-top-left"><button className="shark-tool" onClick={leave} aria-label="返回地图" title="返回地图"><ArrowLeft/></button><span className="shark-game-name">鲨鱼英语吞吞乐</span></div>
       <div className="shark-top-right"><button className="shark-tool" onClick={() => { pause("设置打开了。准备好后，点继续游。"); onSettings(); }} aria-label="声音和设置" title="设置"><Settings2/></button><button className="shark-tool" onClick={() => fullscreen.current?.toggle()} aria-label={expanded ? "退出全屏" : "全屏游玩"} title={expanded ? "退出全屏" : "全屏"}>{expanded ? <Minimize2/> : <Maximize2/>}</button><button className="shark-tool" onClick={() => isPaused ? resume() : pause()} disabled={suspended || hasConflict} aria-label={isPaused ? "继续游" : "暂停游玩"} title={isPaused ? "继续游" : "暂停"}>{isPaused ? <Play/> : <Pause/>}</button></div>
       <div className={`shark-caption ${displayToken ? "shark-caption-filled" : ""}`} aria-live="polite" aria-atomic="true">
         <span className="shark-caption-tag">{isReading ? "听一听 · 跟着读" : displayToken ? "刚刚吃到" : stage.tier === "letters" ? "吃小鱼，听英语" : "吃目标，听英语"}</span>
         <strong lang="en">{displayToken?.en ?? preview.en}</strong><span className="shark-caption-meaning">{displayToken?.zh ?? preview.zh}</span>
         {displayToken && <button className="shark-replay" onClick={() => replay(displayToken.id)} disabled={isPaused || suspended} aria-label={`再听一次 ${displayToken.en}`}><Volume2 size={20}/>{isReading ? "再听" : "听一遍"}</button>}
       </div>
-      {!started && !isPaused && <div className="shark-first-guide"><span>拖动海面就出发</span><small>方向键 / WASD / 右下角方向键</small><p>吃比你小的，鲨鱼会慢慢长大</p></div>}
-      {!isPaused && (!!storageError || !!audioError) && <div className="shark-alert-stack">
+      {!started && !isPaused && <div className="shark-first-guide"><span>拖动海面就出发</span><small>方向键 / WASD / 触屏方向键</small><p>吃比你小的，鲨鱼会慢慢长大</p><small>左下角或空格键 · 跃出海面</small></div>}
+      {!isPaused && (!!storageError || !!audioError || !!imageError) && <div className="shark-alert-stack">
         {!!storageError && <div className="shark-storage-error" role="alert"><strong>成长暂时没有保存</strong><span>成长暂存在本页面，请重试保存或备份。</span><small>{storageError}</small><div>{onRetryStorage && <button onClick={onRetryStorage}>重试保存</button>}{onBackup && <button onClick={onBackup}>备份成长</button>}</div></div>}
         {!!audioError && !isPaused && <div className="shark-audio-error" role="status"><span>声音暂时没播出来，英语和成长记录仍在本页面。</span><button onClick={() => replay()}><Volume2 size={18}/>重试声音</button></div>}
+        {!!imageError && <div className="shark-audio-error" role="status"><span>{imageError}</span><button onClick={() => retryImages.current()}>重试图片</button></div>}
       </div>}
       {recent.until > hud.now && recent.ids.length > 0 && <div className="shark-recent" aria-label="最近吃到的英语，点击可以重听"><span>吃到了</span>{recent.ids.map((id, index) => <button lang="en" key={`${id}-${index}`} onClick={() => replay(id)} disabled={isPaused || suspended} aria-label={`重听 ${getSharkToken(id)?.en}`}><Volume2 size={13}/>{getSharkToken(id)?.en}</button>)}</div>}
+      <div className="shark-left-panel">
+      {stage.stageIndex < 6 && <button className="shark-jump-control" onClick={jump} disabled={isPaused || suspended || hasConflict || hud.jumpPhase !== "idle"} aria-label="跃出海面"><ArrowUp size={21}/><span>{hud.jumpPhase === "approach" ? "冲向海面" : hud.jumpPhase === "air" ? "飞起来啦" : hud.jumpPhase === "cooldown" ? "落水啦" : "跃出海面"}<small>空格键 / 点击</small></span></button>}
       <aside className="shark-next-peek"><span>{nextStage ? "下一个大餐" : "宇宙还在变大"}</span><strong>{nextStage?.en ?? `Universe ${stage.cycle + 2}`}</strong><small>{nextStage?.title ?? "继续听英语，继续探索"}</small></aside>
+      </div>
       <div className="shark-growth"><div><strong lang="en">{stage.en}{stage.cycle ? ` ${stage.cycle + 1}` : ""}</strong><span>{hud.total} 口英语</span></div><div className="shark-growth-track" role="progressbar" aria-label="鲨鱼成长" aria-valuenow={hud.total} aria-valuemin={stage.currentAt} aria-valuemax={stage.nextAt}><span style={{ width: `${fraction * 100}%` }}/></div><p>{goal}</p></div>
       <div className="shark-direction-pad" aria-label="游动方向"><button className="shark-pad-up" onPointerDown={() => swimDirection({ x: 0, y: -1 })} onClick={() => swimDirection({ x: 0, y: -1 })} aria-label="向上游"><ArrowUp/></button><button className="shark-pad-left" onPointerDown={() => swimDirection({ x: -1, y: 0 })} onClick={() => swimDirection({ x: -1, y: 0 })} aria-label="向左游"><ArrowLeft/></button><span aria-hidden="true">游</span><button className="shark-pad-right" onPointerDown={() => swimDirection({ x: 1, y: 0 })} onClick={() => swimDirection({ x: 1, y: 0 })} aria-label="向右游"><ArrowRight/></button><button className="shark-pad-down" onPointerDown={() => swimDirection({ x: 0, y: 1 })} onClick={() => swimDirection({ x: 0, y: 1 })} aria-label="向下游"><ArrowDown/></button></div>
       {isPaused && <div className="shark-pause-overlay"><div className="shark-pause-card"><SharkFeastArt/><h2>{hasConflict ? "成长记录更新了" : "小鲨鱼休息一下"}</h2><p>{notice}</p><span role={storageError ? "alert" : undefined}>{hud.total} 口英语 · {storageError ? "成长暂存在本页面，请重试保存或备份。" : "已经保存"}</span>{!!storageError && <div className="shark-pause-storage-actions">{onRetryStorage && <button onClick={onRetryStorage}>重试保存</button>}{onBackup && <button onClick={onBackup}>备份成长</button>}</div>}{!hasConflict && <button className="shark-continue" onClick={resume} disabled={suspended}><Play size={22} fill="currentColor"/>{suspended ? "先关闭设置" : "继续游"}</button>}<button className="shark-pause-back" onClick={leave}>返回地图</button></div></div>}

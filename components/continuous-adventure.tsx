@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useId, useRef, useState, type PointerEvent } from "react";
+import { useEffect, useId, useRef, useState, type PointerEvent, type ReactNode } from "react";
 import { ArrowLeft, ArrowDown, ArrowRight, ArrowUp, BookOpen, Gift, HelpCircle, Maximize2, Minimize2, Pause, Play, Settings2, Volume2 } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { advanceAdventure, cameraForWorld, createAdventureWorld, getAdventureSpeedBoost, setWorldMission, type AdventureActor, type Vec } from "@/lib/adventure-engine";
@@ -32,11 +32,11 @@ function WordPicture({ id }: {id:string}) {
 }
 const tierNames = ["", "微小伙伴", "小型伙伴", "中型伙伴", "大型伙伴", "远古与幻想伙伴"];
 const categoryNames: Record<AdventureWordCategory,string> = {animals:"动物",plants:"植物",food:"食物",toys:"玩具",transport:"交通",family:"家人",school:"学校",body:"身体",actions:"动作",nature:"天气",home:"家里"};
-export function AdventureEntries({ progress, onOpen, ready }: {progress:Progress;onOpen:(mode:AdventureMode)=>void;ready:boolean}) {
+export function AdventureEntries({ progress, onOpen, ready, children }: {progress:Progress;onOpen:(mode:AdventureMode)=>void;ready:boolean;children?:ReactNode}) {
   return <section className="continuous-entries adventure-side-rail" aria-label="连续成长冒险"><span className="rail-title">随时来玩</span>{(["fish", "snake"] as const).map(mode => {
     const state = progress.adventure.modes[mode], index = Math.max(0, adventureStages[mode].findLastIndex(stage => state.xp >= stage.xp));
     return <button key={mode} className={`adventure-entry entry-${mode}`} disabled={!ready} onClick={() => onOpen(mode)} aria-label={mode === "fish" ? "海洋成长冒险" : "贪吃蛇连续版"}><AdventureSprite mode={mode} index={mode === "fish" ? index : 0}/><span><strong>{mode === "fish" ? "海洋成长" : "贪吃蛇"}</strong><b>{state.lastAt ? "继续游玩" : "拖动出发"}</b></span></button>;
-  })}</section>;
+  })}{children}</section>;
 }
 
 type AdventureProps = {mode:AdventureMode;progress:Progress;commit:Commit;onBack:()=>void;onSettings:()=>void;suspended?:boolean};
