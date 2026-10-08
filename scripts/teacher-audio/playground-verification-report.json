@@ -1,0 +1,937 @@
+{
+  "voices": {
+    "en": {
+      "voice": "en-US-JennyNeural",
+      "rate": "-12%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    },
+    "zh": {
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-7%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "format": {
+    "sampleRate": 22050,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "encoding": "PCM"
+  },
+  "manuallyAuditioned": false,
+  "files": [
+    {
+      "language": "en",
+      "text": "Give the bunny a carrot.",
+      "url": "/audio/playground-en-06b8141aaec3.wav",
+      "filename": "playground-en-06b8141aaec3.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.697418,
+      "rms": 0.081168,
+      "nonSilentSamples": 27128,
+      "clippedSamples": 0,
+      "sha256": "df589d31db7e392096bf4428b3a195cce757c929b1567cf8fb89e64a2ce602f1"
+    },
+    {
+      "language": "en",
+      "text": "Give the bunny some water.",
+      "url": "/audio/playground-en-0a9bb494e559.wav",
+      "filename": "playground-en-0a9bb494e559.wav",
+      "frames": 56625,
+      "durationMs": 2568.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.667938,
+      "rms": 0.077259,
+      "nonSilentSamples": 29880,
+      "clippedSamples": 0,
+      "sha256": "53effe1362fcf03574ee768d5a04059d618552178c020ae37c432595ff4f153e"
+    },
+    {
+      "language": "en",
+      "text": "Give the kitten a fish.",
+      "url": "/audio/playground-en-4caf01a7a2d3.wav",
+      "filename": "playground-en-4caf01a7a2d3.wav",
+      "frames": 55037,
+      "durationMs": 2496.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.713043,
+      "rms": 0.067691,
+      "nonSilentSamples": 27948,
+      "clippedSamples": 0,
+      "sha256": "3db77a8a4c9856d94c11c1a74b6fb55c4106ce172093cdacb226360f1c86a1d9"
+    },
+    {
+      "language": "en",
+      "text": "Give the kitten some water.",
+      "url": "/audio/playground-en-082c010cfc67.wav",
+      "filename": "playground-en-082c010cfc67.wav",
+      "frames": 56625,
+      "durationMs": 2568.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.584961,
+      "rms": 0.06428,
+      "nonSilentSamples": 29538,
+      "clippedSamples": 0,
+      "sha256": "09935ac9869b447e3f09da7f8ecc34f86f833689d3e7529c99dcaa6a31322b0d"
+    },
+    {
+      "language": "en",
+      "text": "Give the puppy a bone.",
+      "url": "/audio/playground-en-aaf131c9b986.wav",
+      "filename": "playground-en-aaf131c9b986.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.756927,
+      "rms": 0.073374,
+      "nonSilentSamples": 26812,
+      "clippedSamples": 0,
+      "sha256": "83ea2d46eb433c1ba28daba2180c7f48ff351b2c70f4f1e13cf27d0ab35e5245"
+    },
+    {
+      "language": "en",
+      "text": "Give the puppy some water.",
+      "url": "/audio/playground-en-0855506a1dac.wav",
+      "filename": "playground-en-0855506a1dac.wav",
+      "frames": 57153,
+      "durationMs": 2591.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.650604,
+      "rms": 0.07269,
+      "nonSilentSamples": 30268,
+      "clippedSamples": 0,
+      "sha256": "13fa9d62dc3c28578346d4fd75d512fb1b084f6203efd49cdce0d9c716ab02aa"
+    },
+    {
+      "language": "en",
+      "text": "Pick the carrots.",
+      "url": "/audio/playground-en-0f94c34ea785.wav",
+      "filename": "playground-en-0f94c34ea785.wav",
+      "frames": 48687,
+      "durationMs": 2208.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.524689,
+      "rms": 0.060862,
+      "nonSilentSamples": 21782,
+      "clippedSamples": 0,
+      "sha256": "b47f95ded903e97b70213a8fadad0bc103b5918329ff0efa99556f2883189d6f"
+    },
+    {
+      "language": "en",
+      "text": "Pick the corn.",
+      "url": "/audio/playground-en-b17358138320.wav",
+      "filename": "playground-en-b17358138320.wav",
+      "frames": 46041,
+      "durationMs": 2088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.532288,
+      "rms": 0.054592,
+      "nonSilentSamples": 19614,
+      "clippedSamples": 0,
+      "sha256": "de42763c43b50ecec189af383bca08ac8910e18669dcc434001ab95732705ca2"
+    },
+    {
+      "language": "en",
+      "text": "Pick the red rose.",
+      "url": "/audio/playground-en-e5e072202795.wav",
+      "filename": "playground-en-e5e072202795.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.569153,
+      "rms": 0.067962,
+      "nonSilentSamples": 26573,
+      "clippedSamples": 0,
+      "sha256": "ba938958d976f7cb972f28c066ea16134875779f79fef420277651b106f2c6aa"
+    },
+    {
+      "language": "en",
+      "text": "Pick the strawberries.",
+      "url": "/audio/playground-en-bfaac6987dac.wav",
+      "filename": "playground-en-bfaac6987dac.wav",
+      "frames": 53450,
+      "durationMs": 2424.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.626892,
+      "rms": 0.063458,
+      "nonSilentSamples": 26750,
+      "clippedSamples": 0,
+      "sha256": "d7ac693fd76116a21da43a4195c04eab3af3d45ae2a457e57e769a5046c3a6eb"
+    },
+    {
+      "language": "en",
+      "text": "Pick the tomatoes.",
+      "url": "/audio/playground-en-957691aa9706.wav",
+      "filename": "playground-en-957691aa9706.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.658508,
+      "rms": 0.067426,
+      "nonSilentSamples": 26214,
+      "clippedSamples": 0,
+      "sha256": "ad9f9bb52ba01ff6041b426621eea9e710853f1b4e43e13e2e0dd0b9ba87ae90"
+    },
+    {
+      "language": "en",
+      "text": "Pick the yellow sunflower.",
+      "url": "/audio/playground-en-292eef04ef2d.wav",
+      "filename": "playground-en-292eef04ef2d.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.594849,
+      "rms": 0.073005,
+      "nonSilentSamples": 32918,
+      "clippedSamples": 0,
+      "sha256": "f41a03acf441f31fdf6ae7bb258633f2b464b827ec67bb805f2c2f742396dcb8"
+    },
+    {
+      "language": "en",
+      "text": "Plant a red rose.",
+      "url": "/audio/playground-en-63fa554eeaa8.wav",
+      "filename": "playground-en-63fa554eeaa8.wav",
+      "frames": 53979,
+      "durationMs": 2448.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.703949,
+      "rms": 0.077836,
+      "nonSilentSamples": 27972,
+      "clippedSamples": 0,
+      "sha256": "0e1a20f912391058aeb241f17495f3fbe7d7bb61707b7bb234a4df0460dbc0bc"
+    },
+    {
+      "language": "en",
+      "text": "Plant a yellow sunflower.",
+      "url": "/audio/playground-en-56209865f379.wav",
+      "filename": "playground-en-56209865f379.wav",
+      "frames": 61917,
+      "durationMs": 2808.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.690582,
+      "rms": 0.08088,
+      "nonSilentSamples": 34849,
+      "clippedSamples": 0,
+      "sha256": "dade79d8a063d496ea6c2a18275a310d1f8e95d52344d9f3ad38392e9fd5d7d7"
+    },
+    {
+      "language": "en",
+      "text": "Plant carrots.",
+      "url": "/audio/playground-en-a8447e345b72.wav",
+      "filename": "playground-en-a8447e345b72.wav",
+      "frames": 48158,
+      "durationMs": 2184.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.686066,
+      "rms": 0.072131,
+      "nonSilentSamples": 21166,
+      "clippedSamples": 0,
+      "sha256": "98900f83d8c9f42eb23cec703e26f3e0e4a219a65ff1f7cc02a510f9651df55a"
+    },
+    {
+      "language": "en",
+      "text": "Plant corn.",
+      "url": "/audio/playground-en-4bcdbe25c330.wav",
+      "filename": "playground-en-4bcdbe25c330.wav",
+      "frames": 44453,
+      "durationMs": 2016.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.663635,
+      "rms": 0.065297,
+      "nonSilentSamples": 18163,
+      "clippedSamples": 0,
+      "sha256": "e7504e4f5fda4206933f2411f8b3f10d94121f7692643c80eb09c7f01c694962"
+    },
+    {
+      "language": "en",
+      "text": "Plant strawberries.",
+      "url": "/audio/playground-en-568d35a2ab23.wav",
+      "filename": "playground-en-568d35a2ab23.wav",
+      "frames": 51861,
+      "durationMs": 2351.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.61795,
+      "rms": 0.069654,
+      "nonSilentSamples": 25804,
+      "clippedSamples": 0,
+      "sha256": "1c6ef36ad3427f96e0f4143d15f6a1b584e81cb0af714709974ba26e5268a349"
+    },
+    {
+      "language": "en",
+      "text": "Plant tomatoes.",
+      "url": "/audio/playground-en-f727d9de92ee.wav",
+      "filename": "playground-en-f727d9de92ee.wav",
+      "frames": 50804,
+      "durationMs": 2304.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.684692,
+      "rms": 0.072228,
+      "nonSilentSamples": 24562,
+      "clippedSamples": 0,
+      "sha256": "df547cbbf35eb3176bb0e813c15b9075b8dafcf826db223e08398065efba9549"
+    },
+    {
+      "language": "en",
+      "text": "Play with the bunny.",
+      "url": "/audio/playground-en-26f1f509eb40.wav",
+      "filename": "playground-en-26f1f509eb40.wav",
+      "frames": 48687,
+      "durationMs": 2208.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.610138,
+      "rms": 0.075242,
+      "nonSilentSamples": 21779,
+      "clippedSamples": 0,
+      "sha256": "e754cd4934e5e11094fec495be3dea2db38abd3594cfc5924ae64cab453fd54a"
+    },
+    {
+      "language": "en",
+      "text": "Play with the kitten.",
+      "url": "/audio/playground-en-e1863a33fa84.wav",
+      "filename": "playground-en-e1863a33fa84.wav",
+      "frames": 47099,
+      "durationMs": 2136.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.601044,
+      "rms": 0.067143,
+      "nonSilentSamples": 20402,
+      "clippedSamples": 0,
+      "sha256": "9fb409be23fb22cfee37da0b6cafe4756b86ff8ab61515188f0168b1c31192df"
+    },
+    {
+      "language": "en",
+      "text": "Play with the puppy.",
+      "url": "/audio/playground-en-519358cdc84d.wav",
+      "filename": "playground-en-519358cdc84d.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.622803,
+      "rms": 0.073588,
+      "nonSilentSamples": 22975,
+      "clippedSamples": 0,
+      "sha256": "a74966f62fe99be437c6a050b16762bd223c745dd90493354c51e6b4e0f6831c"
+    },
+    {
+      "language": "en",
+      "text": "Put the bunny to bed.",
+      "url": "/audio/playground-en-ebf27ec8a8a9.wav",
+      "filename": "playground-en-ebf27ec8a8a9.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.655212,
+      "rms": 0.075299,
+      "nonSilentSamples": 26073,
+      "clippedSamples": 0,
+      "sha256": "b79832c89bc8dd18d9c455d7a979c97fa5a82b66c17240898bd74787525cb880"
+    },
+    {
+      "language": "en",
+      "text": "Put the kitten to bed.",
+      "url": "/audio/playground-en-5eededccb63a.wav",
+      "filename": "playground-en-5eededccb63a.wav",
+      "frames": 51861,
+      "durationMs": 2351.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.671539,
+      "rms": 0.069347,
+      "nonSilentSamples": 25762,
+      "clippedSamples": 0,
+      "sha256": "5f92e57b548f35b29b5c2fbc88bdbff784ba71806207ce4ef4213e6a9018518e"
+    },
+    {
+      "language": "en",
+      "text": "Put the puppy to bed.",
+      "url": "/audio/playground-en-f8ec58bb193e.wav",
+      "filename": "playground-en-f8ec58bb193e.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.64801,
+      "rms": 0.072139,
+      "nonSilentSamples": 26670,
+      "clippedSamples": 0,
+      "sha256": "840e3f4ebb8abb4e1e9b8c693795f72051c56fc542d5128a0f12637c999f7bea"
+    },
+    {
+      "language": "en",
+      "text": "Take the apple to the farm.",
+      "url": "/audio/playground-en-dedd479c271a.wav",
+      "filename": "playground-en-dedd479c271a.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.594177,
+      "rms": 0.064477,
+      "nonSilentSamples": 32789,
+      "clippedSamples": 0,
+      "sha256": "fc12d773ba715e5813e4b6f0fb5f9bdf8776cc5c2e1f0a3bf75552b33c36497f"
+    },
+    {
+      "language": "en",
+      "text": "Take the apple to the shop.",
+      "url": "/audio/playground-en-4297f9f444d3.wav",
+      "filename": "playground-en-4297f9f444d3.wav",
+      "frames": 57683,
+      "durationMs": 2616.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.618378,
+      "rms": 0.070204,
+      "nonSilentSamples": 30175,
+      "clippedSamples": 0,
+      "sha256": "7729d647fd750ef530b5ad6498f19122207f2ffbd002dfe20cdb1da40b92ba43"
+    },
+    {
+      "language": "en",
+      "text": "Take the ball home.",
+      "url": "/audio/playground-en-8458c38a27ec.wav",
+      "filename": "playground-en-8458c38a27ec.wav",
+      "frames": 50274,
+      "durationMs": 2280.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.593475,
+      "rms": 0.067288,
+      "nonSilentSamples": 24187,
+      "clippedSamples": 0,
+      "sha256": "34aa7926b456460e1d0fe38080329c592d404d59b57a2cf3f0ba07dce30477bb"
+    },
+    {
+      "language": "en",
+      "text": "Take the ball to the park.",
+      "url": "/audio/playground-en-773df3af8dc3.wav",
+      "filename": "playground-en-773df3af8dc3.wav",
+      "frames": 57683,
+      "durationMs": 2616.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.647949,
+      "rms": 0.073359,
+      "nonSilentSamples": 29939,
+      "clippedSamples": 0,
+      "sha256": "b35a7811d81065f70069cca2eeeb6ebc81158b2bc56011f7d1af0cfd5100bb46"
+    },
+    {
+      "language": "en",
+      "text": "Take the book to the beach.",
+      "url": "/audio/playground-en-d8cb2c28e5b2.wav",
+      "filename": "playground-en-d8cb2c28e5b2.wav",
+      "frames": 55037,
+      "durationMs": 2496.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.670837,
+      "rms": 0.065213,
+      "nonSilentSamples": 27326,
+      "clippedSamples": 0,
+      "sha256": "651d28ec13634dfcb0a5f1c75a845d864358ad21b8d4fdbc912550747d31420a"
+    },
+    {
+      "language": "en",
+      "text": "Take the book to the school.",
+      "url": "/audio/playground-en-cceb9f05dc0c.wav",
+      "filename": "playground-en-cceb9f05dc0c.wav",
+      "frames": 56625,
+      "durationMs": 2568.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.612366,
+      "rms": 0.059587,
+      "nonSilentSamples": 28195,
+      "clippedSamples": 0,
+      "sha256": "e5f388fbac2a1a1e001836b709d30ea17004df222d4861da8e472e7a0009454b"
+    },
+    {
+      "language": "en",
+      "text": "Take the flower home.",
+      "url": "/audio/playground-en-a3ab719a1650.wav",
+      "filename": "playground-en-a3ab719a1650.wav",
+      "frames": 53450,
+      "durationMs": 2424.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.588867,
+      "rms": 0.066601,
+      "nonSilentSamples": 26985,
+      "clippedSamples": 0,
+      "sha256": "09d405d989721c4cbf80e77cfb5c003da9f28d5750b5efb3a96bf5c670202d3b"
+    },
+    {
+      "language": "en",
+      "text": "Take the flower to the park.",
+      "url": "/audio/playground-en-bb82553cb910.wav",
+      "filename": "playground-en-bb82553cb910.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.639893,
+      "rms": 0.0688,
+      "nonSilentSamples": 33346,
+      "clippedSamples": 0,
+      "sha256": "31bcb8d0cfcfd60f2a9a2ad12c83d937b093edbb8df57cd510ee829a2e1e69fe"
+    },
+    {
+      "language": "en",
+      "text": "Take the milk to the farm.",
+      "url": "/audio/playground-en-45a1c1b7789f.wav",
+      "filename": "playground-en-45a1c1b7789f.wav",
+      "frames": 58742,
+      "durationMs": 2664.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.610901,
+      "rms": 0.065206,
+      "nonSilentSamples": 31406,
+      "clippedSamples": 0,
+      "sha256": "74c31d91f6f6b1a6433b74e3306dd5f613776d3f41bd1b5e0dee5b08fd136848"
+    },
+    {
+      "language": "en",
+      "text": "Take the milk to the shop.",
+      "url": "/audio/playground-en-03e990fa45b3.wav",
+      "filename": "playground-en-03e990fa45b3.wav",
+      "frames": 57153,
+      "durationMs": 2591.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.675507,
+      "rms": 0.071356,
+      "nonSilentSamples": 29321,
+      "clippedSamples": 0,
+      "sha256": "e0d763824cd0635d3b1b779deb961a039f99c47f5bf7bc2d15369876640a7026"
+    },
+    {
+      "language": "en",
+      "text": "Take the water to the beach.",
+      "url": "/audio/playground-en-352cd096b0af.wav",
+      "filename": "playground-en-352cd096b0af.wav",
+      "frames": 59271,
+      "durationMs": 2688.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.657959,
+      "rms": 0.07363,
+      "nonSilentSamples": 32210,
+      "clippedSamples": 0,
+      "sha256": "c7b23ee8ae605eddca8e3f6555909d48ded8cd2edb9724cb1fd083660c3e6ae9"
+    },
+    {
+      "language": "en",
+      "text": "Take the water to the school.",
+      "url": "/audio/playground-en-50cda3017d39.wav",
+      "filename": "playground-en-50cda3017d39.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.578705,
+      "rms": 0.069498,
+      "nonSilentSamples": 31951,
+      "clippedSamples": 0,
+      "sha256": "90c5f6dd9320970afaa5be22810f5a01dbfc0bb71e1a11accf3aa1bc097ca8f3"
+    },
+    {
+      "language": "en",
+      "text": "Wash the bunny.",
+      "url": "/audio/playground-en-71902349f785.wav",
+      "filename": "playground-en-71902349f785.wav",
+      "frames": 46569,
+      "durationMs": 2111.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.675201,
+      "rms": 0.07159,
+      "nonSilentSamples": 19549,
+      "clippedSamples": 0,
+      "sha256": "828ded1efb461686cf3d95ccb141722406e674c83f6d306b3f0f57f437b54ffe"
+    },
+    {
+      "language": "en",
+      "text": "Wash the kitten.",
+      "url": "/audio/playground-en-b06f1c70441e.wav",
+      "filename": "playground-en-b06f1c70441e.wav",
+      "frames": 44982,
+      "durationMs": 2040.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.659973,
+      "rms": 0.05848,
+      "nonSilentSamples": 18389,
+      "clippedSamples": 0,
+      "sha256": "ecabb85e23182a26ff4206f7c29fd479212da4fd64672cb4313e81ab22410efd"
+    },
+    {
+      "language": "en",
+      "text": "Wash the puppy.",
+      "url": "/audio/playground-en-d523244dd05c.wav",
+      "filename": "playground-en-d523244dd05c.wav",
+      "frames": 48158,
+      "durationMs": 2184.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.689972,
+      "rms": 0.067843,
+      "nonSilentSamples": 20590,
+      "clippedSamples": 0,
+      "sha256": "6b8d7828993a556f804f8e8127da2b4318d607d018964cee28831a81486b2e11"
+    },
+    {
+      "language": "en",
+      "text": "Water the carrots.",
+      "url": "/audio/playground-en-a938eb5da25c.wav",
+      "filename": "playground-en-a938eb5da25c.wav",
+      "frames": 51861,
+      "durationMs": 2351.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.628418,
+      "rms": 0.066962,
+      "nonSilentSamples": 24841,
+      "clippedSamples": 0,
+      "sha256": "02b1adb1d8647843058c5f5efaa1c559cbf2fbcda01cfa9237acfa4403b4dd06"
+    },
+    {
+      "language": "en",
+      "text": "Water the corn.",
+      "url": "/audio/playground-en-0da6d3cd7d43.wav",
+      "filename": "playground-en-0da6d3cd7d43.wav",
+      "frames": 48158,
+      "durationMs": 2184.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.629028,
+      "rms": 0.065134,
+      "nonSilentSamples": 21989,
+      "clippedSamples": 0,
+      "sha256": "d411075f1d47b02f8665748a7c19cb9928116ba60b77aa1bb316f0c5852ffbc5"
+    },
+    {
+      "language": "en",
+      "text": "Water the red rose.",
+      "url": "/audio/playground-en-1f49b5c2a8c1.wav",
+      "filename": "playground-en-1f49b5c2a8c1.wav",
+      "frames": 55566,
+      "durationMs": 2520.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.594574,
+      "rms": 0.072134,
+      "nonSilentSamples": 29102,
+      "clippedSamples": 0,
+      "sha256": "47a0deb95c3da93cbdf6aafde4a6cb1aabd82e0d32eecf15050bbfce66e3780a"
+    },
+    {
+      "language": "en",
+      "text": "Water the strawberries.",
+      "url": "/audio/playground-en-f127386eef82.wav",
+      "filename": "playground-en-f127386eef82.wav",
+      "frames": 56625,
+      "durationMs": 2568.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.583557,
+      "rms": 0.065474,
+      "nonSilentSamples": 30266,
+      "clippedSamples": 0,
+      "sha256": "112102f89e610c8ed669fac2eec2f33383d6c4a205eb2b0389d3e4a856cf4457"
+    },
+    {
+      "language": "en",
+      "text": "Water the tomatoes.",
+      "url": "/audio/playground-en-bea42405634c.wav",
+      "filename": "playground-en-bea42405634c.wav",
+      "frames": 55037,
+      "durationMs": 2496.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.615967,
+      "rms": 0.06975,
+      "nonSilentSamples": 28458,
+      "clippedSamples": 0,
+      "sha256": "24224366fd35e7f0b281cee4f5112672091d3100b14eca9758a107207f75a43b"
+    },
+    {
+      "language": "en",
+      "text": "Water the yellow sunflower.",
+      "url": "/audio/playground-en-fd2b43ac1ee8.wav",
+      "filename": "playground-en-fd2b43ac1ee8.wav",
+      "frames": 63504,
+      "durationMs": 2880.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.691559,
+      "rms": 0.075053,
+      "nonSilentSamples": 36154,
+      "clippedSamples": 0,
+      "sha256": "33369db7fed7ae271180c4211ab74296e64ca7d05a4fc18affc82b5f969cdb23"
+    },
+    {
+      "language": "zh",
+      "text": "小狗、小猫和小兔在等你。先听英语，选好用品，再点需要照顾的小伙伴。也可以拖过去。",
+      "url": "/audio/playground-zh-7e6781ee99e2.wav",
+      "filename": "playground-zh-7e6781ee99e2.wav",
+      "frames": 222264,
+      "durationMs": 10080.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.624146,
+      "rms": 0.099358,
+      "nonSilentSamples": 165334,
+      "clippedSamples": 0,
+      "sha256": "038dcc230c3f31cdd4cbdaa6c144ac64c347cca8fe38ee3b7c61202e5c0f50af"
+    },
+    {
+      "language": "zh",
+      "text": "小车带着礼物出发啦。先听英语，再点目的地，小车会沿着道路开过去。方向按钮和键盘也能开车。",
+      "url": "/audio/playground-zh-1f06acb610a2.wav",
+      "filename": "playground-zh-1f06acb610a2.wav",
+      "frames": 244491,
+      "durationMs": 11088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.718109,
+      "rms": 0.101338,
+      "nonSilentSamples": 193640,
+      "clippedSamples": 0,
+      "sha256": "afa799fe05c5215a5b321139d2cbbaf6e2ed85f28c88f2a206e883cab0dbe695"
+    },
+    {
+      "language": "zh",
+      "text": "欢迎来到小狐狸花园。先听英语，选好种子或工具，再点亮着光的土地。也可以拖过去。",
+      "url": "/audio/playground-zh-ea734a21450e.wav",
+      "filename": "playground-zh-ea734a21450e.wav",
+      "frames": 214326,
+      "durationMs": 9720.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.623962,
+      "rms": 0.098206,
+      "nonSilentSamples": 162618,
+      "clippedSamples": 0,
+      "sha256": "6073cad189c87960fb354c500e79b840842a259177fdf057527c1f6b6c42c2eb"
+    }
+  ]
+}

@@ -233,6 +233,7 @@ export function LearningStudio({ progress, commit, onBack, initialUnit = null }:
     {pendingActivity && <div className="learning-switch-confirm" role="alertdialog" aria-labelledby="learning-switch-title"><h2 id="learning-switch-title">换一条探险小路？</h2><p>当前这次还没结束。切换后保留已经答过的学习记录，结束当前续玩，开始“{pendingActivity.title}”。</p><div className="learning-actions"><button className="learning-button" onClick={() => beginActivity(pendingActivity, true)}>开始新的探险</button><button className="learning-button learning-button-secondary" onClick={() => setPendingActivity(null)}>继续当前这次</button></div></div>}
 
     {view === "hub" && <>
+      {/* eslint-disable-next-line @next/next/no-img-element -- The shared static mascot must also load from the public and offline asset packs. */}
       <div className="learning-hero"><div><p className="learning-eyebrow">每天一点点，自己会表达</p><h1>乐乐的学习探索站</h1><p>听一听、找一找、拼一拼，再把今天会的英语告诉家人。</p><span className="learning-level-pill">Pre-A1 基础 → A1 衔接</span></div><img src="/images/fox.png" alt="小狐狸乐乐" /></div>
       {run && <div className="learning-resume"><span>上次的小路还没走完 · 已完成 {run.index} / {run.taskIds.length}</span><button className="learning-button" onClick={() => { const found = getLearningActivity(run.activityId); if (found) beginActivity(found); }}>继续这次探险 <ArrowRight size={20} /></button></div>}
       <div className="learning-daily"><h2>今天的 10–15 分钟小冒险</h2><div className="learning-daily-grid">

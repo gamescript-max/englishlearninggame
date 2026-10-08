@@ -2,6 +2,7 @@ import { bonusInstructions, createRun, getLesson, getTopic, getWord, lessons, to
 import { createLearningProgress, recordRecall, validateLearningProgress, normalizeLearningAnswer, type LearningProgress } from "./learning-state";
 import { allLearningWords, learningActivities, learningTasks, diagnosticActivity, getLearningActivity } from "./learning-content";
 import { createAdventureProgress, validateAdventureProgress, type AdventureProgress } from "./adventure-progress";
+import { createPlaygroundProgress, validatePlaygroundProgress, type PlaygroundProgress } from "./playground-progress";
 
 export interface AnswerRecord {
   id: string;
@@ -51,6 +52,7 @@ export interface Progress {
   version: 1;
   learning: LearningProgress;
   adventure: AdventureProgress;
+  playground: PlaygroundProgress;
   completed: Record<string, Completion>;
   attempts: AnswerRecord[];
   review: ReviewItem[];
@@ -93,7 +95,7 @@ export function nextDayAt(now: number): number {
 }
 
 export function createProgress(): Progress {
-  return { version: 1, learning: createLearningProgress(), adventure: createAdventureProgress(), completed: {}, attempts: [], review: [], stars: 0, reviewRewardDays: [], settledRuns: [], settings: { music: true, volume: 0.75 }, activeRun: null, totalSeconds: 0, speakingCount: 0 };
+  return { version: 1, learning: createLearningProgress(), adventure: createAdventureProgress(), playground: createPlaygroundProgress(), completed: {}, attempts: [], review: [], stars: 0, reviewRewardDays: [], settledRuns: [], settings: { music: true, volume: 0.75 }, activeRun: null, totalSeconds: 0, speakingCount: 0 };
 }
 
 export function isTopicUnlocked(progress: Progress, topicId: string): boolean {
@@ -330,7 +332,7 @@ function parseExercise(value: unknown, runLessonId: string): Exercise {
 
 /** Validate and reconstruct every field rather than trusting imported object properties. */
 export function validateProgress(value: unknown): Progress {
-  const data = object(value, ["version", "learning", "adventure", "completed", "attempts", "review", "stars", "reviewRewardDays", "settledRuns", "settings", "activeRun", "totalSeconds", "speakingCount"]);
+  const data = object(value, ["version", "learning", "adventure", "playground", "completed", "attempts", "review", "stars", "reviewRewardDays", "settledRuns", "settings", "activeRun", "totalSeconds", "speakingCount"]);
   if (data.version !== 1) invalid();
   const completedData = object(data.completed);
   const completed: Record<string, Completion> = {};
@@ -354,6 +356,7 @@ export function validateProgress(value: unknown): Progress {
   if (typeof settings.volume !== "number" || !Number.isFinite(settings.volume) || settings.volume < 0 || settings.volume > 1) invalid();
   const progress: Progress = {
     adventure: validateAdventureProgress(data.adventure),
+    playground: validatePlaygroundProgress(data.playground),
     version: 1, learning: data.learning === undefined ? migrateLearning(attempts, review) : validateLearningProgress(data.learning, new Set(allLearningWords.map(word=>word.id)), new Set(learningTasks.keys()), new Set(learningActivities.map(activity=>activity.id))), completed, attempts, review, stars: integer(data.stars, 100000),
     reviewRewardDays: unique(list(data.reviewRewardDays, 40000).map(dateKey)),
     settledRuns: unique(list(data.settledRuns).map((value) => string(value))),

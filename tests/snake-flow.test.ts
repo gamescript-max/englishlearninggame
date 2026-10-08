@@ -4,6 +4,7 @@ import * as course from "../lib/course";
 import * as domain from "../lib/progress";
 import * as destinations from "../lib/destinations";
 import * as adventureProgress from "../lib/adventure-progress";
+import * as playgroundContent from "../lib/playground-content";
 import type { SnakeGameProps } from "../components/snake-game";
 import type { ExplorationGameProps } from "../components/exploration-games";
 import { componentHost, nodeText } from "./helpers/component-host";
@@ -53,6 +54,8 @@ function mount(lessonId = "animals-10") {
     "@/components/bonus-games": ui(["MemoryGame", "SceneGame", "SpellingGame"]), "@/components/snake-game": ui(["SnakeGame"]),
     "@/components/catch-game": ui(["CatchGame"]), "@/components/adventure-map": ui(["WorldMap", "LessonTrail"]),
     "@/components/continuous-adventure": ui(["AdventureEntries", "AdventureReport", "ContinuousAdventure"]),
+    "@/components/playground": ui(["Playground", "PlaygroundEntries", "PlaygroundReport"]),
+    "@/lib/playground-content": playgroundContent,
     "@/lib/adventure-progress": adventureProgress,
     "@/components/exploration-games": ui(["BubbleGame", "DeliveryGame", "ConnectionGame"]),
     "@/lib/destinations": destinations,

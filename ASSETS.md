@@ -1,6 +1,14 @@
 # 素材来源与许可说明
 
-记录日期：2026-10-04；当前海洋素材说明更新于 2026-10-05。图片使用内置 `image_gen` 按本项目的原创描述生成；未直接复制参考仓库的角色、场景、词图或音频。图像用于本项目，未使用剑桥官方考试图、原题、认证标识或其他品牌角色。
+记录日期：2026-10-04；海洋素材说明更新于 2026-10-05，生活游戏素材说明更新于 2026-10-08。PNG图片使用内置 `image_gen` 按本项目的原创描述生成；生活游戏的植物、宠物、小车和场景使用原创SVG及CSS绘制。未直接复制参考仓库的角色、场景、词图或音频。图像用于本项目，未使用剑桥官方考试图、原题、认证标识或其他品牌角色。
+
+## 三个生活游戏的素材与固定语音（2026-10-08）
+
+小狐狸花园、萌宠照顾小镇和英语欢乐赛车新增的植物、工具、宠物、小车、花园及道路建筑均为本项目原创SVG/CSS，源文件为 `components/garden-game.tsx`、`components/pet-town-game.tsx`、`components/racing-game.tsx` 及各自CSS。花园复用现有原创 `public/images/fox.png` 伙伴，不增加下载图集或外部图像依赖。这些场景没有使用参考游戏的角色、标志或素材。
+
+新增48条固定语音对应18个花园任务、15个宠物任务、12个赛车任务及3条普通话操作说明。英语沿用 `en-US-JennyNeural`、语速-12%，普通话沿用 `zh-CN-XiaoxiaoNeural`、语速-7%；它们是合成女声，不是幼师真人录音。游戏播放预生成文件，游玩时不请求在线合成，也不发送孩子录音。
+
+文件为 `public/audio/playground-en-*.wav` 和 `public/audio/playground-zh-*.wav`，采用单声道16bit PCM WAV、22,050Hz。课程文本清单在 `scripts/teacher-audio/playground-texts.json`，复现脚本是 `scripts/teacher-audio/playground-audio.py`；生成后同步 `public/audio/manifest.json` 与 `lib/audio-manifest.json`。逐文件格式、时长、峰值、非静音、零削波与SHA256记录见 `scripts/teacher-audio/playground-verification-report.json`。自动文件检查通过；该报告明确记录 `manuallyAuditioned: false`，尚未逐条人工试听，不能据此宣称主观发音或儿童可理解性已验收。
 
 ## 大海域背景（2026-10-04）
 
