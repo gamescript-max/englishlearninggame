@@ -7,12 +7,14 @@ import { advanceSwimState, createSwimState, fishFinRows, fishStrip, sampleSwim, 
 import { naturalColorArt, naturalOceanArt, naturalOceanAtlases } from "@/lib/natural-ocean-art";
 import { feedingOpen, mouthGeometry, mouthProfile } from "@/lib/adventure-feeding";
 import { paintOceanScenery } from "./ocean-scenery";
+import { loadOceanSceneryImages, type OceanSceneryImages } from "./ocean-scenery-sprites";
 
 export interface AdventureImages {
   snake: HTMLImageElement; words: HTMLImageElement; sea: HTMLImageElement;
   ocean: HTMLImageElement[]; snakeBreeds: HTMLImageElement;
   oceanSprites?: Map<number, HTMLCanvasElement>;
   cards: HTMLImageElement; expandedWords: HTMLImageElement;
+  scenery?: OceanSceneryImages;
 }
 type Rect = { x: number; y: number; w: number; h: number };
 type SwimRecord = {state:SwimState;x:number;y:number;at:number};
@@ -35,13 +37,13 @@ export async function loadAdventureImages(): Promise<AdventureImages> {
   const load = (src: string) => new Promise<HTMLImageElement>((resolve, reject) => {
     const img = new Image(); img.onload = () => resolve(img); img.onerror = () => reject(new Error("小伙伴的图片还没加载好，点一下重试。")); img.src = src;
   });
-  const [entries, ocean] = await Promise.all([Promise.all(names.map(name => load(`/images/${name}.png`))), Promise.all(naturalOceanAtlases.map(atlas => load(atlas.src)))]);
+  const [entries, ocean, scenery] = await Promise.all([Promise.all(names.map(name => load(`/images/${name}.png`))), Promise.all(naturalOceanAtlases.map(atlas => load(atlas.src))), loadOceanSceneryImages()]);
   const oceanSprites = new Map<number,HTMLCanvasElement>();
   for (const index of [85,86,87,88,90,91,92]) {
     const rect = naturalOceanArt(index);
     oceanSprites.set(index,prepareOceanSprite(ocean[rect.atlas],rect));
   }
-  return { snake: entries[0], words: entries[1], sea: entries[2], snakeBreeds: entries[3], cards: entries[4], expandedWords: entries[5], ocean, oceanSprites };
+  return { snake: entries[0], words: entries[1], sea: entries[2], snakeBreeds: entries[3], cards: entries[4], expandedWords: entries[5], ocean, oceanSprites, scenery };
 }
 export function paintAdventure(ctx: CanvasRenderingContext2D, world: AdventureWorld, images: AdventureImages, width: number, height: number, hinted: boolean, followId?: string, reducedMotion = false) {
   const previewStart = process.env.NODE_ENV === "development" ? performance.now() : undefined;
@@ -51,7 +53,7 @@ export function paintAdventure(ctx: CanvasRenderingContext2D, world: AdventureWo
   if (world.mode === "fish") {
     ctx.drawImage(images.sea, camera.x / world.width * images.sea.width, camera.y / world.height * images.sea.height, viewWidth / world.width * images.sea.width, viewHeight / world.height * images.sea.height, 0, 0, width, height);
     ctx.fillStyle = "#20b7d712"; ctx.fillRect(0, 0, width, height);
-    paintOceanScenery(ctx, {width, height, cameraX:camera.x, cameraY:camera.y, zoom:camera.zoom, elapsed:world.elapsed, reducedMotion, islands:true});
+    paintOceanScenery(ctx, {width, height, cameraX:camera.x, cameraY:camera.y, zoom:camera.zoom, elapsed:world.elapsed, reducedMotion, scene:"adventure", images:images.scenery});
   }
   ctx.save(); ctx.scale(camera.zoom, camera.zoom); ctx.translate(-camera.x, -camera.y);
   let swimRecords = swimming.get(world);

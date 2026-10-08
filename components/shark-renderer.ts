@@ -41,7 +41,7 @@ function glow(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numbe
 }
 function stroke(ctx: CanvasRenderingContext2D, color: string, width: number) { ctx.strokeStyle = color; ctx.lineWidth = width; ctx.stroke(); }
 
-function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, time: number, reducedMotion: boolean) {
+function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, time: number, reducedMotion: boolean, images?: SharkImages) {
   const horizon = sharkSurfaceScreenY(height), offset = world.player.x * .024;
   ctx.fillStyle = linear(ctx, 0, 0, 0, horizon, [[0, "#86bcdc"], [.65, "#c4dfeb"], [1, "#eaf1ef"]]); ctx.fillRect(0, 0, width, horizon + 5);
   const sun = ctx.createRadialGradient(width * .77, horizon * .34, 1, width * .77, horizon * .34, Math.max(34, horizon * .55));
@@ -87,7 +87,7 @@ function paintOcean(ctx: CanvasRenderingContext2D, world: SharkWorld, width: num
   }
   ctx.restore();
   const camera = sharkCamera(world, width, height);
-  paintOceanScenery(ctx, { width, height, cameraX: camera.x, cameraY: camera.y, elapsed: time, reducedMotion, surfaceY: horizon, islands: false });
+  paintOceanScenery(ctx, { width, height, cameraX: camera.x, cameraY: camera.y, elapsed: time, reducedMotion, surfaceY: horizon, scene:"shark", images:images?.scenery });
   // Small whitecaps stay on the surface instead of suggesting an ocean-floor reef.
   ctx.lineCap = "round";
   for (let crest = 0; crest < 15; crest++) {
@@ -154,9 +154,9 @@ function paintSpace(ctx: CanvasRenderingContext2D, world: SharkWorld, width: num
   }
 }
 
-function paintBackground(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, reducedMotion: boolean) {
+function paintBackground(ctx: CanvasRenderingContext2D, world: SharkWorld, width: number, height: number, stage: number, reducedMotion: boolean, images?: SharkImages) {
   const time = reducedMotion ? 0 : world.elapsed;
-  if (stage < 6) paintOcean(ctx, world, width, height, stage, time, reducedMotion);
+  if (stage < 6) paintOcean(ctx, world, width, height, stage, time, reducedMotion, images);
   else paintSpace(ctx, world, width, height, stage, time, reducedMotion);
 }
 
@@ -544,9 +544,9 @@ export function paintSharkWorld(ctx: CanvasRenderingContext2D, world: SharkWorld
   ctx.save(); ctx.clearRect(0, 0, width, height);
   const transition = reducedMotion ? 1 : clamp((world.elapsed - memory.changedAt) / .9, 0, 1);
   if (transition < 1 && memory.previousStage !== memory.stage) {
-    paintBackground(ctx, world, width, height, memory.previousStage, reducedMotion);
-    ctx.save(); ctx.globalAlpha = transition; paintBackground(ctx, world, width, height, memory.stage, reducedMotion); ctx.restore();
-  } else paintBackground(ctx, world, width, height, memory.stage, reducedMotion);
+    paintBackground(ctx, world, width, height, memory.previousStage, reducedMotion, options.images);
+    ctx.save(); ctx.globalAlpha = transition; paintBackground(ctx, world, width, height, memory.stage, reducedMotion, options.images); ctx.restore();
+  } else paintBackground(ctx, world, width, height, memory.stage, reducedMotion, options.images);
   const views: FoodView[] = [];
   const nearbyIds = world.nearbyFoodIds ? new Set(world.nearbyFoodIds) : undefined;
   for (const food of world.foods.slice(0, 20)) {

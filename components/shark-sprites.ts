@@ -1,13 +1,14 @@
 import { naturalOceanArt } from "@/lib/natural-ocean-art";
 import { createSwimState, fishFinRows, fishStrip, sampleSwim, swimProfileFor } from "@/lib/adventure-motion";
 import { mouthGeometry } from "@/lib/adventure-feeding";
+import { loadOceanSceneryImages, type OceanSceneryImages } from "./ocean-scenery-sprites";
 
 export const SHARK_ART_INDEX = 70;
 // Preserve each species' natural colour: orange goldfish, red betta, blue/red
 // tetras and yellow croaker share the water with a few silver coastal fish.
 export const SHARK_PREY_ART = [9, 11, 12, 15, 16, 26, 27, 48] as const;
 export interface SharkSprite { image: CanvasImageSource; w: number; h: number; species: string }
-export interface SharkImages { readonly sprites: ReadonlyMap<number, SharkSprite> }
+export interface SharkImages { readonly sprites: ReadonlyMap<number, SharkSprite>; readonly scenery?: OceanSceneryImages }
 type Point = { x: number; y: number };
 type Rect = { x: number; y: number; w: number; h: number };
 
@@ -18,6 +19,7 @@ export function loadSharkImages(): Promise<SharkImages> {
   return imageLoading;
 }
 async function prepareSharkImages(): Promise<SharkImages> {
+  const scenery = await loadOceanSceneryImages();
   const indices = [SHARK_ART_INDEX, ...SHARK_PREY_ART], sources = [...new Set(indices.map(index => naturalOceanArt(index).src))];
   const loaded = await Promise.all(sources.map(src => new Promise<HTMLImageElement>((resolve, reject) => {
     const image = new Image(); image.onload = () => resolve(image);
@@ -39,7 +41,7 @@ async function prepareSharkImages(): Promise<SharkImages> {
   }
   // Release decoded atlas images after copying their small crops.
   for (const image of loaded) { image.onload = null; image.onerror = null; image.src = ""; }
-  return { sprites };
+  return { sprites, scenery };
 }
 
 function path(ctx: CanvasRenderingContext2D, points: Point[]) {

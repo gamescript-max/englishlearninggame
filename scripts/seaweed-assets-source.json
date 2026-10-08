@@ -1,0 +1,96 @@
+{
+  "source": "public/images/natural-seabed-plants-v2.png",
+  "width": 1223,
+  "height": 1286,
+  "mode": "RGBA",
+  "bytes": 2396924,
+  "sha256": "b06a8c1cb5381c5ad094be2174c0788e6779432d3bed22828644389de93202a7",
+  "transparentFraction": 0.4685556384944347,
+  "cells": [
+    {
+      "rect": [
+        50,
+        25,
+        600,
+        638
+      ],
+      "alphaAbove12Bounds": [
+        25,
+        26,
+        573,
+        622
+      ],
+      "rootAt": "bottom-centre",
+      "transparentPaddingPx": [
+        25,
+        26,
+        27,
+        16
+      ]
+    },
+    {
+      "rect": [
+        650,
+        25,
+        557,
+        638
+      ],
+      "alphaAbove12Bounds": [
+        16,
+        14,
+        524,
+        622
+      ],
+      "rootAt": "bottom-centre",
+      "transparentPaddingPx": [
+        16,
+        14,
+        33,
+        16
+      ]
+    },
+    {
+      "rect": [
+        35,
+        667,
+        585,
+        590
+      ],
+      "alphaAbove12Bounds": [
+        15,
+        9,
+        568,
+        572
+      ],
+      "rootAt": "bottom-centre",
+      "transparentPaddingPx": [
+        15,
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "rect": [
+        635,
+        675,
+        574,
+        585
+      ],
+      "alphaAbove12Bounds": [
+        12,
+        22,
+        551,
+        563
+      ],
+      "rootAt": "bottom-centre",
+      "transparentPaddingPx": [
+        12,
+        22,
+        23,
+        22
+      ]
+    }
+  ],
+  "method": "read-only alpha inspection; PNG bytes and pixels unchanged; crop coordinates used only at runtime"
+}

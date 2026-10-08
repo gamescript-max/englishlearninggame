@@ -7,23 +7,32 @@ import ecologyArt from "../lib/ecology-art.json";
 import { getAdventureWord, getOceanSpecies, oceanEvolution } from "../lib/adventure-catalog";
 import { naturalOceanArt, naturalOceanAtlases } from "../lib/natural-ocean-art";
 import { swimProfileFor } from "../lib/adventure-motion";
+import type { OceanSceneryImages } from "../components/ocean-scenery-sprites";
+import { getVisibleOceanScenery } from "../lib/ocean-scenery-layout";
+
+type Matrix = [number, number, number, number, number, number];
+const sceneryImages: OceanSceneryImages = {sprites:Array.from({length:4},(_,index)=>({image:{id:`reef-${index}`} as unknown as CanvasImageSource,w:480,h:400}))};
 
 function canvasProbe() {
   const draws: unknown[][] = [], rotations: number[] = [], scales: number[][] = [], transforms: number[][] = [];
   const scenery: number[][] = [], gradients: number[][] = [];
+  const drawMatrices: Matrix[] = [], matrixStack: Matrix[] = [];
+  let matrix: Matrix = [1,0,0,1,0,0];
+  const multiply = ([g,h,i,j,k,l]:Matrix) => {const [a,b,c,d,e,f]=matrix;matrix=[a*g+c*h,b*g+d*h,a*i+c*j,b*i+d*j,a*k+c*l+e,b*k+d*l+f];};
   const context = {
-    clearRect() {}, fillRect() {}, save() {}, restore() {}, scale(x: number,y: number) { scales.push([x,y]); }, translate() {}, strokeRect() {},
-    beginPath() {}, closePath() {}, clip() {}, roundRect() {}, fill() {}, setLineDash() {}, arc() {}, stroke() {}, fillText() {}, transform(...matrix:number[]) {transforms.push(matrix);}, moveTo() {}, lineTo() {},
+    clearRect() {}, fillRect() {}, save() {matrixStack.push([...matrix]);}, restore() {matrix=matrixStack.pop()!;}, scale(x: number,y: number) { scales.push([x,y]);multiply([x,0,0,y,0,0]); }, translate(x:number,y:number) {multiply([1,0,0,1,x,y]);}, strokeRect() {},
+    beginPath() {}, closePath() {}, clip() {}, rect() {}, roundRect() {}, fill() {}, setLineDash() {}, arc() {}, stroke() {}, fillText() {}, transform(...next:Matrix) {transforms.push(next);multiply(next);}, moveTo() {}, lineTo() {},
     createLinearGradient(...points:number[]) { gradients.push(points); return {addColorStop() {}}; }, ellipse(...points:number[]) { scenery.push(points); }, bezierCurveTo() {}, quadraticCurveTo() {},
-    rotate(angle: number) { rotations.push(angle); }, drawImage(...args: unknown[]) { draws.push(args); },
+    rotate(angle: number) { rotations.push(angle);multiply([Math.cos(angle),Math.sin(angle),-Math.sin(angle),Math.cos(angle),0,0]); }, drawImage(...args: unknown[]) { draws.push(args);drawMatrices.push([...matrix]); },
   } as unknown as CanvasRenderingContext2D;
   const images = {...Object.fromEntries(["snake", "words", "sea", "snakeBreeds", "cards", "expandedWords"].map(id => [id, { id, width: 1536, height: 1024 }])),ocean:naturalOceanAtlases.map((atlas,index)=>({id:`ocean-${index}`,width:atlas.width,height:atlas.height}))} as unknown as AdventureImages;
-  return { context, images, draws, rotations, scales, transforms, scenery, gradients };
+  return { context, images, draws, drawMatrices, rotations, scales, transforms, scenery, gradients };
 }
 
 test("ocean scenery is below creatures, stays out of snake mode and does not change simulation state", () => {
   for (const mode of ["fish", "snake"] as const) {
     const world = createAdventureWorld(mode, 18), probe = canvasProbe();
+    probe.images.scenery=sceneryImages;
     world.actors = [];
     cameraForWorld(world,800,600);
     const before = structuredClone(world);
@@ -35,8 +44,44 @@ test("ocean scenery is below creatures, stays out of snake mode and does not cha
       const sea = probe.draws.find(call => call[0] === probe.images.sea)!;
       assert.deepEqual(sea.slice(5), [0,0,800,600], "the ocean backdrop keeps CSS-pixel scenery aligned at every camera zoom");
       assert.ok(probe.draws.some(call => probe.images.ocean.includes(call[0] as HTMLImageElement)), "original fish sprites remain visible above the scene");
+      const plants=probe.draws.map((call,index)=>sceneryImages.sprites.some(sprite=>sprite.image===call[0])?index:-1).filter(index=>index>=0);
+      assert.ok(plants.length>0,"the realistic plant images are used in fish mode");
+      assert.ok(plants.every(index=>index>probe.draws.indexOf(sea)&&index<probe.draws.findIndex(call=>probe.images.ocean.includes(call[0] as HTMLImageElement))),"plant textures are layered between the backdrop and creatures");
+    } else {
+      assert.ok(!probe.draws.some(call=>sceneryImages.sprites.some(sprite=>sprite.image===call[0])),"snake mode does not draw ocean plant images");
     }
   }
+});
+
+test("real adventure camera movement and zoom project plant roots with the fish world rather than following the player",()=>{
+  const world=createAdventureWorld("fish",22,50);world.actors=[];
+  const frames:{camera:{x:number;y:number;zoom:number};roots:Map<string,{x:number;y:number}>}[]=[];
+  for(const [width,height,dx,dy] of [[800,600,0,0],[800,600,83,61],[390,844,0,0]]) {
+    world.player.x+=dx;world.player.y+=dy;
+    const probe=canvasProbe();probe.images.scenery=sceneryImages;
+    const camera=paintAdventure(probe.context,world,probe.images,width,height,false,undefined,true);
+    const patches=getVisibleOceanScenery({scene:"adventure",width,height,cameraX:camera.x,cameraY:camera.y,zoom:camera.zoom});
+    const plantIndices=probe.draws.map((call,index)=>sceneryImages.sprites.some(sprite=>sprite.image===call[0])?index:-1).filter(index=>index>=0);
+    assert.ok(patches.length>0);assert.equal(plantIndices.length,patches.length,"reduced motion draws each fixed root exactly once");
+    const roots=new Map<string,{x:number;y:number}>();
+    for(const [index,patch] of patches.entries()) {
+      const drawIndex=plantIndices[index],draw=probe.draws[drawIndex],[a,b,c,d,e,f]=probe.drawMatrices[drawIndex];
+      const localX=Number(draw[5])+Number(draw[7])/2,localY=Number(draw[6])+Number(draw[8]);
+      const root={x:a*localX+c*localY+e,y:b*localX+d*localY+f};
+      assert.ok(Math.abs(root.x-(patch.worldX-camera.x)*camera.zoom)<1e-8,`${patch.id} uses the caller's exact horizontal projection`);
+      assert.ok(Math.abs(root.y-(patch.worldY-camera.y)*camera.zoom)<1e-8,`${patch.id} uses the caller's exact vertical projection`);
+      roots.set(patch.id,root);
+    }
+    frames.push({camera,roots});
+  }
+  const first=frames[0],moved=frames[1],shared=[...first.roots.keys()].filter(id=>moved.roots.has(id));
+  assert.ok(shared.length>0,"the camera movement retains some of the same fixed seabed patches");
+  for(const id of shared) {
+    const from=first.roots.get(id)!,to=moved.roots.get(id)!;
+    assert.ok(Math.abs(to.x-from.x+(moved.camera.x-first.camera.x)*first.camera.zoom)<1e-8);
+    assert.ok(Math.abs(to.y-from.y+(moved.camera.y-first.camera.y)*first.camera.zoom)<1e-8);
+  }
+  assert.notEqual(frames[2].camera.zoom,first.camera.zoom,"the phone exercises the real reduced camera zoom");
 });
 
 test("snake body displays the consumed word pictures in head-to-tail order and follows vertical turns", () => {

@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { drawSharkPortrait, paintSharkWorld, type SharkHudRect } from "../components/shark-renderer";
-import { createSharkWorld, ensureSharkViewport, SHARK_SURFACE_Y, sharkCamera, sharkSurfaceScreenY, sharkWorldToScreen, type SharkFood } from "../lib/shark-engine";
+import { createSharkWorld, ensureSharkViewport, SHARK_SURFACE_Y, SHARK_WORLD_WIDTH, sharkCamera, sharkSurfaceScreenY, sharkWorldToScreen, type SharkFood } from "../lib/shark-engine";
 import { createSharkProgress } from "../lib/shark-progress";
 import { getSharkToken, sharkStages, type SharkFoodKind } from "../lib/shark-content";
 import { naturalOceanArt } from "../lib/natural-ocean-art";
 import { drawNaturalSwimmer, SHARK_ART_INDEX, SHARK_PREY_ART, type SharkImages } from "../components/shark-sprites";
+import { getVisibleOceanScenery } from "../lib/ocean-scenery-layout";
 
 function canvasProbe() {
   const calls: unknown[][] = [], text: { value: string; x: number; y: number; font: string }[] = [];
@@ -36,6 +37,30 @@ function croppedImages(): SharkImages {
     return [index, { image: { width: art.w, height: art.h } as unknown as CanvasImageSource, w: art.w, h: art.h, species: art.id ?? "sardine" }];
   })) };
 }
+
+test("shark scenery uses the actual ocean camera and repeats only across the world seam",()=>{
+  const world=createSharkWorld(createSharkProgress(),110);world.foods=[];
+  const images={...croppedImages(),scenery:{sprites:Array.from({length:4},(_,index)=>({image:{id:`reef-${index}`} as unknown as CanvasImageSource,w:480,h:400}))}};
+  for(const [width,height,playerX] of [[800,600,SHARK_WORLD_WIDTH-12],[800,600,17],[390,844,17]]) {
+    world.player.x=playerX;
+    const camera=sharkCamera(world,width,height),surfaceY=sharkSurfaceScreenY(height),probe=canvasProbe();
+    paintSharkWorld(probe.context,world,width,height,{images,reducedMotion:true});
+    const patches=getVisibleOceanScenery({scene:"shark",width,height,cameraX:camera.x,cameraY:camera.y,surfaceY});
+    const plants=probe.calls.map((call,index)=>call[0]==="drawImage"&&images.scenery!.sprites.some(sprite=>sprite.image===call[1])?index:-1).filter(index=>index>=0);
+    assert.ok(patches.length>0);assert.equal(plants.length,patches.length,"the shark renderer passes its fixed scenery images into the ocean pass");
+    for(const [index,patch] of patches.entries()) {
+      const drawIndex=plants[index],draw=probe.calls[drawIndex];
+      const translate=probe.calls.slice(0,drawIndex).findLast(call=>call[0]==="translate")!;
+      const expected=sharkWorldToScreen({x:patch.worldX,y:patch.worldY},camera);
+      const rootX=Number(translate[1]),rootY=Number(translate[2]);
+      assert.ok(Math.abs(rootX-expected.x)<1e-8,`${patch.id} follows the actual world seam projection`);
+      assert.ok(Math.abs(rootY-expected.y)<1e-8,`${patch.id} stays at its fixed world depth on both orientations`);
+      assert.ok(Math.abs(Number(draw[6])+Number(draw[8])/2)<1e-8,"the texture's bottom center stays on the translated seabed root");
+      assert.ok(Math.abs(Number(draw[7])+Number(draw[9]))<1e-8);
+    }
+    assert.equal(probe.stack.length,0);
+  }
+});
 
 test("the full English stays visible on both desktop and portrait mobile at readable sizes", () => {
   for (const [width, height, minimum] of [[1024, 700, 19], [390, 844, 17]]) {
