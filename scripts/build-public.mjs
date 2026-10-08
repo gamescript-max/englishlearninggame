@@ -60,7 +60,9 @@ async function filesIn(directory) {
   return files;
 }
 const files = await filesIn(output);
-if (files.length > 1000) throw new Error("文件超过 Cloudflare 控制台直接上传的1000项限制，请改用 Wrangler 上传。");
+// Workers Builds deploys through Wrangler; the dashboard drag-and-drop limit does not apply.
+if (files.length > 20000) throw new Error("资源数量超过 Cloudflare Workers 免费套餐的20000项限制。");
+if (files.length > 1000) console.warn("资源超过1000项，请使用 npm run deploy:public 或 Git 自动部署上传。");
 let bytes = 0;
 for (const file of files) {
   const size = (await stat(file)).size;

@@ -1,5 +1,7 @@
 # 萌宠英语探索岛
 
+**新增鲨鱼英语大餐：**首页入口直接进入全屏海洋，拖动、方向按钮或 WASD 就能出发。先吃26个不同字母，再吃20个常用单词，接着反复接触24个简单句子。小鱼独立游动，鲨鱼摆尾、转向、张嘴吞吃；逐步解锁小船、大鱼、大船、岛屿、地球、行星、太阳、银河与宇宙，最后阶段仍能继续探索。每次成功收集排队朗读，完整英文与中文意思显示在上方，重复听读与成长分别记录。状态自动保存并纳入原有JSON备份，无需新增账号。玩法与成长阈值见 [LEARNING-GUIDE.md](./LEARNING-GUIDE.md)。
+
 **独立公开网站：**新域名为 `englishlearninggame.online`，核心关键词为 `english learning game`。执行 `npm run build:public` 生成不需要访客账号的 Cloudflare 静态网站部署包。当前 Workers 构建设置使用构建命令 `npm run build:public`、部署命令 `npm run deploy:public`，明确读取 `wrangler.cloudflare.jsonc` 和项目锁定的 Wrangler。完整步骤、Pages 上传方式和域名迁移说明见 [CLOUDFLARE-DEPLOYMENT.md](./CLOUDFLARE-DEPLOYMENT.md)。尚未确认新域名上线。
 
 **2026-10-08 新增三个生活英语游戏：**小狐狸花园、萌宠照顾小镇和英语欢乐赛车分别有18、15、12个任务，共45句完整英语指令。听懂后种植、照顾伙伴或开车送货，完成后自动进入下一任务，整轮完成后继续新一轮；首页可直接进入，游戏底部也可切换玩法。每个任务完成获得10快乐金币，游戏金币与原有课程星星、海洋成长点分开。操作、家长记录与备份说明见 [LEARNING-GUIDE.md](./LEARNING-GUIDE.md)。本轮新增48条固定语音（英语45条、普通话3条），已通过文件格式及非静音检查，尚未逐条人工试听。
@@ -28,7 +30,7 @@
 
 ## 运行
 
-需要 Node.js 22.13 或更高版本。运行 `npm install` 安装依赖，`npm run dev` 启动本地开发，`npm run build` 生成 Sites/Cloudflare 构建。部署地址与访问设置由 Sites 管理。本地开发可在 localhost 使用麦克风；平板远程访问录音功能需要 HTTPS。
+需要 Node.js 22.13 或更高版本。运行 `npm install` 安装依赖，`npm run dev` 启动本地开发。当前独立网站使用 `npm run build:public` 构建、`npm run preview:public` 在本机5173端口预览，按 Cloudflare 部署说明发布，不需要访客绑定账号。原模板服务端构建仍可用 `npm run build`。本地开发可在 localhost 使用麦克风；平板远程访问录音功能需要 HTTPS。
 
 源码使用 React、TypeScript、Tailwind 和 Howler.js。`lib/course.ts` 定义课程与可重用的练习内容；`lib/progress.ts` 提供纯函数学习状态、复习安排、奖励结算和备份校验；教学图片和预生成语音位于 `public`。课程内容与玩法分离，以便新增主题和级别。
 

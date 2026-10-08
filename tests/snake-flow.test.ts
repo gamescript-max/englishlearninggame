@@ -55,6 +55,7 @@ function mount(lessonId = "animals-10") {
     "@/components/catch-game": ui(["CatchGame"]), "@/components/adventure-map": ui(["WorldMap", "LessonTrail"]),
     "@/components/continuous-adventure": ui(["AdventureEntries", "AdventureReport", "ContinuousAdventure"]),
     "@/components/playground": ui(["Playground", "PlaygroundEntries", "PlaygroundReport"]),
+    "@/components/shark-feast": ui(["SharkFeast", "SharkFeastEntry", "SharkFeastReport"]),
     "@/lib/playground-content": playgroundContent,
     "@/lib/adventure-progress": adventureProgress,
     "@/components/exploration-games": ui(["BubbleGame", "DeliveryGame", "ConnectionGame"]),

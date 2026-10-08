@@ -1,0 +1,1792 @@
+{
+  "voices": {
+    "en": {
+      "voice": "en-US-JennyNeural",
+      "rate": "-12%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    },
+    "zh": {
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-7%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "format": {
+    "sampleRate": 22050,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "encoding": "PCM"
+  },
+  "manuallyAuditioned": false,
+  "files": [
+    {
+      "language": "en",
+      "text": "A",
+      "url": "/audio/shark-en-559aead08264.wav",
+      "filename": "shark-en-559aead08264.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.436554,
+      "rms": 0.055065,
+      "nonSilentSamples": 9902,
+      "clippedSamples": 0,
+      "sha256": "8478a9c1b89c40e58adb8e0282c3f79111ca9fe8ab0eb196717da879518e780f"
+    },
+    {
+      "language": "en",
+      "text": "B",
+      "url": "/audio/shark-en-df7e70e50215.wav",
+      "filename": "shark-en-df7e70e50215.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.548828,
+      "rms": 0.059937,
+      "nonSilentSamples": 8619,
+      "clippedSamples": 0,
+      "sha256": "66f80834c3f6e48d84b65cb6e2c222b0e567e60eff203e760421611c5b43fb07"
+    },
+    {
+      "language": "en",
+      "text": "Baby shark",
+      "url": "/audio/shark-en-a33d9397f26c.wav",
+      "filename": "shark-en-a33d9397f26c.wav",
+      "frames": 46041,
+      "durationMs": 2088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.480896,
+      "rms": 0.064608,
+      "nonSilentSamples": 19197,
+      "clippedSamples": 0,
+      "sha256": "75cae9b9d2a56ffc641f42b926c897d89565ca455b5af42d6018662adaf4b465"
+    },
+    {
+      "language": "en",
+      "text": "Big ships",
+      "url": "/audio/shark-en-74d3495f038c.wav",
+      "filename": "shark-en-74d3495f038c.wav",
+      "frames": 43923,
+      "durationMs": 1991.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.513428,
+      "rms": 0.057283,
+      "nonSilentSamples": 17011,
+      "clippedSamples": 0,
+      "sha256": "6b42424dfe536ad34ac6c6308325d61ee2e76dcf2815c45d9849378c23886362"
+    },
+    {
+      "language": "en",
+      "text": "Bigger fish",
+      "url": "/audio/shark-en-47951b3d817e.wav",
+      "filename": "shark-en-47951b3d817e.wav",
+      "frames": 46041,
+      "durationMs": 2088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.557922,
+      "rms": 0.057333,
+      "nonSilentSamples": 19834,
+      "clippedSamples": 0,
+      "sha256": "2de75c0a2742a532688724ba343e178e9c519cbaf74c3b83f995e12060dca01b"
+    },
+    {
+      "language": "en",
+      "text": "C",
+      "url": "/audio/shark-en-6b23c0d5f35d.wav",
+      "filename": "shark-en-6b23c0d5f35d.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.665466,
+      "rms": 0.059466,
+      "nonSilentSamples": 10923,
+      "clippedSamples": 0,
+      "sha256": "58afd675acfa38dd53f03f7f350c3167dcbc250e9dc5a94ca6d9b8a6a26e7c47"
+    },
+    {
+      "language": "en",
+      "text": "D",
+      "url": "/audio/shark-en-3f39d5c348e5.wav",
+      "filename": "shark-en-3f39d5c348e5.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.529877,
+      "rms": 0.064868,
+      "nonSilentSamples": 9624,
+      "clippedSamples": 0,
+      "sha256": "a8a7e18376ab27cb3de3c9f2aa9dc88503c22129a10b31d2360583f138fb4e4d"
+    },
+    {
+      "language": "en",
+      "text": "E",
+      "url": "/audio/shark-en-a9f51566bd67.wav",
+      "filename": "shark-en-a9f51566bd67.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.452789,
+      "rms": 0.059773,
+      "nonSilentSamples": 9468,
+      "clippedSamples": 0,
+      "sha256": "0d65ab34ff7650a5d2391de1829fb0ebcf278cc045cc037cc678b426a8219007"
+    },
+    {
+      "language": "en",
+      "text": "Earth",
+      "url": "/audio/shark-en-b7c9b5ccd3e3.wav",
+      "filename": "shark-en-b7c9b5ccd3e3.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.70694,
+      "rms": 0.058523,
+      "nonSilentSamples": 8248,
+      "clippedSamples": 0,
+      "sha256": "fd3da2d0ff0dd10964024597e57c62d516e93c791eb0fb9cf8afa1720a423b2f"
+    },
+    {
+      "language": "en",
+      "text": "F",
+      "url": "/audio/shark-en-f67ab10ad4e4.wav",
+      "filename": "shark-en-f67ab10ad4e4.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.606689,
+      "rms": 0.045744,
+      "nonSilentSamples": 9628,
+      "clippedSamples": 0,
+      "sha256": "f87c90aca2191a672a00108f13e08fa9131bad0d4840fd2c9b10dd27ec24501a"
+    },
+    {
+      "language": "en",
+      "text": "G",
+      "url": "/audio/shark-en-333e0a1e2781.wav",
+      "filename": "shark-en-333e0a1e2781.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.52832,
+      "rms": 0.064873,
+      "nonSilentSamples": 10713,
+      "clippedSamples": 0,
+      "sha256": "bcd4bc88ca3c8c3e23671574a9d68e73b440a11d24954c7de3060359da6d592e"
+    },
+    {
+      "language": "en",
+      "text": "Galaxies",
+      "url": "/audio/shark-en-7116ee4ab7c7.wav",
+      "filename": "shark-en-7116ee4ab7c7.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.575562,
+      "rms": 0.069533,
+      "nonSilentSamples": 20909,
+      "clippedSamples": 0,
+      "sha256": "1cdbf5cd24d3c7647af8f85f84ad1fa6095091b483e32700afd0e3b45bc96d49"
+    },
+    {
+      "language": "en",
+      "text": "H",
+      "url": "/audio/shark-en-44bd7ae60f47.wav",
+      "filename": "shark-en-44bd7ae60f47.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.5737,
+      "rms": 0.057166,
+      "nonSilentSamples": 11186,
+      "clippedSamples": 0,
+      "sha256": "08a13d8569133151ca0d8f34b07101e8a2f2ce76382e045fa2b250ad84f3541e"
+    },
+    {
+      "language": "en",
+      "text": "I",
+      "url": "/audio/shark-en-a83dd0ccbffe.wav",
+      "filename": "shark-en-a83dd0ccbffe.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.450928,
+      "rms": 0.055803,
+      "nonSilentSamples": 11323,
+      "clippedSamples": 0,
+      "sha256": "656398a4f1d12de26d92662e5584020573626d5cdef0abaaad69952eb371d787"
+    },
+    {
+      "language": "en",
+      "text": "I can read.",
+      "url": "/audio/learn-5cb4bba2d20a21a6c90f.wav",
+      "filename": "learn-5cb4bba2d20a21a6c90f.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.059821,
+      "nonSilentSamples": 17165,
+      "clippedSamples": 0,
+      "sha256": "a3fec9652533a65d2e3879076965629f96c66ff2b1459aaa9022c45a7eee5cc0"
+    },
+    {
+      "language": "en",
+      "text": "I can run.",
+      "url": "/audio/learn-7b7cdf693e1035c45f8c.wav",
+      "filename": "learn-7b7cdf693e1035c45f8c.wav",
+      "frames": 43395,
+      "durationMs": 1968.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.057729,
+      "nonSilentSamples": 17662,
+      "clippedSamples": 0,
+      "sha256": "b5c24e0fcefe44bff403d57770b6e36c2c6b99cd797e5e57bc00022e2af98133"
+    },
+    {
+      "language": "en",
+      "text": "I can see a cloud.",
+      "url": "/audio/learn-b60f64628c11c1c73336.wav",
+      "filename": "learn-b60f64628c11c1c73336.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.076023,
+      "nonSilentSamples": 26145,
+      "clippedSamples": 0,
+      "sha256": "c61f1ab8f2818e83685390ea90e0bd0766504bcdad16fb8978d115a2e13661bc"
+    },
+    {
+      "language": "en",
+      "text": "I can see a rainbow.",
+      "url": "/audio/learn-629814b9d31559fcc868.wav",
+      "filename": "learn-629814b9d31559fcc868.wav",
+      "frames": 53450,
+      "durationMs": 2424.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.074992,
+      "nonSilentSamples": 27177,
+      "clippedSamples": 0,
+      "sha256": "54b96e9d622491ded3d2de1b71e6b702dc1671a14c79cca66164624cca142a19"
+    },
+    {
+      "language": "en",
+      "text": "I can see the sun.",
+      "url": "/audio/learn-35b526fd5838345f0338.wav",
+      "filename": "learn-35b526fd5838345f0338.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.729492,
+      "rms": 0.071058,
+      "nonSilentSamples": 26651,
+      "clippedSamples": 0,
+      "sha256": "811ac373419f9d29e25203292a1f6e6475993057d885e6e11775e5d9b207e712"
+    },
+    {
+      "language": "en",
+      "text": "I drink water.",
+      "url": "/audio/learn-e548881fa97bd0b9b33b.wav",
+      "filename": "learn-e548881fa97bd0b9b33b.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.626648,
+      "rms": 0.066494,
+      "nonSilentSamples": 20472,
+      "clippedSamples": 0,
+      "sha256": "1d97199784f51d5c112d52ce78f26ed7f44a5a2b3b2b678a65da1481e1cf6e0c"
+    },
+    {
+      "language": "en",
+      "text": "I have a sister.",
+      "url": "/audio/learn-5eec673799d2538117da.wav",
+      "filename": "learn-5eec673799d2538117da.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.601654,
+      "rms": 0.060067,
+      "nonSilentSamples": 22926,
+      "clippedSamples": 0,
+      "sha256": "bbb768e13cf00669acce8727f53ade90ee17ca7fe896bc2599723c7a89392c6c"
+    },
+    {
+      "language": "en",
+      "text": "I have two eyes.",
+      "url": "/audio/learn-152c93ab70d9bb4a3a6d.wav",
+      "filename": "learn-152c93ab70d9bb4a3a6d.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.724274,
+      "rms": 0.070319,
+      "nonSilentSamples": 25748,
+      "clippedSamples": 0,
+      "sha256": "803010ff944bfa6ecc46e88659e4ba9b786b1b3967dfa120a032e887fa39cf9e"
+    },
+    {
+      "language": "en",
+      "text": "I have two hands.",
+      "url": "/audio/learn-e4333eca800b7e978dd5.wav",
+      "filename": "learn-e4333eca800b7e978dd5.wav",
+      "frames": 51861,
+      "durationMs": 2351.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.653992,
+      "rms": 0.065158,
+      "nonSilentSamples": 25031,
+      "clippedSamples": 0,
+      "sha256": "b2e7cf05d6ef012f1f09af40f38d00ecf8b967efba785438645c2c48868b5049"
+    },
+    {
+      "language": "en",
+      "text": "I like apples.",
+      "url": "/audio/en-158.wav",
+      "filename": "en-158.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.632111,
+      "rms": 0.071979,
+      "nonSilentSamples": 22758,
+      "clippedSamples": 0,
+      "sha256": "4a7a896def66dbaeb2bce3acb5ffd3c3d6a567ffe261acc9fbf39da95ac4da76"
+    },
+    {
+      "language": "en",
+      "text": "I like bananas.",
+      "url": "/audio/learn-91b1229796cb4f72f9d2.wav",
+      "filename": "learn-91b1229796cb4f72f9d2.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.677765,
+      "rms": 0.076689,
+      "nonSilentSamples": 25250,
+      "clippedSamples": 0,
+      "sha256": "bd3ece882012c65a87e6cc8ea02cc9d8266756da9b5e3e143d69b8f3ddb5362a"
+    },
+    {
+      "language": "en",
+      "text": "I like to play.",
+      "url": "/audio/learn-f4cedd7421ccef11a0bf.wav",
+      "filename": "learn-f4cedd7421ccef11a0bf.wav",
+      "frames": 49215,
+      "durationMs": 2231.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.658722,
+      "rms": 0.090556,
+      "nonSilentSamples": 22287,
+      "clippedSamples": 0,
+      "sha256": "10fef809871814118423de1a0085af3b0d5baba899220cf4390fb093f9691cc9"
+    },
+    {
+      "language": "en",
+      "text": "I like to read.",
+      "url": "/audio/learn-59068e3adca4c6a717c2.wav",
+      "filename": "learn-59068e3adca4c6a717c2.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.655548,
+      "rms": 0.081663,
+      "nonSilentSamples": 21007,
+      "clippedSamples": 0,
+      "sha256": "c505452ff0c96a2d8ce20052e7302bbc069f01353bab807ea990e661fd799463"
+    },
+    {
+      "language": "en",
+      "text": "I play with my friend.",
+      "url": "/audio/learn-5b68e1350e665b7c221e.wav",
+      "filename": "learn-5b68e1350e665b7c221e.wav",
+      "frames": 55566,
+      "durationMs": 2520.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.681152,
+      "rms": 0.071123,
+      "nonSilentSamples": 28863,
+      "clippedSamples": 0,
+      "sha256": "93fa747861add7d8a2acc621766aa810076eb3f3e79fdc2845af1de70566f3a3"
+    },
+    {
+      "language": "en",
+      "text": "Islands",
+      "url": "/audio/shark-en-9ea22d9740ac.wav",
+      "filename": "shark-en-9ea22d9740ac.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.659058,
+      "rms": 0.053712,
+      "nonSilentSamples": 14276,
+      "clippedSamples": 0,
+      "sha256": "0797f3dac429129c4c1bf22352d7933c524ac58e248163578afbb9595cb0ad9b"
+    },
+    {
+      "language": "en",
+      "text": "It is cold today.",
+      "url": "/audio/learn-e9f810b1df38bc31691d.wav",
+      "filename": "learn-e9f810b1df38bc31691d.wav",
+      "frames": 50274,
+      "durationMs": 2280.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.08171,
+      "nonSilentSamples": 23614,
+      "clippedSamples": 0,
+      "sha256": "e5d7205bf5fc75d6300ac2c7152d88b51dcc07a7be81764db18db97e4ff3e7e5"
+    },
+    {
+      "language": "en",
+      "text": "It is hot today.",
+      "url": "/audio/learn-98128dc71d6969f78390.wav",
+      "filename": "learn-98128dc71d6969f78390.wav",
+      "frames": 49215,
+      "durationMs": 2231.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.5961,
+      "rms": 0.070734,
+      "nonSilentSamples": 23075,
+      "clippedSamples": 0,
+      "sha256": "ae5c09fe56e28159c5e9798e65974d18b4ae1a0c27d50e85594a6cfbda9efe08"
+    },
+    {
+      "language": "en",
+      "text": "J",
+      "url": "/audio/shark-en-6da43b944e49.wav",
+      "filename": "shark-en-6da43b944e49.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.593536,
+      "rms": 0.065794,
+      "nonSilentSamples": 10564,
+      "clippedSamples": 0,
+      "sha256": "76802df448bf42f4ad2c570bcc866969769f2cbdd24472a79f6aa237fc575b2a"
+    },
+    {
+      "language": "en",
+      "text": "K",
+      "url": "/audio/shark-en-86be9a55762d.wav",
+      "filename": "shark-en-86be9a55762d.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.609833,
+      "rms": 0.05735,
+      "nonSilentSamples": 10115,
+      "clippedSamples": 0,
+      "sha256": "d18b7558f10226758b2d3bdf3652dc06c90c332a76853d8f85c0c57900d1c181"
+    },
+    {
+      "language": "en",
+      "text": "L",
+      "url": "/audio/shark-en-72dfcfb0c470.wav",
+      "filename": "shark-en-72dfcfb0c470.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.423279,
+      "rms": 0.053068,
+      "nonSilentSamples": 9188,
+      "clippedSamples": 0,
+      "sha256": "108d8f2e392d1f1f3a35def0c74b7810896726a7516de9b7190109b7cea625bf"
+    },
+    {
+      "language": "en",
+      "text": "Large fish",
+      "url": "/audio/shark-en-ec11431ef3cf.wav",
+      "filename": "shark-en-ec11431ef3cf.wav",
+      "frames": 46041,
+      "durationMs": 2088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.520508,
+      "rms": 0.062153,
+      "nonSilentSamples": 19998,
+      "clippedSamples": 0,
+      "sha256": "fd527b28188905d38f0d29ad8904ab9aae68369d3d6ae385692dbdc798d1e75f"
+    },
+    {
+      "language": "en",
+      "text": "M",
+      "url": "/audio/shark-en-08f271887ce9.wav",
+      "filename": "shark-en-08f271887ce9.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.460907,
+      "rms": 0.055485,
+      "nonSilentSamples": 9730,
+      "clippedSamples": 0,
+      "sha256": "2ed4a83b511c1b97239dd35b27cc0516da2f359cc3481810a4ef51e1c67f32d5"
+    },
+    {
+      "language": "en",
+      "text": "My book is in my bag.",
+      "url": "/audio/learn-333e96b222ea4753529f.wav",
+      "filename": "learn-333e96b222ea4753529f.wav",
+      "frames": 56096,
+      "durationMs": 2544.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.529816,
+      "rms": 0.080925,
+      "nonSilentSamples": 29944,
+      "clippedSamples": 0,
+      "sha256": "4215faed1b2bd40fbb01455f88c61cd5c1782685082e41ff4a7448dd18c213b9"
+    },
+    {
+      "language": "en",
+      "text": "N",
+      "url": "/audio/shark-en-8ce86a6ae65d.wav",
+      "filename": "shark-en-8ce86a6ae65d.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.479279,
+      "rms": 0.054749,
+      "nonSilentSamples": 10174,
+      "clippedSamples": 0,
+      "sha256": "8958437a2ec91068721694b6854d8baa25d1820e3ebb5ff72237b87c2bf0fc5f"
+    },
+    {
+      "language": "en",
+      "text": "O",
+      "url": "/audio/shark-en-c4694f2e93d5.wav",
+      "filename": "shark-en-c4694f2e93d5.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.540466,
+      "rms": 0.068573,
+      "nonSilentSamples": 10802,
+      "clippedSamples": 0,
+      "sha256": "086d687d0f9eb2a89c8557ac5662d9fa3c903821e55670963db4a7afc7fa95c5"
+    },
+    {
+      "language": "en",
+      "text": "P",
+      "url": "/audio/shark-en-5c62e091b8c0.wav",
+      "filename": "shark-en-5c62e091b8c0.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.512695,
+      "rms": 0.054311,
+      "nonSilentSamples": 9516,
+      "clippedSamples": 0,
+      "sha256": "0427e75a72b84170ffc2c9555019ac5d83e880c614da545206c89c2d786ec764"
+    },
+    {
+      "language": "en",
+      "text": "Planets",
+      "url": "/audio/shark-en-c06c7c6bbd57.wav",
+      "filename": "shark-en-c06c7c6bbd57.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.576813,
+      "rms": 0.060329,
+      "nonSilentSamples": 15017,
+      "clippedSamples": 0,
+      "sha256": "48dfee73e9539ea16f57e4c2b920af414f591ae0378c09073e5c027b60bdfeda"
+    },
+    {
+      "language": "en",
+      "text": "Q",
+      "url": "/audio/shark-en-4ae81572f06e.wav",
+      "filename": "shark-en-4ae81572f06e.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.510498,
+      "rms": 0.069003,
+      "nonSilentSamples": 11119,
+      "clippedSamples": 0,
+      "sha256": "aa99f39a7bfd43b89dd045c7d18476f872ead9b767fcbc9b13b19126e0214048"
+    },
+    {
+      "language": "en",
+      "text": "R",
+      "url": "/audio/shark-en-8c2574892063.wav",
+      "filename": "shark-en-8c2574892063.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.492798,
+      "rms": 0.053421,
+      "nonSilentSamples": 9910,
+      "clippedSamples": 0,
+      "sha256": "beac53ccd19dfaf7c1bf92f0eb2a50a56b079dc5aa92b5ea79d6a7e2ec7c87f1"
+    },
+    {
+      "language": "en",
+      "text": "S",
+      "url": "/audio/shark-en-8de0b3c47f11.wav",
+      "filename": "shark-en-8de0b3c47f11.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.698425,
+      "rms": 0.046727,
+      "nonSilentSamples": 9459,
+      "clippedSamples": 0,
+      "sha256": "e90db0bcab43f258bb204465f14549b18b24455040e69028f11ac7dc808a3515"
+    },
+    {
+      "language": "en",
+      "text": "Small boats",
+      "url": "/audio/shark-en-e03d0745f7c8.wav",
+      "filename": "shark-en-e03d0745f7c8.wav",
+      "frames": 47099,
+      "durationMs": 2136.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.523926,
+      "rms": 0.066229,
+      "nonSilentSamples": 20430,
+      "clippedSamples": 0,
+      "sha256": "4a0151e65fee6debc673e9fde396a38b969788e6382260daaa87f916187ee8a9"
+    },
+    {
+      "language": "en",
+      "text": "T",
+      "url": "/audio/shark-en-e632b7095b0b.wav",
+      "filename": "shark-en-e632b7095b0b.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.487,
+      "rms": 0.052028,
+      "nonSilentSamples": 9684,
+      "clippedSamples": 0,
+      "sha256": "d0f08c4f873a69351e3ebb238d4ae604875be34015ec7fe8041bd0a872e5ac5c"
+    },
+    {
+      "language": "en",
+      "text": "The bird is blue.",
+      "url": "/audio/en-157.wav",
+      "filename": "en-157.wav",
+      "frames": 50274,
+      "durationMs": 2280.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.499268,
+      "rms": 0.071013,
+      "nonSilentSamples": 22859,
+      "clippedSamples": 0,
+      "sha256": "c9c373f5fd739390d6f3c94719d678633ccae6b672f716aa0f72f8b6fa5d963d"
+    },
+    {
+      "language": "en",
+      "text": "The cat is happy.",
+      "url": "/audio/learn-1914b96665291aebae7d.wav",
+      "filename": "learn-1914b96665291aebae7d.wav",
+      "frames": 50804,
+      "durationMs": 2304.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.605591,
+      "rms": 0.06718,
+      "nonSilentSamples": 23449,
+      "clippedSamples": 0,
+      "sha256": "3602b76c2785aa7a5ca7180f58abcca05e8656ac48428af240aba3c4ebeb2a55"
+    },
+    {
+      "language": "en",
+      "text": "The sun",
+      "url": "/audio/shark-en-88a027da1dfc.wav",
+      "filename": "shark-en-88a027da1dfc.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.512878,
+      "rms": 0.054732,
+      "nonSilentSamples": 15214,
+      "clippedSamples": 0,
+      "sha256": "fde49738419ab3b9b5b89497c9fe57b6f79928c9e2ec88e879b6befee945d3e9"
+    },
+    {
+      "language": "en",
+      "text": "The universe",
+      "url": "/audio/shark-en-89f412f6dee3.wav",
+      "filename": "shark-en-89f412f6dee3.wav",
+      "frames": 46041,
+      "durationMs": 2088.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.480103,
+      "rms": 0.066557,
+      "nonSilentSamples": 19574,
+      "clippedSamples": 0,
+      "sha256": "907eb15711eebdff425681c0d51a17550510457c7a7db4ab2ee137b9bcfc5a81"
+    },
+    {
+      "language": "en",
+      "text": "This is a cat.",
+      "url": "/audio/learn-364711eb01b206cfbf92.wav",
+      "filename": "learn-364711eb01b206cfbf92.wav",
+      "frames": 49215,
+      "durationMs": 2231.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.60849,
+      "rms": 0.062027,
+      "nonSilentSamples": 22052,
+      "clippedSamples": 0,
+      "sha256": "32881766ca85bd440b5979a37af576ba2dc5f691b6a8d76f6c150f2ad4a4c33b"
+    },
+    {
+      "language": "en",
+      "text": "This is my ball.",
+      "url": "/audio/en-161.wav",
+      "filename": "en-161.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.556427,
+      "rms": 0.067777,
+      "nonSilentSamples": 22803,
+      "clippedSamples": 0,
+      "sha256": "a77aca79e604bfdc4337ef227018a78f0f5796304bcfd0cb2e61b44508f04ee0"
+    },
+    {
+      "language": "en",
+      "text": "This is my book.",
+      "url": "/audio/learn-01eacdb5e697b17d4d56.wav",
+      "filename": "learn-01eacdb5e697b17d4d56.wav",
+      "frames": 48687,
+      "durationMs": 2208.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.557495,
+      "rms": 0.071067,
+      "nonSilentSamples": 21431,
+      "clippedSamples": 0,
+      "sha256": "d2aac2113e2635fea5a692568ab267e8bc69d9022a391934dd39b3bb223514c2"
+    },
+    {
+      "language": "en",
+      "text": "This is my mother.",
+      "url": "/audio/learn-8d57d6d209d4173bf3e2.wav",
+      "filename": "learn-8d57d6d209d4173bf3e2.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.593994,
+      "rms": 0.072746,
+      "nonSilentSamples": 22734,
+      "clippedSamples": 0,
+      "sha256": "fe206604e24922f7f3013a175fac07c3e882f96621b5fe6cb152a661a26e0e24"
+    },
+    {
+      "language": "en",
+      "text": "This is my teacher.",
+      "url": "/audio/learn-b9be01ac5a8683259bc4.wav",
+      "filename": "learn-b9be01ac5a8683259bc4.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.643799,
+      "rms": 0.069206,
+      "nonSilentSamples": 25397,
+      "clippedSamples": 0,
+      "sha256": "07984c10d60a8be5f38ffd4b7ee40cdfd3150eaa43657753b85ebd81fc344bd5"
+    },
+    {
+      "language": "en",
+      "text": "U",
+      "url": "/audio/shark-en-a25513c7e0f6.wav",
+      "filename": "shark-en-a25513c7e0f6.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.589508,
+      "rms": 0.072822,
+      "nonSilentSamples": 10573,
+      "clippedSamples": 0,
+      "sha256": "10abfefa52cde1a775fd69e4f0db8489c628009699f438f1f1279b4f76adc453"
+    },
+    {
+      "language": "en",
+      "text": "V",
+      "url": "/audio/shark-en-de5a6f78116e.wav",
+      "filename": "shark-en-de5a6f78116e.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.488586,
+      "rms": 0.052828,
+      "nonSilentSamples": 9733,
+      "clippedSamples": 0,
+      "sha256": "c3e8241ee1c5fba248a24ddc140a3a4a923bd35cb99654d478167e409bbc833b"
+    },
+    {
+      "language": "en",
+      "text": "W",
+      "url": "/audio/shark-en-fcb5f40df9be.wav",
+      "filename": "shark-en-fcb5f40df9be.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.644043,
+      "rms": 0.080209,
+      "nonSilentSamples": 14896,
+      "clippedSamples": 0,
+      "sha256": "53db834a2bc29d1c160fffd21a410fdbdadb0bf28ba6aaf88d1e96c9d04bdf2b"
+    },
+    {
+      "language": "en",
+      "text": "X",
+      "url": "/audio/shark-en-4b68ab3847fe.wav",
+      "filename": "shark-en-4b68ab3847fe.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.671173,
+      "rms": 0.047599,
+      "nonSilentSamples": 10536,
+      "clippedSamples": 0,
+      "sha256": "f09119ad31212890630687818bea7a5743f6992a50bb8ba87c8e9fa5e952cbec"
+    },
+    {
+      "language": "en",
+      "text": "Y",
+      "url": "/audio/shark-en-18f5384d58bc.wav",
+      "filename": "shark-en-18f5384d58bc.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.474335,
+      "rms": 0.054723,
+      "nonSilentSamples": 10098,
+      "clippedSamples": 0,
+      "sha256": "11f160a2a07e2ca990e922f392594d5ba2bd1c3b7c3cbce7ae47d31a278d305e"
+    },
+    {
+      "language": "en",
+      "text": "Z",
+      "url": "/audio/shark-en-bbeebd879e1d.wav",
+      "filename": "shark-en-bbeebd879e1d.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.543671,
+      "rms": 0.064626,
+      "nonSilentSamples": 10798,
+      "clippedSamples": 0,
+      "sha256": "99ff7ca544e0e8c0c0fb3293f494356f564c4132e10b794edf9b422047188c19"
+    },
+    {
+      "language": "en",
+      "text": "apple",
+      "url": "/audio/en-009.wav",
+      "filename": "en-009.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.730438,
+      "rms": 0.05393,
+      "nonSilentSamples": 10681,
+      "clippedSamples": 0,
+      "sha256": "096e6aed872ca72dc4d0c45f811b39432732f88b91ae67b171178f6d987436bf"
+    },
+    {
+      "language": "en",
+      "text": "bag",
+      "url": "/audio/learn-10947dcc5f24f2342621.wav",
+      "filename": "learn-10947dcc5f24f2342621.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.501343,
+      "rms": 0.047406,
+      "nonSilentSamples": 10593,
+      "clippedSamples": 0,
+      "sha256": "19db52f0fc10fac61b2e7f89cce8bcb929741ebae685daea6a698123590f361f"
+    },
+    {
+      "language": "en",
+      "text": "ball",
+      "url": "/audio/en-017.wav",
+      "filename": "en-017.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.463135,
+      "rms": 0.048231,
+      "nonSilentSamples": 9676,
+      "clippedSamples": 0,
+      "sha256": "09e522af4ddb6dafb241e7287a26216e5114bb5432d25bc1bb0b281f9d39b2f5"
+    },
+    {
+      "language": "en",
+      "text": "banana",
+      "url": "/audio/en-010.wav",
+      "filename": "en-010.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.531555,
+      "rms": 0.069407,
+      "nonSilentSamples": 14136,
+      "clippedSamples": 0,
+      "sha256": "be75e1b0b2e0f82de98e0af80794149df2326650c2b8d837f370d9ebbf49fb19"
+    },
+    {
+      "language": "en",
+      "text": "bird",
+      "url": "/audio/en-003.wav",
+      "filename": "en-003.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.503448,
+      "rms": 0.053481,
+      "nonSilentSamples": 8943,
+      "clippedSamples": 0,
+      "sha256": "1b03689f9b84d2f28bdc5ff5b7e6eb521ea27fb3ec00b3723973864954ef851c"
+    },
+    {
+      "language": "en",
+      "text": "boat",
+      "url": "/audio/ecology-en-40e235cd4db25047.wav",
+      "filename": "ecology-en-40e235cd4db25047.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.447113,
+      "rms": 0.048875,
+      "nonSilentSamples": 10272,
+      "clippedSamples": 0,
+      "sha256": "8c95e16907f2fb9b3118314c61a654957095a22a55fa8fbc40673aa158a55ebd"
+    },
+    {
+      "language": "en",
+      "text": "book",
+      "url": "/audio/learn-b32c95c8493175659c84.wav",
+      "filename": "learn-b32c95c8493175659c84.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.462158,
+      "rms": 0.050508,
+      "nonSilentSamples": 9115,
+      "clippedSamples": 0,
+      "sha256": "493982ded0d17ee223fc15ba7f30f1a892dfb56ea6757b880db4a63b03bf155b"
+    },
+    {
+      "language": "en",
+      "text": "bread",
+      "url": "/audio/en-012.wav",
+      "filename": "en-012.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.585571,
+      "rms": 0.05923,
+      "nonSilentSamples": 10100,
+      "clippedSamples": 0,
+      "sha256": "6592c96eb030dc896266df0c9bd312a890926ae8e139f862ca1ec994d96b1058"
+    },
+    {
+      "language": "en",
+      "text": "car",
+      "url": "/audio/ecology-en-0268bbfb05ac0383.wav",
+      "filename": "ecology-en-0268bbfb05ac0383.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.454315,
+      "rms": 0.045679,
+      "nonSilentSamples": 10471,
+      "clippedSamples": 0,
+      "sha256": "10116af6450b1327db13685914b8de7f54abc3da01e012838403f09bdc9567d6"
+    },
+    {
+      "language": "en",
+      "text": "cat",
+      "url": "/audio/en-001.wav",
+      "filename": "en-001.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.601654,
+      "rms": 0.040872,
+      "nonSilentSamples": 11209,
+      "clippedSamples": 0,
+      "sha256": "9c5c7114e727d0295c3c3f56fbcc15a02630b1a6e8dc80780eb570c7ef4862e8"
+    },
+    {
+      "language": "en",
+      "text": "cloud",
+      "url": "/audio/learn-6fd30cda99add06f52af.wav",
+      "filename": "learn-6fd30cda99add06f52af.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.536011,
+      "rms": 0.053558,
+      "nonSilentSamples": 11879,
+      "clippedSamples": 0,
+      "sha256": "d5eaf7b16a12a4120845d8e7e5a457d64d8dcf1f4b42da78d8e51e73f238dbf9"
+    },
+    {
+      "language": "en",
+      "text": "dog",
+      "url": "/audio/en-002.wav",
+      "filename": "en-002.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.424377,
+      "rms": 0.051591,
+      "nonSilentSamples": 11100,
+      "clippedSamples": 0,
+      "sha256": "a6c531c7c71f17880f7c045ae791a8edb1f7385dfd9a490683b13ea6b3961209"
+    },
+    {
+      "language": "en",
+      "text": "duck",
+      "url": "/audio/en-006.wav",
+      "filename": "en-006.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.542389,
+      "rms": 0.050105,
+      "nonSilentSamples": 10331,
+      "clippedSamples": 0,
+      "sha256": "9050d2116236609ecc7564a69c7197e7eb4ca112321cb4b4f31d622c7d805e01"
+    },
+    {
+      "language": "en",
+      "text": "fish",
+      "url": "/audio/en-004.wav",
+      "filename": "en-004.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.513611,
+      "rms": 0.047384,
+      "nonSilentSamples": 11697,
+      "clippedSamples": 0,
+      "sha256": "07c097cc007f079adb21c05fe47d73ff6a020a78b7cd67a2d78ae17f3dbf7566"
+    },
+    {
+      "language": "en",
+      "text": "flower",
+      "url": "/audio/ecology-en-8f8fdf575d7f9d6c.wav",
+      "filename": "ecology-en-8f8fdf575d7f9d6c.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.402802,
+      "rms": 0.05127,
+      "nonSilentSamples": 13872,
+      "clippedSamples": 0,
+      "sha256": "2da5a18d847f685bce9e4b36d8709122a71053c928603156531a62b0ca16b6c0"
+    },
+    {
+      "language": "en",
+      "text": "kite",
+      "url": "/audio/en-019.wav",
+      "filename": "en-019.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.688446,
+      "rms": 0.045005,
+      "nonSilentSamples": 10916,
+      "clippedSamples": 0,
+      "sha256": "2df70aed7a32faf67cc499542df527842dbb69fc9a0529afe38949c6f373ce3c"
+    },
+    {
+      "language": "en",
+      "text": "milk",
+      "url": "/audio/en-013.wav",
+      "filename": "en-013.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.418976,
+      "rms": 0.043026,
+      "nonSilentSamples": 10405,
+      "clippedSamples": 0,
+      "sha256": "12c8d3c6c701f482f06662f370a5c5929b3ab4674dd034a51b88383a4f77b62b"
+    },
+    {
+      "language": "en",
+      "text": "orange",
+      "url": "/audio/en-011.wav",
+      "filename": "en-011.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.500092,
+      "rms": 0.068014,
+      "nonSilentSamples": 13190,
+      "clippedSamples": 0,
+      "sha256": "9bea97d536c334c271e53b68f931237cbe013131631f192af92df724110ee75c"
+    },
+    {
+      "language": "en",
+      "text": "pencil",
+      "url": "/audio/learn-2fe4ef52f2191581c97a.wav",
+      "filename": "learn-2fe4ef52f2191581c97a.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.61676,
+      "rms": 0.058656,
+      "nonSilentSamples": 13795,
+      "clippedSamples": 0,
+      "sha256": "41bee9d31411e66d3f69d964851057203d8de02a519a4e22bffcc981a7791673"
+    },
+    {
+      "language": "en",
+      "text": "rabbit",
+      "url": "/audio/en-008.wav",
+      "filename": "en-008.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.524475,
+      "rms": 0.056422,
+      "nonSilentSamples": 12310,
+      "clippedSamples": 0,
+      "sha256": "4bca7d48f3211d5e33fae554a95fc3e15521befd3efbfadf5ff681594b36dcbb"
+    },
+    {
+      "language": "en",
+      "text": "robot",
+      "url": "/audio/en-020.wav",
+      "filename": "en-020.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.483826,
+      "rms": 0.060272,
+      "nonSilentSamples": 13523,
+      "clippedSamples": 0,
+      "sha256": "cc1a6353fa6cb6ded1f9548c75d6bd575577f1dd6bfbcce440fc6bfc3f9a8024"
+    },
+    {
+      "language": "en",
+      "text": "sun",
+      "url": "/audio/learn-52ab41d42c9a5e40f0f0.wav",
+      "filename": "learn-52ab41d42c9a5e40f0f0.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.515656,
+      "rms": 0.048427,
+      "nonSilentSamples": 12367,
+      "clippedSamples": 0,
+      "sha256": "b0c88ec5c0438969898e5bfca4bef14b3d404e7e82359851f0f3e7ea05865333"
+    },
+    {
+      "language": "en",
+      "text": "tree",
+      "url": "/audio/ecology-en-5bb4cd1689e065c7.wav",
+      "filename": "ecology-en-5bb4cd1689e065c7.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.47702,
+      "rms": 0.058124,
+      "nonSilentSamples": 11063,
+      "clippedSamples": 0,
+      "sha256": "aad81de91f2353a406c9ca73f67a20b92349654afc66ee0423a7758271d3ea90"
+    },
+    {
+      "language": "en",
+      "text": "water",
+      "url": "/audio/en-014.wav",
+      "filename": "en-014.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.448273,
+      "rms": 0.046253,
+      "nonSilentSamples": 11344,
+      "clippedSamples": 0,
+      "sha256": "67d7fb367d1ed772c437dd28845e475a76494ad1515fefadb37d410b2d8c8e87"
+    },
+    {
+      "language": "zh",
+      "text": "先吃带字母的小鱼。听一听，跟着读一个字母。",
+      "url": "/audio/shark-zh-8500eee5cd82.wav",
+      "filename": "shark-zh-8500eee5cd82.wav",
+      "frames": 115895,
+      "durationMs": 5256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.554871,
+      "rms": 0.097483,
+      "nonSilentSamples": 82424,
+      "clippedSamples": 0,
+      "sha256": "a2c6753489754d1860a85277ca874dc012854bb9bd42d4801e6487ce9fe4a777"
+    },
+    {
+      "language": "zh",
+      "text": "宇宙还有好多好吃的！继续游，继续听英语吧。",
+      "url": "/audio/shark-zh-3c59246e91df.wav",
+      "filename": "shark-zh-3c59246e91df.wav",
+      "frames": 115365,
+      "durationMs": 5231.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.528656,
+      "rms": 0.090346,
+      "nonSilentSamples": 82054,
+      "clippedSamples": 0,
+      "sha256": "a244a81774168e98523f758eac54effa769b35353d6e6192e35c6612a6649d35"
+    },
+    {
+      "language": "zh",
+      "text": "小鲨鱼出发啦！吃小鱼，听英语，一起长大吧！",
+      "url": "/audio/shark-zh-9a71eb9f6531.wav",
+      "filename": "shark-zh-9a71eb9f6531.wav",
+      "frames": 122246,
+      "durationMs": 5544.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.609589,
+      "rms": 0.085125,
+      "nonSilentSamples": 87250,
+      "clippedSamples": 0,
+      "sha256": "2c9dba9a3d8904d6b5af937202d19abd7bb68ba5f9df1431b58947ea31930be3"
+    },
+    {
+      "language": "zh",
+      "text": "小鲨鱼长大啦！吃小船和大鱼，听一听英语单词。",
+      "url": "/audio/shark-zh-4d2a4850c4e4.wav",
+      "filename": "shark-zh-4d2a4850c4e4.wav",
+      "frames": 129654,
+      "durationMs": 5880.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.632355,
+      "rms": 0.093876,
+      "nonSilentSamples": 97402,
+      "clippedSamples": 0,
+      "sha256": "a4ea03b5c92d8e985c9b02fc9195d1ad3072bf7e239c5423ee6480de2a9d6efb"
+    },
+    {
+      "language": "zh",
+      "text": "拖动手指，或用方向键，带小鲨鱼自由游。吃比你小的，听一听，跟着读。",
+      "url": "/audio/shark-zh-8acd7d0ff120.wav",
+      "filename": "shark-zh-8acd7d0ff120.wav",
+      "frames": 182045,
+      "durationMs": 8256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.578613,
+      "rms": 0.094472,
+      "nonSilentSamples": 139514,
+      "clippedSamples": 0,
+      "sha256": "4a22086b81df07822e805c4dd50eba5fe3fdbe9d7ba4d61189c06b20c4cfb763"
+    },
+    {
+      "language": "zh",
+      "text": "玩了一会儿，可以停下来休息眼睛，再回来继续游。",
+      "url": "/audio/shark-zh-07db81fe4372.wav",
+      "filename": "shark-zh-07db81fe4372.wav",
+      "frames": 106370,
+      "durationMs": 4824.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.667664,
+      "rms": 0.101965,
+      "nonSilentSamples": 87268,
+      "clippedSamples": 0,
+      "sha256": "e431b911afad3bfc5f5aaefc6fe301583ee2b6702b76b59f495eb0d89148be0f"
+    },
+    {
+      "language": "zh",
+      "text": "现在来听短句子吧。吃到大鱼或大船，跟着读一句英语。",
+      "url": "/audio/shark-zh-eb287d5e669e.wav",
+      "filename": "shark-zh-eb287d5e669e.wav",
+      "frames": 141825,
+      "durationMs": 6431.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.650757,
+      "rms": 0.097855,
+      "nonSilentSamples": 107273,
+      "clippedSamples": 0,
+      "sha256": "38580121edcb7e1d5bb0d130e15b232e35eab814037d05e2f26ea90e672a5156"
+    },
+    {
+      "language": "zh",
+      "text": "这个还太大，轻轻碰一下没关系。先吃比你小的吧。",
+      "url": "/audio/shark-zh-6af4467d5707.wav",
+      "filename": "shark-zh-6af4467d5707.wav",
+      "frames": 125421,
+      "durationMs": 5688.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.505951,
+      "rms": 0.088537,
+      "nonSilentSamples": 91552,
+      "clippedSamples": 0,
+      "sha256": "a0d761d4c1bc393ff11c898fc69c99e1329c2f764dd254c28332b5ebb520ff65"
+    }
+  ]
+}

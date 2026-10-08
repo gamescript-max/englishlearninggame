@@ -42,16 +42,18 @@ npm run deploy:public -- --dry-run
 
 ## 另一种托管方式：上传到 Cloudflare Pages
 
+当前资源已超过控制台拖拽上传的1000文件限制。推荐继续使用上面的Workers Git自动部署；若另建Pages，请使用项目已安装的Wrangler上传文件夹，ZIP仅作归档和交付。
+
 1. 登录购买域名的 Cloudflare 管理后台，在 **Workers & Pages** 创建 **Pages** 应用，选择直接上传文件。
 2. 项目名称可用 `englishlearninggame`，如果被占用则选择其他可用名称。
-3. 上传 `artifacts/englishlearninggame-cloudflare.zip`，或上传整个 `public-dist` 目录。ZIP 根目录应直接包含 `index.html`、`assets`、`audio`、`images`，不要再套一层项目文件夹。
+3. 在项目目录运行 `node node_modules/wrangler/bin/wrangler.js pages deploy public-dist --config wrangler.public.jsonc`，按提示选择实际Pages项目。上传整个文件夹，不把ZIP传给Wrangler。
 4. 部署后先使用 Cloudflare 返回的实际 `pages.dev` 地址检查地图、课程、声音、鱼、贪吃蛇、备份恢复和离线下载。
 5. 在该 Pages 项目中进入 **Custom domains → Set up a domain**，输入 `englishlearninggame.online`。域名所在 Cloudflare zone 需要正常启用，并且和 Pages 项目处于同一 Cloudflare 账户。按后台提示创建/确认 DNS 记录，等待域名和 HTTPS 证书状态正常。
 6. 可再接入 `www.englishlearninggame.online`，在 Cloudflare 域名规则中将它301跳转到主域名。先接入 Pages 自定义域名，不要只手工填写一个猜测的 CNAME 或 IP。
 
 公开网页不需要添加 Cloudflare Access 登录门禁。
 
-官方说明：[直接上传](https://developers.cloudflare.com/pages/get-started/direct-upload/)、[自定义域名](https://developers.cloudflare.com/pages/configuration/custom-domains/)。Pages 控制台直接上传限制为1000文件、每文件25MiB；构建脚本会检查这些限制。
+官方说明：[直接上传](https://developers.cloudflare.com/pages/get-started/direct-upload/)、[自定义域名](https://developers.cloudflare.com/pages/configuration/custom-domains/)、[Workers静态资源限制](https://developers.cloudflare.com/workers/platform/limits/)。Pages控制台拖拽最多1000文件，Wrangler Pages及Workers免费套餐支持20000文件，单文件最多25MiB。构建脚本检查20000文件及25MiB，并在超过1000文件时提示使用Git或Wrangler。
 
 ## 后续重新构建
 
