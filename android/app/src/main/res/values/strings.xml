@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">萌宠英语探索岛</string>
+    <string name="title_activity_main">萌宠英语探索岛</string>
+    <string name="package_name">com.littlefox.englishisland</string>
+    <string name="custom_url_scheme">com.littlefox.englishisland</string>
+</resources>

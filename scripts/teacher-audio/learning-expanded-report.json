@@ -1,0 +1,4889 @@
+{
+  "createdAt": "2026-10-04T12:11:39.156484+00:00",
+  "status": "complete",
+  "input": "D:\\project\\englishlearning\\learning-supplement-speech.json",
+  "inputSha256": "8d6cba763609af2977af0abfba431eef85b229fa5de8c5935fac0fefcaf0ffa7",
+  "baseManifest": "D:\\project\\englishlearning\\english-island\\lib\\audio-manifest.json",
+  "baseManifestSha256": "d95861aa4f4ebda9f6b3dd13b312e939d8323e8134fc7e306f753c19430755b3",
+  "baseSpeechCount": 562,
+  "requestedTextCount": 459,
+  "newClipCount": 93,
+  "reusedExistingTextCount": 366,
+  "voices": {
+    "en": {
+      "voice": "en-US-JennyNeural",
+      "rate": "-12%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    },
+    "zh": {
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-7%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "format": {
+    "sampleRate": 22050,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "encoding": "PCM"
+  },
+  "manualListeningPerformed": false,
+  "generatorReused": "D:\\project\\englishlearning\\english-island\\scripts\\teacher-audio\\generate-speech.py",
+  "generatorSha256": "9aed416264a017a85b8f873186d43353c8eb9627cf5dae2ebcf14597743fd6d9",
+  "dependencies": "D:\\project\\englishlearning\\audio-refresh\\dependencies",
+  "files": [
+    {
+      "language": "en",
+      "text": "Do you like apples?",
+      "aliases": [
+        "Do you like apples?"
+      ],
+      "origins": [
+        "$.diagnostic.tasks[23].exampleAnswers[1]",
+        "$.extraTeachingAudio[0].audioText"
+      ],
+      "url": "/audio/learn-8d4a7c780ca1ab3dee25.wav",
+      "filename": "learn-8d4a7c780ca1ab3dee25.wav",
+      "frames": 51333,
+      "durationMs": 2328.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.481689,
+      "rms": 0.0762,
+      "nonSilentSamples": 24378,
+      "clippedSamples": 0,
+      "sha256": "64cc213348b457faa93274bcea2e13ac1ec2778c6928b46cb989928928b3d9de",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-8d4a7c780ca1ab3dee25.mp3",
+      "sourceMp3Sha256": "c7fc1e05b817a3be8bdf5ddcea5e44a89acaeb60d9bfcd1407f2e3206ef53816",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-8d4a7c780ca1ab3dee25.wav"
+    },
+    {
+      "language": "en",
+      "text": "He is reading a book.",
+      "aliases": [
+        "He is reading a book."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[19].exampleAnswers[0]",
+        "$.extraTeachingAudio[1].audioText"
+      ],
+      "url": "/audio/learn-f656d8cc7c83cf737d0b.wav",
+      "filename": "learn-f656d8cc7c83cf737d0b.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.410614,
+      "rms": 0.063983,
+      "nonSilentSamples": 25430,
+      "clippedSamples": 0,
+      "sha256": "c8d93c4880dc89711c7f7fc777ab3454e9bd50cb8493a5df2058f8f96386a5aa",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-f656d8cc7c83cf737d0b.mp3",
+      "sourceMp3Sha256": "4316024f70a214450df8154e21e86155f4704de1896ea49d75a71b571e9967d2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-f656d8cc7c83cf737d0b.wav"
+    },
+    {
+      "language": "en",
+      "text": "Here the ball is on the chair. There it is under the chair.",
+      "aliases": [
+        "Here the ball is on the chair. There it is under the chair."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[20].exampleAnswers[1]",
+        "$.extraTeachingAudio[2].audioText"
+      ],
+      "url": "/audio/learn-efe1ccf5417f6d2dd136.wav",
+      "filename": "learn-efe1ccf5417f6d2dd136.wav",
+      "frames": 115895,
+      "durationMs": 5256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.551971,
+      "rms": 0.080687,
+      "nonSilentSamples": 64935,
+      "clippedSamples": 0,
+      "sha256": "4ea520d8b8813659ae0d7b3bb6b45408bc7bca1f71a1ae2aa1c884befd7fb767",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-efe1ccf5417f6d2dd136.mp3",
+      "sourceMp3Sha256": "2686d689edf4a994995874365cae2a458677af45b82f50aa917d6d2be6edb9bf",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-efe1ccf5417f6d2dd136.wav"
+    },
+    {
+      "language": "en",
+      "text": "I can read.",
+      "aliases": [
+        "I can read."
+      ],
+      "origins": [
+        "$.units[3].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[3].audioText"
+      ],
+      "url": "/audio/learn-5cb4bba2d20a21a6c90f.wav",
+      "filename": "learn-5cb4bba2d20a21a6c90f.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.059821,
+      "nonSilentSamples": 17165,
+      "clippedSamples": 0,
+      "sha256": "a3fec9652533a65d2e3879076965629f96c66ff2b1459aaa9022c45a7eee5cc0",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-5cb4bba2d20a21a6c90f.mp3",
+      "sourceMp3Sha256": "4b0d2ab0cd479a0acc68ba4120b7a11844dd8f17cd4b380b6f177aba1f5193e1",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-5cb4bba2d20a21a6c90f.wav"
+    },
+    {
+      "language": "en",
+      "text": "I can see a cloud.",
+      "aliases": [
+        "I can see a cloud."
+      ],
+      "origins": [
+        "$.units[4].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[4].audioText"
+      ],
+      "url": "/audio/learn-b60f64628c11c1c73336.wav",
+      "filename": "learn-b60f64628c11c1c73336.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.076023,
+      "nonSilentSamples": 26145,
+      "clippedSamples": 0,
+      "sha256": "c61f1ab8f2818e83685390ea90e0bd0766504bcdad16fb8978d115a2e13661bc",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-b60f64628c11c1c73336.mp3",
+      "sourceMp3Sha256": "11e67db4c634bcd254deaf9341179ee05c92b4cc9155a76f487100b1f492be1d",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-b60f64628c11c1c73336.wav"
+    },
+    {
+      "language": "en",
+      "text": "I can see a desk.",
+      "aliases": [
+        "I can see a desk."
+      ],
+      "origins": [
+        "$.units[1].activities[3].tasks[0].exampleAnswers[0]",
+        "$.extraTeachingAudio[5].audioText"
+      ],
+      "url": "/audio/learn-97e5a4ec5714855ff6b3.wav",
+      "filename": "learn-97e5a4ec5714855ff6b3.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.785034,
+      "rms": 0.074266,
+      "nonSilentSamples": 27641,
+      "clippedSamples": 0,
+      "sha256": "21ac848a1289be5a6ca0addce9f8933f3f6389b803890916b7582c9b82b99723",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-97e5a4ec5714855ff6b3.mp3",
+      "sourceMp3Sha256": "e9ed1ec8d8f526bed26242ce36981f9e2e21d08bb4eab4f9c5deec2ce89ac0f2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-97e5a4ec5714855ff6b3.wav"
+    },
+    {
+      "language": "en",
+      "text": "I can see the sun.",
+      "aliases": [
+        "I can see the sun."
+      ],
+      "origins": [
+        "$.units[4].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[6].audioText"
+      ],
+      "url": "/audio/learn-35b526fd5838345f0338.wav",
+      "filename": "learn-35b526fd5838345f0338.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.729492,
+      "rms": 0.071058,
+      "nonSilentSamples": 26651,
+      "clippedSamples": 0,
+      "sha256": "811ac373419f9d29e25203292a1f6e6475993057d885e6e11775e5d9b207e712",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-35b526fd5838345f0338.mp3",
+      "sourceMp3Sha256": "b80ee48a40eb05bce25d2740eb72576ec86f70feaf4e453570cdc54027495fa0",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-35b526fd5838345f0338.wav"
+    },
+    {
+      "language": "en",
+      "text": "I drink milk every day.",
+      "aliases": [
+        "I drink milk every day."
+      ],
+      "origins": [
+        "$.units[3].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[7].audioText"
+      ],
+      "url": "/audio/learn-8d63374e163ee5c0cafa.wav",
+      "filename": "learn-8d63374e163ee5c0cafa.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.086254,
+      "nonSilentSamples": 33080,
+      "clippedSamples": 0,
+      "sha256": "78e6c36041c2e5977bcee67c4aadc32b3cb3da956ad9f6316646b9b793a6f393",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-8d63374e163ee5c0cafa.mp3",
+      "sourceMp3Sha256": "847b29788fabaedf7fa7960ef17c39d3b7aae712b109ebb8b1832f37981258a7",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-8d63374e163ee5c0cafa.wav"
+    },
+    {
+      "language": "en",
+      "text": "I drink water.",
+      "aliases": [
+        "I drink water."
+      ],
+      "origins": [
+        "$.units[4].activities[3].tasks[2].exampleAnswers[0]",
+        "$.extraTeachingAudio[8].audioText"
+      ],
+      "url": "/audio/learn-e548881fa97bd0b9b33b.wav",
+      "filename": "learn-e548881fa97bd0b9b33b.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.626648,
+      "rms": 0.066494,
+      "nonSilentSamples": 20472,
+      "clippedSamples": 0,
+      "sha256": "1d97199784f51d5c112d52ce78f26ed7f44a5a2b3b2b678a65da1481e1cf6e0c",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-e548881fa97bd0b9b33b.mp3",
+      "sourceMp3Sha256": "41650fc29d6875fc8cc62b1ecc8f33b3a1b3679e0d67d59fc46891ac59bbe752",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-e548881fa97bd0b9b33b.wav"
+    },
+    {
+      "language": "en",
+      "text": "I have a sister.",
+      "aliases": [
+        "I have a sister."
+      ],
+      "origins": [
+        "$.units[0].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[9].audioText"
+      ],
+      "url": "/audio/learn-5eec673799d2538117da.wav",
+      "filename": "learn-5eec673799d2538117da.wav",
+      "frames": 49745,
+      "durationMs": 2256.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.601654,
+      "rms": 0.060067,
+      "nonSilentSamples": 22926,
+      "clippedSamples": 0,
+      "sha256": "bbb768e13cf00669acce8727f53ade90ee17ca7fe896bc2599723c7a89392c6c",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-5eec673799d2538117da.mp3",
+      "sourceMp3Sha256": "ad171ded4c09c9d2bc652417c1995e6395e7c5042e9e60eddc3ea7a05724ce5f",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-5eec673799d2538117da.wav"
+    },
+    {
+      "language": "en",
+      "text": "I have two eyes.",
+      "aliases": [
+        "I have two eyes."
+      ],
+      "origins": [
+        "$.units[2].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[10].audioText"
+      ],
+      "url": "/audio/learn-152c93ab70d9bb4a3a6d.wav",
+      "filename": "learn-152c93ab70d9bb4a3a6d.wav",
+      "frames": 52920,
+      "durationMs": 2400.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.724274,
+      "rms": 0.070319,
+      "nonSilentSamples": 25748,
+      "clippedSamples": 0,
+      "sha256": "803010ff944bfa6ecc46e88659e4ba9b786b1b3967dfa120a032e887fa39cf9e",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-152c93ab70d9bb4a3a6d.mp3",
+      "sourceMp3Sha256": "eca138ebed4363d2102220f741fcaa6a4ccd72024c44067226d62078ba47e28e",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-152c93ab70d9bb4a3a6d.wav"
+    },
+    {
+      "language": "en",
+      "text": "I like bananas.",
+      "aliases": [
+        "I like bananas."
+      ],
+      "origins": [
+        "$.stories[1].tasks[1].exampleAnswers[1]"
+      ],
+      "url": "/audio/learn-91b1229796cb4f72f9d2.wav",
+      "filename": "learn-91b1229796cb4f72f9d2.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.677765,
+      "rms": 0.076689,
+      "nonSilentSamples": 25250,
+      "clippedSamples": 0,
+      "sha256": "bd3ece882012c65a87e6cc8ea02cc9d8266756da9b5e3e143d69b8f3ddb5362a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-91b1229796cb4f72f9d2.mp3",
+      "sourceMp3Sha256": "7b82a3733b69351113d219b9b26634152f634c3a356170422effc6993c110e8a",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-91b1229796cb4f72f9d2.wav"
+    },
+    {
+      "language": "en",
+      "text": "I like playing with my friends.",
+      "aliases": [
+        "I like playing with my friends."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[18].exampleAnswers[1]",
+        "$.extraTeachingAudio[11].audioText"
+      ],
+      "url": "/audio/learn-fa8088cfe7eb64384a6e.wav",
+      "filename": "learn-fa8088cfe7eb64384a6e.wav",
+      "frames": 66150,
+      "durationMs": 3000.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.558685,
+      "rms": 0.07061,
+      "nonSilentSamples": 37934,
+      "clippedSamples": 0,
+      "sha256": "667894252763274f407d2229c0755a27db886d598f92e98a0b3c20d760429a2c",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-fa8088cfe7eb64384a6e.mp3",
+      "sourceMp3Sha256": "667d915c6b5ebd6b750ddf88de571691d5bc4d1b6c171d730451699d08a7374d",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-fa8088cfe7eb64384a6e.wav"
+    },
+    {
+      "language": "en",
+      "text": "I like to play.",
+      "aliases": [
+        "I like to play."
+      ],
+      "origins": [
+        "$.units[3].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[12].audioText"
+      ],
+      "url": "/audio/learn-f4cedd7421ccef11a0bf.wav",
+      "filename": "learn-f4cedd7421ccef11a0bf.wav",
+      "frames": 49215,
+      "durationMs": 2231.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.658722,
+      "rms": 0.090556,
+      "nonSilentSamples": 22287,
+      "clippedSamples": 0,
+      "sha256": "10fef809871814118423de1a0085af3b0d5baba899220cf4390fb093f9691cc9",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-f4cedd7421ccef11a0bf.mp3",
+      "sourceMp3Sha256": "2322287d76fed43d8d859d2284580d1564185a94fb7306ee281c17a9d14dbf75",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-f4cedd7421ccef11a0bf.wav"
+    },
+    {
+      "language": "en",
+      "text": "I like to read.",
+      "aliases": [
+        "I like to read."
+      ],
+      "origins": [
+        "$.units[3].activities[3].tasks[1].exampleAnswers[1]",
+        "$.diagnostic.tasks[18].exampleAnswers[0]",
+        "$.extraTeachingAudio[13].audioText"
+      ],
+      "url": "/audio/learn-59068e3adca4c6a717c2.wav",
+      "filename": "learn-59068e3adca4c6a717c2.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.655548,
+      "rms": 0.081663,
+      "nonSilentSamples": 21007,
+      "clippedSamples": 0,
+      "sha256": "c505452ff0c96a2d8ce20052e7302bbc069f01353bab807ea990e661fd799463",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-59068e3adca4c6a717c2.mp3",
+      "sourceMp3Sha256": "2f10b45cd5b22c3672c86914859a3428495c498a3c9e07ea5c3867066a9a2790",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-59068e3adca4c6a717c2.wav"
+    },
+    {
+      "language": "en",
+      "text": "It is hot. The boy drinks water. He is happy.",
+      "aliases": [
+        "It is hot. The boy drinks water. He is happy."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[21].exampleAnswers[0]",
+        "$.extraTeachingAudio[14].audioText"
+      ],
+      "url": "/audio/learn-891fe5b9134995e77f74.wav",
+      "filename": "learn-891fe5b9134995e77f74.wav",
+      "frames": 138651,
+      "durationMs": 6288.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.567047,
+      "rms": 0.063709,
+      "nonSilentSamples": 63313,
+      "clippedSamples": 0,
+      "sha256": "737cd5fa8cdebdcd0346dd15e6712c00ff8475545f1ee70c9100f1072a64a2bb",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-891fe5b9134995e77f74.mp3",
+      "sourceMp3Sha256": "f64a6699746f4ef6444e1d45b0af8d1e5e7b21c0bf00cb08268901fccf8d46ed",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-891fe5b9134995e77f74.wav"
+    },
+    {
+      "language": "en",
+      "text": "My book is on the desk.",
+      "aliases": [
+        "My book is on the desk."
+      ],
+      "origins": [
+        "$.units[1].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[15].audioText"
+      ],
+      "url": "/audio/learn-8188c346325e3cf9bc77.wav",
+      "filename": "learn-8188c346325e3cf9bc77.wav",
+      "frames": 59271,
+      "durationMs": 2688.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.635651,
+      "rms": 0.076437,
+      "nonSilentSamples": 32399,
+      "clippedSamples": 0,
+      "sha256": "c9a58d447b68322804197062669fbe8ea6f77315aba6547c11bfd1cbd05a9147",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-8188c346325e3cf9bc77.mp3",
+      "sourceMp3Sha256": "a9a53374f185bb70bf22339ff7793161ddf3740c203cf3e3ba9731583c3d8fcb",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-8188c346325e3cf9bc77.wav"
+    },
+    {
+      "language": "en",
+      "text": "My eyes are brown.",
+      "aliases": [
+        "My eyes are brown."
+      ],
+      "origins": [
+        "$.units[2].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[16].audioText"
+      ],
+      "url": "/audio/learn-238fb7a3ef306b944a06.wav",
+      "filename": "learn-238fb7a3ef306b944a06.wav",
+      "frames": 52391,
+      "durationMs": 2376.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.544647,
+      "rms": 0.077987,
+      "nonSilentSamples": 26726,
+      "clippedSamples": 0,
+      "sha256": "379320b6145fad47c35bcbc884f9682e65c22581fdcd95096683ef225a4b428a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-238fb7a3ef306b944a06.mp3",
+      "sourceMp3Sha256": "28bbccb7639de9ab9a6a8b0d69e0fcdc9fe29af253b41236738a9cce48de2b17",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-238fb7a3ef306b944a06.wav"
+    },
+    {
+      "language": "en",
+      "text": "My friend has a book.",
+      "aliases": [
+        "My friend has a book."
+      ],
+      "origins": [
+        "$.units[0].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[17].audioText"
+      ],
+      "url": "/audio/learn-492571a11fef6744f88d.wav",
+      "filename": "learn-492571a11fef6744f88d.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.63913,
+      "rms": 0.076527,
+      "nonSilentSamples": 27038,
+      "clippedSamples": 0,
+      "sha256": "bffac3ae5c979d1289a27ad307f268d4ba5b546c707f748af4625da2471cfef3",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-492571a11fef6744f88d.mp3",
+      "sourceMp3Sha256": "2774b8c3946538f44f81e01d3fc988b723bced7645c785e30765457417772bf3",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-492571a11fef6744f88d.wav"
+    },
+    {
+      "language": "en",
+      "text": "My teacher has a book.",
+      "aliases": [
+        "My teacher has a book."
+      ],
+      "origins": [
+        "$.units[1].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[18].audioText"
+      ],
+      "url": "/audio/learn-a8be87706949d5c8458b.wav",
+      "filename": "learn-a8be87706949d5c8458b.wav",
+      "frames": 55037,
+      "durationMs": 2496.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.593903,
+      "rms": 0.072978,
+      "nonSilentSamples": 28020,
+      "clippedSamples": 0,
+      "sha256": "c66f4a48bb1ed13b053e8e8fe36bb31065a10acd27dfb0fbdafbdd9ee400ebfa",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a8be87706949d5c8458b.mp3",
+      "sourceMp3Sha256": "5d9076c4c42c3a03947a0684783a9c4803a8cdf0183820b5fb7625657fa6e811",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a8be87706949d5c8458b.wav"
+    },
+    {
+      "language": "en",
+      "text": "The apple is different. It is food.",
+      "aliases": [
+        "The apple is different. It is food."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[22].exampleAnswers[0]",
+        "$.extraTeachingAudio[19].audioText"
+      ],
+      "url": "/audio/learn-2f995cf1124cac5e3761.wav",
+      "filename": "learn-2f995cf1124cac5e3761.wav",
+      "frames": 97373,
+      "durationMs": 4416.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.691681,
+      "rms": 0.066993,
+      "nonSilentSamples": 46541,
+      "clippedSamples": 0,
+      "sha256": "49beb2814026fe2eefc0e65b7a2ebc7c839b403af66999fc09da8b248b11b817",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-2f995cf1124cac5e3761.mp3",
+      "sourceMp3Sha256": "501167e4d86c9d42c6e0928b79a5366ecbf5a6162e43870f53e804064168c900",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-2f995cf1124cac5e3761.wav"
+    },
+    {
+      "language": "en",
+      "text": "The boy is reading.",
+      "aliases": [
+        "The boy is reading."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[19].exampleAnswers[1]",
+        "$.extraTeachingAudio[20].audioText"
+      ],
+      "url": "/audio/learn-fed5dd221f9112a015ad.wav",
+      "filename": "learn-fed5dd221f9112a015ad.wav",
+      "frames": 51333,
+      "durationMs": 2328.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.424316,
+      "rms": 0.068547,
+      "nonSilentSamples": 24949,
+      "clippedSamples": 0,
+      "sha256": "9536a417ec6bb228d1074d87f76c4bb77333dd6499b2082e589ee72064f8a72b",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-fed5dd221f9112a015ad.mp3",
+      "sourceMp3Sha256": "556acc54731df93576ea71ab8cf656a212c96c33b046b6b01fcd0688b54b44b6",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-fed5dd221f9112a015ad.wav"
+    },
+    {
+      "language": "en",
+      "text": "These are animals. The apple is not an animal.",
+      "aliases": [
+        "These are animals. The apple is not an animal."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[22].exampleAnswers[1]",
+        "$.extraTeachingAudio[21].audioText"
+      ],
+      "url": "/audio/learn-530fbd59402787452b0e.wav",
+      "filename": "learn-530fbd59402787452b0e.wav",
+      "frames": 111132,
+      "durationMs": 5040.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.593048,
+      "rms": 0.077188,
+      "nonSilentSamples": 60372,
+      "clippedSamples": 0,
+      "sha256": "c14124520feaf56cb4b87affc51ac92b5fbc328c287d1a75b42f4de931f9325d",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-530fbd59402787452b0e.mp3",
+      "sourceMp3Sha256": "397eb087f548944c17221eb1aaab1575b2ddfea5bd90d602c4929a02eaff2295",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-530fbd59402787452b0e.wav"
+    },
+    {
+      "language": "en",
+      "text": "This ball is red. That ball is blue.",
+      "aliases": [
+        "This ball is red. That ball is blue."
+      ],
+      "origins": [
+        "$.diagnostic.tasks[20].exampleAnswers[0]",
+        "$.extraTeachingAudio[22].audioText"
+      ],
+      "url": "/audio/learn-988826484bef62590149.wav",
+      "filename": "learn-988826484bef62590149.wav",
+      "frames": 102135,
+      "durationMs": 4631.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.691437,
+      "rms": 0.081464,
+      "nonSilentSamples": 50077,
+      "clippedSamples": 0,
+      "sha256": "86bf5965096f334b5450c2dec182d5c95d47083950a1e78038a5ff0546c455e0",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-988826484bef62590149.mp3",
+      "sourceMp3Sha256": "cab15f2c4667b261b9555a8f794f80337641296f9c3b41c4624bac14f53df22f",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-988826484bef62590149.wav"
+    },
+    {
+      "language": "en",
+      "text": "This is my book.",
+      "aliases": [
+        "This is my book."
+      ],
+      "origins": [
+        "$.units[1].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[23].audioText"
+      ],
+      "url": "/audio/learn-01eacdb5e697b17d4d56.wav",
+      "filename": "learn-01eacdb5e697b17d4d56.wav",
+      "frames": 48687,
+      "durationMs": 2208.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.557495,
+      "rms": 0.071067,
+      "nonSilentSamples": 21431,
+      "clippedSamples": 0,
+      "sha256": "d2aac2113e2635fea5a692568ab267e8bc69d9022a391934dd39b3bb223514c2",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-01eacdb5e697b17d4d56.mp3",
+      "sourceMp3Sha256": "aedfa31a5f6ce4f85ae75b19ce84bcbc5537515f978dfad6fea8f4b671a865d3",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-01eacdb5e697b17d4d56.wav"
+    },
+    {
+      "language": "en",
+      "text": "This is my nose.",
+      "aliases": [
+        "This is my nose."
+      ],
+      "origins": [
+        "$.units[2].activities[3].tasks[2].exampleAnswers[0]",
+        "$.extraTeachingAudio[24].audioText"
+      ],
+      "url": "/audio/learn-66b5a04cad8bf3d009ab.wav",
+      "filename": "learn-66b5a04cad8bf3d009ab.wav",
+      "frames": 51333,
+      "durationMs": 2328.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.629822,
+      "rms": 0.074333,
+      "nonSilentSamples": 25030,
+      "clippedSamples": 0,
+      "sha256": "9248c9ad08438af7dba99af40c961afff9335d80a38936fb7acad88ecf19f703",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-66b5a04cad8bf3d009ab.mp3",
+      "sourceMp3Sha256": "b5cdbef4e1f83d85a5bbcf6770e2dbd79b0e2a4b36b2890c82d91e3ef59ab167",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-66b5a04cad8bf3d009ab.wav"
+    },
+    {
+      "language": "en",
+      "text": "What food do you like?",
+      "aliases": [
+        "What food do you like?"
+      ],
+      "origins": [
+        "$.diagnostic.tasks[23].exampleAnswers[0]",
+        "$.extraTeachingAudio[25].audioText"
+      ],
+      "url": "/audio/learn-d01abe5501032f8102d6.wav",
+      "filename": "learn-d01abe5501032f8102d6.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.699249,
+      "rms": 0.072267,
+      "nonSilentSamples": 26768,
+      "clippedSamples": 0,
+      "sha256": "2f4c42350ab7192f6e339a3d689dc89b2c21c2b1521fe4bf393f7fafbb97b253",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-d01abe5501032f8102d6.mp3",
+      "sourceMp3Sha256": "d320a5ab348b2eeafc73a9a76ce7923b01c9f2c8b46d086db091d7cb7d571d8b",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-d01abe5501032f8102d6.wav"
+    },
+    {
+      "language": "en",
+      "text": "What is your favourite food?",
+      "aliases": [
+        "What is your favourite food?"
+      ],
+      "origins": [
+        "$.diagnostic.tasks[23].exampleAnswers[2]",
+        "$.extraTeachingAudio[26].audioText"
+      ],
+      "url": "/audio/learn-833aa617d8803f802fb0.wav",
+      "filename": "learn-833aa617d8803f802fb0.wav",
+      "frames": 57153,
+      "durationMs": 2591.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.685303,
+      "rms": 0.077246,
+      "nonSilentSamples": 30636,
+      "clippedSamples": 0,
+      "sha256": "15d48cfbc6caf8ae5e4baae94a440a196d3ab7d9b9dcad336b529c0c95b7dbb9",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-833aa617d8803f802fb0.mp3",
+      "sourceMp3Sha256": "795159c6749d7c185307fd2f8e09f58a4ea66eb142303d7a15fb125f996c9798",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-833aa617d8803f802fb0.wav"
+    },
+    {
+      "language": "zh",
+      "text": "听一听，找到对应的图片。",
+      "aliases": [
+        "听一听，找到对应的图片。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[91].audioText"
+      ],
+      "url": "/audio/learn-6dc6a120c128b9ba69a2.wav",
+      "filename": "learn-6dc6a120c128b9ba69a2.wav",
+      "frames": 66680,
+      "durationMs": 3024.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.598663,
+      "rms": 0.083854,
+      "nonSilentSamples": 48048,
+      "clippedSamples": 0,
+      "sha256": "85c6f41dd14a13df69b69e1016ae27174206eec948f3e38e4cd15ecd02ba11c1",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-6dc6a120c128b9ba69a2.mp3",
+      "sourceMp3Sha256": "cd343cdc87d8ed3e641fe52a67e83144831e03d4d1938807e99a26843cbfc7b3",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-6dc6a120c128b9ba69a2.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是书。",
+      "aliases": [
+        "目标是书。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[59].audioText"
+      ],
+      "url": "/audio/learn-9815eac87aef13b5d4cc.wav",
+      "filename": "learn-9815eac87aef13b5d4cc.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.472351,
+      "rms": 0.080507,
+      "nonSilentSamples": 21618,
+      "clippedSamples": 0,
+      "sha256": "df4c25fef6b6acf6fc97fde99c2bb1627a1c05c40ec87a9f3c53010d709e4baf",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-9815eac87aef13b5d4cc.mp3",
+      "sourceMp3Sha256": "238a7363fb91049fa90654025af3bb587de64802a22c71be78a5f5dafa7e9314",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-9815eac87aef13b5d4cc.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是书写。",
+      "aliases": [
+        "目标是书写。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[78].audioText"
+      ],
+      "url": "/audio/learn-df6e61d33a8dd75bc840.wav",
+      "filename": "learn-df6e61d33a8dd75bc840.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.455566,
+      "rms": 0.088089,
+      "nonSilentSamples": 25913,
+      "clippedSamples": 0,
+      "sha256": "12b7c867bca4d03ae648e4737a8eff6e6526cb5e7275bd0aba50cac54f9337fa",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-df6e61d33a8dd75bc840.mp3",
+      "sourceMp3Sha256": "869c8c2e0b84f40af010050abc118a6985f8379528c0b94892a66f23bef04a2f",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-df6e61d33a8dd75bc840.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是书包。",
+      "aliases": [
+        "目标是书包。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[62].audioText"
+      ],
+      "url": "/audio/learn-1c1596e210d1b81c1a13.wav",
+      "filename": "learn-1c1596e210d1b81c1a13.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.549072,
+      "rms": 0.092783,
+      "nonSilentSamples": 24322,
+      "clippedSamples": 0,
+      "sha256": "aa4c32f874a7cd62b319546e7aec9ecbd203eaa45d9d329f0a3fa9dcf8a02f97",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-1c1596e210d1b81c1a13.mp3",
+      "sourceMp3Sha256": "d2351a371a0a09286f22493aba23d047371dfb5ceac87f9cdba56fba5ea722e6",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-1c1596e210d1b81c1a13.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是云。",
+      "aliases": [
+        "目标是云。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[84].audioText"
+      ],
+      "url": "/audio/learn-362976d3791772d533ed.wav",
+      "filename": "learn-362976d3791772d533ed.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.525848,
+      "rms": 0.093988,
+      "nonSilentSamples": 22220,
+      "clippedSamples": 0,
+      "sha256": "9f910220e158f82b9bfe31e30e8ddc06e03b30a86b1a38e8e9731a13e26b1bc8",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-362976d3791772d533ed.mp3",
+      "sourceMp3Sha256": "cf65302d372f41d2a175b8961d878e85a3cdf062e93e9c6e55e9f22a9937829c",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-362976d3791772d533ed.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是兄弟。",
+      "aliases": [
+        "目标是兄弟。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[53].audioText"
+      ],
+      "url": "/audio/learn-dd80d99cdb020696246a.wav",
+      "filename": "learn-dd80d99cdb020696246a.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.478729,
+      "rms": 0.081959,
+      "nonSilentSamples": 25018,
+      "clippedSamples": 0,
+      "sha256": "ebec7df312c2b93b040bc96ca59b84a7a3b8098ccc86fb4d512041d9c8badb28",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-dd80d99cdb020696246a.mp3",
+      "sourceMp3Sha256": "63d0a46b24c93329b3302ee563c35c5c07e80bbbde2461e63aa7c74030c1f3f0",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-dd80d99cdb020696246a.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是兔子。",
+      "aliases": [
+        "目标是兔子。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[34].audioText"
+      ],
+      "url": "/audio/learn-14d75149bd64c55925f4.wav",
+      "filename": "learn-14d75149bd64c55925f4.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.505066,
+      "rms": 0.083496,
+      "nonSilentSamples": 24209,
+      "clippedSamples": 0,
+      "sha256": "0425282cedd2f22a341bac5252285a1973b9536731a564fd4121b19a72caba39",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-14d75149bd64c55925f4.mp3",
+      "sourceMp3Sha256": "520ceca3549e80eeef195b345b865f73aeb5405fe6b010ce1981ab2f72f264e2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-14d75149bd64c55925f4.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是吃。",
+      "aliases": [
+        "目标是吃。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[75].audioText"
+      ],
+      "url": "/audio/learn-dbb08e126a52976ec06d.wav",
+      "filename": "learn-dbb08e126a52976ec06d.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.512115,
+      "rms": 0.077374,
+      "nonSilentSamples": 21545,
+      "clippedSamples": 0,
+      "sha256": "e23df7ab53b6b5f4e2210facb6b77a7e3734b9f4dee7316dc9267bcfb8c9ecbf",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-dbb08e126a52976ec06d.mp3",
+      "sourceMp3Sha256": "a610840bd4eedf7cc1089b88dfc45d8b9bab3320ee04cf87dc89228bdb29f046",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-dbb08e126a52976ec06d.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是喝。",
+      "aliases": [
+        "目标是喝。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[76].audioText"
+      ],
+      "url": "/audio/learn-3872dc05917fee3f8781.wav",
+      "filename": "learn-3872dc05917fee3f8781.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.47287,
+      "rms": 0.081934,
+      "nonSilentSamples": 21155,
+      "clippedSamples": 0,
+      "sha256": "bc29ae74ab0c2f099d07fec0d617431f3bf510d256a334b06bf8c960279dbdb3",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-3872dc05917fee3f8781.mp3",
+      "sourceMp3Sha256": "88822f72ae03a150d33f41baedb131bb73592f1bf3c5b1c544ff7ae4922383f6",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-3872dc05917fee3f8781.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是嘴。",
+      "aliases": [
+        "目标是嘴。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[74].audioText"
+      ],
+      "url": "/audio/learn-10ff6ee95440a9b8e8de.wav",
+      "filename": "learn-10ff6ee95440a9b8e8de.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.501648,
+      "rms": 0.084623,
+      "nonSilentSamples": 21800,
+      "clippedSamples": 0,
+      "sha256": "6e737f4fc108c452fe8ed3bfe39f555b05eec866f595c0ffe3d97b1365d3eb7c",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-10ff6ee95440a9b8e8de.mp3",
+      "sourceMp3Sha256": "9bfa0fce7a66777a0fe0947411da0e18f63ea984f75b13d78cc8acb193a931a8",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-10ff6ee95440a9b8e8de.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是太阳。",
+      "aliases": [
+        "目标是太阳。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[83].audioText"
+      ],
+      "url": "/audio/learn-afb01fef6725f520f6da.wav",
+      "filename": "learn-afb01fef6725f520f6da.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.480957,
+      "rms": 0.087667,
+      "nonSilentSamples": 24976,
+      "clippedSamples": 0,
+      "sha256": "12d402f4ce059f630a87167c2b2b3479d108afeb714086b9e161492a9ab5570a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-afb01fef6725f520f6da.mp3",
+      "sourceMp3Sha256": "04908396212a464fcf9127f9bef82fd20764db257926a17877c46b2b55841826",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-afb01fef6725f520f6da.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是头。",
+      "aliases": [
+        "目标是头。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[67].audioText"
+      ],
+      "url": "/audio/learn-cab625b26c49bb6240b9.wav",
+      "filename": "learn-cab625b26c49bb6240b9.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.53299,
+      "rms": 0.083439,
+      "nonSilentSamples": 21180,
+      "clippedSamples": 0,
+      "sha256": "aaf846af73a2be824c06a0969f435954dda086c242c84b459092b37619e4e0d2",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-cab625b26c49bb6240b9.mp3",
+      "sourceMp3Sha256": "ba743c9cc8b37d3524c477d049c97e069ebe303bc2f98d33f53af0493858e825",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-cab625b26c49bb6240b9.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是奶奶 / 外婆。",
+      "aliases": [
+        "目标是奶奶 / 外婆。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[55].audioText"
+      ],
+      "url": "/audio/learn-443e2be0fe794629a75b.wav",
+      "filename": "learn-443e2be0fe794629a75b.wav",
+      "frames": 50804,
+      "durationMs": 2304.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.5625,
+      "rms": 0.105487,
+      "nonSilentSamples": 34087,
+      "clippedSamples": 0,
+      "sha256": "be999c6156f33e7cd65c8be108b8cf5b54d400a71809dcf3483e53e609b99991",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-443e2be0fe794629a75b.mp3",
+      "sourceMp3Sha256": "8c100b324fffdbf9bc593c10a17a464e3d14d99c05dcade1e43efc2dea654eb9",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-443e2be0fe794629a75b.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是妈妈。",
+      "aliases": [
+        "目标是妈妈。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[51].audioText"
+      ],
+      "url": "/audio/learn-f622eb8b49eda73154e1.wav",
+      "filename": "learn-f622eb8b49eda73154e1.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.473419,
+      "rms": 0.091222,
+      "nonSilentSamples": 23729,
+      "clippedSamples": 0,
+      "sha256": "6ec2eb0103f68ba12aaed5447842c4fb124a06b052c931e1b2295e9d9c3874e1",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-f622eb8b49eda73154e1.mp3",
+      "sourceMp3Sha256": "d9bb3df7be3cbf16e6502110844cb457931352621e1a77d8ec42050b266db4fe",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-f622eb8b49eda73154e1.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是姐妹。",
+      "aliases": [
+        "目标是姐妹。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[54].audioText"
+      ],
+      "url": "/audio/learn-c17edc4665fa13e32405.wav",
+      "filename": "learn-c17edc4665fa13e32405.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.552002,
+      "rms": 0.095155,
+      "nonSilentSamples": 24714,
+      "clippedSamples": 0,
+      "sha256": "fc3273a2970fab0fe23f290f786b6822dff3602b472d6c06bba77510f24c3cb1",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-c17edc4665fa13e32405.mp3",
+      "sourceMp3Sha256": "170dc4a4e72e36e10087df9114ddf94a83903291cae3419d309618658397a972",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-c17edc4665fa13e32405.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是娃娃。",
+      "aliases": [
+        "目标是娃娃。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[44].audioText"
+      ],
+      "url": "/audio/learn-fa2dec0f226c07619c76.wav",
+      "filename": "learn-fa2dec0f226c07619c76.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.522949,
+      "rms": 0.094817,
+      "nonSilentSamples": 24145,
+      "clippedSamples": 0,
+      "sha256": "a334ada9d87fb0e7050648aebea2e597ffdac26238cd3eeb6ae0cd901871a4ee",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-fa2dec0f226c07619c76.mp3",
+      "sourceMp3Sha256": "3cd8797dbc6ea86efd1ee838d555f4ef38a281f1cb3e35429914ae1fe8e11a40",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-fa2dec0f226c07619c76.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是婴儿。",
+      "aliases": [
+        "目标是婴儿。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[57].audioText"
+      ],
+      "url": "/audio/learn-8c447a7e774fe050061f.wav",
+      "filename": "learn-8c447a7e774fe050061f.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.544708,
+      "rms": 0.085028,
+      "nonSilentSamples": 23291,
+      "clippedSamples": 0,
+      "sha256": "045f04a0cac5bd5af057707867212193c31f53b36146f2115028a9bf1bd6cb91",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-8c447a7e774fe050061f.mp3",
+      "sourceMp3Sha256": "d6d0c3a0ce110f9763523b91f1b170060afc9e49a53838d9b6db92745efa2f6a",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-8c447a7e774fe050061f.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是寒冷。",
+      "aliases": [
+        "目标是寒冷。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[90].audioText"
+      ],
+      "url": "/audio/learn-62ce57e558fac44c43f9.wav",
+      "filename": "learn-62ce57e558fac44c43f9.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.433655,
+      "rms": 0.085954,
+      "nonSilentSamples": 24478,
+      "clippedSamples": 0,
+      "sha256": "9af0af1dfd5615d8347e93b7fdb2e6ac74f8494b25de06fb468cc9259a2cd3c6",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-62ce57e558fac44c43f9.mp3",
+      "sourceMp3Sha256": "4c9be4ab3819d5629d93edcebe2ee4ba6d69403438cad21a1965900483d02f45",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-62ce57e558fac44c43f9.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是彩虹。",
+      "aliases": [
+        "目标是彩虹。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[88].audioText"
+      ],
+      "url": "/audio/learn-bed00cc5a465422724ef.wav",
+      "filename": "learn-bed00cc5a465422724ef.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.466431,
+      "rms": 0.08221,
+      "nonSilentSamples": 26448,
+      "clippedSamples": 0,
+      "sha256": "806e7bb5529980a98c90efdee7001c3a4f37477d25ff0ad6efffb1f56f71918a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-bed00cc5a465422724ef.mp3",
+      "sourceMp3Sha256": "65a7759ac071473771dd207e26d958734f1451a837e7cc70b66ddc95259e8614",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-bed00cc5a465422724ef.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是手。",
+      "aliases": [
+        "目标是手。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[68].audioText"
+      ],
+      "url": "/audio/learn-bd0d33a63a981d1918fa.wav",
+      "filename": "learn-bd0d33a63a981d1918fa.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.515198,
+      "rms": 0.084674,
+      "nonSilentSamples": 21153,
+      "clippedSamples": 0,
+      "sha256": "36c48046c7f1aba3e964715f46879f48f14e8b52087d634c039a74f6bf3a3fc0",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-bd0d33a63a981d1918fa.mp3",
+      "sourceMp3Sha256": "9aa506df5b91d40aa20c5633c0d233b7b39dc71bb35643c1e8618af80ff3b2b2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-bd0d33a63a981d1918fa.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是教室。",
+      "aliases": [
+        "目标是教室。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[66].audioText"
+      ],
+      "url": "/audio/learn-7c63fad33b3e923bdadd.wav",
+      "filename": "learn-7c63fad33b3e923bdadd.wav",
+      "frames": 42336,
+      "durationMs": 1920.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.503448,
+      "rms": 0.088031,
+      "nonSilentSamples": 25844,
+      "clippedSamples": 0,
+      "sha256": "290e71d6ef7038e59705480548b717b3e6fabb1ebb7b7c538663aec5980e55f3",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-7c63fad33b3e923bdadd.mp3",
+      "sourceMp3Sha256": "d62cbce79044abe894c78667b2383a9edf57be9ceca40df1912f71ad616fae5b",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-7c63fad33b3e923bdadd.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是朋友。",
+      "aliases": [
+        "目标是朋友。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[58].audioText"
+      ],
+      "url": "/audio/learn-d2ca01aff3177f4d1cf6.wav",
+      "filename": "learn-d2ca01aff3177f4d1cf6.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.532898,
+      "rms": 0.08987,
+      "nonSilentSamples": 23995,
+      "clippedSamples": 0,
+      "sha256": "117421899a90b9c8c480a365613ee3ece6adf6d546f12fdf3c17e24954714df8",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-d2ca01aff3177f4d1cf6.mp3",
+      "sourceMp3Sha256": "7cd7119bfc194d80085c0ee05952f08cdf003e9ce6caae91325a4659ce6db386",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-d2ca01aff3177f4d1cf6.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是机器人。",
+      "aliases": [
+        "目标是机器人。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[46].audioText"
+      ],
+      "url": "/audio/learn-d680286b5ef390a70a83.wav",
+      "filename": "learn-d680286b5ef390a70a83.wav",
+      "frames": 46569,
+      "durationMs": 2111.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.465637,
+      "rms": 0.089978,
+      "nonSilentSamples": 30002,
+      "clippedSamples": 0,
+      "sha256": "632724fafba8cb26eb15af14dd2c3a777b81c436df8c9a820a0d1976185c7897",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-d680286b5ef390a70a83.mp3",
+      "sourceMp3Sha256": "fc66fc8768bddcb889c1a922a041bf8b1c8e0c39782b65565c969c7003e89664",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-d680286b5ef390a70a83.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是果汁。",
+      "aliases": [
+        "目标是果汁。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[41].audioText"
+      ],
+      "url": "/audio/learn-908ef22a00cc852d32fa.wav",
+      "filename": "learn-908ef22a00cc852d32fa.wav",
+      "frames": 42336,
+      "durationMs": 1920.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.478973,
+      "rms": 0.087603,
+      "nonSilentSamples": 24771,
+      "clippedSamples": 0,
+      "sha256": "9fad5483741480d83fef24b0359dbf0107765aeaa56da5bd69d38270f339fd59",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-908ef22a00cc852d32fa.mp3",
+      "sourceMp3Sha256": "1a4e71673b612dcd06a7ed1a139beaef43e52a0af3194d22adda5d00afa5a780",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-908ef22a00cc852d32fa.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是椅子。",
+      "aliases": [
+        "目标是椅子。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[64].audioText"
+      ],
+      "url": "/audio/learn-a949e998d0b3dc701d2e.wav",
+      "filename": "learn-a949e998d0b3dc701d2e.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.472229,
+      "rms": 0.085275,
+      "nonSilentSamples": 24243,
+      "clippedSamples": 0,
+      "sha256": "1277f750fba5559a67d6f0cd54fbd28e8187618b64acd7bf33812e32b46d7cb0",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a949e998d0b3dc701d2e.mp3",
+      "sourceMp3Sha256": "097a3a50cb67625bfa92bcb06fe45e6a54308855885e5d45b97e36e65ec87acb",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a949e998d0b3dc701d2e.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是橙子。",
+      "aliases": [
+        "目标是橙子。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[37].audioText"
+      ],
+      "url": "/audio/learn-7070150bb51e1bccd68c.wav",
+      "filename": "learn-7070150bb51e1bccd68c.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.551178,
+      "rms": 0.082038,
+      "nonSilentSamples": 24536,
+      "clippedSamples": 0,
+      "sha256": "e32d15d5f528de6dcd67ae46d5a32a0a99d87185581b1df6db33f13dabbec0b1",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-7070150bb51e1bccd68c.mp3",
+      "sourceMp3Sha256": "9a23261f5964395c9b388d50f33b823f13e18a137a253d201c96ff9f56ec4c03",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-7070150bb51e1bccd68c.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是水。",
+      "aliases": [
+        "目标是水。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[40].audioText"
+      ],
+      "url": "/audio/learn-a9bd773304b3d76478a3.wav",
+      "filename": "learn-a9bd773304b3d76478a3.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.48822,
+      "rms": 0.084238,
+      "nonSilentSamples": 21574,
+      "clippedSamples": 0,
+      "sha256": "7a58fd7fad3188485b3577cd6eb14089b03e2867b6a8fa6cadae11994ad20443",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a9bd773304b3d76478a3.mp3",
+      "sourceMp3Sha256": "b1ca8ef614d7d6228495d0739ce7d21bae300b3e20f6f792953fe226b8ed1079",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a9bd773304b3d76478a3.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是泰迪熊。",
+      "aliases": [
+        "目标是泰迪熊。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[49].audioText"
+      ],
+      "url": "/audio/learn-7d5b997c1aa037de5e5a.wav",
+      "filename": "learn-7d5b997c1aa037de5e5a.wav",
+      "frames": 47099,
+      "durationMs": 2136.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.553589,
+      "rms": 0.085052,
+      "nonSilentSamples": 30541,
+      "clippedSamples": 0,
+      "sha256": "a4e9d198894933c253729537c75ed2681a88bf41133a10985bf83bb0095ab2b4",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-7d5b997c1aa037de5e5a.mp3",
+      "sourceMp3Sha256": "f5b5b2da0ba6b6c26f12c772147136a413e3084692384c0d25bb5552ea348b16",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-7d5b997c1aa037de5e5a.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是火车。",
+      "aliases": [
+        "目标是火车。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[48].audioText"
+      ],
+      "url": "/audio/learn-732256b1ac33a5026f7f.wav",
+      "filename": "learn-732256b1ac33a5026f7f.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.504242,
+      "rms": 0.088977,
+      "nonSilentSamples": 25363,
+      "clippedSamples": 0,
+      "sha256": "e57cc87be1b4d20c1c5cce93e7fa86d9d0dc0aa0a3f4fe3fda52071965354e34",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-732256b1ac33a5026f7f.mp3",
+      "sourceMp3Sha256": "d7433ebb1cd7934b69dbef44c738fbab0b7812ae8fc5ad36005f69721448b7f5",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-732256b1ac33a5026f7f.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是炎热。",
+      "aliases": [
+        "目标是炎热。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[89].audioText"
+      ],
+      "url": "/audio/learn-a0ad5401b65131ee9b10.wav",
+      "filename": "learn-a0ad5401b65131ee9b10.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.46817,
+      "rms": 0.09383,
+      "nonSilentSamples": 24847,
+      "clippedSamples": 0,
+      "sha256": "5f57026ba209794b44d7754a9bd282694f2393472a97ffc75a40829430e560a4",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a0ad5401b65131ee9b10.mp3",
+      "sourceMp3Sha256": "a158fe565d61c0fa87d08af2ab0daa2d3cc15147bdd955efc50c5808287e34e5",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a0ad5401b65131ee9b10.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是爷爷 / 外公。",
+      "aliases": [
+        "目标是爷爷 / 外公。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[56].audioText"
+      ],
+      "url": "/audio/learn-9a0bce0cef03d035351f.wav",
+      "filename": "learn-9a0bce0cef03d035351f.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.46521,
+      "rms": 0.097186,
+      "nonSilentSamples": 31198,
+      "clippedSamples": 0,
+      "sha256": "0f24acd0cbb6b8bd2a5b3774ecc26747b2400f117086972c906b221e154a57f3",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-9a0bce0cef03d035351f.mp3",
+      "sourceMp3Sha256": "8606130eec37871102cb9ded05cbfa602727fb3bb9d1ab40f05b845fcd912031",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-9a0bce0cef03d035351f.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是爸爸。",
+      "aliases": [
+        "目标是爸爸。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[52].audioText"
+      ],
+      "url": "/audio/learn-ac6573e81c47cc5b235f.wav",
+      "filename": "learn-ac6573e81c47cc5b235f.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.092887,
+      "nonSilentSamples": 23065,
+      "clippedSamples": 0,
+      "sha256": "7e6253f01396c4e9fc2eb9176b2e825065916f641dad5c7662ee7f5a9c6eae2e",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-ac6573e81c47cc5b235f.mp3",
+      "sourceMp3Sha256": "75af60a5b48a7e84a016c42b86e2ef48e61d5990d33b16dab70fbb86a7f96ea0",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-ac6573e81c47cc5b235f.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是牛奶。",
+      "aliases": [
+        "目标是牛奶。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[39].audioText"
+      ],
+      "url": "/audio/learn-11f07417382b0fbae8c0.wav",
+      "filename": "learn-11f07417382b0fbae8c0.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.559448,
+      "rms": 0.106963,
+      "nonSilentSamples": 24879,
+      "clippedSamples": 0,
+      "sha256": "23aa8fb0a528efa4253447f2c89079cecfc34e7b188d89de808627ff55b02459",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-11f07417382b0fbae8c0.mp3",
+      "sourceMp3Sha256": "3652945aff152511f0b417c20ae5f9d92ccc1aa38e7a6b007b4c15315d12a53d",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-11f07417382b0fbae8c0.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是狗。",
+      "aliases": [
+        "目标是狗。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[28].audioText"
+      ],
+      "url": "/audio/learn-b9e426d608b67e6b0149.wav",
+      "filename": "learn-b9e426d608b67e6b0149.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.601532,
+      "rms": 0.090839,
+      "nonSilentSamples": 20528,
+      "clippedSamples": 0,
+      "sha256": "e6abddebc803ffeff3edff701792c287bb3d14160fa86b0a0a8b9e20cc3becfc",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-b9e426d608b67e6b0149.mp3",
+      "sourceMp3Sha256": "1f81d3799acab436f7562324c7eb3c025bd7ccb30622079eaa65fcfb381126f4",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-b9e426d608b67e6b0149.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是猫。",
+      "aliases": [
+        "目标是猫。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[27].audioText"
+      ],
+      "url": "/audio/learn-fa6af26f14210cb669e2.wav",
+      "filename": "learn-fa6af26f14210cb669e2.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.462036,
+      "rms": 0.093775,
+      "nonSilentSamples": 20062,
+      "clippedSamples": 0,
+      "sha256": "1e0340296a400ab7d1b26c9b9469a32d0f3bfc346583aa3f1f981845ee72f972",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-fa6af26f14210cb669e2.mp3",
+      "sourceMp3Sha256": "062be9d1c18c1024bac3f4e9abe6c39474f2aeb8e8648954a76a0d10e792cf97",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-fa6af26f14210cb669e2.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是玩具汽车。",
+      "aliases": [
+        "目标是玩具汽车。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[50].audioText"
+      ],
+      "url": "/audio/learn-a428e51ba5a599bace32.wav",
+      "filename": "learn-a428e51ba5a599bace32.wav",
+      "frames": 50274,
+      "durationMs": 2280.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.486053,
+      "rms": 0.094252,
+      "nonSilentSamples": 33984,
+      "clippedSamples": 0,
+      "sha256": "48fbfe929c02064dfb50ea987720c8ca2357919e8a4d870317bc4759679008bc",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a428e51ba5a599bace32.mp3",
+      "sourceMp3Sha256": "432f00d49836a6c3d70ee3d99c6e0502f5b18557aac49596584759fe0ff4db11",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a428e51ba5a599bace32.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是玩耍。",
+      "aliases": [
+        "目标是玩耍。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[80].audioText"
+      ],
+      "url": "/audio/learn-679374b04861a670e367.wav",
+      "filename": "learn-679374b04861a670e367.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.578156,
+      "rms": 0.092498,
+      "nonSilentSamples": 26113,
+      "clippedSamples": 0,
+      "sha256": "8df51d6dc7753341763e218d45c4e6522ce21baae14a0784c908f0f5a83cdfc8",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-679374b04861a670e367.mp3",
+      "sourceMp3Sha256": "a00f58c3d771821ad3cdd9b49171e41be726587dcb97ea54eec27907993e4342",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-679374b04861a670e367.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是球。",
+      "aliases": [
+        "目标是球。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[43].audioText"
+      ],
+      "url": "/audio/learn-8400c5ff42e0b7e23a8c.wav",
+      "filename": "learn-8400c5ff42e0b7e23a8c.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.509888,
+      "rms": 0.081331,
+      "nonSilentSamples": 21584,
+      "clippedSamples": 0,
+      "sha256": "0d0a4532b1b4e659b989c8969c32c24f8cac8764d7f2be4de43accb850dfe102",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-8400c5ff42e0b7e23a8c.mp3",
+      "sourceMp3Sha256": "b7c8227867cd6a8cd9e540140cd88c6556c1a5a7b96605406b1862fc5f4a8f4a",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-8400c5ff42e0b7e23a8c.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是眼睛。",
+      "aliases": [
+        "目标是眼睛。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[72].audioText"
+      ],
+      "url": "/audio/learn-2a81b2d4f652d5482166.wav",
+      "filename": "learn-2a81b2d4f652d5482166.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.575317,
+      "rms": 0.094705,
+      "nonSilentSamples": 25101,
+      "clippedSamples": 0,
+      "sha256": "38afdf23c0153a51029f7e26394892208357a88e8a0c63cd1fc6863062b85c79",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-2a81b2d4f652d5482166.mp3",
+      "sourceMp3Sha256": "f9e85a0129ee4d2c9ae32113d0cd803cbf17499e51acce80dda9d2cada2a0540",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-2a81b2d4f652d5482166.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是睡觉。",
+      "aliases": [
+        "目标是睡觉。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[79].audioText"
+      ],
+      "url": "/audio/learn-6ebf3583d2c0c645268e.wav",
+      "filename": "learn-6ebf3583d2c0c645268e.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.662506,
+      "rms": 0.091287,
+      "nonSilentSamples": 25330,
+      "clippedSamples": 0,
+      "sha256": "581ff1bf0590a3602e1c1572735521d6c3d69c4f8d806e7182b6b314d141ba40",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-6ebf3583d2c0c645268e.mp3",
+      "sourceMp3Sha256": "0e4c45f6caa680106f609531c0037cd6be4c6cb14d84bf1401abca3992b87dd2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-6ebf3583d2c0c645268e.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是老师。",
+      "aliases": [
+        "目标是老师。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[65].audioText"
+      ],
+      "url": "/audio/learn-816762a56e596005040a.wav",
+      "filename": "learn-816762a56e596005040a.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.527039,
+      "rms": 0.083722,
+      "nonSilentSamples": 25026,
+      "clippedSamples": 0,
+      "sha256": "772abd61864344919c42923c99cdc278493cb17c049dd3b497264d76931d592d",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-816762a56e596005040a.mp3",
+      "sourceMp3Sha256": "a97a8931dbc0dbb4a7ee0e6c6a16691e7e51df12e424a986fd4b17294ed98138",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-816762a56e596005040a.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是胳膊。",
+      "aliases": [
+        "目标是胳膊。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[69].audioText"
+      ],
+      "url": "/audio/learn-6d517b2b4a0c84d57c14.wav",
+      "filename": "learn-6d517b2b4a0c84d57c14.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.559875,
+      "rms": 0.09708,
+      "nonSilentSamples": 23580,
+      "clippedSamples": 0,
+      "sha256": "0a60a16bbd6ff1668d0d6d1907b141147fb8e8c3ab1aee531e1481b131f511d1",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-6d517b2b4a0c84d57c14.mp3",
+      "sourceMp3Sha256": "2f0a844cffe2838594ad98f5f0d9c6aae3c5cf71c80bfe80a87cc9f0828aeec2",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-6d517b2b4a0c84d57c14.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是脚。",
+      "aliases": [
+        "目标是脚。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[71].audioText"
+      ],
+      "url": "/audio/learn-922399df95892917a677.wav",
+      "filename": "learn-922399df95892917a677.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.534607,
+      "rms": 0.083571,
+      "nonSilentSamples": 20651,
+      "clippedSamples": 0,
+      "sha256": "01d9fcc9d0dbc39f686a36f51d20d2e953d366b147f64d9cb6099556923759c4",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-922399df95892917a677.mp3",
+      "sourceMp3Sha256": "91b223ab180efc2666d46ff60bda54fc880bd956494dd8ed5b8315386c5893ea",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-922399df95892917a677.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是腿。",
+      "aliases": [
+        "目标是腿。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[70].audioText"
+      ],
+      "url": "/audio/learn-5ed02cc919c6d958607e.wav",
+      "filename": "learn-5ed02cc919c6d958607e.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.508575,
+      "rms": 0.081195,
+      "nonSilentSamples": 21242,
+      "clippedSamples": 0,
+      "sha256": "4cd74c9eebbde8477bb10c0f67be253179e424318fff6a87e33952f3bf9ab5c7",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-5ed02cc919c6d958607e.mp3",
+      "sourceMp3Sha256": "8a06351fc4af28e9e1cc6ca253e71933c9974f1fc44f2a03f94949d215f549d3",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-5ed02cc919c6d958607e.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是自行车。",
+      "aliases": [
+        "目标是自行车。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[47].audioText"
+      ],
+      "url": "/audio/learn-73c0c132319f6bf85fe3.wav",
+      "filename": "learn-73c0c132319f6bf85fe3.wav",
+      "frames": 47099,
+      "durationMs": 2136.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.458435,
+      "rms": 0.090322,
+      "nonSilentSamples": 30778,
+      "clippedSamples": 0,
+      "sha256": "74fc915cdc2698c335d4e770da1e263cede0b71a2766b299197fa6c3d44f4ccc",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-73c0c132319f6bf85fe3.mp3",
+      "sourceMp3Sha256": "53d1b5109c757aa78edb3c9671db9631890b2e2e000b9a9b74cc0d389393a9b4",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-73c0c132319f6bf85fe3.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是苹果。",
+      "aliases": [
+        "目标是苹果。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[35].audioText"
+      ],
+      "url": "/audio/learn-15493bcd6a63558f6cd2.wav",
+      "filename": "learn-15493bcd6a63558f6cd2.wav",
+      "frames": 42336,
+      "durationMs": 1920.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.58551,
+      "rms": 0.094959,
+      "nonSilentSamples": 25358,
+      "clippedSamples": 0,
+      "sha256": "e89c908e6d8f5190257f640ab9d2414a0597494db7ad44c474d644fb58dad8cd",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-15493bcd6a63558f6cd2.mp3",
+      "sourceMp3Sha256": "32e1392117f69a27436e43070fb75b8c9b63249e60a64608f49b434b4f54ae75",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-15493bcd6a63558f6cd2.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是蛋糕。",
+      "aliases": [
+        "目标是蛋糕。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[42].audioText"
+      ],
+      "url": "/audio/learn-efd167af9016c919cf25.wav",
+      "filename": "learn-efd167af9016c919cf25.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.504089,
+      "rms": 0.094205,
+      "nonSilentSamples": 24159,
+      "clippedSamples": 0,
+      "sha256": "5e4a91f85e4be1ec403d409f007463e1f8874bcb32bd2f7d2c39bbcb14a3aad9",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-efd167af9016c919cf25.mp3",
+      "sourceMp3Sha256": "e457d3636759f67534e7c822998076a6a8c914438a1505597a59c4b1371817ed",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-efd167af9016c919cf25.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是课桌。",
+      "aliases": [
+        "目标是课桌。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[63].audioText"
+      ],
+      "url": "/audio/learn-20a2105587b6c2d63f3d.wav",
+      "filename": "learn-20a2105587b6c2d63f3d.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.522278,
+      "rms": 0.090672,
+      "nonSilentSamples": 25252,
+      "clippedSamples": 0,
+      "sha256": "b5dd8feeda431dd1a80762ebd8ea7cf4c9b842b1d01764a4e7d2c76d9a800003",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-20a2105587b6c2d63f3d.mp3",
+      "sourceMp3Sha256": "d89391fefa1995f00c722f14fe546e6ae117624c3f2f4eb65946eb864b8d51ee",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-20a2105587b6c2d63f3d.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是走路。",
+      "aliases": [
+        "目标是走路。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[82].audioText"
+      ],
+      "url": "/audio/learn-9d1653ecc538d858a3ea.wav",
+      "filename": "learn-9d1653ecc538d858a3ea.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.528992,
+      "rms": 0.094144,
+      "nonSilentSamples": 23893,
+      "clippedSamples": 0,
+      "sha256": "b966323207cde296b6038e9fecf4b37c1da7900b8432d9244c2ac2fecec06fa9",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-9d1653ecc538d858a3ea.mp3",
+      "sourceMp3Sha256": "ae8c03398350316aebf8a99bad84af6471d0532b37791ca1c54e3f2b4b03b3fe",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-9d1653ecc538d858a3ea.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是跑步。",
+      "aliases": [
+        "目标是跑步。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[81].audioText"
+      ],
+      "url": "/audio/learn-e49fdb52811d6ac6b231.wav",
+      "filename": "learn-e49fdb52811d6ac6b231.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.59964,
+      "rms": 0.087588,
+      "nonSilentSamples": 23825,
+      "clippedSamples": 0,
+      "sha256": "7ac8257a8b75cbb6a8f84151e608c3f69707f31a58be9eeb8deb8f4c9209a212",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-e49fdb52811d6ac6b231.mp3",
+      "sourceMp3Sha256": "e476bbb3856e00d7f86291ca8be9d6edf62b6065a62e4a3c3501f8586cb34b27",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-e49fdb52811d6ac6b231.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是钢笔 / 水笔。",
+      "aliases": [
+        "目标是钢笔 / 水笔。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[60].audioText"
+      ],
+      "url": "/audio/learn-197930fd90b0f36344bd.wav",
+      "filename": "learn-197930fd90b0f36344bd.wav",
+      "frames": 55566,
+      "durationMs": 2520.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.509399,
+      "rms": 0.083729,
+      "nonSilentSamples": 37734,
+      "clippedSamples": 0,
+      "sha256": "1de0753699448dcd2193b25ce91ab12dda7a3426222efca8f84a0c41984dda8d",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-197930fd90b0f36344bd.mp3",
+      "sourceMp3Sha256": "c87aa11844aec8c14fb248cf695bddfb09306ad3c670fd4e97927da55bc6c38e",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-197930fd90b0f36344bd.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是铅笔。",
+      "aliases": [
+        "目标是铅笔。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[61].audioText"
+      ],
+      "url": "/audio/learn-cf80603dcf818dd4f796.wav",
+      "filename": "learn-cf80603dcf818dd4f796.wav",
+      "frames": 42866,
+      "durationMs": 1944.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.498444,
+      "rms": 0.081929,
+      "nonSilentSamples": 25954,
+      "clippedSamples": 0,
+      "sha256": "0e018d96993524fba682ebfddb6da24a8854d635aad3f97e1ac99fcb2a20823d",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-cf80603dcf818dd4f796.mp3",
+      "sourceMp3Sha256": "2d0edffaa9582ad904d70883bd56f60f9b5c76b72f7b75120f80f5083344ea96",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-cf80603dcf818dd4f796.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是阅读。",
+      "aliases": [
+        "目标是阅读。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[77].audioText"
+      ],
+      "url": "/audio/learn-4a0483545d493972f856.wav",
+      "filename": "learn-4a0483545d493972f856.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.505188,
+      "rms": 0.098727,
+      "nonSilentSamples": 25380,
+      "clippedSamples": 0,
+      "sha256": "e5932a75c89fe778777c03a06fe6b8fbcc8bb1971fc4072c19715d5c6b522526",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-4a0483545d493972f856.mp3",
+      "sourceMp3Sha256": "5b974b64ea8587bfd411e05a633553fe9d80cad1b749aae085a7ecb9465ce06f",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-4a0483545d493972f856.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是雨。",
+      "aliases": [
+        "目标是雨。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[85].audioText"
+      ],
+      "url": "/audio/learn-1bbd87d6ee25518c2302.wav",
+      "filename": "learn-1bbd87d6ee25518c2302.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.511871,
+      "rms": 0.089703,
+      "nonSilentSamples": 21275,
+      "clippedSamples": 0,
+      "sha256": "c06db1eda371a4f7880ab1f99613b4af5720980243da3b9478e2807d68353edc",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-1bbd87d6ee25518c2302.mp3",
+      "sourceMp3Sha256": "49e6e620e1076f6d16abacfbe92a681a117a66b058cd0e07892c663db266961f",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-1bbd87d6ee25518c2302.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是雪。",
+      "aliases": [
+        "目标是雪。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[86].audioText"
+      ],
+      "url": "/audio/learn-4289778fbb5a42da5ce6.wav",
+      "filename": "learn-4289778fbb5a42da5ce6.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.510956,
+      "rms": 0.079813,
+      "nonSilentSamples": 21612,
+      "clippedSamples": 0,
+      "sha256": "6edeb4f95d44d4881280af2fe04013fcade513d35dd72cc5db7c41f5f3cfdc9e",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-4289778fbb5a42da5ce6.mp3",
+      "sourceMp3Sha256": "5428ec93c8bdc8f08993d9b3071c815adc739e0921a40fabe94c9fa881bf7949",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-4289778fbb5a42da5ce6.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是青蛙。",
+      "aliases": [
+        "目标是青蛙。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[31].audioText"
+      ],
+      "url": "/audio/learn-06dbaf657eb49de9c57b.wav",
+      "filename": "learn-06dbaf657eb49de9c57b.wav",
+      "frames": 41807,
+      "durationMs": 1896.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.739471,
+      "rms": 0.09319,
+      "nonSilentSamples": 25467,
+      "clippedSamples": 0,
+      "sha256": "d87f415c9d2d3b73b995720c0e968daf6febb82bd62b5fa38b52db5ea2e37c2d",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-06dbaf657eb49de9c57b.mp3",
+      "sourceMp3Sha256": "24da3b663f9ab94e499d4c246f05e6871aae4769ec37433b9dccfa8c718ca11b",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-06dbaf657eb49de9c57b.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是面包。",
+      "aliases": [
+        "目标是面包。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[38].audioText"
+      ],
+      "url": "/audio/learn-156d8c1d3b533afcc41b.wav",
+      "filename": "learn-156d8c1d3b533afcc41b.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.48941,
+      "rms": 0.098995,
+      "nonSilentSamples": 24612,
+      "clippedSamples": 0,
+      "sha256": "50c5ed039332b8089d2c905cd985f9bf238fed38743662b8606f8c43e924d7ee",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-156d8c1d3b533afcc41b.mp3",
+      "sourceMp3Sha256": "cccae228ad3235c1931659bbbb794feca384aee2fc20612ed5f4016243242c52",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-156d8c1d3b533afcc41b.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是风。",
+      "aliases": [
+        "目标是风。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[87].audioText"
+      ],
+      "url": "/audio/learn-e763114c3eadd79f2daa.wav",
+      "filename": "learn-e763114c3eadd79f2daa.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.561127,
+      "rms": 0.084512,
+      "nonSilentSamples": 21527,
+      "clippedSamples": 0,
+      "sha256": "a037a2818c3f781eff0a9f6a0fbcdc98c137a5028baa8921efb5fd37f6143d51",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-e763114c3eadd79f2daa.mp3",
+      "sourceMp3Sha256": "2bde87553f93035f55fc2220afacf0b473795701332296ca96ab3169a9ee3b85",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-e763114c3eadd79f2daa.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是风筝。",
+      "aliases": [
+        "目标是风筝。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[45].audioText"
+      ],
+      "url": "/audio/learn-253e10d715e2fc0bf83f.wav",
+      "filename": "learn-253e10d715e2fc0bf83f.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.564606,
+      "rms": 0.082298,
+      "nonSilentSamples": 24063,
+      "clippedSamples": 0,
+      "sha256": "719af692d6bd2b2d4337221bcafe0df45735af2390a71c1e9b485be91c37790a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-253e10d715e2fc0bf83f.mp3",
+      "sourceMp3Sha256": "195edde41305e41095be6fdcfdce227a4ee5161dc95861d54c6856020fe3d65a",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-253e10d715e2fc0bf83f.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是香蕉。",
+      "aliases": [
+        "目标是香蕉。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[36].audioText"
+      ],
+      "url": "/audio/learn-2c2631c0f3ae079c6363.wav",
+      "filename": "learn-2c2631c0f3ae079c6363.wav",
+      "frames": 42336,
+      "durationMs": 1920.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.511688,
+      "rms": 0.089227,
+      "nonSilentSamples": 26206,
+      "clippedSamples": 0,
+      "sha256": "c35e5f0444318e3264ea26ee800e33769065ef54286024010aca0e33c559da46",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-2c2631c0f3ae079c6363.mp3",
+      "sourceMp3Sha256": "b39e7364b2e2a312d078fef83693d8c7b215a2e7d724e107f9fe0796cb412aa5",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-2c2631c0f3ae079c6363.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是马。",
+      "aliases": [
+        "目标是马。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[33].audioText"
+      ],
+      "url": "/audio/learn-92a2bac6e527a7e44dc1.wav",
+      "filename": "learn-92a2bac6e527a7e44dc1.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.688538,
+      "rms": 0.092875,
+      "nonSilentSamples": 19979,
+      "clippedSamples": 0,
+      "sha256": "521ca977ce70f45d9dfd30a0d5689f511ecf904f971245f2964c5917b2f4ce5a",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-92a2bac6e527a7e44dc1.mp3",
+      "sourceMp3Sha256": "3a1d4f08689dd42804fbf182bd48edc3e3d7a60a06be81dc9b0172803b3b37c4",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-92a2bac6e527a7e44dc1.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是鱼。",
+      "aliases": [
+        "目标是鱼。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[30].audioText"
+      ],
+      "url": "/audio/learn-fef58e5cb43049ae1425.wav",
+      "filename": "learn-fef58e5cb43049ae1425.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.541351,
+      "rms": 0.087937,
+      "nonSilentSamples": 21414,
+      "clippedSamples": 0,
+      "sha256": "07433f8e1e59c8f9fb9947ab31b1c0a947c97b031192de1f7397c3ef502db6b0",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-fef58e5cb43049ae1425.mp3",
+      "sourceMp3Sha256": "eb127cb01d24c16fb502f565dbec5610b77158f65832d934beecb44ed056be74",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-fef58e5cb43049ae1425.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是鸟。",
+      "aliases": [
+        "目标是鸟。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[29].audioText"
+      ],
+      "url": "/audio/learn-13866b1fab0b60e91232.wav",
+      "filename": "learn-13866b1fab0b60e91232.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.506195,
+      "rms": 0.098282,
+      "nonSilentSamples": 20879,
+      "clippedSamples": 0,
+      "sha256": "63faaeeca54c0b91ddc8f91177d0d17ff7bcab451941e3ab0bf6ced6559cf768",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-13866b1fab0b60e91232.mp3",
+      "sourceMp3Sha256": "0fe08f98a2fb8e5c5334f2a3004d37b274fac28155a423f2f07d3c09c29b3287",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-13866b1fab0b60e91232.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是鸭子。",
+      "aliases": [
+        "目标是鸭子。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[32].audioText"
+      ],
+      "url": "/audio/learn-e0d28af59b53598e5b88.wav",
+      "filename": "learn-e0d28af59b53598e5b88.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.470551,
+      "rms": 0.08645,
+      "nonSilentSamples": 24642,
+      "clippedSamples": 0,
+      "sha256": "b2279404b99d57975a027da7433e7cfe316269febbf7d2cba36edff97fdfbb85",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-e0d28af59b53598e5b88.mp3",
+      "sourceMp3Sha256": "4f569ea488eb28fac003e0f0155e111dfd2ecdca388a6963612dc39e0c4fb27e",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-e0d28af59b53598e5b88.wav"
+    },
+    {
+      "language": "zh",
+      "text": "目标是鼻子。",
+      "aliases": [
+        "目标是鼻子。"
+      ],
+      "origins": [
+        "$.extraTeachingAudio[73].audioText"
+      ],
+      "url": "/audio/learn-a280c98d195664fbb963.wav",
+      "filename": "learn-a280c98d195664fbb963.wav",
+      "frames": 41277,
+      "durationMs": 1871.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.485962,
+      "rms": 0.0809,
+      "nonSilentSamples": 24287,
+      "clippedSamples": 0,
+      "sha256": "f2e267dcf59f217412e4bd4167af6654c5ed2fcbedcb8815f0d94da67e72d0aa",
+      "sourceMp3": "D:\\project\\englishlearning\\expanded-audio\\mp3-source\\learn-a280c98d195664fbb963.mp3",
+      "sourceMp3Sha256": "c061572c3efa88e2d944716ec597241c34bb2a258be200e6ce8eed496034988b",
+      "attempt": 1,
+      "wavPath": "D:\\project\\englishlearning\\expanded-audio\\speech\\learn-a280c98d195664fbb963.wav"
+    }
+  ],
+  "failures": [],
+  "collectedTexts": {
+    "en": {
+      "mother": [
+        "$.units[0].words[0].en",
+        "$.units[0].words[0].audioText",
+        "seedWords"
+      ],
+      "father": [
+        "$.units[0].words[1].en",
+        "$.units[0].words[1].audioText",
+        "seedWords"
+      ],
+      "brother": [
+        "$.units[0].words[2].en",
+        "$.units[0].words[2].audioText",
+        "seedWords"
+      ],
+      "sister": [
+        "$.units[0].words[3].en",
+        "$.units[0].words[3].audioText",
+        "seedWords"
+      ],
+      "grandma": [
+        "$.units[0].words[4].en",
+        "$.units[0].words[4].audioText",
+        "seedWords"
+      ],
+      "grandpa": [
+        "$.units[0].words[5].en",
+        "$.units[0].words[5].audioText",
+        "seedWords"
+      ],
+      "baby": [
+        "$.units[0].words[6].en",
+        "$.units[0].words[6].audioText",
+        "seedWords"
+      ],
+      "friend": [
+        "$.units[0].words[7].en",
+        "$.units[0].words[7].audioText",
+        "seedWords"
+      ],
+      "This is my mother.": [
+        "$.units[0].phrases[0].en",
+        "$.units[0].phrases[0].audioText",
+        "$.units[0].activities[3].tasks[0].exampleAnswers[0]"
+      ],
+      "My brother has a ball.": [
+        "$.units[0].phrases[1].en",
+        "$.units[0].phrases[1].audioText",
+        "$.units[0].activities[3].tasks[2].exampleAnswers[0]"
+      ],
+      "I play with my friend.": [
+        "$.units[0].phrases[2].en",
+        "$.units[0].phrases[2].audioText",
+        "$.units[0].activities[3].tasks[1].exampleAnswers[0]"
+      ],
+      "Find the picture for the word mother.": [
+        "$.units[0].activities[0].tasks[0].audioText"
+      ],
+      "Find the picture for the word father.": [
+        "$.units[0].activities[0].tasks[1].audioText"
+      ],
+      "Find the picture for the word brother.": [
+        "$.units[0].activities[0].tasks[2].audioText"
+      ],
+      "Find the picture for the word sister.": [
+        "$.units[0].activities[0].tasks[3].audioText"
+      ],
+      "Find the picture for the word grandma.": [
+        "$.units[0].activities[0].tasks[4].audioText"
+      ],
+      "Find the picture for the word grandpa.": [
+        "$.units[0].activities[0].tasks[5].audioText"
+      ],
+      "Find the picture for the word baby.": [
+        "$.units[0].activities[0].tasks[6].audioText"
+      ],
+      "Find the picture for the word friend.": [
+        "$.units[0].activities[0].tasks[7].audioText"
+      ],
+      "Which picture matches this word?": [
+        "$.units[0].activities[1].tasks[0].audioText",
+        "$.units[0].activities[1].tasks[1].audioText",
+        "$.units[0].activities[1].tasks[2].audioText",
+        "$.units[0].activities[1].tasks[3].audioText",
+        "$.units[0].activities[1].tasks[4].audioText",
+        "$.units[0].activities[1].tasks[5].audioText",
+        "$.units[0].activities[1].tasks[6].audioText",
+        "$.units[0].activities[1].tasks[7].audioText",
+        "$.units[1].activities[1].tasks[0].audioText",
+        "$.units[1].activities[1].tasks[1].audioText",
+        "$.units[1].activities[1].tasks[2].audioText",
+        "$.units[1].activities[1].tasks[3].audioText",
+        "$.units[1].activities[1].tasks[4].audioText",
+        "$.units[1].activities[1].tasks[5].audioText",
+        "$.units[1].activities[1].tasks[6].audioText",
+        "$.units[1].activities[1].tasks[7].audioText",
+        "$.units[2].activities[1].tasks[0].audioText",
+        "$.units[2].activities[1].tasks[1].audioText",
+        "$.units[2].activities[1].tasks[2].audioText",
+        "$.units[2].activities[1].tasks[3].audioText",
+        "$.units[2].activities[1].tasks[4].audioText",
+        "$.units[2].activities[1].tasks[5].audioText",
+        "$.units[2].activities[1].tasks[6].audioText",
+        "$.units[2].activities[1].tasks[7].audioText",
+        "$.units[3].activities[1].tasks[0].audioText",
+        "$.units[3].activities[1].tasks[1].audioText",
+        "$.units[3].activities[1].tasks[2].audioText",
+        "$.units[3].activities[1].tasks[3].audioText",
+        "$.units[3].activities[1].tasks[4].audioText",
+        "$.units[3].activities[1].tasks[5].audioText",
+        "$.units[3].activities[1].tasks[6].audioText",
+        "$.units[3].activities[1].tasks[7].audioText",
+        "$.units[4].activities[1].tasks[0].audioText",
+        "$.units[4].activities[1].tasks[1].audioText",
+        "$.units[4].activities[1].tasks[2].audioText",
+        "$.units[4].activities[1].tasks[3].audioText",
+        "$.units[4].activities[1].tasks[4].audioText",
+        "$.units[4].activities[1].tasks[5].audioText",
+        "$.units[4].activities[1].tasks[6].audioText",
+        "$.units[4].activities[1].tasks[7].audioText"
+      ],
+      "Write the word for this picture.": [
+        "$.units[0].activities[2].tasks[0].audioText",
+        "$.units[0].activities[2].tasks[1].audioText",
+        "$.units[0].activities[2].tasks[2].audioText",
+        "$.units[0].activities[2].tasks[3].audioText",
+        "$.units[1].activities[2].tasks[0].audioText",
+        "$.units[1].activities[2].tasks[1].audioText",
+        "$.units[1].activities[2].tasks[2].audioText",
+        "$.units[1].activities[2].tasks[3].audioText",
+        "$.units[2].activities[2].tasks[0].audioText",
+        "$.units[2].activities[2].tasks[1].audioText",
+        "$.units[2].activities[2].tasks[2].audioText",
+        "$.units[2].activities[2].tasks[3].audioText",
+        "$.units[3].activities[2].tasks[0].audioText",
+        "$.units[3].activities[2].tasks[1].audioText",
+        "$.units[3].activities[2].tasks[2].audioText",
+        "$.units[3].activities[2].tasks[3].audioText",
+        "$.units[4].activities[2].tasks[0].audioText",
+        "$.units[4].activities[2].tasks[1].audioText",
+        "$.units[4].activities[2].tasks[2].audioText",
+        "$.units[4].activities[2].tasks[3].audioText"
+      ],
+      "Tell me about your family.": [
+        "$.units[0].activities[3].tasks[0].audioText"
+      ],
+      "I have a sister.": [
+        "$.units[0].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[9].audioText"
+      ],
+      "Who do you play with?": [
+        "$.units[0].activities[3].tasks[1].audioText"
+      ],
+      "What does your brother or sister have?": [
+        "$.units[0].activities[3].tasks[2].audioText"
+      ],
+      "My friend has a book.": [
+        "$.units[0].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[17].audioText"
+      ],
+      "book": [
+        "$.units[1].words[0].en",
+        "$.units[1].words[0].audioText",
+        "seedWords"
+      ],
+      "pen": [
+        "$.units[1].words[1].en",
+        "$.units[1].words[1].audioText",
+        "$.phonics[5].words[0]",
+        "$.phonics[5].audioTexts[0]",
+        "seedWords"
+      ],
+      "pencil": [
+        "$.units[1].words[2].en",
+        "$.units[1].words[2].audioText",
+        "seedWords"
+      ],
+      "bag": [
+        "$.units[1].words[3].en",
+        "$.units[1].words[3].audioText",
+        "seedWords"
+      ],
+      "desk": [
+        "$.units[1].words[4].en",
+        "$.units[1].words[4].audioText",
+        "seedWords"
+      ],
+      "chair": [
+        "$.units[1].words[5].en",
+        "$.units[1].words[5].audioText",
+        "seedWords"
+      ],
+      "teacher": [
+        "$.units[1].words[6].en",
+        "$.units[1].words[6].audioText",
+        "seedWords"
+      ],
+      "classroom": [
+        "$.units[1].words[7].en",
+        "$.units[1].words[7].audioText",
+        "seedWords"
+      ],
+      "This is my teacher.": [
+        "$.units[1].phrases[0].en",
+        "$.units[1].phrases[0].audioText",
+        "$.units[1].activities[3].tasks[2].exampleAnswers[0]"
+      ],
+      "My book is in my bag.": [
+        "$.units[1].phrases[1].en",
+        "$.units[1].phrases[1].audioText",
+        "$.units[1].activities[3].tasks[1].exampleAnswers[0]"
+      ],
+      "I can see two pencils.": [
+        "$.units[1].phrases[2].en",
+        "$.units[1].phrases[2].audioText"
+      ],
+      "Find the picture for the word book.": [
+        "$.units[1].activities[0].tasks[0].audioText"
+      ],
+      "Find the picture for the word pen.": [
+        "$.units[1].activities[0].tasks[1].audioText"
+      ],
+      "Find the picture for the word pencil.": [
+        "$.units[1].activities[0].tasks[2].audioText"
+      ],
+      "Find the picture for the word bag.": [
+        "$.units[1].activities[0].tasks[3].audioText"
+      ],
+      "Find the picture for the word desk.": [
+        "$.units[1].activities[0].tasks[4].audioText"
+      ],
+      "Find the picture for the word chair.": [
+        "$.units[1].activities[0].tasks[5].audioText"
+      ],
+      "Find the picture for the word teacher.": [
+        "$.units[1].activities[0].tasks[6].audioText"
+      ],
+      "Find the picture for the word classroom.": [
+        "$.units[1].activities[0].tasks[7].audioText"
+      ],
+      "What can you see in your classroom?": [
+        "$.units[1].activities[3].tasks[0].audioText"
+      ],
+      "I can see a desk.": [
+        "$.units[1].activities[3].tasks[0].exampleAnswers[0]",
+        "$.extraTeachingAudio[5].audioText"
+      ],
+      "This is my book.": [
+        "$.units[1].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[23].audioText"
+      ],
+      "Where is your book?": [
+        "$.units[1].activities[3].tasks[1].audioText"
+      ],
+      "My book is on the desk.": [
+        "$.units[1].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[15].audioText"
+      ],
+      "Tell me about your teacher.": [
+        "$.units[1].activities[3].tasks[2].audioText"
+      ],
+      "My teacher has a book.": [
+        "$.units[1].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[18].audioText"
+      ],
+      "head": [
+        "$.units[2].words[0].en",
+        "$.units[2].words[0].audioText",
+        "seedWords"
+      ],
+      "hand": [
+        "$.units[2].words[1].en",
+        "$.units[2].words[1].audioText",
+        "seedWords"
+      ],
+      "arm": [
+        "$.units[2].words[2].en",
+        "$.units[2].words[2].audioText",
+        "seedWords"
+      ],
+      "leg": [
+        "$.units[2].words[3].en",
+        "$.units[2].words[3].audioText",
+        "seedWords"
+      ],
+      "foot": [
+        "$.units[2].words[4].en",
+        "$.units[2].words[4].audioText",
+        "seedWords"
+      ],
+      "eye": [
+        "$.units[2].words[5].en",
+        "$.units[2].words[5].audioText",
+        "seedWords"
+      ],
+      "nose": [
+        "$.units[2].words[6].en",
+        "$.units[2].words[6].audioText",
+        "seedWords"
+      ],
+      "mouth": [
+        "$.units[2].words[7].en",
+        "$.units[2].words[7].audioText",
+        "seedWords"
+      ],
+      "Point to your nose.": [
+        "$.units[2].phrases[0].en",
+        "$.units[2].phrases[0].audioText"
+      ],
+      "I have two hands.": [
+        "$.units[2].phrases[1].en",
+        "$.units[2].phrases[1].audioText",
+        "$.units[2].activities[3].tasks[0].exampleAnswers[0]"
+      ],
+      "My mouth is small.": [
+        "$.units[2].phrases[2].en",
+        "$.units[2].phrases[2].audioText"
+      ],
+      "Find the picture for the word head.": [
+        "$.units[2].activities[0].tasks[0].audioText"
+      ],
+      "Find the picture for the word hand.": [
+        "$.units[2].activities[0].tasks[1].audioText"
+      ],
+      "Find the picture for the word arm.": [
+        "$.units[2].activities[0].tasks[2].audioText"
+      ],
+      "Find the picture for the word leg.": [
+        "$.units[2].activities[0].tasks[3].audioText"
+      ],
+      "Find the picture for the word foot.": [
+        "$.units[2].activities[0].tasks[4].audioText"
+      ],
+      "Find the picture for the word eye.": [
+        "$.units[2].activities[0].tasks[5].audioText"
+      ],
+      "Find the picture for the word nose.": [
+        "$.units[2].activities[0].tasks[6].audioText"
+      ],
+      "Find the picture for the word mouth.": [
+        "$.units[2].activities[0].tasks[7].audioText"
+      ],
+      "How many hands do you have?": [
+        "$.units[2].activities[3].tasks[0].audioText"
+      ],
+      "Tell me about your eyes.": [
+        "$.units[2].activities[3].tasks[1].audioText"
+      ],
+      "I have two eyes.": [
+        "$.units[2].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[10].audioText"
+      ],
+      "My eyes are brown.": [
+        "$.units[2].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[16].audioText"
+      ],
+      "Point to your nose and tell me what it is.": [
+        "$.units[2].activities[3].tasks[2].audioText"
+      ],
+      "This is my nose.": [
+        "$.units[2].activities[3].tasks[2].exampleAnswers[0]",
+        "$.extraTeachingAudio[24].audioText"
+      ],
+      "eat": [
+        "$.units[3].words[0].en",
+        "$.units[3].words[0].audioText",
+        "seedWords"
+      ],
+      "drink": [
+        "$.units[3].words[1].en",
+        "$.units[3].words[1].audioText",
+        "seedWords"
+      ],
+      "read": [
+        "$.units[3].words[2].en",
+        "$.units[3].words[2].audioText",
+        "seedWords"
+      ],
+      "write": [
+        "$.units[3].words[3].en",
+        "$.units[3].words[3].audioText",
+        "seedWords"
+      ],
+      "sleep": [
+        "$.units[3].words[4].en",
+        "$.units[3].words[4].audioText",
+        "seedWords"
+      ],
+      "play": [
+        "$.units[3].words[5].en",
+        "$.units[3].words[5].audioText",
+        "seedWords"
+      ],
+      "run": [
+        "$.units[3].words[6].en",
+        "$.units[3].words[6].audioText",
+        "$.phonics[2].words[1]",
+        "$.phonics[2].audioTexts[1]",
+        "seedWords"
+      ],
+      "walk": [
+        "$.units[3].words[7].en",
+        "$.units[3].words[7].audioText",
+        "seedWords"
+      ],
+      "I can run.": [
+        "$.units[3].phrases[0].en",
+        "$.units[3].phrases[0].audioText",
+        "$.units[3].activities[3].tasks[0].exampleAnswers[0]"
+      ],
+      "I am reading a book.": [
+        "$.units[3].phrases[1].en",
+        "$.units[3].phrases[1].audioText"
+      ],
+      "I drink water every day.": [
+        "$.units[3].phrases[2].en",
+        "$.units[3].phrases[2].audioText",
+        "$.units[3].activities[3].tasks[2].exampleAnswers[0]"
+      ],
+      "Find the picture for the word eat.": [
+        "$.units[3].activities[0].tasks[0].audioText"
+      ],
+      "Find the picture for the word drink.": [
+        "$.units[3].activities[0].tasks[1].audioText"
+      ],
+      "Find the picture for the word read.": [
+        "$.units[3].activities[0].tasks[2].audioText"
+      ],
+      "Find the picture for the word write.": [
+        "$.units[3].activities[0].tasks[3].audioText"
+      ],
+      "Find the picture for the word sleep.": [
+        "$.units[3].activities[0].tasks[4].audioText"
+      ],
+      "Find the picture for the word play.": [
+        "$.units[3].activities[0].tasks[5].audioText"
+      ],
+      "Find the picture for the word run.": [
+        "$.units[3].activities[0].tasks[6].audioText"
+      ],
+      "Find the picture for the word walk.": [
+        "$.units[3].activities[0].tasks[7].audioText"
+      ],
+      "What can you do?": [
+        "$.units[3].activities[3].tasks[0].audioText"
+      ],
+      "I can read.": [
+        "$.units[3].activities[3].tasks[0].exampleAnswers[1]",
+        "$.extraTeachingAudio[3].audioText"
+      ],
+      "What do you like to do?": [
+        "$.units[3].activities[3].tasks[1].audioText"
+      ],
+      "I like to play.": [
+        "$.units[3].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[12].audioText"
+      ],
+      "I like to read.": [
+        "$.units[3].activities[3].tasks[1].exampleAnswers[1]",
+        "$.diagnostic.tasks[18].exampleAnswers[0]",
+        "$.extraTeachingAudio[13].audioText"
+      ],
+      "What do you drink every day?": [
+        "$.units[3].activities[3].tasks[2].audioText"
+      ],
+      "I drink milk every day.": [
+        "$.units[3].activities[3].tasks[2].exampleAnswers[1]",
+        "$.extraTeachingAudio[7].audioText"
+      ],
+      "sun": [
+        "$.units[4].words[0].en",
+        "$.units[4].words[0].audioText",
+        "$.phonics[2].words[0]",
+        "$.phonics[2].audioTexts[0]",
+        "seedWords"
+      ],
+      "cloud": [
+        "$.units[4].words[1].en",
+        "$.units[4].words[1].audioText",
+        "seedWords"
+      ],
+      "rain": [
+        "$.units[4].words[2].en",
+        "$.units[4].words[2].audioText",
+        "seedWords"
+      ],
+      "snow": [
+        "$.units[4].words[3].en",
+        "$.units[4].words[3].audioText",
+        "seedWords"
+      ],
+      "wind": [
+        "$.units[4].words[4].en",
+        "$.units[4].words[4].audioText",
+        "seedWords"
+      ],
+      "rainbow": [
+        "$.units[4].words[5].en",
+        "$.units[4].words[5].audioText",
+        "seedWords"
+      ],
+      "hot": [
+        "$.units[4].words[6].en",
+        "$.units[4].words[6].audioText",
+        "seedWords"
+      ],
+      "cold": [
+        "$.units[4].words[7].en",
+        "$.units[4].words[7].audioText",
+        "seedWords"
+      ],
+      "It is hot today.": [
+        "$.units[4].phrases[0].en",
+        "$.units[4].phrases[0].audioText",
+        "$.units[4].activities[3].tasks[0].exampleAnswers[0]"
+      ],
+      "I can see a rainbow.": [
+        "$.units[4].phrases[1].en",
+        "$.units[4].phrases[1].audioText"
+      ],
+      "It is cold today.": [
+        "$.units[4].phrases[2].en",
+        "$.units[4].phrases[2].audioText",
+        "$.units[4].activities[3].tasks[0].exampleAnswers[1]"
+      ],
+      "Find the picture for the word sun.": [
+        "$.units[4].activities[0].tasks[0].audioText"
+      ],
+      "Find the picture for the word cloud.": [
+        "$.units[4].activities[0].tasks[1].audioText"
+      ],
+      "Find the picture for the word rain.": [
+        "$.units[4].activities[0].tasks[2].audioText"
+      ],
+      "Find the picture for the word snow.": [
+        "$.units[4].activities[0].tasks[3].audioText"
+      ],
+      "Find the picture for the word wind.": [
+        "$.units[4].activities[0].tasks[4].audioText"
+      ],
+      "Find the picture for the word rainbow.": [
+        "$.units[4].activities[0].tasks[5].audioText"
+      ],
+      "Find the picture for the word hot.": [
+        "$.units[4].activities[0].tasks[6].audioText"
+      ],
+      "Find the picture for the word cold.": [
+        "$.units[4].activities[0].tasks[7].audioText"
+      ],
+      "What is the weather like today?": [
+        "$.units[4].activities[3].tasks[0].audioText"
+      ],
+      "What can you see in the sky?": [
+        "$.units[4].activities[3].tasks[1].audioText"
+      ],
+      "I can see a cloud.": [
+        "$.units[4].activities[3].tasks[1].exampleAnswers[0]",
+        "$.extraTeachingAudio[4].audioText"
+      ],
+      "I can see the sun.": [
+        "$.units[4].activities[3].tasks[1].exampleAnswers[1]",
+        "$.extraTeachingAudio[6].audioText"
+      ],
+      "What do you drink when it is hot?": [
+        "$.units[4].activities[3].tasks[2].audioText"
+      ],
+      "I drink water.": [
+        "$.units[4].activities[3].tasks[2].exampleAnswers[0]",
+        "$.extraTeachingAudio[8].audioText"
+      ],
+      "This is a cat.": [
+        "$.stories[0].pages[0].en",
+        "$.stories[0].pages[0].audioText"
+      ],
+      "The cat can see a blue ball.": [
+        "$.stories[0].pages[1].en",
+        "$.stories[0].pages[1].audioText"
+      ],
+      "The ball is under the chair.": [
+        "$.stories[0].pages[2].en",
+        "$.stories[0].pages[2].audioText",
+        "$.stories[0].tasks[1].audioText"
+      ],
+      "The cat is happy.": [
+        "$.stories[0].pages[3].en",
+        "$.stories[0].pages[3].audioText"
+      ],
+      "What colour is the ball?": [
+        "$.stories[0].tasks[0].audioText"
+      ],
+      "Complete the sentence.": [
+        "$.stories[0].tasks[2].audioText",
+        "$.stories[1].tasks[2].audioText",
+        "$.stories[2].tasks[2].audioText",
+        "$.diagnostic.tasks[14].audioText",
+        "$.diagnostic.tasks[15].audioText"
+      ],
+      "My brother has a bag.": [
+        "$.stories[1].pages[0].en",
+        "$.stories[1].pages[0].audioText"
+      ],
+      "Two apples are in the bag.": [
+        "$.stories[1].pages[1].en",
+        "$.stories[1].pages[1].audioText"
+      ],
+      "My sister has some water.": [
+        "$.stories[1].pages[2].en",
+        "$.stories[1].pages[2].audioText"
+      ],
+      "We eat and drink with our friends.": [
+        "$.stories[1].pages[3].en",
+        "$.stories[1].pages[3].audioText"
+      ],
+      "How many apples are in the bag?": [
+        "$.stories[1].tasks[0].audioText"
+      ],
+      "What do you like to eat?": [
+        "$.stories[1].tasks[1].audioText"
+      ],
+      "I like apples.": [
+        "$.stories[1].tasks[1].exampleAnswers[0]"
+      ],
+      "I like bananas.": [
+        "$.stories[1].tasks[1].exampleAnswers[1]"
+      ],
+      "The children are in the classroom.": [
+        "$.stories[2].pages[0].en",
+        "$.stories[2].pages[0].audioText"
+      ],
+      "They can see rain outside.": [
+        "$.stories[2].pages[1].en",
+        "$.stories[2].pages[1].audioText"
+      ],
+      "Their teacher reads a book.": [
+        "$.stories[2].pages[2].en",
+        "$.stories[2].pages[2].audioText",
+        "$.stories[2].tasks[1].audioText"
+      ],
+      "The children listen and smile.": [
+        "$.stories[2].pages[3].en",
+        "$.stories[2].pages[3].audioText"
+      ],
+      "Where are the children?": [
+        "$.stories[2].tasks[0].audioText"
+      ],
+      "cat": [
+        "$.phonics[0].words[0]",
+        "$.phonics[0].audioTexts[0]"
+      ],
+      "hat": [
+        "$.phonics[0].words[1]",
+        "$.phonics[0].audioTexts[1]"
+      ],
+      "cat, hat.": [
+        "$.phonics[0].audioText"
+      ],
+      "Listen to cat. Which word has the same ending sound?": [
+        "$.phonics[0].tasks[0].audioText"
+      ],
+      "Build the word cat.": [
+        "$.phonics[0].tasks[1].audioText"
+      ],
+      "can": [
+        "$.phonics[1].words[0]",
+        "$.phonics[1].audioTexts[0]"
+      ],
+      "man": [
+        "$.phonics[1].words[1]",
+        "$.phonics[1].audioTexts[1]"
+      ],
+      "can, man.": [
+        "$.phonics[1].audioText"
+      ],
+      "Listen to can. Which word has the same ending sound?": [
+        "$.phonics[1].tasks[0].audioText"
+      ],
+      "Build the word can.": [
+        "$.phonics[1].tasks[1].audioText"
+      ],
+      "sun, run.": [
+        "$.phonics[2].audioText"
+      ],
+      "Listen to sun. Which word has the same ending sound?": [
+        "$.phonics[2].tasks[0].audioText"
+      ],
+      "Build the word sun.": [
+        "$.phonics[2].tasks[1].audioText"
+      ],
+      "sit": [
+        "$.phonics[3].words[0]",
+        "$.phonics[3].audioTexts[0]"
+      ],
+      "hit": [
+        "$.phonics[3].words[1]",
+        "$.phonics[3].audioTexts[1]"
+      ],
+      "sit, hit.": [
+        "$.phonics[3].audioText"
+      ],
+      "Listen to sit. Which word has the same ending sound?": [
+        "$.phonics[3].tasks[0].audioText"
+      ],
+      "Build the word sit.": [
+        "$.phonics[3].tasks[1].audioText"
+      ],
+      "red": [
+        "$.phonics[4].words[0]",
+        "$.phonics[4].audioTexts[0]"
+      ],
+      "bed": [
+        "$.phonics[4].words[1]",
+        "$.phonics[4].audioTexts[1]"
+      ],
+      "red, bed.": [
+        "$.phonics[4].audioText"
+      ],
+      "Listen to red. Which word has the same ending sound?": [
+        "$.phonics[4].tasks[0].audioText"
+      ],
+      "Build the word red.": [
+        "$.phonics[4].tasks[1].audioText"
+      ],
+      "ten": [
+        "$.phonics[5].words[1]",
+        "$.phonics[5].audioTexts[1]"
+      ],
+      "pen, ten.": [
+        "$.phonics[5].audioText"
+      ],
+      "Listen to pen. Which word has the same ending sound?": [
+        "$.phonics[5].tasks[0].audioText"
+      ],
+      "Build the word pen.": [
+        "$.phonics[5].tasks[1].audioText"
+      ],
+      "Please put the red ball under the chair.": [
+        "$.diagnostic.tasks[0].audioText"
+      ],
+      "Anna has two pencils. Her brother has one book. Which things are Anna's?": [
+        "$.diagnostic.tasks[1].audioText"
+      ],
+      "Tom: Would you like some juice? Anna: No, thank you. Can I have some water, please?": [
+        "$.diagnostic.tasks[2].audioText"
+      ],
+      "The girl is reading. The boy is running. What is the girl doing?": [
+        "$.diagnostic.tasks[3].audioText"
+      ],
+      "The sun is out, and it is hot. What can you see in the sky?": [
+        "$.diagnostic.tasks[4].audioText"
+      ],
+      "Tom: Where is my book? Anna: It is in your bag.": [
+        "$.diagnostic.tasks[5].audioText"
+      ],
+      "Where does the book go?": [
+        "$.diagnostic.tasks[6].audioText"
+      ],
+      "Where is Tom?": [
+        "$.diagnostic.tasks[7].audioText"
+      ],
+      "How many pencils does she have?": [
+        "$.diagnostic.tasks[8].audioText"
+      ],
+      "What can Ben do?": [
+        "$.diagnostic.tasks[9].audioText"
+      ],
+      "Why are the children inside?": [
+        "$.diagnostic.tasks[10].audioText"
+      ],
+      "What is the dog doing?": [
+        "$.diagnostic.tasks[11].audioText"
+      ],
+      "What is this?": [
+        "$.diagnostic.tasks[12].audioText",
+        "$.diagnostic.tasks[13].audioText"
+      ],
+      "Write a sentence about the picture.": [
+        "$.diagnostic.tasks[16].audioText"
+      ],
+      "What is the boy doing?": [
+        "$.diagnostic.tasks[17].audioText",
+        "$.diagnostic.tasks[19].audioText"
+      ],
+      "What do you like to do at school?": [
+        "$.diagnostic.tasks[18].audioText"
+      ],
+      "I like playing with my friends.": [
+        "$.diagnostic.tasks[18].exampleAnswers[1]",
+        "$.extraTeachingAudio[11].audioText"
+      ],
+      "He is reading a book.": [
+        "$.diagnostic.tasks[19].exampleAnswers[0]",
+        "$.extraTeachingAudio[1].audioText"
+      ],
+      "The boy is reading.": [
+        "$.diagnostic.tasks[19].exampleAnswers[1]",
+        "$.extraTeachingAudio[20].audioText"
+      ],
+      "Look at these two pictures. What is different?": [
+        "$.diagnostic.tasks[20].audioText"
+      ],
+      "This ball is red. That ball is blue.": [
+        "$.diagnostic.tasks[20].exampleAnswers[0]",
+        "$.extraTeachingAudio[22].audioText"
+      ],
+      "Here the ball is on the chair. There it is under the chair.": [
+        "$.diagnostic.tasks[20].exampleAnswers[1]",
+        "$.extraTeachingAudio[2].audioText"
+      ],
+      "Tell me about these pictures.": [
+        "$.diagnostic.tasks[21].audioText"
+      ],
+      "It is hot. The boy drinks water. He is happy.": [
+        "$.diagnostic.tasks[21].exampleAnswers[0]",
+        "$.extraTeachingAudio[14].audioText"
+      ],
+      "Which picture is different? Why?": [
+        "$.diagnostic.tasks[22].audioText"
+      ],
+      "The apple is different. It is food.": [
+        "$.diagnostic.tasks[22].exampleAnswers[0]",
+        "$.extraTeachingAudio[19].audioText"
+      ],
+      "These are animals. The apple is not an animal.": [
+        "$.diagnostic.tasks[22].exampleAnswers[1]",
+        "$.extraTeachingAudio[21].audioText"
+      ],
+      "Ask me a question about my favourite food.": [
+        "$.diagnostic.tasks[23].audioText"
+      ],
+      "What food do you like?": [
+        "$.diagnostic.tasks[23].exampleAnswers[0]",
+        "$.extraTeachingAudio[25].audioText"
+      ],
+      "Do you like apples?": [
+        "$.diagnostic.tasks[23].exampleAnswers[1]",
+        "$.extraTeachingAudio[0].audioText"
+      ],
+      "What is your favourite food?": [
+        "$.diagnostic.tasks[23].exampleAnswers[2]",
+        "$.extraTeachingAudio[26].audioText"
+      ]
+    },
+    "zh": {
+      "家长每天只需听孩子独立说一句话；不会说时先鼓励，再给一句示范。记录“独立/有提示”，不拿星星数量判断语言等级。": [
+        "$.dailyFlow.adultBridgeZh"
+      ],
+      "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。": [
+        "$.units[0].adultPromptZh",
+        "$.units[1].adultPromptZh",
+        "$.units[2].adultPromptZh",
+        "$.units[3].adultPromptZh",
+        "$.units[4].adultPromptZh"
+      ],
+      "听英语，点对应的图片。": [
+        "$.units[0].activities[0].tasks[0].promptZh",
+        "$.units[0].activities[0].tasks[1].promptZh",
+        "$.units[0].activities[0].tasks[2].promptZh",
+        "$.units[0].activities[0].tasks[3].promptZh",
+        "$.units[0].activities[0].tasks[4].promptZh",
+        "$.units[0].activities[0].tasks[5].promptZh",
+        "$.units[0].activities[0].tasks[6].promptZh",
+        "$.units[0].activities[0].tasks[7].promptZh",
+        "$.units[1].activities[0].tasks[0].promptZh",
+        "$.units[1].activities[0].tasks[1].promptZh",
+        "$.units[1].activities[0].tasks[2].promptZh",
+        "$.units[1].activities[0].tasks[3].promptZh",
+        "$.units[1].activities[0].tasks[4].promptZh",
+        "$.units[1].activities[0].tasks[5].promptZh",
+        "$.units[1].activities[0].tasks[6].promptZh",
+        "$.units[1].activities[0].tasks[7].promptZh",
+        "$.units[2].activities[0].tasks[0].promptZh",
+        "$.units[2].activities[0].tasks[1].promptZh",
+        "$.units[2].activities[0].tasks[2].promptZh",
+        "$.units[2].activities[0].tasks[3].promptZh",
+        "$.units[2].activities[0].tasks[4].promptZh",
+        "$.units[2].activities[0].tasks[5].promptZh",
+        "$.units[2].activities[0].tasks[6].promptZh",
+        "$.units[2].activities[0].tasks[7].promptZh",
+        "$.units[3].activities[0].tasks[0].promptZh",
+        "$.units[3].activities[0].tasks[1].promptZh",
+        "$.units[3].activities[0].tasks[2].promptZh",
+        "$.units[3].activities[0].tasks[3].promptZh",
+        "$.units[3].activities[0].tasks[4].promptZh",
+        "$.units[3].activities[0].tasks[5].promptZh",
+        "$.units[3].activities[0].tasks[6].promptZh",
+        "$.units[3].activities[0].tasks[7].promptZh",
+        "$.units[4].activities[0].tasks[0].promptZh",
+        "$.units[4].activities[0].tasks[1].promptZh",
+        "$.units[4].activities[0].tasks[2].promptZh",
+        "$.units[4].activities[0].tasks[3].promptZh",
+        "$.units[4].activities[0].tasks[4].promptZh",
+        "$.units[4].activities[0].tasks[5].promptZh",
+        "$.units[4].activities[0].tasks[6].promptZh",
+        "$.units[4].activities[0].tasks[7].promptZh"
+      ],
+      "目标是“妈妈”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[0].hintZh"
+      ],
+      "目标是“爸爸”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[1].hintZh"
+      ],
+      "目标是“兄弟”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[2].hintZh"
+      ],
+      "目标是“姐妹”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[3].hintZh"
+      ],
+      "目标是“奶奶 / 外婆”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[4].hintZh"
+      ],
+      "目标是“爷爷 / 外公”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[5].hintZh"
+      ],
+      "目标是“婴儿”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[6].hintZh"
+      ],
+      "目标是“朋友”。听一遍，再找图片。": [
+        "$.units[0].activities[0].tasks[7].hintZh"
+      ],
+      "读英文单词，选出对应的图片。": [
+        "$.units[0].activities[1].tasks[0].promptZh",
+        "$.units[0].activities[1].tasks[1].promptZh",
+        "$.units[0].activities[1].tasks[2].promptZh",
+        "$.units[0].activities[1].tasks[3].promptZh",
+        "$.units[0].activities[1].tasks[4].promptZh",
+        "$.units[0].activities[1].tasks[5].promptZh",
+        "$.units[0].activities[1].tasks[6].promptZh",
+        "$.units[0].activities[1].tasks[7].promptZh",
+        "$.units[1].activities[1].tasks[0].promptZh",
+        "$.units[1].activities[1].tasks[1].promptZh",
+        "$.units[1].activities[1].tasks[2].promptZh",
+        "$.units[1].activities[1].tasks[3].promptZh",
+        "$.units[1].activities[1].tasks[4].promptZh",
+        "$.units[1].activities[1].tasks[5].promptZh",
+        "$.units[1].activities[1].tasks[6].promptZh",
+        "$.units[1].activities[1].tasks[7].promptZh",
+        "$.units[2].activities[1].tasks[0].promptZh",
+        "$.units[2].activities[1].tasks[1].promptZh",
+        "$.units[2].activities[1].tasks[2].promptZh",
+        "$.units[2].activities[1].tasks[3].promptZh",
+        "$.units[2].activities[1].tasks[4].promptZh",
+        "$.units[2].activities[1].tasks[5].promptZh",
+        "$.units[2].activities[1].tasks[6].promptZh",
+        "$.units[2].activities[1].tasks[7].promptZh",
+        "$.units[3].activities[1].tasks[0].promptZh",
+        "$.units[3].activities[1].tasks[1].promptZh",
+        "$.units[3].activities[1].tasks[2].promptZh",
+        "$.units[3].activities[1].tasks[3].promptZh",
+        "$.units[3].activities[1].tasks[4].promptZh",
+        "$.units[3].activities[1].tasks[5].promptZh",
+        "$.units[3].activities[1].tasks[6].promptZh",
+        "$.units[3].activities[1].tasks[7].promptZh",
+        "$.units[4].activities[1].tasks[0].promptZh",
+        "$.units[4].activities[1].tasks[1].promptZh",
+        "$.units[4].activities[1].tasks[2].promptZh",
+        "$.units[4].activities[1].tasks[3].promptZh",
+        "$.units[4].activities[1].tasks[4].promptZh",
+        "$.units[4].activities[1].tasks[5].promptZh",
+        "$.units[4].activities[1].tasks[6].promptZh",
+        "$.units[4].activities[1].tasks[7].promptZh"
+      ],
+      "这个词表示“妈妈”。": [
+        "$.units[0].activities[1].tasks[0].hintZh"
+      ],
+      "这个词表示“爸爸”。": [
+        "$.units[0].activities[1].tasks[1].hintZh"
+      ],
+      "这个词表示“兄弟”。": [
+        "$.units[0].activities[1].tasks[2].hintZh"
+      ],
+      "这个词表示“姐妹”。": [
+        "$.units[0].activities[1].tasks[3].hintZh"
+      ],
+      "这个词表示“奶奶 / 外婆”。": [
+        "$.units[0].activities[1].tasks[4].hintZh"
+      ],
+      "这个词表示“爷爷 / 外公”。": [
+        "$.units[0].activities[1].tasks[5].hintZh"
+      ],
+      "这个词表示“婴儿”。": [
+        "$.units[0].activities[1].tasks[6].hintZh"
+      ],
+      "这个词表示“朋友”。": [
+        "$.units[0].activities[1].tasks[7].hintZh"
+      ],
+      "看图，输入对应的英文单词。": [
+        "$.units[0].activities[2].tasks[0].promptZh",
+        "$.units[0].activities[2].tasks[1].promptZh",
+        "$.units[0].activities[2].tasks[2].promptZh",
+        "$.units[0].activities[2].tasks[3].promptZh",
+        "$.units[1].activities[2].tasks[0].promptZh",
+        "$.units[1].activities[2].tasks[1].promptZh",
+        "$.units[1].activities[2].tasks[2].promptZh",
+        "$.units[1].activities[2].tasks[3].promptZh",
+        "$.units[2].activities[2].tasks[0].promptZh",
+        "$.units[2].activities[2].tasks[1].promptZh",
+        "$.units[2].activities[2].tasks[2].promptZh",
+        "$.units[2].activities[2].tasks[3].promptZh",
+        "$.units[3].activities[2].tasks[0].promptZh",
+        "$.units[3].activities[2].tasks[1].promptZh",
+        "$.units[3].activities[2].tasks[2].promptZh",
+        "$.units[3].activities[2].tasks[3].promptZh",
+        "$.units[4].activities[2].tasks[0].promptZh",
+        "$.units[4].activities[2].tasks[1].promptZh",
+        "$.units[4].activities[2].tasks[2].promptZh",
+        "$.units[4].activities[2].tasks[3].promptZh"
+      ],
+      "它的英文是 mother。": [
+        "$.units[0].activities[2].tasks[0].hintZh"
+      ],
+      "它的英文是 father。": [
+        "$.units[0].activities[2].tasks[1].hintZh"
+      ],
+      "它的英文是 brother。": [
+        "$.units[0].activities[2].tasks[2].hintZh"
+      ],
+      "它的英文是 sister。": [
+        "$.units[0].activities[2].tasks[3].hintZh"
+      ],
+      "介绍一位家人。": [
+        "$.units[0].activities[3].tasks[0].promptZh"
+      ],
+      "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。": [
+        "$.units[0].activities[3].tasks[0].hintZh",
+        "$.units[0].activities[3].tasks[1].hintZh",
+        "$.units[0].activities[3].tasks[2].hintZh",
+        "$.units[1].activities[3].tasks[0].hintZh",
+        "$.units[1].activities[3].tasks[1].hintZh",
+        "$.units[1].activities[3].tasks[2].hintZh",
+        "$.units[2].activities[3].tasks[0].hintZh",
+        "$.units[2].activities[3].tasks[1].hintZh",
+        "$.units[2].activities[3].tasks[2].hintZh",
+        "$.units[3].activities[3].tasks[0].hintZh",
+        "$.units[3].activities[3].tasks[1].hintZh",
+        "$.units[3].activities[3].tasks[2].hintZh",
+        "$.units[4].activities[3].tasks[0].hintZh",
+        "$.units[4].activities[3].tasks[1].hintZh",
+        "$.units[4].activities[3].tasks[2].hintZh"
+      ],
+      "说说你和谁一起玩。": [
+        "$.units[0].activities[3].tasks[1].promptZh"
+      ],
+      "介绍兄弟姐妹的一件物品，也可以介绍朋友。": [
+        "$.units[0].activities[3].tasks[2].promptZh"
+      ],
+      "目标是“书”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[0].hintZh"
+      ],
+      "目标是“钢笔 / 水笔”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[1].hintZh"
+      ],
+      "目标是“铅笔”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[2].hintZh"
+      ],
+      "目标是“书包”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[3].hintZh"
+      ],
+      "目标是“课桌”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[4].hintZh"
+      ],
+      "目标是“椅子”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[5].hintZh"
+      ],
+      "目标是“老师”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[6].hintZh"
+      ],
+      "目标是“教室”。听一遍，再找图片。": [
+        "$.units[1].activities[0].tasks[7].hintZh"
+      ],
+      "这个词表示“书”。": [
+        "$.units[1].activities[1].tasks[0].hintZh"
+      ],
+      "这个词表示“钢笔 / 水笔”。": [
+        "$.units[1].activities[1].tasks[1].hintZh"
+      ],
+      "这个词表示“铅笔”。": [
+        "$.units[1].activities[1].tasks[2].hintZh"
+      ],
+      "这个词表示“书包”。": [
+        "$.units[1].activities[1].tasks[3].hintZh"
+      ],
+      "这个词表示“课桌”。": [
+        "$.units[1].activities[1].tasks[4].hintZh"
+      ],
+      "这个词表示“椅子”。": [
+        "$.units[1].activities[1].tasks[5].hintZh"
+      ],
+      "这个词表示“老师”。": [
+        "$.units[1].activities[1].tasks[6].hintZh"
+      ],
+      "这个词表示“教室”。": [
+        "$.units[1].activities[1].tasks[7].hintZh"
+      ],
+      "它的英文是 book。": [
+        "$.units[1].activities[2].tasks[0].hintZh"
+      ],
+      "它的英文是 pen。": [
+        "$.units[1].activities[2].tasks[1].hintZh"
+      ],
+      "它的英文是 pencil。": [
+        "$.units[1].activities[2].tasks[2].hintZh"
+      ],
+      "它的英文是 bag。": [
+        "$.units[1].activities[2].tasks[3].hintZh"
+      ],
+      "说说教室里的一件东西。": [
+        "$.units[1].activities[3].tasks[0].promptZh"
+      ],
+      "介绍你的书在哪里。": [
+        "$.units[1].activities[3].tasks[1].promptZh"
+      ],
+      "介绍你的老师。": [
+        "$.units[1].activities[3].tasks[2].promptZh"
+      ],
+      "目标是“头”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[0].hintZh"
+      ],
+      "目标是“手”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[1].hintZh"
+      ],
+      "目标是“胳膊”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[2].hintZh"
+      ],
+      "目标是“腿”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[3].hintZh"
+      ],
+      "目标是“脚”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[4].hintZh"
+      ],
+      "目标是“眼睛”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[5].hintZh"
+      ],
+      "目标是“鼻子”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[6].hintZh"
+      ],
+      "目标是“嘴”。听一遍，再找图片。": [
+        "$.units[2].activities[0].tasks[7].hintZh"
+      ],
+      "这个词表示“头”。": [
+        "$.units[2].activities[1].tasks[0].hintZh"
+      ],
+      "这个词表示“手”。": [
+        "$.units[2].activities[1].tasks[1].hintZh"
+      ],
+      "这个词表示“胳膊”。": [
+        "$.units[2].activities[1].tasks[2].hintZh"
+      ],
+      "这个词表示“腿”。": [
+        "$.units[2].activities[1].tasks[3].hintZh"
+      ],
+      "这个词表示“脚”。": [
+        "$.units[2].activities[1].tasks[4].hintZh"
+      ],
+      "这个词表示“眼睛”。": [
+        "$.units[2].activities[1].tasks[5].hintZh"
+      ],
+      "这个词表示“鼻子”。": [
+        "$.units[2].activities[1].tasks[6].hintZh"
+      ],
+      "这个词表示“嘴”。": [
+        "$.units[2].activities[1].tasks[7].hintZh"
+      ],
+      "它的英文是 head。": [
+        "$.units[2].activities[2].tasks[0].hintZh"
+      ],
+      "它的英文是 hand。": [
+        "$.units[2].activities[2].tasks[1].hintZh"
+      ],
+      "它的英文是 arm。": [
+        "$.units[2].activities[2].tasks[2].hintZh"
+      ],
+      "它的英文是 leg。": [
+        "$.units[2].activities[2].tasks[3].hintZh"
+      ],
+      "说说你有几只手。": [
+        "$.units[2].activities[3].tasks[0].promptZh"
+      ],
+      "说说你的眼睛。": [
+        "$.units[2].activities[3].tasks[1].promptZh"
+      ],
+      "指一指鼻子，再用英语介绍它。": [
+        "$.units[2].activities[3].tasks[2].promptZh"
+      ],
+      "目标是“吃”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[0].hintZh"
+      ],
+      "目标是“喝”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[1].hintZh"
+      ],
+      "目标是“阅读”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[2].hintZh"
+      ],
+      "目标是“书写”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[3].hintZh"
+      ],
+      "目标是“睡觉”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[4].hintZh"
+      ],
+      "目标是“玩耍”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[5].hintZh"
+      ],
+      "目标是“跑步”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[6].hintZh"
+      ],
+      "目标是“走路”。听一遍，再找图片。": [
+        "$.units[3].activities[0].tasks[7].hintZh"
+      ],
+      "这个词表示“吃”。": [
+        "$.units[3].activities[1].tasks[0].hintZh"
+      ],
+      "这个词表示“喝”。": [
+        "$.units[3].activities[1].tasks[1].hintZh"
+      ],
+      "这个词表示“阅读”。": [
+        "$.units[3].activities[1].tasks[2].hintZh"
+      ],
+      "这个词表示“书写”。": [
+        "$.units[3].activities[1].tasks[3].hintZh"
+      ],
+      "这个词表示“睡觉”。": [
+        "$.units[3].activities[1].tasks[4].hintZh"
+      ],
+      "这个词表示“玩耍”。": [
+        "$.units[3].activities[1].tasks[5].hintZh"
+      ],
+      "这个词表示“跑步”。": [
+        "$.units[3].activities[1].tasks[6].hintZh"
+      ],
+      "这个词表示“走路”。": [
+        "$.units[3].activities[1].tasks[7].hintZh"
+      ],
+      "它的英文是 eat。": [
+        "$.units[3].activities[2].tasks[0].hintZh"
+      ],
+      "它的英文是 drink。": [
+        "$.units[3].activities[2].tasks[1].hintZh"
+      ],
+      "它的英文是 read。": [
+        "$.units[3].activities[2].tasks[2].hintZh"
+      ],
+      "它的英文是 write。": [
+        "$.units[3].activities[2].tasks[3].hintZh"
+      ],
+      "说说你会做的一件事。": [
+        "$.units[3].activities[3].tasks[0].promptZh"
+      ],
+      "说说你喜欢做的事。": [
+        "$.units[3].activities[3].tasks[1].promptZh"
+      ],
+      "说说你每天喝什么。": [
+        "$.units[3].activities[3].tasks[2].promptZh"
+      ],
+      "目标是“太阳”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[0].hintZh"
+      ],
+      "目标是“云”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[1].hintZh"
+      ],
+      "目标是“雨”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[2].hintZh"
+      ],
+      "目标是“雪”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[3].hintZh"
+      ],
+      "目标是“风”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[4].hintZh"
+      ],
+      "目标是“彩虹”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[5].hintZh"
+      ],
+      "目标是“炎热”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[6].hintZh"
+      ],
+      "目标是“寒冷”。听一遍，再找图片。": [
+        "$.units[4].activities[0].tasks[7].hintZh"
+      ],
+      "这个词表示“太阳”。": [
+        "$.units[4].activities[1].tasks[0].hintZh"
+      ],
+      "这个词表示“云”。": [
+        "$.units[4].activities[1].tasks[1].hintZh"
+      ],
+      "这个词表示“雨”。": [
+        "$.units[4].activities[1].tasks[2].hintZh"
+      ],
+      "这个词表示“雪”。": [
+        "$.units[4].activities[1].tasks[3].hintZh"
+      ],
+      "这个词表示“风”。": [
+        "$.units[4].activities[1].tasks[4].hintZh"
+      ],
+      "这个词表示“彩虹”。": [
+        "$.units[4].activities[1].tasks[5].hintZh"
+      ],
+      "这个词表示“炎热”。": [
+        "$.units[4].activities[1].tasks[6].hintZh"
+      ],
+      "这个词表示“寒冷”。": [
+        "$.units[4].activities[1].tasks[7].hintZh"
+      ],
+      "它的英文是 sun。": [
+        "$.units[4].activities[2].tasks[0].hintZh"
+      ],
+      "它的英文是 cloud。": [
+        "$.units[4].activities[2].tasks[1].hintZh"
+      ],
+      "它的英文是 rain。": [
+        "$.units[4].activities[2].tasks[2].hintZh"
+      ],
+      "它的英文是 snow。": [
+        "$.units[4].activities[2].tasks[3].hintZh"
+      ],
+      "看看窗外，介绍今天的天气。": [
+        "$.units[4].activities[3].tasks[0].promptZh"
+      ],
+      "看看天空，说出一种景物。": [
+        "$.units[4].activities[3].tasks[1].promptZh"
+      ],
+      "说说天热时你喝什么。": [
+        "$.units[4].activities[3].tasks[2].promptZh"
+      ],
+      "读故事，找出球的颜色。": [
+        "$.stories[0].tasks[0].promptZh"
+      ],
+      "再看故事的第二页。": [
+        "$.stories[0].tasks[0].hintZh"
+      ],
+      "听句子，选出正确的图片。": [
+        "$.stories[0].tasks[1].promptZh"
+      ],
+      "under 表示在下面。": [
+        "$.stories[0].tasks[1].hintZh"
+      ],
+      "回想故事，用一个英文单词填空。": [
+        "$.stories[0].tasks[2].promptZh",
+        "$.stories[1].tasks[2].promptZh",
+        "$.stories[2].tasks[2].promptZh"
+      ],
+      "球的英文有四个字母。": [
+        "$.stories[0].tasks[2].hintZh"
+      ],
+      "读故事，找到苹果的数量。": [
+        "$.stories[1].tasks[0].promptZh"
+      ],
+      "再读故事的第二页。": [
+        "$.stories[1].tasks[0].hintZh"
+      ],
+      "说说你喜欢吃什么。": [
+        "$.stories[1].tasks[1].promptZh"
+      ],
+      "用 I like 开头，接你喜欢的食物。": [
+        "$.stories[1].tasks[1].hintZh"
+      ],
+      "故事里拿着水的是姐妹。": [
+        "$.stories[1].tasks[2].hintZh"
+      ],
+      "读故事，找出孩子们在哪里。": [
+        "$.stories[2].tasks[0].promptZh"
+      ],
+      "再读第一句话。": [
+        "$.stories[2].tasks[0].hintZh"
+      ],
+      "听句子，选出老师做的活动。": [
+        "$.stories[2].tasks[1].promptZh"
+      ],
+      "reads a book 表示读书。": [
+        "$.stories[2].tasks[1].hintZh"
+      ],
+      "故事里外面正在下雨。": [
+        "$.stories[2].tasks[2].hintZh"
+      ],
+      "听 cat 和 hat 的整词发音。它们末尾的 -at 相同。再点字母拼出 cat。": [
+        "$.phonics[0].teacherNoteZh",
+        "$.phonics[0].tasks[0].hintZh"
+      ],
+      "听例词，再找出末尾声音相同的词。": [
+        "$.phonics[0].tasks[0].promptZh",
+        "$.phonics[1].tasks[0].promptZh",
+        "$.phonics[2].tasks[0].promptZh",
+        "$.phonics[3].tasks[0].promptZh",
+        "$.phonics[4].tasks[0].promptZh",
+        "$.phonics[5].tasks[0].promptZh"
+      ],
+      "听完整单词，试着按声音拼出它。": [
+        "$.phonics[0].tasks[1].promptZh",
+        "$.phonics[1].tasks[1].promptZh",
+        "$.phonics[2].tasks[1].promptZh",
+        "$.phonics[3].tasks[1].promptZh",
+        "$.phonics[4].tasks[1].promptZh",
+        "$.phonics[5].tasks[1].promptZh"
+      ],
+      "可以先听整词，再把每一个声音对应到字母。": [
+        "$.phonics[0].tasks[1].hintZh",
+        "$.phonics[1].tasks[1].hintZh",
+        "$.phonics[2].tasks[1].hintZh",
+        "$.phonics[3].tasks[1].hintZh",
+        "$.phonics[4].tasks[1].hintZh",
+        "$.phonics[5].tasks[1].hintZh"
+      ],
+      "听 can 和 man 的整词发音。注意相同的 -an，can 在这里使用完整重读读音。": [
+        "$.phonics[1].teacherNoteZh",
+        "$.phonics[1].tasks[0].hintZh"
+      ],
+      "听 sun 和 run 的整词发音。注意相同的 -un，再试着拼出 sun。": [
+        "$.phonics[2].teacherNoteZh",
+        "$.phonics[2].tasks[0].hintZh"
+      ],
+      "听 sit 和 hit 的整词发音。注意相同的 -it，再试着拼出 sit。": [
+        "$.phonics[3].teacherNoteZh",
+        "$.phonics[3].tasks[0].hintZh"
+      ],
+      "听 red 和 bed 的整词发音。这里是单词末尾 -ed 的词家族，不是过去式词尾发音规则。": [
+        "$.phonics[4].teacherNoteZh",
+        "$.phonics[4].tasks[0].hintZh"
+      ],
+      "听 pen 和 ten 的整词发音。注意相同的 -en，再试着拼出 pen。": [
+        "$.phonics[5].teacherNoteZh",
+        "$.phonics[5].tasks[0].hintZh"
+      ],
+      "听英语，选出正确的图片。": [
+        "$.diagnostic.tasks[0].promptZh"
+      ],
+      "这句话里有颜色和位置两个线索。": [
+        "$.diagnostic.tasks[0].hintZh"
+      ],
+      "听短描述，找出安娜的东西。": [
+        "$.diagnostic.tasks[1].promptZh"
+      ],
+      "注意听 Anna has 后面的信息。": [
+        "$.diagnostic.tasks[1].hintZh"
+      ],
+      "听对话，选出安娜想喝的东西。": [
+        "$.diagnostic.tasks[2].promptZh"
+      ],
+      "安娜拒绝了第一种饮料，又提出了自己的请求。": [
+        "$.diagnostic.tasks[2].hintZh"
+      ],
+      "听描述，选出女孩正在做的事。": [
+        "$.diagnostic.tasks[3].promptZh"
+      ],
+      "先找 girl，再听她做的活动。": [
+        "$.diagnostic.tasks[3].hintZh"
+      ],
+      "听描述，选出天空里的景物。": [
+        "$.diagnostic.tasks[4].promptZh"
+      ],
+      "听这段话开头提到的天空景物。": [
+        "$.diagnostic.tasks[4].hintZh"
+      ],
+      "听对话，选出书的位置。": [
+        "$.diagnostic.tasks[5].promptZh"
+      ],
+      "听安娜回答里的位置。": [
+        "$.diagnostic.tasks[5].hintZh"
+      ],
+      "读提示牌，选出书应该放在哪里。": [
+        "$.diagnostic.tasks[6].promptZh"
+      ],
+      "寻找 put 后面的物品和 in 后面的位置。": [
+        "$.diagnostic.tasks[6].hintZh"
+      ],
+      "读短消息，找出汤姆在哪里。": [
+        "$.diagnostic.tasks[7].promptZh"
+      ],
+      "寻找 I am 后面描述的地点。": [
+        "$.diagnostic.tasks[7].hintZh"
+      ],
+      "读描述，选择正确的数量。": [
+        "$.diagnostic.tasks[8].promptZh"
+      ],
+      "pencils 前面的词表示数量。": [
+        "$.diagnostic.tasks[8].hintZh"
+      ],
+      "读句子，找到本会做的事情。": [
+        "$.diagnostic.tasks[9].promptZh"
+      ],
+      "can 与 cannot 表达的意思不同。": [
+        "$.diagnostic.tasks[9].hintZh"
+      ],
+      "读短文，选择孩子们在室内的原因。": [
+        "$.diagnostic.tasks[10].promptZh"
+      ],
+      "看看短文前两句说的天气。": [
+        "$.diagnostic.tasks[10].hintZh"
+      ],
+      "读短故事，选出狗正在做的事情。": [
+        "$.diagnostic.tasks[11].promptZh"
+      ],
+      "找到 The dog 开头的句子。": [
+        "$.diagnostic.tasks[11].hintZh"
+      ],
+      "看图，输入这个物品的英文名称。": [
+        "$.diagnostic.tasks[12].promptZh"
+      ],
+      "这是铅笔。": [
+        "$.diagnostic.tasks[12].hintZh"
+      ],
+      "看图，输入这个身体部位的英文名称。": [
+        "$.diagnostic.tasks[13].promptZh"
+      ],
+      "图里是一只脚，用单数。": [
+        "$.diagnostic.tasks[13].hintZh"
+      ],
+      "看图，用一个英文单词填空。": [
+        "$.diagnostic.tasks[14].promptZh"
+      ],
+      "一个 book，两个要加 s。": [
+        "$.diagnostic.tasks[14].hintZh"
+      ],
+      "看图，填入正确的位置词。": [
+        "$.diagnostic.tasks[15].promptZh"
+      ],
+      "球在椅子下面。": [
+        "$.diagnostic.tasks[15].hintZh"
+      ],
+      "用 book、bag、in 写一个完整句子。": [
+        "$.diagnostic.tasks[16].promptZh"
+      ],
+      "可以用 The book is 开头。": [
+        "$.diagnostic.tasks[16].hintZh"
+      ],
+      "看图，用一个英语句子说明男孩正在做什么。": [
+        "$.diagnostic.tasks[17].promptZh"
+      ],
+      "可以用 The boy is 开头。": [
+        "$.diagnostic.tasks[17].hintZh"
+      ],
+      "说一说你在学校喜欢做什么。": [
+        "$.diagnostic.tasks[18].promptZh"
+      ],
+      "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。": [
+        "$.diagnostic.tasks[18].hintZh",
+        "$.diagnostic.tasks[19].hintZh",
+        "$.diagnostic.tasks[20].hintZh",
+        "$.diagnostic.tasks[21].hintZh",
+        "$.diagnostic.tasks[22].hintZh",
+        "$.diagnostic.tasks[23].hintZh"
+      ],
+      "看图，说出男孩正在做什么。": [
+        "$.diagnostic.tasks[19].promptZh"
+      ],
+      "看两张图，说出两个不同的地方。": [
+        "$.diagnostic.tasks[20].promptZh"
+      ],
+      "按顺序讲一个小故事。": [
+        "$.diagnostic.tasks[21].promptZh"
+      ],
+      "找出不同类的图片，并说说原因。": [
+        "$.diagnostic.tasks[22].promptZh"
+      ],
+      "请向家长提一个关于喜爱食物的英语问题。": [
+        "$.diagnostic.tasks[23].promptZh"
+      ],
+      "目标是猫。": [
+        "$.extraTeachingAudio[27].audioText"
+      ],
+      "目标是狗。": [
+        "$.extraTeachingAudio[28].audioText"
+      ],
+      "目标是鸟。": [
+        "$.extraTeachingAudio[29].audioText"
+      ],
+      "目标是鱼。": [
+        "$.extraTeachingAudio[30].audioText"
+      ],
+      "目标是青蛙。": [
+        "$.extraTeachingAudio[31].audioText"
+      ],
+      "目标是鸭子。": [
+        "$.extraTeachingAudio[32].audioText"
+      ],
+      "目标是马。": [
+        "$.extraTeachingAudio[33].audioText"
+      ],
+      "目标是兔子。": [
+        "$.extraTeachingAudio[34].audioText"
+      ],
+      "目标是苹果。": [
+        "$.extraTeachingAudio[35].audioText"
+      ],
+      "目标是香蕉。": [
+        "$.extraTeachingAudio[36].audioText"
+      ],
+      "目标是橙子。": [
+        "$.extraTeachingAudio[37].audioText"
+      ],
+      "目标是面包。": [
+        "$.extraTeachingAudio[38].audioText"
+      ],
+      "目标是牛奶。": [
+        "$.extraTeachingAudio[39].audioText"
+      ],
+      "目标是水。": [
+        "$.extraTeachingAudio[40].audioText"
+      ],
+      "目标是果汁。": [
+        "$.extraTeachingAudio[41].audioText"
+      ],
+      "目标是蛋糕。": [
+        "$.extraTeachingAudio[42].audioText"
+      ],
+      "目标是球。": [
+        "$.extraTeachingAudio[43].audioText"
+      ],
+      "目标是娃娃。": [
+        "$.extraTeachingAudio[44].audioText"
+      ],
+      "目标是风筝。": [
+        "$.extraTeachingAudio[45].audioText"
+      ],
+      "目标是机器人。": [
+        "$.extraTeachingAudio[46].audioText"
+      ],
+      "目标是自行车。": [
+        "$.extraTeachingAudio[47].audioText"
+      ],
+      "目标是火车。": [
+        "$.extraTeachingAudio[48].audioText"
+      ],
+      "目标是泰迪熊。": [
+        "$.extraTeachingAudio[49].audioText"
+      ],
+      "目标是玩具汽车。": [
+        "$.extraTeachingAudio[50].audioText"
+      ],
+      "目标是妈妈。": [
+        "$.extraTeachingAudio[51].audioText"
+      ],
+      "目标是爸爸。": [
+        "$.extraTeachingAudio[52].audioText"
+      ],
+      "目标是兄弟。": [
+        "$.extraTeachingAudio[53].audioText"
+      ],
+      "目标是姐妹。": [
+        "$.extraTeachingAudio[54].audioText"
+      ],
+      "目标是奶奶 / 外婆。": [
+        "$.extraTeachingAudio[55].audioText"
+      ],
+      "目标是爷爷 / 外公。": [
+        "$.extraTeachingAudio[56].audioText"
+      ],
+      "目标是婴儿。": [
+        "$.extraTeachingAudio[57].audioText"
+      ],
+      "目标是朋友。": [
+        "$.extraTeachingAudio[58].audioText"
+      ],
+      "目标是书。": [
+        "$.extraTeachingAudio[59].audioText"
+      ],
+      "目标是钢笔 / 水笔。": [
+        "$.extraTeachingAudio[60].audioText"
+      ],
+      "目标是铅笔。": [
+        "$.extraTeachingAudio[61].audioText"
+      ],
+      "目标是书包。": [
+        "$.extraTeachingAudio[62].audioText"
+      ],
+      "目标是课桌。": [
+        "$.extraTeachingAudio[63].audioText"
+      ],
+      "目标是椅子。": [
+        "$.extraTeachingAudio[64].audioText"
+      ],
+      "目标是老师。": [
+        "$.extraTeachingAudio[65].audioText"
+      ],
+      "目标是教室。": [
+        "$.extraTeachingAudio[66].audioText"
+      ],
+      "目标是头。": [
+        "$.extraTeachingAudio[67].audioText"
+      ],
+      "目标是手。": [
+        "$.extraTeachingAudio[68].audioText"
+      ],
+      "目标是胳膊。": [
+        "$.extraTeachingAudio[69].audioText"
+      ],
+      "目标是腿。": [
+        "$.extraTeachingAudio[70].audioText"
+      ],
+      "目标是脚。": [
+        "$.extraTeachingAudio[71].audioText"
+      ],
+      "目标是眼睛。": [
+        "$.extraTeachingAudio[72].audioText"
+      ],
+      "目标是鼻子。": [
+        "$.extraTeachingAudio[73].audioText"
+      ],
+      "目标是嘴。": [
+        "$.extraTeachingAudio[74].audioText"
+      ],
+      "目标是吃。": [
+        "$.extraTeachingAudio[75].audioText"
+      ],
+      "目标是喝。": [
+        "$.extraTeachingAudio[76].audioText"
+      ],
+      "目标是阅读。": [
+        "$.extraTeachingAudio[77].audioText"
+      ],
+      "目标是书写。": [
+        "$.extraTeachingAudio[78].audioText"
+      ],
+      "目标是睡觉。": [
+        "$.extraTeachingAudio[79].audioText"
+      ],
+      "目标是玩耍。": [
+        "$.extraTeachingAudio[80].audioText"
+      ],
+      "目标是跑步。": [
+        "$.extraTeachingAudio[81].audioText"
+      ],
+      "目标是走路。": [
+        "$.extraTeachingAudio[82].audioText"
+      ],
+      "目标是太阳。": [
+        "$.extraTeachingAudio[83].audioText"
+      ],
+      "目标是云。": [
+        "$.extraTeachingAudio[84].audioText"
+      ],
+      "目标是雨。": [
+        "$.extraTeachingAudio[85].audioText"
+      ],
+      "目标是雪。": [
+        "$.extraTeachingAudio[86].audioText"
+      ],
+      "目标是风。": [
+        "$.extraTeachingAudio[87].audioText"
+      ],
+      "目标是彩虹。": [
+        "$.extraTeachingAudio[88].audioText"
+      ],
+      "目标是炎热。": [
+        "$.extraTeachingAudio[89].audioText"
+      ],
+      "目标是寒冷。": [
+        "$.extraTeachingAudio[90].audioText"
+      ],
+      "听一听，找到对应的图片。": [
+        "$.extraTeachingAudio[91].audioText"
+      ]
+    }
+  },
+  "existingReferences": {
+    "en": {
+      "Anna has two pencils. Her brother has one book. Which things are Anna's?": "/audio/learn-f6b12552b3d0c74a6bd8.wav",
+      "Ask me a question about my favourite food.": "/audio/learn-b2a99d65ddc36f7754b7.wav",
+      "Build the word can.": "/audio/learn-325575e13e53252e5753.wav",
+      "Build the word cat.": "/audio/learn-b34cc9196100d952309b.wav",
+      "Build the word pen.": "/audio/learn-b7f678b5f570215556ca.wav",
+      "Build the word red.": "/audio/learn-0a4f5e5ef018bce10f1f.wav",
+      "Build the word sit.": "/audio/learn-27604d7239c3402fa2f5.wav",
+      "Build the word sun.": "/audio/learn-0c3e72a1a23140cde36e.wav",
+      "Complete the sentence.": "/audio/learn-be94904dc63c512c7097.wav",
+      "Find the picture for the word arm.": "/audio/learn-26722ecb7922e503076f.wav",
+      "Find the picture for the word baby.": "/audio/learn-af85b83dbe985cf8954a.wav",
+      "Find the picture for the word bag.": "/audio/learn-2410bfabc913bb42ed94.wav",
+      "Find the picture for the word book.": "/audio/learn-72603a0c298ad5ed1688.wav",
+      "Find the picture for the word brother.": "/audio/learn-6f2260c250126935cc86.wav",
+      "Find the picture for the word chair.": "/audio/learn-5559a2d9077a175a7042.wav",
+      "Find the picture for the word classroom.": "/audio/learn-41ba7cfc551ec5acc81b.wav",
+      "Find the picture for the word cloud.": "/audio/learn-1d3e886b115bc0a4dc53.wav",
+      "Find the picture for the word cold.": "/audio/learn-065da00c248b6cdb5830.wav",
+      "Find the picture for the word desk.": "/audio/learn-df776b289f2c1089fe23.wav",
+      "Find the picture for the word drink.": "/audio/learn-ac612fde11586b1f72a5.wav",
+      "Find the picture for the word eat.": "/audio/learn-526863ee45e543b94837.wav",
+      "Find the picture for the word eye.": "/audio/learn-a02ca61d52dbc16a6553.wav",
+      "Find the picture for the word father.": "/audio/learn-680ef2a2f7d7ed7cd71d.wav",
+      "Find the picture for the word foot.": "/audio/learn-ce482ed5a093a5630e62.wav",
+      "Find the picture for the word friend.": "/audio/learn-ba4fce74204b9bc33ba4.wav",
+      "Find the picture for the word grandma.": "/audio/learn-81715fa659b579dc883e.wav",
+      "Find the picture for the word grandpa.": "/audio/learn-a68201bebb45ec3b9033.wav",
+      "Find the picture for the word hand.": "/audio/learn-8dd0525598e27c20b7d9.wav",
+      "Find the picture for the word head.": "/audio/learn-a202ff981af31c8cf58f.wav",
+      "Find the picture for the word hot.": "/audio/learn-40ff9fc70a4e3663617f.wav",
+      "Find the picture for the word leg.": "/audio/learn-37594a18e22f1796d8be.wav",
+      "Find the picture for the word mother.": "/audio/learn-743570588ffd460dcf21.wav",
+      "Find the picture for the word mouth.": "/audio/learn-a8302de9821afacd2d33.wav",
+      "Find the picture for the word nose.": "/audio/learn-260d7e4c9daf6a8a79d2.wav",
+      "Find the picture for the word pen.": "/audio/learn-32a64a0c82d1f3de3be7.wav",
+      "Find the picture for the word pencil.": "/audio/learn-1a350d28d0356b4ced95.wav",
+      "Find the picture for the word play.": "/audio/learn-46da62ec2c660f414b11.wav",
+      "Find the picture for the word rain.": "/audio/learn-4f270fe8df9fda04dc2b.wav",
+      "Find the picture for the word rainbow.": "/audio/learn-1b32878569bbde7c5342.wav",
+      "Find the picture for the word read.": "/audio/learn-7f2cb7f30d9a0a35e648.wav",
+      "Find the picture for the word run.": "/audio/learn-e0fb774f5fb7e859ce87.wav",
+      "Find the picture for the word sister.": "/audio/learn-136f2c9ac25f70b03889.wav",
+      "Find the picture for the word sleep.": "/audio/learn-ce8955fda85efb0abc86.wav",
+      "Find the picture for the word snow.": "/audio/learn-1ed703995eb71d68cdf2.wav",
+      "Find the picture for the word sun.": "/audio/learn-dacd16bef2e21d5d2f37.wav",
+      "Find the picture for the word teacher.": "/audio/learn-f83eafcdb0d1f3c962d4.wav",
+      "Find the picture for the word walk.": "/audio/learn-ea9cdaa7a33d6bb8928b.wav",
+      "Find the picture for the word wind.": "/audio/learn-183b758448a86ea56422.wav",
+      "Find the picture for the word write.": "/audio/learn-390a65dbcfd1511fe565.wav",
+      "How many apples are in the bag?": "/audio/learn-48118c6eb8cce75ea070.wav",
+      "How many hands do you have?": "/audio/learn-74384367f2de4830eaef.wav",
+      "How many pencils does she have?": "/audio/learn-81efce08c140f36f9a15.wav",
+      "I am reading a book.": "/audio/learn-5c43a4e154b3bcbc2c41.wav",
+      "I can run.": "/audio/learn-7b7cdf693e1035c45f8c.wav",
+      "I can see a rainbow.": "/audio/learn-629814b9d31559fcc868.wav",
+      "I can see two pencils.": "/audio/learn-b131233d9879d20fbb8a.wav",
+      "I drink water every day.": "/audio/learn-812e6077c2ac4918412f.wav",
+      "I have two hands.": "/audio/learn-e4333eca800b7e978dd5.wav",
+      "I like apples.": "/audio/en-158.wav",
+      "I play with my friend.": "/audio/learn-5b68e1350e665b7c221e.wav",
+      "It is cold today.": "/audio/learn-e9f810b1df38bc31691d.wav",
+      "It is hot today.": "/audio/learn-98128dc71d6969f78390.wav",
+      "Listen to can. Which word has the same ending sound?": "/audio/learn-ac8fe31a1200947333e8.wav",
+      "Listen to cat. Which word has the same ending sound?": "/audio/learn-fdd995cf1c2c05bca334.wav",
+      "Listen to pen. Which word has the same ending sound?": "/audio/learn-8caa9b1a5c169b3120c7.wav",
+      "Listen to red. Which word has the same ending sound?": "/audio/learn-a82e6ddbb5801f50336a.wav",
+      "Listen to sit. Which word has the same ending sound?": "/audio/learn-233953c2d404ab9c598e.wav",
+      "Listen to sun. Which word has the same ending sound?": "/audio/learn-97dcde0f69ea4dabf680.wav",
+      "Look at these two pictures. What is different?": "/audio/learn-0c5d1792c7c24e510c34.wav",
+      "My book is in my bag.": "/audio/learn-333e96b222ea4753529f.wav",
+      "My brother has a bag.": "/audio/learn-03b813fc764d5e51122b.wav",
+      "My brother has a ball.": "/audio/learn-b4c059ac02f2acf5a534.wav",
+      "My mouth is small.": "/audio/learn-fa9df856592741ccc244.wav",
+      "My sister has some water.": "/audio/learn-5c4be15ed29e32f45fc0.wav",
+      "Please put the red ball under the chair.": "/audio/learn-43134b4140f33b3eca97.wav",
+      "Point to your nose and tell me what it is.": "/audio/learn-11db41d41abbcb9e1e0c.wav",
+      "Point to your nose.": "/audio/learn-d891a7fb605e5dd5a9a4.wav",
+      "Tell me about these pictures.": "/audio/learn-dd3d6184aabb5cb30c88.wav",
+      "Tell me about your eyes.": "/audio/learn-5fab8bd5cf05590b00e6.wav",
+      "Tell me about your family.": "/audio/learn-0c19fe9091fc86a36042.wav",
+      "Tell me about your teacher.": "/audio/learn-3595632535e773c19ccf.wav",
+      "The ball is under the chair.": "/audio/learn-40af3d37b6b15881de61.wav",
+      "The cat can see a blue ball.": "/audio/learn-54c20932a065d78b78fe.wav",
+      "The cat is happy.": "/audio/learn-1914b96665291aebae7d.wav",
+      "The children are in the classroom.": "/audio/learn-eb624fc5a3ff871ffdbf.wav",
+      "The children listen and smile.": "/audio/learn-e57fbdedd25810f29aef.wav",
+      "The girl is reading. The boy is running. What is the girl doing?": "/audio/learn-1d91ebd0f72f9967c72e.wav",
+      "The sun is out, and it is hot. What can you see in the sky?": "/audio/learn-e78630b97dff2a747ca3.wav",
+      "Their teacher reads a book.": "/audio/learn-1aa4e09e049d7de42c0b.wav",
+      "They can see rain outside.": "/audio/learn-eebe75e1db149f52c69b.wav",
+      "This is a cat.": "/audio/learn-364711eb01b206cfbf92.wav",
+      "This is my mother.": "/audio/learn-8d57d6d209d4173bf3e2.wav",
+      "This is my teacher.": "/audio/learn-b9be01ac5a8683259bc4.wav",
+      "Tom: Where is my book? Anna: It is in your bag.": "/audio/learn-d9a2347c6dcbaa16f556.wav",
+      "Tom: Would you like some juice? Anna: No, thank you. Can I have some water, please?": "/audio/learn-dafa6c38acb6ea9dbc30.wav",
+      "Two apples are in the bag.": "/audio/learn-743832f5b2b62d83c55f.wav",
+      "We eat and drink with our friends.": "/audio/learn-b9b344702d257ce8e42d.wav",
+      "What can Ben do?": "/audio/learn-c687dfe378f623342737.wav",
+      "What can you do?": "/audio/learn-d936dd6c8e66a2c0ada4.wav",
+      "What can you see in the sky?": "/audio/learn-cb2d5b6bc7955430126a.wav",
+      "What can you see in your classroom?": "/audio/learn-f53682af920e6afc17c0.wav",
+      "What colour is the ball?": "/audio/learn-71d2a02f12ce1f82ff65.wav",
+      "What do you drink every day?": "/audio/learn-7ab3ef294ed50e5449b2.wav",
+      "What do you drink when it is hot?": "/audio/learn-df54ef622e87f2c2d5eb.wav",
+      "What do you like to do at school?": "/audio/learn-f5141cab7909269efced.wav",
+      "What do you like to do?": "/audio/learn-3761a7c0544edc0a6329.wav",
+      "What do you like to eat?": "/audio/learn-3b4d47ca9e1ba83776e2.wav",
+      "What does your brother or sister have?": "/audio/learn-68e9250d17091f367c7b.wav",
+      "What is the boy doing?": "/audio/learn-49fdbd6f44e81f325df7.wav",
+      "What is the dog doing?": "/audio/learn-217f8e3f3c1a89a7d66e.wav",
+      "What is the weather like today?": "/audio/learn-36b22d6a765f055de12a.wav",
+      "What is this?": "/audio/learn-a33b10a9980f9e0d2c01.wav",
+      "Where are the children?": "/audio/learn-375100facdc75c0c93a1.wav",
+      "Where does the book go?": "/audio/learn-1e34c5a9de766eedb281.wav",
+      "Where is Tom?": "/audio/learn-f7075a903e1308d551e5.wav",
+      "Where is your book?": "/audio/learn-f30b4c67ffc71532a44e.wav",
+      "Which picture is different? Why?": "/audio/learn-2ad854bac504bea8f8db.wav",
+      "Which picture matches this word?": "/audio/learn-bf9b81c3c68ce8978040.wav",
+      "Who do you play with?": "/audio/learn-e268759d38ffda87ce2c.wav",
+      "Why are the children inside?": "/audio/learn-eace71096fd5b79d9498.wav",
+      "Write a sentence about the picture.": "/audio/learn-2b26fc7490b706e696cf.wav",
+      "Write the word for this picture.": "/audio/learn-95935d575188bba75155.wav",
+      "arm": "/audio/learn-7419d48566e3d3818a2d.wav",
+      "baby": "/audio/learn-470a893d42a501ed18db.wav",
+      "bag": "/audio/learn-10947dcc5f24f2342621.wav",
+      "bed": "/audio/learn-52c74dbae5478e9a477c.wav",
+      "book": "/audio/learn-b32c95c8493175659c84.wav",
+      "brother": "/audio/learn-2b3d4e2da2da381ac1eb.wav",
+      "can": "/audio/learn-98232c8d779b7cc696ce.wav",
+      "can, man.": "/audio/learn-eb53f0b25cb736c10bf1.wav",
+      "cat": "/audio/en-001.wav",
+      "cat, hat.": "/audio/learn-59f426794726589c6078.wav",
+      "chair": "/audio/learn-6181136d9b1f9bad32be.wav",
+      "classroom": "/audio/learn-4f6c7de9ec917aef0af5.wav",
+      "cloud": "/audio/learn-6fd30cda99add06f52af.wav",
+      "cold": "/audio/learn-b497d5a9a52e8336ddaa.wav",
+      "desk": "/audio/learn-bab3f587f2cf2646e981.wav",
+      "drink": "/audio/learn-060b8bc110aead6d50f1.wav",
+      "eat": "/audio/learn-a9eefe5ca47e739e311a.wav",
+      "eye": "/audio/learn-458224b100f33d21e67d.wav",
+      "father": "/audio/learn-48b113e1ea9bf6529f8e.wav",
+      "foot": "/audio/learn-d4a7f3e517d777e426f1.wav",
+      "friend": "/audio/learn-c6170fbc185d5682f4ba.wav",
+      "grandma": "/audio/learn-3830ff4beafa44f716bd.wav",
+      "grandpa": "/audio/learn-3c5b599a68967138466e.wav",
+      "hand": "/audio/learn-aadcdf7e3ffd72c68c06.wav",
+      "hat": "/audio/learn-5291f12e8fcf9a9e40f5.wav",
+      "head": "/audio/learn-b49a668e31287c0404a5.wav",
+      "hit": "/audio/learn-efdce21d33de2d4c6b87.wav",
+      "hot": "/audio/learn-da25859e8d8ba6214f2c.wav",
+      "leg": "/audio/learn-0d58b7162aff2e1ddf30.wav",
+      "man": "/audio/learn-f859821186b83a84ad34.wav",
+      "mother": "/audio/learn-5a1f0c292c88e9069611.wav",
+      "mouth": "/audio/learn-21a17743d8ece4202bff.wav",
+      "nose": "/audio/learn-4fbb36aedf62a394b058.wav",
+      "pen": "/audio/learn-900438436a42ddd8c20e.wav",
+      "pen, ten.": "/audio/learn-f3c59baa4e490205b39a.wav",
+      "pencil": "/audio/learn-2fe4ef52f2191581c97a.wav",
+      "play": "/audio/learn-1c61410c44f3931416cd.wav",
+      "rain": "/audio/learn-2e4a31a6837c637ab91f.wav",
+      "rainbow": "/audio/learn-ad5a920314049f5fc23c.wav",
+      "read": "/audio/learn-2bf69597a12260d0b29c.wav",
+      "red": "/audio/en-025.wav",
+      "red, bed.": "/audio/learn-8784f4fcd4080c45c29c.wav",
+      "run": "/audio/learn-63ee03636dbd5fb80305.wav",
+      "sister": "/audio/learn-eebf84b99d14c53e2ebb.wav",
+      "sit": "/audio/learn-0e62dc3e75531da41bbc.wav",
+      "sit, hit.": "/audio/learn-b30b073afa23136fc8e3.wav",
+      "sleep": "/audio/learn-56123b5d05145ae999ac.wav",
+      "snow": "/audio/learn-82a16cc5db28b0742d6c.wav",
+      "sun": "/audio/learn-52ab41d42c9a5e40f0f0.wav",
+      "sun, run.": "/audio/learn-721a84b2df6df494427b.wav",
+      "teacher": "/audio/learn-e05301fae2b1a226cc52.wav",
+      "ten": "/audio/learn-d32f3364cda837dc1d6c.wav",
+      "walk": "/audio/learn-d40ae3b0c0061f37afa2.wav",
+      "wind": "/audio/learn-4b13aa18ed9495c909f7.wav",
+      "write": "/audio/learn-e3ba2df1b97228a37259.wav"
+    },
+    "zh": {
+      "can 与 cannot 表达的意思不同。": "/audio/learn-be7441a41948d5fd050d.wav",
+      "pencils 前面的词表示数量。": "/audio/learn-a347bba2ae592cac33c6.wav",
+      "reads a book 表示读书。": "/audio/learn-2421c1a626a4deff868c.wav",
+      "under 表示在下面。": "/audio/learn-adc1af54835a3bf4ab92.wav",
+      "一个 book，两个要加 s。": "/audio/learn-af24c67414f9f581a824.wav",
+      "介绍一位家人。": "/audio/learn-7175db0985531eb4530e.wav",
+      "介绍你的书在哪里。": "/audio/learn-334367498505dc28383f.wav",
+      "介绍你的老师。": "/audio/learn-5ced1b340b8351ff68fe.wav",
+      "介绍兄弟姐妹的一件物品，也可以介绍朋友。": "/audio/learn-f44dab5f178f2047b0c1.wav",
+      "先找 girl，再听她做的活动。": "/audio/learn-a27f908cd30627539412.wav",
+      "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。": "/audio/learn-62d5a9336bb0b3c49b5c.wav",
+      "再看故事的第二页。": "/audio/learn-8eca2a08cbe4f9b7f55b.wav",
+      "再读故事的第二页。": "/audio/learn-260e36311174b9d9f8d3.wav",
+      "再读第一句话。": "/audio/learn-b25e4de69bf8eeebaa84.wav",
+      "可以先听整词，再把每一个声音对应到字母。": "/audio/learn-4035f5a0ceff63126665.wav",
+      "可以用 The book is 开头。": "/audio/learn-65e2295573dacbc2ce93.wav",
+      "可以用 The boy is 开头。": "/audio/learn-03d9643a2c226ab8713c.wav",
+      "听 can 和 man 的整词发音。注意相同的 -an，can 在这里使用完整重读读音。": "/audio/learn-8e5e5569fe3a010a7bd2.wav",
+      "听 cat 和 hat 的整词发音。它们末尾的 -at 相同。再点字母拼出 cat。": "/audio/learn-adfb7825c5320940623c.wav",
+      "听 pen 和 ten 的整词发音。注意相同的 -en，再试着拼出 pen。": "/audio/learn-0d6cfe216bacd09718aa.wav",
+      "听 red 和 bed 的整词发音。这里是单词末尾 -ed 的词家族，不是过去式词尾发音规则。": "/audio/learn-e350d4b2f241143e9a62.wav",
+      "听 sit 和 hit 的整词发音。注意相同的 -it，再试着拼出 sit。": "/audio/learn-533059c90308cb7f9b94.wav",
+      "听 sun 和 run 的整词发音。注意相同的 -un，再试着拼出 sun。": "/audio/learn-7b3af84351f25d1db1ef.wav",
+      "听例词，再找出末尾声音相同的词。": "/audio/learn-22dc323d15487d220c89.wav",
+      "听句子，选出正确的图片。": "/audio/learn-7fc479543f6c1b9de249.wav",
+      "听句子，选出老师做的活动。": "/audio/learn-d438c8d3adcca3f5db4f.wav",
+      "听安娜回答里的位置。": "/audio/learn-528a3885abdc0ca8f706.wav",
+      "听完整单词，试着按声音拼出它。": "/audio/learn-8591d17f809368f921d4.wav",
+      "听对话，选出书的位置。": "/audio/learn-21c0435b8a0c49f9c419.wav",
+      "听对话，选出安娜想喝的东西。": "/audio/learn-d0deb24c33bfae0dda23.wav",
+      "听描述，选出天空里的景物。": "/audio/learn-f392cb1071f745357ac6.wav",
+      "听描述，选出女孩正在做的事。": "/audio/learn-60c257e784c118e955c4.wav",
+      "听短描述，找出安娜的东西。": "/audio/learn-3f9943e8a27aee13ed43.wav",
+      "听英语，点对应的图片。": "/audio/learn-61c36401192f520ff000.wav",
+      "听英语，选出正确的图片。": "/audio/learn-26f800938972009a10a2.wav",
+      "听这段话开头提到的天空景物。": "/audio/learn-267c347119c30e84f790.wav",
+      "回想故事，用一个英文单词填空。": "/audio/learn-76cb6a38489edeb581a7.wav",
+      "图里是一只脚，用单数。": "/audio/learn-eb8b6237d89092b9ef12.wav",
+      "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。": "/audio/learn-d34e749a3a1684ba8957.wav",
+      "它的英文是 arm。": "/audio/learn-efbaf90a1a9d531e4f94.wav",
+      "它的英文是 bag。": "/audio/learn-5d55b56a038cec553c0d.wav",
+      "它的英文是 book。": "/audio/learn-b05f2d91e6c05af72057.wav",
+      "它的英文是 brother。": "/audio/learn-3df8286c6c9f42ef204a.wav",
+      "它的英文是 cloud。": "/audio/learn-cafb608f3aba01007201.wav",
+      "它的英文是 drink。": "/audio/learn-93d4832f3f08af03c637.wav",
+      "它的英文是 eat。": "/audio/learn-611f008aacb72b8a12b4.wav",
+      "它的英文是 father。": "/audio/learn-cb18c6cc767209fc177e.wav",
+      "它的英文是 hand。": "/audio/learn-7a731ccecfafeb01dcd6.wav",
+      "它的英文是 head。": "/audio/learn-fcf91f82dbc1a639c9ca.wav",
+      "它的英文是 leg。": "/audio/learn-59fb3a08ee3e57079317.wav",
+      "它的英文是 mother。": "/audio/learn-86012ecd38570dbbd8e3.wav",
+      "它的英文是 pencil。": "/audio/learn-a8b1afef7ad0c6104a09.wav",
+      "它的英文是 pen。": "/audio/learn-04d302838f67e3ade992.wav",
+      "它的英文是 rain。": "/audio/learn-fb8052e951946a2a0e64.wav",
+      "它的英文是 read。": "/audio/learn-cfea84133774cc518e93.wav",
+      "它的英文是 sister。": "/audio/learn-299ccb9480075c0ca183.wav",
+      "它的英文是 snow。": "/audio/learn-5d7b6254adadf1860751.wav",
+      "它的英文是 sun。": "/audio/learn-e693cd9a7acc5cf21486.wav",
+      "它的英文是 write。": "/audio/learn-a598c90c286d5a173176.wav",
+      "安娜拒绝了第一种饮料，又提出了自己的请求。": "/audio/learn-535e31036aefadc412ab.wav",
+      "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。": "/audio/learn-79b8ee025f18a0729540.wav",
+      "家长每天只需听孩子独立说一句话；不会说时先鼓励，再给一句示范。记录“独立/有提示”，不拿星星数量判断语言等级。": "/audio/learn-4f0a656f1780768a12ac.wav",
+      "寻找 I am 后面描述的地点。": "/audio/learn-ad24be7d9170f511a299.wav",
+      "寻找 put 后面的物品和 in 后面的位置。": "/audio/learn-2afc0cf20f0d17b31dc3.wav",
+      "找出不同类的图片，并说说原因。": "/audio/learn-32206cdbb7ebfa8eb777.wav",
+      "找到 The dog 开头的句子。": "/audio/learn-5ac6a459263abe69df2a.wav",
+      "指一指鼻子，再用英语介绍它。": "/audio/learn-7827b8050bf58540b09b.wav",
+      "按顺序讲一个小故事。": "/audio/learn-97a7b35a2c731357699c.wav",
+      "故事里外面正在下雨。": "/audio/learn-b621b2c5bb91992ffacb.wav",
+      "故事里拿着水的是姐妹。": "/audio/learn-97ebd788de8d89e821ab.wav",
+      "注意听 Anna has 后面的信息。": "/audio/learn-e615011a3a04f32d5149.wav",
+      "球在椅子下面。": "/audio/learn-82c6cc1e8af3b645cb9c.wav",
+      "球的英文有四个字母。": "/audio/learn-3b9ded6706ef6785b2fd.wav",
+      "用 I like 开头，接你喜欢的食物。": "/audio/learn-2fd1b44f4a9bf5e1c281.wav",
+      "用 book、bag、in 写一个完整句子。": "/audio/learn-e5d00d21790650bd166c.wav",
+      "目标是“书”。听一遍，再找图片。": "/audio/learn-d5b7586830478bec94fa.wav",
+      "目标是“书写”。听一遍，再找图片。": "/audio/learn-1537c3283b63c0d02d78.wav",
+      "目标是“书包”。听一遍，再找图片。": "/audio/learn-352dd9b1adf1b0db0732.wav",
+      "目标是“云”。听一遍，再找图片。": "/audio/learn-7da3bcc547a575702ba8.wav",
+      "目标是“兄弟”。听一遍，再找图片。": "/audio/learn-08de7fdddc452e20565e.wav",
+      "目标是“吃”。听一遍，再找图片。": "/audio/learn-b7d7a43d8c8c5e8b6e87.wav",
+      "目标是“喝”。听一遍，再找图片。": "/audio/learn-231b6871fa0da826b735.wav",
+      "目标是“嘴”。听一遍，再找图片。": "/audio/learn-6c50ead581d9ac125897.wav",
+      "目标是“太阳”。听一遍，再找图片。": "/audio/learn-c05b67d6841d7ed08000.wav",
+      "目标是“头”。听一遍，再找图片。": "/audio/learn-59b6d550a9f53a7943c6.wav",
+      "目标是“奶奶 / 外婆”。听一遍，再找图片。": "/audio/learn-06e8d4a320c1abcf993d.wav",
+      "目标是“妈妈”。听一遍，再找图片。": "/audio/learn-8974f71618d6c2a8a6f2.wav",
+      "目标是“姐妹”。听一遍，再找图片。": "/audio/learn-860d0de59a9928cba56d.wav",
+      "目标是“婴儿”。听一遍，再找图片。": "/audio/learn-47524cdfc38ec24979b9.wav",
+      "目标是“寒冷”。听一遍，再找图片。": "/audio/learn-91523cf77dc842812c34.wav",
+      "目标是“彩虹”。听一遍，再找图片。": "/audio/learn-70d129e0e82ec2d745ff.wav",
+      "目标是“手”。听一遍，再找图片。": "/audio/learn-33de59be92a546a8dd56.wav",
+      "目标是“教室”。听一遍，再找图片。": "/audio/learn-7a2d884c2a2ae3847b97.wav",
+      "目标是“朋友”。听一遍，再找图片。": "/audio/learn-941bdab983453996ae87.wav",
+      "目标是“椅子”。听一遍，再找图片。": "/audio/learn-734608c421458b201776.wav",
+      "目标是“炎热”。听一遍，再找图片。": "/audio/learn-c42ea0b0bba0f70680af.wav",
+      "目标是“爷爷 / 外公”。听一遍，再找图片。": "/audio/learn-47cf27c922d1774added.wav",
+      "目标是“爸爸”。听一遍，再找图片。": "/audio/learn-07d727a4236705a6240f.wav",
+      "目标是“玩耍”。听一遍，再找图片。": "/audio/learn-402e0bb9deb1a8838641.wav",
+      "目标是“眼睛”。听一遍，再找图片。": "/audio/learn-d25c47db978753c2eb1d.wav",
+      "目标是“睡觉”。听一遍，再找图片。": "/audio/learn-2ba60c9b8c8cea65abb0.wav",
+      "目标是“老师”。听一遍，再找图片。": "/audio/learn-5ec0c0f373e3bcc21e82.wav",
+      "目标是“胳膊”。听一遍，再找图片。": "/audio/learn-b188344727d4f8b22750.wav",
+      "目标是“脚”。听一遍，再找图片。": "/audio/learn-408fd9f73b45cbfe1d46.wav",
+      "目标是“腿”。听一遍，再找图片。": "/audio/learn-ca30ca3a6f56067fe1f3.wav",
+      "目标是“课桌”。听一遍，再找图片。": "/audio/learn-934ff252bb704953f919.wav",
+      "目标是“走路”。听一遍，再找图片。": "/audio/learn-cd096e8863145fb16147.wav",
+      "目标是“跑步”。听一遍，再找图片。": "/audio/learn-deeeac5231bfbbb2daa0.wav",
+      "目标是“钢笔 / 水笔”。听一遍，再找图片。": "/audio/learn-c970190a25155bc2b506.wav",
+      "目标是“铅笔”。听一遍，再找图片。": "/audio/learn-5f50255925858fecb45b.wav",
+      "目标是“阅读”。听一遍，再找图片。": "/audio/learn-d525dfbe36952314c72e.wav",
+      "目标是“雨”。听一遍，再找图片。": "/audio/learn-105c652fc87785d10139.wav",
+      "目标是“雪”。听一遍，再找图片。": "/audio/learn-ca36b9dd2382a06f75ab.wav",
+      "目标是“风”。听一遍，再找图片。": "/audio/learn-4e14dee3257e39d28475.wav",
+      "目标是“鼻子”。听一遍，再找图片。": "/audio/learn-14aa5fc33b5b7789fcdb.wav",
+      "看两张图，说出两个不同的地方。": "/audio/learn-6889136e2ac3e660d3f2.wav",
+      "看图，填入正确的位置词。": "/audio/learn-414c0037bb686d520eeb.wav",
+      "看图，用一个英文单词填空。": "/audio/learn-7f76523cb6c1d42d851c.wav",
+      "看图，用一个英语句子说明男孩正在做什么。": "/audio/learn-3a1e7f90760077b9225b.wav",
+      "看图，说出男孩正在做什么。": "/audio/learn-d50edb912a7bc6508e58.wav",
+      "看图，输入对应的英文单词。": "/audio/learn-27cce31c7ce4477f6e72.wav",
+      "看图，输入这个物品的英文名称。": "/audio/learn-9b610f3fdbdb1de72fb0.wav",
+      "看图，输入这个身体部位的英文名称。": "/audio/learn-7c1be6864d4814ce1f71.wav",
+      "看看天空，说出一种景物。": "/audio/learn-4d4c23c106b512f5a3dd.wav",
+      "看看短文前两句说的天气。": "/audio/learn-5939e631a60f58317fc0.wav",
+      "看看窗外，介绍今天的天气。": "/audio/learn-b09a412f99d928e50fd8.wav",
+      "说一说你在学校喜欢做什么。": "/audio/learn-90d8dc27589bc7c692df.wav",
+      "说说你会做的一件事。": "/audio/learn-a87bdbde05b62e3c228a.wav",
+      "说说你和谁一起玩。": "/audio/learn-a1e4e7c1a092d79d65b5.wav",
+      "说说你喜欢做的事。": "/audio/learn-dde7224289e7d79f12ac.wav",
+      "说说你喜欢吃什么。": "/audio/learn-d28d8a39101d97c27878.wav",
+      "说说你有几只手。": "/audio/learn-3e6c30d193007be2e714.wav",
+      "说说你每天喝什么。": "/audio/learn-65914296a35b586454ee.wav",
+      "说说你的眼睛。": "/audio/learn-f363cbf8681cc35657e2.wav",
+      "说说天热时你喝什么。": "/audio/learn-b106aeb223b1806df06f.wav",
+      "说说教室里的一件东西。": "/audio/learn-37e01947bd08379adcd9.wav",
+      "请向家长提一个关于喜爱食物的英语问题。": "/audio/learn-926ee8c56cd4a150e5ce.wav",
+      "读句子，找到本会做的事情。": "/audio/learn-af4584eb1a8be47a5160.wav",
+      "读描述，选择正确的数量。": "/audio/learn-0266538fd527b8bdc297.wav",
+      "读提示牌，选出书应该放在哪里。": "/audio/learn-ba7c347d91453a2fef23.wav",
+      "读故事，找出孩子们在哪里。": "/audio/learn-ac9fa166bc5457e5731a.wav",
+      "读故事，找出球的颜色。": "/audio/learn-b96b411610f8b3f03173.wav",
+      "读故事，找到苹果的数量。": "/audio/learn-01626aec417712151013.wav",
+      "读短故事，选出狗正在做的事情。": "/audio/learn-d28d78db6e77e068b094.wav",
+      "读短文，选择孩子们在室内的原因。": "/audio/learn-310963ee4f5fd5cdd790.wav",
+      "读短消息，找出汤姆在哪里。": "/audio/learn-3b0aa3557ac2447ef67a.wav",
+      "读英文单词，选出对应的图片。": "/audio/learn-f114500716907c018501.wav",
+      "这个词表示“书”。": "/audio/learn-473b35343705eab36eb8.wav",
+      "这个词表示“书写”。": "/audio/learn-ab982101ec480540d9fd.wav",
+      "这个词表示“书包”。": "/audio/learn-095255edf53d877a7f63.wav",
+      "这个词表示“云”。": "/audio/learn-772bf9e9a986ecdeb82e.wav",
+      "这个词表示“兄弟”。": "/audio/learn-e5df141ad817cb0fde9f.wav",
+      "这个词表示“吃”。": "/audio/learn-461e83708c408c2e91e0.wav",
+      "这个词表示“喝”。": "/audio/learn-f82fccfd54fac77df595.wav",
+      "这个词表示“嘴”。": "/audio/learn-5da2a50e724a6d1f6ef2.wav",
+      "这个词表示“太阳”。": "/audio/learn-a1b9e257971f79558301.wav",
+      "这个词表示“头”。": "/audio/learn-0a25eba2ac54da16010e.wav",
+      "这个词表示“奶奶 / 外婆”。": "/audio/learn-33a31a974f6b7ca87a46.wav",
+      "这个词表示“妈妈”。": "/audio/learn-d611f98bb3ed75739b9f.wav",
+      "这个词表示“姐妹”。": "/audio/learn-7f5e07eff2db628d7ce1.wav",
+      "这个词表示“婴儿”。": "/audio/learn-20ea0e0a6f5eb3e1ff91.wav",
+      "这个词表示“寒冷”。": "/audio/learn-318a3aca8bfa20953944.wav",
+      "这个词表示“彩虹”。": "/audio/learn-f58a07cb77ff83bcbbf5.wav",
+      "这个词表示“手”。": "/audio/learn-2a5b3f0847d543c6d5c5.wav",
+      "这个词表示“教室”。": "/audio/learn-3a3410b611f3b8f8dc78.wav",
+      "这个词表示“朋友”。": "/audio/learn-c055e4f8b068de2977a8.wav",
+      "这个词表示“椅子”。": "/audio/learn-8692f4bf91243cc58bb7.wav",
+      "这个词表示“炎热”。": "/audio/learn-ba6c75875f38426beff7.wav",
+      "这个词表示“爷爷 / 外公”。": "/audio/learn-a02eac59128794cc6f6d.wav",
+      "这个词表示“爸爸”。": "/audio/learn-16bb88046cc8e5df94a6.wav",
+      "这个词表示“玩耍”。": "/audio/learn-949924407d3da401f1af.wav",
+      "这个词表示“眼睛”。": "/audio/learn-f85f0c7e05c2d47282e3.wav",
+      "这个词表示“睡觉”。": "/audio/learn-73e09f3a5f30ce046afe.wav",
+      "这个词表示“老师”。": "/audio/learn-018bc9b3a47f1f1ef734.wav",
+      "这个词表示“胳膊”。": "/audio/learn-b970c930d74f39ebe350.wav",
+      "这个词表示“脚”。": "/audio/learn-567e4fb77c6e4dc52d19.wav",
+      "这个词表示“腿”。": "/audio/learn-9226b19a94c2fd63014f.wav",
+      "这个词表示“课桌”。": "/audio/learn-5871d2ed1f38d73eb9ed.wav",
+      "这个词表示“走路”。": "/audio/learn-4dfd2241fd198d9e6381.wav",
+      "这个词表示“跑步”。": "/audio/learn-044dabf103d36bf4d8f0.wav",
+      "这个词表示“钢笔 / 水笔”。": "/audio/learn-53fd25fc9a10df12a232.wav",
+      "这个词表示“铅笔”。": "/audio/learn-90ceba1ffb93304bccd6.wav",
+      "这个词表示“阅读”。": "/audio/learn-6e5cb8ba7441f0836c81.wav",
+      "这个词表示“雨”。": "/audio/learn-c29d24ff447a8a1fc08c.wav",
+      "这个词表示“雪”。": "/audio/learn-1d94f72c42b5dd00bbc8.wav",
+      "这个词表示“风”。": "/audio/learn-518f6d427e9c1adb2ca4.wav",
+      "这个词表示“鼻子”。": "/audio/learn-4e0dd8b5d02b971bec6b.wav",
+      "这句话里有颜色和位置两个线索。": "/audio/learn-3d01af0b3424f1ce4935.wav",
+      "这是铅笔。": "/audio/learn-41f60b9f0d02f2fd11d7.wav"
+    }
+  },
+  "completedAt": "2026-10-04T12:11:52.265129+00:00"
+}

@@ -1,0 +1,72 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+__pycache__/
+*.py[cod]
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+/dist/
+/.wrangler/
+# Checkout-local execution profile and tool state; never publish them.
+/.sites-runtime/
+/.agents/
+/.codex/
+/outputs/
+/work/
+/output/
+/.playwright-cli/
+/artifacts/
+*.tsbuildinfo
+/.android-tools/
+/mobile-dist/
+/public-dist/
+/android/.gradle/
+/android/local.properties
+/android/app/build/
+/android/build/
+/android/app/src/main/assets/public/
+/android/app/src/main/assets/capacitor.plugins.json
+/android/app/src/main/assets/capacitor.config.json
+*.keystore
+*.jks
+/scripts/teacher-audio/dependencies/
+/scripts/teacher-audio/mp3-source/
+/scripts/teacher-audio/speech/
+/scripts/teacher-audio/music/
+/scripts/teacher-audio/effects/
+/scripts/teacher-audio/manifest-combined.json
+/scripts/teacher-audio/speech-report.json
+/scripts/teacher-audio/music-report.json

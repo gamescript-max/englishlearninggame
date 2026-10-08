@@ -1,0 +1,31 @@
+Use case: photorealistic-natural
+Asset type: ORIGINAL transparent wildlife cutout atlas for an underwater English-learning game. This must look like actual fish and aquatic animals, NOT cartoon mascots, NOT primitive 3D models, NOT a texture collage.
+Primary request: One landscape PNG image, target 3072x2048, exact 3:2 aspect ratio. EXACT SIX columns by FOUR rows, 24 equally sized invisible cells, tightly covering the image without external margins or gutters. Each non-empty cell contains exactly ONE fully visible, separate aquatic animal cutout, naturally colored and anatomically recognizable. Genuine transparent background (RGBA alpha), absolutely no background blocks, tiles, studio backdrop or water rectangle. No text, numbers, labels, logos, border or drawn grid.
+Composition: Put each animal centered within its own cell with a generous transparent 12% cell-width safety margin; no overlap, no clipped fins, tail, limbs or antennae. Animals should mostly be LEFT-TAIL / RIGHT-HEAD side views, bodies swimming horizontally. Preserve each species' REAL natural aspect ratio: eels/hairtail/gar/swordfish/saury remain long and thin; carp/goldfish remain naturally fish-shaped; octopuses/turtles/jellyfish/seahorses retain their own distinct anatomy. Do not reuse the same wide rounded generic fish body for different species. For inherently upright/flat radial animals use a natural slightly three-quarter pose and orient the head toward the right when meaningful. Long animals fit the cell width while staying thin, never widen them into ovals. Animals can have a very gentle natural tail curve, but must not be bent into a circle.
+Style: photographic-quality aquarium / underwater wildlife cutout, genuine natural skin, fine fish scales, crisp fins, accurate subtle wet surface detail, volumetric natural form from soft light illuminating the animal itself. Small natural realistic eyes in correct anatomical location. No enormous eyes, no smile, no facial expression, no thick outline, no toy plastic, no clay, no white untextured model, no pseudo-random painted scale collage. Natural dorsal-back and paler ventral-belly colors for each species, clearly detailed fish fins/tails and gill lines. The image should look like real aquatic life photographed closely, isolated on transparency. No cast drop-shadow or shadow plane outside animal, no water particles, no bubbles, no plants.
+Grid order: strict ROW-MAJOR, first six subjects on top row from left to right, next six on row 2, next six row 3, last six bottom row. The following ordered list is an instruction, not text to draw:
+1. Pacific saury: one very slender blue-silver Pacific saury with tiny rear finlets and pointed mouth
+2. Herring: one sleek blue-gray-backed silver herring
+3. Sea bream: one naturally oval pink-silver sea bream with a gold brow marking
+4. Small grouper: one small thick-bodied mottled orange-brown grouper with natural dark spots
+5. Flounder: one true flat brown mottled flounder in three-quarter top/side view, both realistic eyes on upper side
+6. Pufferfish: one realistic golden-brown spotted pufferfish in relaxed elongated swimming form, not a sphere
+7. Eel: one very long dark brown freshwater eel with continuous low fins and sinuous tapering body
+8. Swamp eel: one very long smooth golden-brown swamp eel with no obvious fin fringe
+9. Softshell turtle: one green-brown Chinese softshell turtle with flattened leathery shell, long neck and snorkel-like nose
+10. Turtle: one real aquatic green-brown turtle with natural domed detailed shell and four webbed limbs
+11. Frog: one realistic green-brown frog swimming horizontally with extended hind legs, small natural eyes
+12. Bullfrog: one sturdy mottled olive-brown bullfrog in natural swimming pose
+13. Crayfish: one red-brown realistic crayfish with segmented tail, two natural claws and thin antennae
+14. Small crab: one small mottled brown swimming crab with natural sideways broad shell and visible legs
+15. Octopus: one large coral-brown octopus with organically spread eight muscular arms and visible suckers
+16. Cuttlefish: one natural brown-mottled cuttlefish with broad oval mantle, thin rippling skirt fins and short arms
+17. Squid: one elongated pink-silver squid with triangular fins, long mantle and slender arms
+18. Sturgeon: one elongated charcoal-gray sturgeon with pointed snout, rows of bony scutes and asymmetric tail
+19. Chum salmon: one sleek silver-blue chum salmon with natural faint mottling and forked tail
+20. Tuna: one powerful torpedo-shaped blue-silver tuna with yellow finlets, not a round generic fish
+21. Sailfish: one slender cobalt-blue silver sailfish with long pointed bill and huge flowing blue dorsal sail
+22. Swordfish: one long sleek blue-gray swordfish with clearly extended long straight swordlike upper jaw and narrow crescent tail
+23. Shark: one naturally proportioned medium reef shark with slate-gray back, ivory belly, five gill slits and pointed fins
+24. Dolphin: one sleek realistic gray-blue bottlenose dolphin with a long beak, curved dorsal fin and horizontal tail flukes
+Final constraints: exact 6×4 grid and exact listed order are crucial. Transparent space surrounds every independent complete silhouette. Never replace distinct animals with identical oval bodies. No visible grid, text, labels, solid background, large cartoon eyes, painted texture patches, geometric substitutes or repeated generic fish.

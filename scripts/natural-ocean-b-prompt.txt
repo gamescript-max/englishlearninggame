@@ -1,0 +1,31 @@
+Use case: photorealistic-natural
+Asset type: ORIGINAL transparent wildlife cutout atlas for an underwater English-learning game. This must look like actual fish and aquatic animals, NOT cartoon mascots, NOT primitive 3D models, NOT a texture collage.
+Primary request: One landscape PNG image, target 3072x2048, exact 3:2 aspect ratio. EXACT SIX columns by FOUR rows, 24 equally sized invisible cells, tightly covering the image without external margins or gutters. Each non-empty cell contains exactly ONE fully visible, separate aquatic animal cutout, naturally colored and anatomically recognizable. Genuine transparent background (RGBA alpha), absolutely no background blocks, tiles, studio backdrop or water rectangle. No text, numbers, labels, logos, border or drawn grid.
+Composition: Put each animal centered within its own cell with a generous transparent 12% cell-width safety margin; no overlap, no clipped fins, tail, limbs or antennae. Animals should mostly be LEFT-TAIL / RIGHT-HEAD side views, bodies swimming horizontally. Preserve each species' REAL natural aspect ratio: eels/hairtail/gar/swordfish/saury remain long and thin; carp/goldfish remain naturally fish-shaped; octopuses/turtles/jellyfish/seahorses retain their own distinct anatomy. Do not reuse the same wide rounded generic fish body for different species. For inherently upright/flat radial animals use a natural slightly three-quarter pose and orient the head toward the right when meaningful. Long animals fit the cell width while staying thin, never widen them into ovals. Animals can have a very gentle natural tail curve, but must not be bent into a circle.
+Style: photographic-quality aquarium / underwater wildlife cutout, genuine natural skin, fine fish scales, crisp fins, accurate subtle wet surface detail, volumetric natural form from soft light illuminating the animal itself. Small natural realistic eyes in correct anatomical location. No enormous eyes, no smile, no facial expression, no thick outline, no toy plastic, no clay, no white untextured model, no pseudo-random painted scale collage. Natural dorsal-back and paler ventral-belly colors for each species, clearly detailed fish fins/tails and gill lines. The image should look like real aquatic life photographed closely, isolated on transparency. No cast drop-shadow or shadow plane outside animal, no water particles, no bubbles, no plants.
+Grid order: strict ROW-MAJOR, first six subjects on top row from left to right, next six on row 2, next six row 3, last six bottom row. The following ordered list is an instruction, not text to draw:
+1. Tilapia fry: one small gray-green juvenile tilapia with faint vertical stripes
+2. Loach: one long thin brown mottled freshwater loach with whiskers
+3. Small yellow croaker: one naturally slender golden-silver yellow croaker
+4. Sardine: one slender silver-blue sardine with dark back
+5. Anchovy: one very slender translucent silver anchovy with large natural mouth and stripe
+6. Icefish: one almost transparent slender whitebait fish with tiny dark eye and visible delicate skeleton
+7. Small octopus: one naturally curled reddish-brown juvenile octopus with eight clearly separate small arms
+8. Small cuttlefish: one brown-mottled small cuttlefish, oval mantle and short delicate arms
+9. Small jellyfish: one small translucent blue moon jellyfish bell with subtle trailing tentacles
+10. Small seahorse: one small tan-orange seahorse with natural upright curved body and curled tail, head facing right
+11. Small starfish: one small orange five-armed sea star, seen clearly in natural three-quarter top view
+12. Crucian carp: one real silver-gold deep-bodied crucian carp with crisp fine scales
+13. Carp: one real bronze common carp with broad scales and visible barbels
+14. Grass carp: one elongated green-gray grass carp with large dark-edged scales
+15. Silver carp: one silver carp with deep silver-gray body and low-set realistic eye
+16. Bighead carp: one gray mottled bighead carp with unmistakably large head and low-set eye
+17. Catfish: one brown-gray broad-headed catfish with long whisker barbels
+18. Snakehead: one long dark olive-brown mottled snakehead fish with long dorsal fin
+19. Bass: one green-silver largemouth bass with dark lateral stripe and natural large mouth
+20. Mandarin fish: one golden-olive mandarin fish with irregular dark blotches and raised spiny dorsal fin
+21. Tilapia: one gray-green adult tilapia with natural faint vertical body bars and red-brown fin edges
+22. Pomfret: one silvery diamond-shaped pomfret, natural flattened deep body and forked tail
+23. Hairtail: one very long ribbon-thin silver hairtail fish with continuous dorsal fin, preserve its narrow elongated outline
+24. Spanish mackerel: one elongated silver-blue Spanish mackerel with black flank spots and deeply forked tail
+Final constraints: exact 6×4 grid and exact listed order are crucial. Transparent space surrounds every independent complete silhouette. Never replace distinct animals with identical oval bodies. No visible grid, text, labels, solid background, large cartoon eyes, painted texture patches, geometric substitutes or repeated generic fish.

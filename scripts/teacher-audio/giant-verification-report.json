@@ -1,0 +1,106 @@
+{
+  "createdAt": "2026-10-05T05:47:23.303708+00:00",
+  "voice": {
+    "voice": "en-US-JennyNeural",
+    "rate": "-12%",
+    "volume": "+0%",
+    "pitch": "+0Hz"
+  },
+  "format": {
+    "sampleRate": 22050,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "encoding": "PCM"
+  },
+  "manualListeningPerformed": false,
+  "verificationScope": "WAV headers, PCM duration, non-silence, RMS/peak, clipping and unique hashes; no subjective audition or transcript recognition.",
+  "learnerRecordingsReadOrUploaded": false,
+  "applicationManifestsModified": false,
+  "files": [
+    {
+      "lang": "en",
+      "text": "Mosasaurus",
+      "url": "/audio/giant-en-mosasaurus.wav",
+      "bytes": 95334,
+      "filename": "giant-en-mosasaurus.wav",
+      "frames": 47628,
+      "durationMs": 2160.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.631317,
+      "rms": 0.067271,
+      "nonSilentSamples": 21506,
+      "clippedSamples": 0,
+      "sha256": "48c473f500dfebead4dbfb8574f2f19c288254761f0f795747134dc4b06bdb0b"
+    },
+    {
+      "lang": "en",
+      "text": "Giant pliosaur",
+      "url": "/audio/giant-en-giant-pliosaur.wav",
+      "bytes": 103800,
+      "filename": "giant-en-giant-pliosaur.wav",
+      "frames": 51861,
+      "durationMs": 2351.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.506042,
+      "rms": 0.063502,
+      "nonSilentSamples": 25221,
+      "clippedSamples": 0,
+      "sha256": "a4876784b563d1c104fc3520f1ffc3633e30bc70d37191d242cc3422eaabc134"
+    },
+    {
+      "lang": "en",
+      "text": "Abyssal giant turtle",
+      "url": "/audio/giant-en-abyssal-giant-turtle.wav",
+      "bytes": 112270,
+      "filename": "giant-en-abyssal-giant-turtle.wav",
+      "frames": 56096,
+      "durationMs": 2544.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.717224,
+      "rms": 0.071101,
+      "nonSilentSamples": 29203,
+      "clippedSamples": 0,
+      "sha256": "7156a2b8fcea5ba2f03ff62c31a42dd9f292f64fb7a4d99b9ccb2b5f87d79580"
+    },
+    {
+      "lang": "en",
+      "text": "Azure sea dragon",
+      "url": "/audio/giant-en-azure-sea-dragon.wav",
+      "bytes": 102744,
+      "filename": "giant-en-azure-sea-dragon.wav",
+      "frames": 51333,
+      "durationMs": 2328.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.779755,
+      "rms": 0.06426,
+      "nonSilentSamples": 25692,
+      "clippedSamples": 0,
+      "sha256": "61b1419f495ebb91b48389bffb09fb15c2f900b758ae384f099000a3edac6b00"
+    }
+  ],
+  "status": "passed",
+  "speechClips": 4,
+  "allNonSilent": true,
+  "totalClippedSamples": 0,
+  "allHashesDistinct": true
+}

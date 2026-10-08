@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "toolMode": "built-in image_gen.imagegen: generate then layout-only edit",
+  "transparentBackground": true,
+  "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a10a79-b732-7782-9e70-56eb4f43fefb\\exec-3f2356b4-3ebb-4050-acb3-72790eece922.png",
+  "file": "D:\\project\\englishlearning\\english-island\\public\\images\\ocean-giants-v1.png",
+  "src": "/images/ocean-giants-v1.png",
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGBA",
+  "columns": 2,
+  "rows": 2,
+  "byteLength": 1633841,
+  "sha256": "a25f622f597647a64b2ec0d838db43bedbf5aff6d9354d943e41882b9ba8c91f",
+  "copiedWithoutPixelChanges": true,
+  "alphaMin": 0,
+  "alphaMax": 254,
+  "transparentPixelRatio": 0.8480269114176432,
+  "alphaOver12PixelRatio": 0.13354174296061197,
+  "alphaOver128PixelRatio": 0.13001187642415366,
+  "alphaAtCellDividersNonzeroPixels": 0,
+  "majorComponentCountAlphaOver12": 4,
+  "minorComponentsAlphaOver12": [
+    {
+      "pixels": 1,
+      "bounds": [
+        388,
+        196,
+        389,
+        197
+      ]
+    },
+    {
+      "pixels": 1,
+      "bounds": [
+        371,
+        200,
+        372,
+        201
+      ]
+    },
+    {
+      "pixels": 1,
+      "bounds": [
+        1278,
+        789,
+        1279,
+        790
+      ]
+    }
+  ],
+  "rectMethod": "read-only alpha > 12 visible-silhouette bounds with 2px padding, 8-connected component validation; no pixel edits",
+  "promptFile": "scripts/ocean-giants-prompt.txt",
+  "generationOriginal": "C:\\Users\\LEGION\\.codex\\generated_images\\01a10a79-b732-7782-9e70-56eb4f43fefb\\exec-4a944b29-5a0d-4237-bef8-b4f663b3847f.png",
+  "generationRejectedReason": "First generation Mosasaurus nose crossed x=768 cell divider; final built-in layout edit reduced and recentered full sprites.",
+  "cells": [
+    {
+      "id": "mosasaurus",
+      "en": "Mosasaurus",
+      "zh": "沧龙",
+      "growthNumber": 21,
+      "artIndex": 95,
+      "sourceRect": {
+        "x": 135,
+        "y": 167,
+        "width": 531,
+        "height": 219,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "boundsAlphaOver12": [
+        137,
+        169,
+        664,
+        384
+      ],
+      "nominalCell": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 512
+      },
+      "componentCountOver100": 1,
+      "alphaAreaOver12": 48213,
+      "flipX": false,
+      "visibleSilhouetteMarginsAlphaOver12": {
+        "left": 137,
+        "top": 169,
+        "right": 104,
+        "bottom": 128
+      }
+    },
+    {
+      "id": "giant-pliosaur",
+      "en": "Giant pliosaur",
+      "zh": "巨型上龙",
+      "growthNumber": 22,
+      "artIndex": 96,
+      "sourceRect": {
+        "x": 911,
+        "y": 178,
+        "width": 492,
+        "height": 218,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "boundsAlphaOver12": [
+        913,
+        180,
+        1401,
+        394
+      ],
+      "nominalCell": {
+        "x": 768,
+        "y": 0,
+        "width": 768,
+        "height": 512
+      },
+      "componentCountOver100": 1,
+      "alphaAreaOver12": 53113,
+      "flipX": false,
+      "visibleSilhouetteMarginsAlphaOver12": {
+        "left": 145,
+        "top": 180,
+        "right": 135,
+        "bottom": 118
+      }
+    },
+    {
+      "id": "abyssal-giant-turtle",
+      "en": "Abyssal giant turtle",
+      "zh": "深海玄龟",
+      "growthNumber": 23,
+      "artIndex": 97,
+      "sourceRect": {
+        "x": 137,
+        "y": 618,
+        "width": 502,
+        "height": 260,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "boundsAlphaOver12": [
+        139,
+        620,
+        637,
+        876
+      ],
+      "nominalCell": {
+        "x": 0,
+        "y": 512,
+        "width": 768,
+        "height": 512
+      },
+      "componentCountOver100": 1,
+      "alphaAreaOver12": 65604,
+      "flipX": false,
+      "visibleSilhouetteMarginsAlphaOver12": {
+        "left": 139,
+        "top": 108,
+        "right": 131,
+        "bottom": 148
+      }
+    },
+    {
+      "id": "azure-sea-dragon",
+      "en": "Azure sea dragon",
+      "zh": "苍海巨龙",
+      "growthNumber": 24,
+      "artIndex": 98,
+      "sourceRect": {
+        "x": 898,
+        "y": 628,
+        "width": 525,
+        "height": 232,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "boundsAlphaOver12": [
+        900,
+        630,
+        1421,
+        858
+      ],
+      "nominalCell": {
+        "x": 768,
+        "y": 512,
+        "width": 768,
+        "height": 512
+      },
+      "componentCountOver100": 1,
+      "alphaAreaOver12": 43113,
+      "flipX": false,
+      "visibleSilhouetteMarginsAlphaOver12": {
+        "left": 132,
+        "top": 118,
+        "right": 115,
+        "bottom": 166
+      }
+    }
+  ],
+  "visualInspection": {
+    "fourCompleteIndependentSilhouettes": true,
+    "rightFacingHorizontalSideProfiles": true,
+    "mouthsClosed": true,
+    "clearEyes": true,
+    "naturalColoredCGTextures": true,
+    "noTextBackgroundBubblesOrRewards": true,
+    "noDetachedFinOrTailFragments": true,
+    "note": "Prehistoric creatures are stylized realistic illustrations; abyssal turtle and azure dragon are original fantasy concepts."
+  },
+  "componentConnectivity": 8,
+  "minorComponentNote": "Three isolated one-pixel alpha-threshold edge specks; no detached fin/tail/body fragments."
+}

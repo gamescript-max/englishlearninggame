@@ -1,0 +1,28 @@
+Use case: stylized-concept
+Asset type: ORIGINAL ALBEDO / COLOR TEXTURE ATLAS for real 3D fish meshes in an underwater children's English game. This is NOT a fish illustration, NOT a sprite sheet, NOT a photograph of whole fish, NOT a material preview sphere.
+Primary request: A perfectly square 2048x2048 bitmap composed of an EXACT 4-column by 4-row grid of equal edge-to-edge square texture cells. There are 16 cells, row-major order. NO gutters, NO grid lines, NO borders, NO text, NO numbers, NO margin. Each cell is filled completely by flat close-up fish-skin albedo texture; no entire fish, head, eyes, fins, silhouette, object, background, shadow, glare or water. Pure diffuse coloration that will wrap around volumetric fish body UVs. Crisp, detailed small overlapping fish scales or species-appropriate skin grain and organic natural color markings; bright and appealing yet believable natural fish skin, not cartoony geometric pattern and not white featureless clay.
+UV convention: within every cell the horizontal axis follows the fish body from tail to head. Scales are small enough that 12-18 scales run along a cell's horizontal width. Texture should tile seamlessly on its left/right edge. Natural broad dorsal-to-belly coloration can vary gently from darker top to richer saturated center to a slightly lighter colored bottom, but never washed-out white. Neutral diffuse illumination, no baked 3D light.
+
+EXACT cells, numbered here for instructions only (do not draw numbers):
+TOP ROW left to right:
+0. Goldfish: warm orange-gold delicate overlapping scales, rich orange along top, vivid orange gold center, soft golden-yellow lower belly, polished natural scale coloration without hard highlights.
+1. Small silver-blue freshwater fish: richly textured steel-blue / silver-cyan overlapping scales, blue upper side, dark scale outlines and tiny natural markings, lower side pale blue, not pure white.
+2. Zebrafish: natural alternating dark midnight blue and creamy warm silver narrow HORIZONTAL stripes extending across the complete cell, subtle tiny scales underneath, like real zebrafish body skin.
+3. Guppy: fine silver-teal scales with natural orange, turquoise and cobalt-blue iridescent mottling, colorful but plausible guppy skin.
+SECOND ROW:
+4. Neon tetra: saturated glowing cyan-blue HORIZONTAL lateral band through the middle, deep blue charcoal upper side, strong crimson-red lower side with minute smooth scales, no literal light flare.
+5. Betta: deep royal blue tiny scales with vivid red and turquoise natural iridescent mottled patches, saturated realistic body colors.
+6. Carp: olive-green / warm bronze-brown larger regular overlapping scales with dark edges and amber lower side, natural fish skin.
+7. Mandarin fish: golden-yellow and olive fine scales with irregular dark brown/black natural spots and interrupted blotches, organic variable fish markings.
+THIRD ROW:
+8. Shark: slate blue-gray fine naturally rough microdenticle skin, darker blue dorsal part and pale blue-gray lower belly, densely detailed subtle grain, never chalky white.
+9. Tuna: deep navy-blue upper skin grading into steel silver-blue / muted gold side scales, extremely fine natural overlapping texture and dark blue stippling.
+10. Eel: wet-looking deep chocolate-brown smooth fine skin with subtle amber dark olive mottling and minute pores, diffuse color, not painted glossy reflections.
+11. Orca: natural deep charcoal-black marine mammal skin with smooth broad softly curved off-white / very light warm-gray marking crossing the lower half, tiny skin grain and faint blue-gray mottling; most of the cell is black, not blank white.
+BOTTOM ROW:
+12. Blue whale: deep ocean blue-gray natural mottled smooth leathery marine mammal skin, variable organic darker patches, very fine subtle pores, believable whale coloration.
+13. Octopus: coral-orange and warm copper skin with irregular pale ochre spots, brown freckles, delicate pebbled skin grain, natural chromatophore appearance.
+14. Turtle: deep forest green, olive and brown natural turtle skin / small irregular shell-like scutes, muted mossy mottling and subtle fine wrinkles; not a turtle-shaped object.
+15. Manta ray: dark purple-blue and navy very fine rough ray skin with subtle blue-gray speckling and organic mottling, highly natural.
+
+Constraints: the exact 4x4 cell ordering and equal dimensions are essential. Flat surface texture only. No fish silhouettes, no animal figures, no preview spheres, no perspective, no 3D objects, no lettering, no gaps, no decorative frame. All 16 cells must have rich realistic colored surface detail, optimized to make an actual lit 3D fish body look like a fish instead of a plain white model.

@@ -1,0 +1,2402 @@
+{
+  "version": 1,
+  "generator": "built-in image_gen",
+  "imageEditing": "none; raw original PNG files copied without resampling/background editing/compositing",
+  "rectMethod": "read-only alpha > 12 connected-component bounding rectangles with 2px padding; detached nearby fins and antennae included; rectangles may cross nominal grid boundaries when imagegen offset a specimen",
+  "notes": [
+    "Transparent RGB under zero alpha can contain blurred colors. It is invisible when RGBA is correctly displayed.",
+    "Artwork is generated, not authoritative zoological photography. Extinct/fantasy creatures are imaginative assets.",
+    "Use actual subject rects and per-atlas image dimensions; preserve width/height aspect ratio.",
+    "Do not use fixed square draw dimensions or recolor whole species."
+  ],
+  "atlases": [
+    {
+      "letter": "a",
+      "file": "natural-ocean-a-v1.png",
+      "path": "D:\\project\\englishlearning\\english-island\\artifacts\\natural-fish-staging\\natural-ocean-a-v1.png",
+      "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-ff567d72-7086-4a34-8e70-303a9f21d885.png",
+      "width": 1536,
+      "height": 1024,
+      "columns": 6,
+      "rows": 4,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixelRatio": 0.6337839762369791,
+      "alphaOver128PixelRatio": 0.19675827026367188,
+      "sha256": "6a9fd889fe8fde9a51052dda489af23c0c98d780fcc87c2cb9465949dfc8f7c2",
+      "promptFile": "natural-ocean-a-prompt.txt",
+      "cells": [
+        {
+          "cell": 0,
+          "artIndex": 0,
+          "id": "plankton",
+          "en": "Plankton",
+          "zh": "浮游生物",
+          "rect": {
+            "x": 43,
+            "y": 57,
+            "width": 186,
+            "height": 207,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 9253,
+          "componentCount": 1
+        },
+        {
+          "cell": 1,
+          "artIndex": 1,
+          "id": "fish-eggs",
+          "en": "Fish eggs",
+          "zh": "鱼卵",
+          "rect": {
+            "x": 287,
+            "y": 81,
+            "width": 184,
+            "height": 145,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14886,
+          "componentCount": 1
+        },
+        {
+          "cell": 2,
+          "artIndex": 2,
+          "id": "fish-fry",
+          "en": "Fish fry",
+          "zh": "小鱼苗",
+          "rect": {
+            "x": 496,
+            "y": 121,
+            "width": 237,
+            "height": 73,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 9385,
+          "componentCount": 1
+        },
+        {
+          "cell": 3,
+          "artIndex": 3,
+          "id": "tadpole",
+          "en": "Tadpole",
+          "zh": "蝌蚪",
+          "rect": {
+            "x": 743,
+            "y": 127,
+            "width": 260,
+            "height": 67,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 8139,
+          "componentCount": 1
+        },
+        {
+          "cell": 4,
+          "artIndex": 4,
+          "id": "brine-shrimp",
+          "en": "Brine shrimp",
+          "zh": "丰年虾",
+          "rect": {
+            "x": 1014,
+            "y": 78,
+            "width": 242,
+            "height": 158,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16576,
+          "componentCount": 1
+        },
+        {
+          "cell": 5,
+          "artIndex": 5,
+          "id": "water-flea",
+          "en": "Water flea",
+          "zh": "水蚤",
+          "rect": {
+            "x": 1320,
+            "y": 57,
+            "width": 190,
+            "height": 204,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17059,
+          "componentCount": 2
+        },
+        {
+          "cell": 6,
+          "artIndex": 6,
+          "id": "mosquito-larva",
+          "en": "Mosquito larva",
+          "zh": "孑孓",
+          "rect": {
+            "x": 46,
+            "y": 286,
+            "width": 154,
+            "height": 217,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 7889,
+          "componentCount": 1
+        },
+        {
+          "cell": 7,
+          "artIndex": 7,
+          "id": "tiny-shrimp",
+          "en": "Tiny shrimp",
+          "zh": "小虾米",
+          "rect": {
+            "x": 223,
+            "y": 311,
+            "width": 301,
+            "height": 180,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11428,
+          "componentCount": 1
+        },
+        {
+          "cell": 8,
+          "artIndex": 8,
+          "id": "river-minnow",
+          "en": "River minnow",
+          "zh": "溪流小银鱼",
+          "rect": {
+            "x": 503,
+            "y": 353,
+            "width": 251,
+            "height": 88,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 10366,
+          "componentCount": 1
+        },
+        {
+          "cell": 9,
+          "artIndex": 9,
+          "id": "guppy",
+          "en": "Guppy",
+          "zh": "孔雀鱼",
+          "rect": {
+            "x": 770,
+            "y": 342,
+            "width": 230,
+            "height": 111,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12341,
+          "componentCount": 1
+        },
+        {
+          "cell": 10,
+          "artIndex": 10,
+          "id": "zebrafish",
+          "en": "Zebrafish",
+          "zh": "斑马鱼",
+          "rect": {
+            "x": 1011,
+            "y": 338,
+            "width": 260,
+            "height": 94,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12714,
+          "componentCount": 1
+        },
+        {
+          "cell": 11,
+          "artIndex": 11,
+          "id": "red-and-blue-tetra",
+          "en": "Red-and-blue tetra",
+          "zh": "红绿灯鱼",
+          "rect": {
+            "x": 1288,
+            "y": 322,
+            "width": 231,
+            "height": 121,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12506,
+          "componentCount": 1
+        },
+        {
+          "cell": 12,
+          "artIndex": 12,
+          "id": "neon-tetra",
+          "en": "Neon tetra",
+          "zh": "霓虹灯鱼",
+          "rect": {
+            "x": 25,
+            "y": 565,
+            "width": 222,
+            "height": 106,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 10980,
+          "componentCount": 1
+        },
+        {
+          "cell": 13,
+          "artIndex": 13,
+          "id": "mosquitofish",
+          "en": "Mosquitofish",
+          "zh": "食蚊鱼",
+          "rect": {
+            "x": 263,
+            "y": 585,
+            "width": 236,
+            "height": 87,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11135,
+          "componentCount": 1
+        },
+        {
+          "cell": 14,
+          "artIndex": 14,
+          "id": "medaka",
+          "en": "Japanese rice fish",
+          "zh": "青鳉鱼",
+          "rect": {
+            "x": 512,
+            "y": 581,
+            "width": 243,
+            "height": 90,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12048,
+          "componentCount": 1
+        },
+        {
+          "cell": 15,
+          "artIndex": 15,
+          "id": "goldfish",
+          "en": "Goldfish",
+          "zh": "金鱼",
+          "rect": {
+            "x": 767,
+            "y": 537,
+            "width": 236,
+            "height": 178,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 19682,
+          "componentCount": 1
+        },
+        {
+          "cell": 16,
+          "artIndex": 16,
+          "id": "betta",
+          "en": "Betta",
+          "zh": "斗鱼",
+          "rect": {
+            "x": 1032,
+            "y": 522,
+            "width": 240,
+            "height": 212,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 30671,
+          "componentCount": 1
+        },
+        {
+          "cell": 17,
+          "artIndex": 17,
+          "id": "molly",
+          "en": "Molly",
+          "zh": "玛丽鱼",
+          "rect": {
+            "x": 1289,
+            "y": 550,
+            "width": 230,
+            "height": 137,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16365,
+          "componentCount": 1
+        },
+        {
+          "cell": 18,
+          "artIndex": 18,
+          "id": "pearl-gourami",
+          "en": "Pearl gourami",
+          "zh": "珍珠马甲鱼",
+          "rect": {
+            "x": 10,
+            "y": 754,
+            "width": 247,
+            "height": 226,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 21553,
+          "componentCount": 1
+        },
+        {
+          "cell": 19,
+          "artIndex": 19,
+          "id": "cory-catfish",
+          "en": "Cory catfish",
+          "zh": "鼠鱼",
+          "rect": {
+            "x": 263,
+            "y": 783,
+            "width": 264,
+            "height": 149,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15376,
+          "componentCount": 1
+        },
+        {
+          "cell": 20,
+          "artIndex": 20,
+          "id": "tetra",
+          "en": "Tetra",
+          "zh": "灯科鱼",
+          "rect": {
+            "x": 524,
+            "y": 771,
+            "width": 231,
+            "height": 157,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16163,
+          "componentCount": 1
+        },
+        {
+          "cell": 21,
+          "artIndex": 21,
+          "id": "bitterling",
+          "en": "Bitterling",
+          "zh": "鳑鲏",
+          "rect": {
+            "x": 770,
+            "y": 782,
+            "width": 233,
+            "height": 138,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15475,
+          "componentCount": 1
+        },
+        {
+          "cell": 22,
+          "artIndex": 22,
+          "id": "topmouth-gudgeon",
+          "en": "Topmouth gudgeon",
+          "zh": "麦穗鱼",
+          "rect": {
+            "x": 1011,
+            "y": 808,
+            "width": 269,
+            "height": 119,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13508,
+          "componentCount": 1
+        },
+        {
+          "cell": 23,
+          "artIndex": 23,
+          "id": "young-crucian-carp",
+          "en": "Young crucian carp",
+          "zh": "小鲫鱼",
+          "rect": {
+            "x": 1290,
+            "y": 769,
+            "width": 229,
+            "height": 166,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18099,
+          "componentCount": 1
+        }
+      ]
+    },
+    {
+      "letter": "b",
+      "file": "natural-ocean-b-v1.png",
+      "path": "D:\\project\\englishlearning\\english-island\\artifacts\\natural-fish-staging\\natural-ocean-b-v1.png",
+      "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-fa4a034c-fca8-429f-8b1e-3a595faafdd8.png",
+      "width": 1536,
+      "height": 1024,
+      "columns": 6,
+      "rows": 4,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixelRatio": 0.6844952901204427,
+      "alphaOver128PixelRatio": 0.21385065714518228,
+      "sha256": "683fb4d6d7c484df484d0f54c39d83d9c213675bd575606a253a874fa6aa08e4",
+      "promptFile": "natural-ocean-b-prompt.txt",
+      "cells": [
+        {
+          "cell": 0,
+          "artIndex": 24,
+          "id": "tilapia-fry",
+          "en": "Tilapia fry",
+          "zh": "罗非鱼苗",
+          "rect": {
+            "x": 25,
+            "y": 99,
+            "width": 214,
+            "height": 132,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15226,
+          "componentCount": 1
+        },
+        {
+          "cell": 1,
+          "artIndex": 25,
+          "id": "loach",
+          "en": "Loach",
+          "zh": "泥鳅",
+          "rect": {
+            "x": 258,
+            "y": 126,
+            "width": 250,
+            "height": 87,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 9152,
+          "componentCount": 1
+        },
+        {
+          "cell": 2,
+          "artIndex": 26,
+          "id": "small-yellow-croaker",
+          "en": "Small yellow croaker",
+          "zh": "小黄鱼",
+          "rect": {
+            "x": 518,
+            "y": 112,
+            "width": 243,
+            "height": 94,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12660,
+          "componentCount": 1
+        },
+        {
+          "cell": 3,
+          "artIndex": 27,
+          "id": "sardine",
+          "en": "Sardine",
+          "zh": "沙丁鱼",
+          "rect": {
+            "x": 778,
+            "y": 133,
+            "width": 238,
+            "height": 63,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 8889,
+          "componentCount": 1
+        },
+        {
+          "cell": 4,
+          "artIndex": 28,
+          "id": "anchovy",
+          "en": "Anchovy",
+          "zh": "凤尾鱼",
+          "rect": {
+            "x": 1030,
+            "y": 133,
+            "width": 241,
+            "height": 60,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 7427,
+          "componentCount": 1
+        },
+        {
+          "cell": 5,
+          "artIndex": 29,
+          "id": "icefish",
+          "en": "Icefish",
+          "zh": "银鱼",
+          "rect": {
+            "x": 1291,
+            "y": 136,
+            "width": 226,
+            "height": 70,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 7200,
+          "componentCount": 1
+        },
+        {
+          "cell": 6,
+          "artIndex": 30,
+          "id": "small-octopus",
+          "en": "Small octopus",
+          "zh": "小章鱼",
+          "rect": {
+            "x": 15,
+            "y": 301,
+            "width": 236,
+            "height": 195,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22557,
+          "componentCount": 1
+        },
+        {
+          "cell": 7,
+          "artIndex": 31,
+          "id": "small-cuttlefish",
+          "en": "Small cuttlefish",
+          "zh": "小乌贼",
+          "rect": {
+            "x": 270,
+            "y": 331,
+            "width": 250,
+            "height": 133,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18002,
+          "componentCount": 1
+        },
+        {
+          "cell": 8,
+          "artIndex": 32,
+          "id": "small-jellyfish",
+          "en": "Small jellyfish",
+          "zh": "小水母",
+          "rect": {
+            "x": 559,
+            "y": 281,
+            "width": 181,
+            "height": 230,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22072,
+          "componentCount": 1
+        },
+        {
+          "cell": 9,
+          "artIndex": 33,
+          "id": "small-seahorse",
+          "en": "Small seahorse",
+          "zh": "小海马",
+          "rect": {
+            "x": 840,
+            "y": 279,
+            "width": 117,
+            "height": 217,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 9424,
+          "componentCount": 1
+        },
+        {
+          "cell": 10,
+          "artIndex": 34,
+          "id": "small-starfish",
+          "en": "Small starfish",
+          "zh": "小海星",
+          "rect": {
+            "x": 1043,
+            "y": 302,
+            "width": 203,
+            "height": 177,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13468,
+          "componentCount": 1
+        },
+        {
+          "cell": 11,
+          "artIndex": 35,
+          "id": "crucian-carp",
+          "en": "Crucian carp",
+          "zh": "鲫鱼",
+          "rect": {
+            "x": 1266,
+            "y": 308,
+            "width": 257,
+            "height": 166,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 20993,
+          "componentCount": 1
+        },
+        {
+          "cell": 12,
+          "artIndex": 36,
+          "id": "carp",
+          "en": "Carp",
+          "zh": "鲤鱼",
+          "rect": {
+            "x": 9,
+            "y": 579,
+            "width": 247,
+            "height": 134,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17779,
+          "componentCount": 1
+        },
+        {
+          "cell": 13,
+          "artIndex": 37,
+          "id": "grass-carp",
+          "en": "Grass carp",
+          "zh": "草鱼",
+          "rect": {
+            "x": 262,
+            "y": 600,
+            "width": 258,
+            "height": 109,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14608,
+          "componentCount": 1
+        },
+        {
+          "cell": 14,
+          "artIndex": 38,
+          "id": "silver-carp",
+          "en": "Silver carp",
+          "zh": "鲢鱼",
+          "rect": {
+            "x": 532,
+            "y": 570,
+            "width": 233,
+            "height": 152,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16852,
+          "componentCount": 1
+        },
+        {
+          "cell": 15,
+          "artIndex": 39,
+          "id": "bighead-carp",
+          "en": "Bighead carp",
+          "zh": "鳙鱼（胖头鱼）",
+          "rect": {
+            "x": 772,
+            "y": 584,
+            "width": 255,
+            "height": 125,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16767,
+          "componentCount": 1
+        },
+        {
+          "cell": 16,
+          "artIndex": 40,
+          "id": "catfish",
+          "en": "Catfish",
+          "zh": "鲶鱼",
+          "rect": {
+            "x": 1032,
+            "y": 583,
+            "width": 246,
+            "height": 143,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14215,
+          "componentCount": 1
+        },
+        {
+          "cell": 17,
+          "artIndex": 41,
+          "id": "snakehead",
+          "en": "Snakehead",
+          "zh": "黑鱼",
+          "rect": {
+            "x": 1278,
+            "y": 603,
+            "width": 251,
+            "height": 89,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14233,
+          "componentCount": 1
+        },
+        {
+          "cell": 18,
+          "artIndex": 42,
+          "id": "bass",
+          "en": "Bass",
+          "zh": "鲈鱼",
+          "rect": {
+            "x": 12,
+            "y": 806,
+            "width": 251,
+            "height": 124,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17628,
+          "componentCount": 1
+        },
+        {
+          "cell": 19,
+          "artIndex": 43,
+          "id": "mandarin-fish",
+          "en": "Mandarin fish",
+          "zh": "鳜鱼",
+          "rect": {
+            "x": 274,
+            "y": 791,
+            "width": 231,
+            "height": 143,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17401,
+          "componentCount": 1
+        },
+        {
+          "cell": 20,
+          "artIndex": 44,
+          "id": "tilapia",
+          "en": "Tilapia",
+          "zh": "罗非鱼",
+          "rect": {
+            "x": 516,
+            "y": 794,
+            "width": 250,
+            "height": 139,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 21847,
+          "componentCount": 1
+        },
+        {
+          "cell": 21,
+          "artIndex": 45,
+          "id": "pomfret",
+          "en": "Pomfret",
+          "zh": "鲳鱼",
+          "rect": {
+            "x": 767,
+            "y": 773,
+            "width": 244,
+            "height": 181,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 20021,
+          "componentCount": 1
+        },
+        {
+          "cell": 22,
+          "artIndex": 46,
+          "id": "hairtail",
+          "en": "Hairtail",
+          "zh": "带鱼",
+          "rect": {
+            "x": 1023,
+            "y": 817,
+            "width": 248,
+            "height": 87,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 8958,
+          "componentCount": 1
+        },
+        {
+          "cell": 23,
+          "artIndex": 47,
+          "id": "spanish-mackerel",
+          "en": "Spanish mackerel",
+          "zh": "鲅鱼",
+          "rect": {
+            "x": 1273,
+            "y": 822,
+            "width": 252,
+            "height": 83,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 8797,
+          "componentCount": 1
+        }
+      ]
+    },
+    {
+      "letter": "c",
+      "file": "natural-ocean-c-v1.png",
+      "path": "D:\\project\\englishlearning\\english-island\\artifacts\\natural-fish-staging\\natural-ocean-c-v1.png",
+      "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-86fb897d-2db9-4266-86da-81dbf56cd711.png",
+      "width": 1536,
+      "height": 1024,
+      "columns": 6,
+      "rows": 4,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixelRatio": 0.6626796722412109,
+      "alphaOver128PixelRatio": 0.19655799865722656,
+      "sha256": "b74255f59c0d2b0614544fcff308d9cd138fc752c8a09921a3144de546b6dc9f",
+      "promptFile": "natural-ocean-c-prompt.txt",
+      "cells": [
+        {
+          "cell": 0,
+          "artIndex": 48,
+          "id": "pacific-saury",
+          "en": "Pacific saury",
+          "zh": "秋刀鱼",
+          "rect": {
+            "x": 8,
+            "y": 133,
+            "width": 247,
+            "height": 57,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 6523,
+          "componentCount": 1
+        },
+        {
+          "cell": 1,
+          "artIndex": 49,
+          "id": "herring",
+          "en": "Herring",
+          "zh": "鲱鱼",
+          "rect": {
+            "x": 264,
+            "y": 112,
+            "width": 252,
+            "height": 89,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11270,
+          "componentCount": 1
+        },
+        {
+          "cell": 2,
+          "artIndex": 50,
+          "id": "sea-bream",
+          "en": "Sea bream",
+          "zh": "鲷鱼",
+          "rect": {
+            "x": 528,
+            "y": 81,
+            "width": 233,
+            "height": 139,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15932,
+          "componentCount": 1
+        },
+        {
+          "cell": 3,
+          "artIndex": 51,
+          "id": "small-grouper",
+          "en": "Small grouper",
+          "zh": "石斑鱼（小型）",
+          "rect": {
+            "x": 772,
+            "y": 97,
+            "width": 245,
+            "height": 121,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16385,
+          "componentCount": 1
+        },
+        {
+          "cell": 4,
+          "artIndex": 52,
+          "id": "flounder",
+          "en": "Flounder",
+          "zh": "比目鱼",
+          "rect": {
+            "x": 1023,
+            "y": 80,
+            "width": 256,
+            "height": 154,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 23333,
+          "componentCount": 1
+        },
+        {
+          "cell": 5,
+          "artIndex": 53,
+          "id": "pufferfish",
+          "en": "Pufferfish",
+          "zh": "河豚",
+          "rect": {
+            "x": 1285,
+            "y": 109,
+            "width": 238,
+            "height": 89,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13716,
+          "componentCount": 1
+        },
+        {
+          "cell": 6,
+          "artIndex": 54,
+          "id": "eel",
+          "en": "Eel",
+          "zh": "鳗鱼",
+          "rect": {
+            "x": 6,
+            "y": 313,
+            "width": 249,
+            "height": 121,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 9448,
+          "componentCount": 1
+        },
+        {
+          "cell": 7,
+          "artIndex": 55,
+          "id": "swamp-eel",
+          "en": "Swamp eel",
+          "zh": "黄鳝",
+          "rect": {
+            "x": 262,
+            "y": 340,
+            "width": 253,
+            "height": 66,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 6487,
+          "componentCount": 1
+        },
+        {
+          "cell": 8,
+          "artIndex": 56,
+          "id": "softshell-turtle",
+          "en": "Softshell turtle",
+          "zh": "鳖（甲鱼）",
+          "rect": {
+            "x": 524,
+            "y": 329,
+            "width": 266,
+            "height": 127,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16898,
+          "componentCount": 1
+        },
+        {
+          "cell": 9,
+          "artIndex": 57,
+          "id": "turtle",
+          "en": "Turtle",
+          "zh": "乌龟",
+          "rect": {
+            "x": 772,
+            "y": 330,
+            "width": 249,
+            "height": 141,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18519,
+          "componentCount": 1
+        },
+        {
+          "cell": 10,
+          "artIndex": 58,
+          "id": "frog",
+          "en": "Frog",
+          "zh": "青蛙",
+          "rect": {
+            "x": 1031,
+            "y": 321,
+            "width": 242,
+            "height": 139,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11045,
+          "componentCount": 1
+        },
+        {
+          "cell": 11,
+          "artIndex": 59,
+          "id": "bullfrog",
+          "en": "Bullfrog",
+          "zh": "牛蛙",
+          "rect": {
+            "x": 1285,
+            "y": 332,
+            "width": 239,
+            "height": 130,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14006,
+          "componentCount": 1
+        },
+        {
+          "cell": 12,
+          "artIndex": 60,
+          "id": "crayfish",
+          "en": "Crayfish",
+          "zh": "小龙虾",
+          "rect": {
+            "x": 7,
+            "y": 555,
+            "width": 246,
+            "height": 145,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11773,
+          "componentCount": 1
+        },
+        {
+          "cell": 13,
+          "artIndex": 61,
+          "id": "small-crab",
+          "en": "Small crab",
+          "zh": "螃蟹（小）",
+          "rect": {
+            "x": 251,
+            "y": 568,
+            "width": 257,
+            "height": 139,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18111,
+          "componentCount": 1
+        },
+        {
+          "cell": 14,
+          "artIndex": 62,
+          "id": "octopus",
+          "en": "Octopus",
+          "zh": "章鱼",
+          "rect": {
+            "x": 514,
+            "y": 514,
+            "width": 244,
+            "height": 231,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 29091,
+          "componentCount": 1
+        },
+        {
+          "cell": 15,
+          "artIndex": 63,
+          "id": "cuttlefish",
+          "en": "Cuttlefish",
+          "zh": "乌贼",
+          "rect": {
+            "x": 768,
+            "y": 580,
+            "width": 252,
+            "height": 140,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18780,
+          "componentCount": 1
+        },
+        {
+          "cell": 16,
+          "artIndex": 64,
+          "id": "squid",
+          "en": "Squid",
+          "zh": "鱿鱼",
+          "rect": {
+            "x": 1029,
+            "y": 577,
+            "width": 247,
+            "height": 128,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 10195,
+          "componentCount": 1
+        },
+        {
+          "cell": 17,
+          "artIndex": 65,
+          "id": "sturgeon",
+          "en": "Sturgeon",
+          "zh": "鲟鱼",
+          "rect": {
+            "x": 1273,
+            "y": 593,
+            "width": 262,
+            "height": 88,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 8511,
+          "componentCount": 1
+        },
+        {
+          "cell": 18,
+          "artIndex": 66,
+          "id": "chum-salmon",
+          "en": "Chum salmon",
+          "zh": "大马哈鱼",
+          "rect": {
+            "x": 5,
+            "y": 815,
+            "width": 250,
+            "height": 92,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11894,
+          "componentCount": 1
+        },
+        {
+          "cell": 19,
+          "artIndex": 67,
+          "id": "tuna",
+          "en": "Tuna",
+          "zh": "金枪鱼",
+          "rect": {
+            "x": 258,
+            "y": 798,
+            "width": 258,
+            "height": 125,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13703,
+          "componentCount": 1
+        },
+        {
+          "cell": 20,
+          "artIndex": 68,
+          "id": "sailfish",
+          "en": "Sailfish",
+          "zh": "旗鱼",
+          "rect": {
+            "x": 518,
+            "y": 785,
+            "width": 255,
+            "height": 141,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 12543,
+          "componentCount": 1
+        },
+        {
+          "cell": 21,
+          "artIndex": 69,
+          "id": "swordfish",
+          "en": "Swordfish",
+          "zh": "剑鱼",
+          "rect": {
+            "x": 769,
+            "y": 809,
+            "width": 260,
+            "height": 105,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 7508,
+          "componentCount": 1
+        },
+        {
+          "cell": 22,
+          "artIndex": 70,
+          "id": "shark",
+          "en": "Shark",
+          "zh": "鲨鱼（中型）",
+          "rect": {
+            "x": 1031,
+            "y": 805,
+            "width": 254,
+            "height": 106,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 11058,
+          "componentCount": 1
+        },
+        {
+          "cell": 23,
+          "artIndex": 71,
+          "id": "dolphin",
+          "en": "Dolphin",
+          "zh": "海豚",
+          "rect": {
+            "x": 1273,
+            "y": 783,
+            "width": 259,
+            "height": 154,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13685,
+          "componentCount": 1
+        }
+      ]
+    },
+    {
+      "letter": "d",
+      "file": "natural-ocean-d-v1.png",
+      "path": "D:\\project\\englishlearning\\english-island\\artifacts\\natural-fish-staging\\natural-ocean-d-v1.png",
+      "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-102b41a8-ab75-4121-8717-540ae20a7e14.png",
+      "width": 1536,
+      "height": 1024,
+      "columns": 6,
+      "rows": 4,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "transparentPixelRatio": 0.6171175638834635,
+      "alphaOver128PixelRatio": 0.2561346689860026,
+      "sha256": "e663b7deecdb3183dba1e77690448958aa0d3515b42734833715a8033fc972e7",
+      "promptFile": "natural-ocean-d-prompt.txt",
+      "cells": [
+        {
+          "cell": 0,
+          "artIndex": 72,
+          "id": "seal",
+          "en": "Seal",
+          "zh": "海豹",
+          "rect": {
+            "x": 7,
+            "y": 85,
+            "width": 251,
+            "height": 112,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 13103,
+          "componentCount": 1
+        },
+        {
+          "cell": 1,
+          "artIndex": 73,
+          "id": "sea-lion",
+          "en": "Sea lion",
+          "zh": "海狮",
+          "rect": {
+            "x": 261,
+            "y": 52,
+            "width": 219,
+            "height": 183,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15419,
+          "componentCount": 1
+        },
+        {
+          "cell": 2,
+          "artIndex": 74,
+          "id": "giant-grouper",
+          "en": "Giant grouper",
+          "zh": "大型石斑鱼",
+          "rect": {
+            "x": 488,
+            "y": 66,
+            "width": 276,
+            "height": 155,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 23838,
+          "componentCount": 1
+        },
+        {
+          "cell": 3,
+          "artIndex": 75,
+          "id": "giant-catfish",
+          "en": "Giant catfish",
+          "zh": "巨型鲶鱼",
+          "rect": {
+            "x": 766,
+            "y": 70,
+            "width": 268,
+            "height": 154,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15938,
+          "componentCount": 1
+        },
+        {
+          "cell": 4,
+          "artIndex": 76,
+          "id": "alligator-gar",
+          "en": "Alligator gar",
+          "zh": "鳄雀鳝",
+          "rect": {
+            "x": 1013,
+            "y": 86,
+            "width": 259,
+            "height": 104,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 10492,
+          "componentCount": 1
+        },
+        {
+          "cell": 5,
+          "artIndex": 77,
+          "id": "arapaima",
+          "en": "Arapaima",
+          "zh": "巨骨舌鱼",
+          "rect": {
+            "x": 1274,
+            "y": 97,
+            "width": 255,
+            "height": 102,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 0,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 16326,
+          "componentCount": 1
+        },
+        {
+          "cell": 6,
+          "artIndex": 78,
+          "id": "mekong-giant-catfish",
+          "en": "Mekong giant catfish",
+          "zh": "湄公河巨鲶",
+          "rect": {
+            "x": 5,
+            "y": 329,
+            "width": 284,
+            "height": 121,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 19836,
+          "componentCount": 1
+        },
+        {
+          "cell": 7,
+          "artIndex": 79,
+          "id": "ocean-sunfish",
+          "en": "Ocean sunfish",
+          "zh": "翻车鱼",
+          "rect": {
+            "x": 301,
+            "y": 269,
+            "width": 185,
+            "height": 245,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22795,
+          "componentCount": 1
+        },
+        {
+          "cell": 8,
+          "artIndex": 80,
+          "id": "manta-ray",
+          "en": "Manta ray",
+          "zh": "蝠鲼",
+          "rect": {
+            "x": 488,
+            "y": 282,
+            "width": 265,
+            "height": 215,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 18678,
+          "componentCount": 1
+        },
+        {
+          "cell": 9,
+          "artIndex": 81,
+          "id": "great-white-shark",
+          "en": "Great white shark",
+          "zh": "大白鲨",
+          "rect": {
+            "x": 765,
+            "y": 301,
+            "width": 246,
+            "height": 168,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17005,
+          "componentCount": 1
+        },
+        {
+          "cell": 10,
+          "artIndex": 82,
+          "id": "orca",
+          "en": "Orca",
+          "zh": "虎鲸",
+          "rect": {
+            "x": 1005,
+            "y": 285,
+            "width": 258,
+            "height": 175,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15368,
+          "componentCount": 1
+        },
+        {
+          "cell": 11,
+          "artIndex": 83,
+          "id": "blue-whale",
+          "en": "Blue whale",
+          "zh": "蓝鲸",
+          "rect": {
+            "x": 1257,
+            "y": 336,
+            "width": 273,
+            "height": 98,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 256,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 14240,
+          "componentCount": 1
+        },
+        {
+          "cell": 12,
+          "artIndex": 84,
+          "id": "megalodon",
+          "en": "Megalodon",
+          "zh": "巨齿鲨",
+          "rect": {
+            "x": 4,
+            "y": 539,
+            "width": 255,
+            "height": 180,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 20941,
+          "componentCount": 1
+        },
+        {
+          "cell": 13,
+          "artIndex": 85,
+          "id": "basilosaurus",
+          "en": "Basilosaurus",
+          "zh": "龙王鲸",
+          "rect": {
+            "x": 258,
+            "y": 563,
+            "width": 266,
+            "height": 146,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15377,
+          "componentCount": 1
+        },
+        {
+          "cell": 14,
+          "artIndex": 86,
+          "id": "kraken",
+          "en": "Kraken",
+          "zh": "海怪克拉肯",
+          "rect": {
+            "x": 500,
+            "y": 543,
+            "width": 268,
+            "height": 196,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22057,
+          "componentCount": 1
+        },
+        {
+          "cell": 15,
+          "artIndex": 87,
+          "id": "leviathan",
+          "en": "Leviathan",
+          "zh": "利维坦",
+          "rect": {
+            "x": 765,
+            "y": 553,
+            "width": 267,
+            "height": 179,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 17077,
+          "componentCount": 1
+        },
+        {
+          "cell": 16,
+          "artIndex": 88,
+          "id": "kun",
+          "en": "Kun",
+          "zh": "鲲",
+          "rect": {
+            "x": 986,
+            "y": 572,
+            "width": 287,
+            "height": 134,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 15659,
+          "componentCount": 1
+        },
+        {
+          "cell": 17,
+          "artIndex": 89,
+          "id": "jiaolong",
+          "en": "Jiaolong",
+          "zh": "蛟龙",
+          "rect": {
+            "x": 1261,
+            "y": 531,
+            "width": 270,
+            "height": 200,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1280,
+            "y": 512,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 24911,
+          "componentCount": 1
+        },
+        {
+          "cell": 18,
+          "artIndex": 90,
+          "id": "sea-dragon",
+          "en": "Sea dragon",
+          "zh": "海龙",
+          "rect": {
+            "x": 6,
+            "y": 780,
+            "width": 256,
+            "height": 212,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 20657,
+          "componentCount": 1
+        },
+        {
+          "cell": 19,
+          "artIndex": 91,
+          "id": "poseidon",
+          "en": "Poseidon",
+          "zh": "波塞冬",
+          "rect": {
+            "x": 256,
+            "y": 780,
+            "width": 317,
+            "height": 193,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22068,
+          "componentCount": 3
+        },
+        {
+          "cell": 20,
+          "artIndex": 92,
+          "id": "sea-guardian",
+          "en": "Sea guardian",
+          "zh": "海神兽",
+          "rect": {
+            "x": 496,
+            "y": 784,
+            "width": 274,
+            "height": 187,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22004,
+          "componentCount": 1
+        },
+        {
+          "cell": 21,
+          "artIndex": 93,
+          "id": "abyssal-maw",
+          "en": "Abyssal maw",
+          "zh": "深渊巨口",
+          "rect": {
+            "x": 777,
+            "y": 788,
+            "width": 239,
+            "height": 180,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 22554,
+          "componentCount": 1
+        },
+        {
+          "cell": 22,
+          "artIndex": 94,
+          "id": "devourer",
+          "en": "Devourer",
+          "zh": "吞噬者",
+          "rect": {
+            "x": 1013,
+            "y": 792,
+            "width": 272,
+            "height": 176,
+            "imageWidth": 1536,
+            "imageHeight": 1024
+          },
+          "nominalCell": {
+            "x": 1024,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 24358,
+          "componentCount": 1
+        },
+        {
+          "cell": 23,
+          "artIndex": 95,
+          "id": null,
+          "en": null,
+          "zh": null,
+          "rect": null,
+          "nominalCell": {
+            "x": 1280,
+            "y": 768,
+            "width": 256,
+            "height": 256
+          },
+          "alphaArea": 0,
+          "componentCount": 0
+        }
+      ]
+    },
+    {
+      "letter": "e",
+      "file": "natural-ocean-e-v1.png",
+      "path": "D:\\project\\englishlearning\\english-island\\artifacts\\natural-fish-staging\\natural-ocean-e-v1.png",
+      "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-c63dd235-f4e3-48df-8722-a7247c3bd6ef.png",
+      "width": 1254,
+      "height": 1254,
+      "columns": 2,
+      "rows": 2,
+      "mode": "RGBA",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentPixelRatio": 0.7008272093892844,
+      "alphaOver128PixelRatio": 0.26531876305233143,
+      "sha256": "f2a25818bf59cc28f5f76395865f877bc0480222662d44c3f90468bb44be9da8",
+      "promptFile": "natural-ocean-e-prompt.txt",
+      "cells": [
+        {
+          "cell": 0,
+          "artIndex": null,
+          "id": "red-fish",
+          "en": "Red swordtail",
+          "zh": "红剑尾鱼",
+          "rect": {
+            "x": 25,
+            "y": 169,
+            "width": 640,
+            "height": 310,
+            "imageWidth": 1254,
+            "imageHeight": 1254
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 0,
+            "width": 627,
+            "height": 627
+          },
+          "alphaArea": 76328,
+          "componentCount": 1
+        },
+        {
+          "cell": 1,
+          "artIndex": null,
+          "id": "blue-fish",
+          "en": "Blue damselfish",
+          "zh": "蓝雀鲷",
+          "rect": {
+            "x": 712,
+            "y": 202,
+            "width": 520,
+            "height": 322,
+            "imageWidth": 1254,
+            "imageHeight": 1254
+          },
+          "nominalCell": {
+            "x": 627,
+            "y": 0,
+            "width": 627,
+            "height": 627
+          },
+          "alphaArea": 95216,
+          "componentCount": 1
+        },
+        {
+          "cell": 2,
+          "artIndex": null,
+          "id": "yellow-fish",
+          "en": "Yellow tang",
+          "zh": "黄倒吊",
+          "rect": {
+            "x": 46,
+            "y": 643,
+            "width": 587,
+            "height": 468,
+            "imageWidth": 1254,
+            "imageHeight": 1254
+          },
+          "nominalCell": {
+            "x": 0,
+            "y": 627,
+            "width": 627,
+            "height": 627
+          },
+          "alphaArea": 157735,
+          "componentCount": 1
+        },
+        {
+          "cell": 3,
+          "artIndex": null,
+          "id": "green-fish",
+          "en": "Green chromis",
+          "zh": "绿光鳃鱼",
+          "rect": {
+            "x": 664,
+            "y": 733,
+            "width": 564,
+            "height": 333,
+            "imageWidth": 1254,
+            "imageHeight": 1254
+          },
+          "nominalCell": {
+            "x": 627,
+            "y": 627,
+            "width": 627,
+            "height": 627
+          },
+          "alphaArea": 97825,
+          "componentCount": 1
+        }
+      ]
+    }
+  ]
+}

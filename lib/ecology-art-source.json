@@ -1,0 +1,5103 @@
+{
+  "generator": "built-in image_gen",
+  "calls": 4,
+  "imageEdits": 0,
+  "promptsFile": "D:\\project\\englishlearning\\ecology-art\\source-prompts.json",
+  "rectFormat": "[x,y,width,height], pixels in original 1536x1024 PNG; right and bottom are exclusive",
+  "alphaBoundsDefinition": "Exact nonzero alpha within the nominal cell, threshold alpha>=1; may include faint edge halos and may clip a sprite crossing the nominal cell",
+  "visibleSpriteBoundsDefinition": "Combined bounds of 8-connected alpha>=16 components (at least 8 pixels) assigned by component centroid to nominal cell; can extend beyond that cell and retain an entire sprite",
+  "recommendedCropDefinition": "visibleSpriteBounds expanded 3 pixels on all sides, clamped to image; use for drawImage source rectangles; never resave or edit the PNG",
+  "assets": [
+    {
+      "id": "A",
+      "file": "D:\\project\\englishlearning\\ecology-art\\aquatic-creatures-v2-a.png",
+      "sha256": "1877c871462b8e83f83d5e05c941c3633c1000ea0f8c06d687c9cbfdf4728436",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "columns": 8,
+      "rows": 6,
+      "firstSlot": 0,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaMedian": 0.0,
+      "alphaZeroPercent": 61.19454701741537,
+      "alphaPixelPercentAtOrAbove": {
+        "1": 38.80545298258464,
+        "16": 27.15161641438802,
+        "64": 26.263872782389324,
+        "128": 25.61486562093099,
+        "200": 24.811681111653648,
+        "250": 18.671417236328125
+      },
+      "interiorBackgroundSamples": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 192,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 192,
+          "y": 170,
+          "alpha": 0
+        },
+        {
+          "x": 768,
+          "y": 512,
+          "alpha": 0
+        },
+        {
+          "x": 1535,
+          "y": 512,
+          "alpha": 0
+        },
+        {
+          "x": 800,
+          "y": 180,
+          "alpha": 0
+        }
+      ],
+      "sprites": [
+        {
+          "localIndex": 0,
+          "globalSlot": 0,
+          "subject": "plankton",
+          "cell": [
+            0,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            45,
+            47,
+            147,
+            123
+          ],
+          "cellVisibleAlphaBounds": [
+            49,
+            56,
+            95,
+            99
+          ],
+          "visibleSpriteBounds": [
+            49,
+            56,
+            95,
+            99
+          ],
+          "recommendedCrop": [
+            46,
+            53,
+            101,
+            105
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 4813,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 1,
+          "globalSlot": 1,
+          "subject": "fish egg",
+          "cell": [
+            192,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            197,
+            0,
+            187,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            228,
+            56,
+            89,
+            106
+          ],
+          "visibleSpriteBounds": [
+            228,
+            56,
+            89,
+            106
+          ],
+          "recommendedCrop": [
+            225,
+            53,
+            95,
+            112
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7348,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 2,
+          "globalSlot": 2,
+          "subject": "fish fry",
+          "cell": [
+            384,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            0,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            388,
+            75,
+            143,
+            68
+          ],
+          "visibleSpriteBounds": [
+            388,
+            75,
+            143,
+            68
+          ],
+          "recommendedCrop": [
+            385,
+            72,
+            149,
+            74
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 5430,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 3,
+          "globalSlot": 3,
+          "subject": "tadpole",
+          "cell": [
+            576,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            33,
+            190,
+            129
+          ],
+          "cellVisibleAlphaBounds": [
+            577,
+            79,
+            169,
+            59
+          ],
+          "visibleSpriteBounds": [
+            577,
+            79,
+            169,
+            59
+          ],
+          "recommendedCrop": [
+            574,
+            76,
+            175,
+            65
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 4928,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 4,
+          "globalSlot": 4,
+          "subject": "brine shrimp",
+          "cell": [
+            768,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            781,
+            19,
+            149,
+            151
+          ],
+          "cellVisibleAlphaBounds": [
+            784,
+            49,
+            134,
+            112
+          ],
+          "visibleSpriteBounds": [
+            784,
+            49,
+            134,
+            112
+          ],
+          "recommendedCrop": [
+            781,
+            46,
+            140,
+            118
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6388,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 5,
+          "globalSlot": 5,
+          "subject": "water flea",
+          "cell": [
+            960,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            967,
+            9,
+            185,
+            162
+          ],
+          "cellVisibleAlphaBounds": [
+            994,
+            49,
+            124,
+            114
+          ],
+          "visibleSpriteBounds": [
+            994,
+            49,
+            124,
+            114
+          ],
+          "recommendedCrop": [
+            991,
+            46,
+            130,
+            120
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8410,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 6,
+          "globalSlot": 6,
+          "subject": "mosquito larva",
+          "cell": [
+            1152,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            29,
+            190,
+            119
+          ],
+          "cellVisibleAlphaBounds": [
+            1157,
+            56,
+            151,
+            86
+          ],
+          "visibleSpriteBounds": [
+            1157,
+            56,
+            151,
+            86
+          ],
+          "recommendedCrop": [
+            1154,
+            53,
+            157,
+            92
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 4347,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 7,
+          "globalSlot": 7,
+          "subject": "tiny shrimp",
+          "cell": [
+            1344,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1355,
+            50,
+            167,
+            121
+          ],
+          "cellVisibleAlphaBounds": [
+            1367,
+            53,
+            143,
+            110
+          ],
+          "visibleSpriteBounds": [
+            1367,
+            53,
+            143,
+            110
+          ],
+          "recommendedCrop": [
+            1364,
+            50,
+            149,
+            116
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6722,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 8,
+          "globalSlot": 8,
+          "subject": "silver minnow",
+          "cell": [
+            0,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            0,
+            207,
+            192,
+            134
+          ],
+          "cellVisibleAlphaBounds": [
+            25,
+            218,
+            153,
+            123
+          ],
+          "visibleSpriteBounds": [
+            25,
+            218,
+            153,
+            80
+          ],
+          "recommendedCrop": [
+            22,
+            215,
+            159,
+            86
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6558,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 9,
+          "globalSlot": 9,
+          "subject": "guppy",
+          "cell": [
+            192,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            192,
+            171,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            205,
+            206,
+            167,
+            102
+          ],
+          "visibleSpriteBounds": [
+            205,
+            206,
+            167,
+            102
+          ],
+          "recommendedCrop": [
+            202,
+            203,
+            173,
+            108
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9923,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 10,
+          "globalSlot": 10,
+          "subject": "zebrafish",
+          "cell": [
+            384,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            384,
+            173,
+            192,
+            165
+          ],
+          "cellVisibleAlphaBounds": [
+            397,
+            215,
+            167,
+            81
+          ],
+          "visibleSpriteBounds": [
+            397,
+            215,
+            167,
+            81
+          ],
+          "recommendedCrop": [
+            394,
+            212,
+            173,
+            87
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7755,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 11,
+          "globalSlot": 11,
+          "subject": "cardinal tetra",
+          "cell": [
+            576,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            577,
+            177,
+            191,
+            150
+          ],
+          "cellVisibleAlphaBounds": [
+            592,
+            216,
+            160,
+            81
+          ],
+          "visibleSpriteBounds": [
+            592,
+            216,
+            160,
+            81
+          ],
+          "recommendedCrop": [
+            589,
+            213,
+            166,
+            87
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6894,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 12,
+          "globalSlot": 12,
+          "subject": "neon tetra",
+          "cell": [
+            768,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            769,
+            171,
+            191,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            785,
+            216,
+            157,
+            81
+          ],
+          "visibleSpriteBounds": [
+            785,
+            216,
+            157,
+            81
+          ],
+          "recommendedCrop": [
+            782,
+            213,
+            163,
+            87
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6668,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 13,
+          "globalSlot": 13,
+          "subject": "mosquitofish",
+          "cell": [
+            960,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            961,
+            171,
+            191,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            975,
+            225,
+            159,
+            74
+          ],
+          "visibleSpriteBounds": [
+            975,
+            225,
+            159,
+            74
+          ],
+          "recommendedCrop": [
+            972,
+            222,
+            165,
+            80
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7186,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 14,
+          "globalSlot": 14,
+          "subject": "medaka",
+          "cell": [
+            1152,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1152,
+            193,
+            182,
+            148
+          ],
+          "cellVisibleAlphaBounds": [
+            1168,
+            225,
+            157,
+            71
+          ],
+          "visibleSpriteBounds": [
+            1168,
+            225,
+            157,
+            71
+          ],
+          "recommendedCrop": [
+            1165,
+            222,
+            163,
+            77
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6768,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 15,
+          "globalSlot": 15,
+          "subject": "goldfish",
+          "cell": [
+            1344,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1354,
+            171,
+            166,
+            161
+          ],
+          "cellVisibleAlphaBounds": [
+            1361,
+            192,
+            156,
+            131
+          ],
+          "visibleSpriteBounds": [
+            1361,
+            192,
+            156,
+            131
+          ],
+          "recommendedCrop": [
+            1358,
+            189,
+            162,
+            137
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12749,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 16,
+          "globalSlot": 16,
+          "subject": "betta",
+          "cell": [
+            0,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            12,
+            341,
+            180,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            22,
+            341,
+            170,
+            149
+          ],
+          "visibleSpriteBounds": [
+            22,
+            340,
+            170,
+            150
+          ],
+          "recommendedCrop": [
+            19,
+            337,
+            176,
+            156
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 16722,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 17,
+          "globalSlot": 17,
+          "subject": "molly",
+          "cell": [
+            192,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            341,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            214,
+            361,
+            170,
+            107
+          ],
+          "visibleSpriteBounds": [
+            214,
+            361,
+            170,
+            107
+          ],
+          "recommendedCrop": [
+            211,
+            358,
+            176,
+            113
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10716,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 18,
+          "globalSlot": 18,
+          "subject": "pearl gourami",
+          "cell": [
+            384,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            344,
+            192,
+            168
+          ],
+          "cellVisibleAlphaBounds": [
+            402,
+            353,
+            164,
+            147
+          ],
+          "visibleSpriteBounds": [
+            402,
+            353,
+            164,
+            147
+          ],
+          "recommendedCrop": [
+            399,
+            350,
+            170,
+            153
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12066,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 19,
+          "globalSlot": 19,
+          "subject": "cory catfish",
+          "cell": [
+            576,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            577,
+            345,
+            191,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            591,
+            367,
+            169,
+            105
+          ],
+          "visibleSpriteBounds": [
+            591,
+            367,
+            169,
+            105
+          ],
+          "recommendedCrop": [
+            588,
+            364,
+            175,
+            111
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9435,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 20,
+          "globalSlot": 20,
+          "subject": "small tetra",
+          "cell": [
+            768,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            341,
+            182,
+            163
+          ],
+          "cellVisibleAlphaBounds": [
+            792,
+            366,
+            152,
+            98
+          ],
+          "visibleSpriteBounds": [
+            792,
+            366,
+            152,
+            98
+          ],
+          "recommendedCrop": [
+            789,
+            363,
+            158,
+            104
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7715,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 21,
+          "globalSlot": 21,
+          "subject": "bitterling",
+          "cell": [
+            960,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            963,
+            343,
+            189,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            972,
+            367,
+            164,
+            104
+          ],
+          "visibleSpriteBounds": [
+            972,
+            367,
+            164,
+            104
+          ],
+          "recommendedCrop": [
+            969,
+            364,
+            170,
+            110
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9625,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 22,
+          "globalSlot": 22,
+          "subject": "topmouth gudgeon",
+          "cell": [
+            1152,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            341,
+            192,
+            163
+          ],
+          "cellVisibleAlphaBounds": [
+            1159,
+            383,
+            170,
+            78
+          ],
+          "visibleSpriteBounds": [
+            1159,
+            383,
+            170,
+            78
+          ],
+          "recommendedCrop": [
+            1156,
+            380,
+            176,
+            84
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8350,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 23,
+          "globalSlot": 23,
+          "subject": "small crucian carp",
+          "cell": [
+            1344,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            351,
+            178,
+            159
+          ],
+          "cellVisibleAlphaBounds": [
+            1354,
+            361,
+            160,
+            114
+          ],
+          "visibleSpriteBounds": [
+            1354,
+            361,
+            160,
+            114
+          ],
+          "recommendedCrop": [
+            1351,
+            358,
+            166,
+            120
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10237,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 24,
+          "globalSlot": 24,
+          "subject": "tilapia fry",
+          "cell": [
+            0,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            15,
+            512,
+            177,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            28,
+            546,
+            141,
+            137
+          ],
+          "visibleSpriteBounds": [
+            28,
+            546,
+            141,
+            81
+          ],
+          "recommendedCrop": [
+            25,
+            543,
+            147,
+            87
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7327,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 25,
+          "globalSlot": 25,
+          "subject": "loach",
+          "cell": [
+            192,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            512,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            197,
+            559,
+            181,
+            124
+          ],
+          "visibleSpriteBounds": [
+            197,
+            559,
+            181,
+            63
+          ],
+          "recommendedCrop": [
+            194,
+            556,
+            187,
+            69
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7220,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 26,
+          "globalSlot": 26,
+          "subject": "yellow croaker",
+          "cell": [
+            384,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            512,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            399,
+            537,
+            166,
+            146
+          ],
+          "visibleSpriteBounds": [
+            399,
+            537,
+            166,
+            90
+          ],
+          "recommendedCrop": [
+            396,
+            534,
+            172,
+            96
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8832,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 27,
+          "globalSlot": 27,
+          "subject": "sardine",
+          "cell": [
+            576,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            512,
+            192,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            584,
+            545,
+            173,
+            73
+          ],
+          "visibleSpriteBounds": [
+            584,
+            545,
+            173,
+            73
+          ],
+          "recommendedCrop": [
+            581,
+            542,
+            179,
+            79
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7050,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 28,
+          "globalSlot": 28,
+          "subject": "anchovy",
+          "cell": [
+            768,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            769,
+            513,
+            191,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            779,
+            557,
+            172,
+            56
+          ],
+          "visibleSpriteBounds": [
+            779,
+            557,
+            172,
+            56
+          ],
+          "recommendedCrop": [
+            776,
+            554,
+            178,
+            62
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 5829,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 29,
+          "globalSlot": 29,
+          "subject": "whitebait",
+          "cell": [
+            960,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            960,
+            512,
+            192,
+            166
+          ],
+          "cellVisibleAlphaBounds": [
+            975,
+            559,
+            157,
+            61
+          ],
+          "visibleSpriteBounds": [
+            975,
+            559,
+            157,
+            61
+          ],
+          "recommendedCrop": [
+            972,
+            556,
+            163,
+            67
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 5827,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 30,
+          "globalSlot": 30,
+          "subject": "baby octopus",
+          "cell": [
+            1152,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            517,
+            192,
+            166
+          ],
+          "cellVisibleAlphaBounds": [
+            1172,
+            528,
+            147,
+            125
+          ],
+          "visibleSpriteBounds": [
+            1172,
+            528,
+            147,
+            125
+          ],
+          "recommendedCrop": [
+            1169,
+            525,
+            153,
+            131
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11327,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 31,
+          "globalSlot": 31,
+          "subject": "baby cuttlefish",
+          "cell": [
+            1344,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            535,
+            180,
+            135
+          ],
+          "cellVisibleAlphaBounds": [
+            1357,
+            543,
+            157,
+            97
+          ],
+          "visibleSpriteBounds": [
+            1357,
+            543,
+            157,
+            97
+          ],
+          "recommendedCrop": [
+            1354,
+            540,
+            163,
+            103
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9811,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 32,
+          "globalSlot": 32,
+          "subject": "jellyfish",
+          "cell": [
+            0,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            31,
+            683,
+            161,
+            161
+          ],
+          "cellVisibleAlphaBounds": [
+            34,
+            683,
+            126,
+            143
+          ],
+          "visibleSpriteBounds": [
+            34,
+            669,
+            126,
+            157
+          ],
+          "recommendedCrop": [
+            31,
+            666,
+            132,
+            163
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12604,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 33,
+          "globalSlot": 33,
+          "subject": "seahorse",
+          "cell": [
+            192,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            193,
+            683,
+            191,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            250,
+            683,
+            91,
+            139
+          ],
+          "visibleSpriteBounds": [
+            250,
+            665,
+            91,
+            157
+          ],
+          "recommendedCrop": [
+            247,
+            662,
+            97,
+            163
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7373,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 34,
+          "globalSlot": 34,
+          "subject": "starfish",
+          "cell": [
+            384,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            387,
+            683,
+            189,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            402,
+            683,
+            136,
+            170
+          ],
+          "visibleSpriteBounds": [
+            402,
+            680,
+            136,
+            129
+          ],
+          "recommendedCrop": [
+            399,
+            677,
+            142,
+            135
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9385,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 35,
+          "globalSlot": 35,
+          "subject": "crucian carp",
+          "cell": [
+            576,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            576,
+            686,
+            192,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            579,
+            688,
+            169,
+            165
+          ],
+          "visibleSpriteBounds": [
+            579,
+            688,
+            169,
+            119
+          ],
+          "recommendedCrop": [
+            576,
+            685,
+            175,
+            125
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11079,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 36,
+          "globalSlot": 36,
+          "subject": "carp",
+          "cell": [
+            768,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            768,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            769,
+            683,
+            179,
+            170
+          ],
+          "visibleSpriteBounds": [
+            769,
+            683,
+            179,
+            125
+          ],
+          "recommendedCrop": [
+            766,
+            680,
+            185,
+            131
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12804,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 37,
+          "globalSlot": 37,
+          "subject": "grass carp",
+          "cell": [
+            960,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            960,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            972,
+            708,
+            170,
+            145
+          ],
+          "visibleSpriteBounds": [
+            972,
+            708,
+            170,
+            82
+          ],
+          "recommendedCrop": [
+            969,
+            705,
+            176,
+            88
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8133,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 38,
+          "globalSlot": 38,
+          "subject": "silver carp",
+          "cell": [
+            1152,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1152,
+            683,
+            192,
+            157
+          ],
+          "cellVisibleAlphaBounds": [
+            1160,
+            695,
+            184,
+            110
+          ],
+          "visibleSpriteBounds": [
+            1160,
+            695,
+            163,
+            110
+          ],
+          "recommendedCrop": [
+            1157,
+            692,
+            169,
+            116
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10085,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 39,
+          "globalSlot": 39,
+          "subject": "bighead carp",
+          "cell": [
+            1344,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1344,
+            683,
+            181,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            1344,
+            691,
+            179,
+            120
+          ],
+          "visibleSpriteBounds": [
+            1333,
+            691,
+            190,
+            120
+          ],
+          "recommendedCrop": [
+            1330,
+            688,
+            196,
+            126
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12638,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 40,
+          "globalSlot": 40,
+          "subject": "catfish",
+          "cell": [
+            0,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            0,
+            858,
+            192,
+            166
+          ],
+          "cellVisibleAlphaBounds": [
+            18,
+            863,
+            172,
+            109
+          ],
+          "visibleSpriteBounds": [
+            18,
+            863,
+            172,
+            109
+          ],
+          "recommendedCrop": [
+            15,
+            860,
+            178,
+            115
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10084,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 41,
+          "globalSlot": 41,
+          "subject": "snakehead",
+          "cell": [
+            192,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            854,
+            192,
+            138
+          ],
+          "cellVisibleAlphaBounds": [
+            204,
+            877,
+            179,
+            74
+          ],
+          "visibleSpriteBounds": [
+            204,
+            877,
+            179,
+            74
+          ],
+          "recommendedCrop": [
+            201,
+            874,
+            185,
+            80
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8949,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 42,
+          "globalSlot": 42,
+          "subject": "sea bass",
+          "cell": [
+            384,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            853,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            401,
+            853,
+            166,
+            114
+          ],
+          "visibleSpriteBounds": [
+            401,
+            850,
+            166,
+            117
+          ],
+          "recommendedCrop": [
+            398,
+            847,
+            172,
+            123
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10707,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 43,
+          "globalSlot": 43,
+          "subject": "mandarinfish",
+          "cell": [
+            576,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            853,
+            192,
+            147
+          ],
+          "cellVisibleAlphaBounds": [
+            585,
+            853,
+            161,
+            118
+          ],
+          "visibleSpriteBounds": [
+            585,
+            850,
+            161,
+            121
+          ],
+          "recommendedCrop": [
+            582,
+            847,
+            167,
+            127
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11138,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 44,
+          "globalSlot": 44,
+          "subject": "tilapia",
+          "cell": [
+            768,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            853,
+            192,
+            125
+          ],
+          "cellVisibleAlphaBounds": [
+            777,
+            853,
+            169,
+            118
+          ],
+          "visibleSpriteBounds": [
+            777,
+            852,
+            169,
+            119
+          ],
+          "recommendedCrop": [
+            774,
+            849,
+            175,
+            125
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12604,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 45,
+          "globalSlot": 45,
+          "subject": "pomfret",
+          "cell": [
+            960,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            960,
+            853,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            972,
+            853,
+            158,
+            122
+          ],
+          "visibleSpriteBounds": [
+            972,
+            847,
+            158,
+            128
+          ],
+          "recommendedCrop": [
+            969,
+            844,
+            164,
+            134
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10509,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 46,
+          "globalSlot": 46,
+          "subject": "hairtail",
+          "cell": [
+            1152,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            855,
+            192,
+            133
+          ],
+          "cellVisibleAlphaBounds": [
+            1160,
+            864,
+            184,
+            103
+          ],
+          "visibleSpriteBounds": [
+            1160,
+            864,
+            162,
+            103
+          ],
+          "recommendedCrop": [
+            1157,
+            861,
+            168,
+            109
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9622,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 47,
+          "globalSlot": 47,
+          "subject": "Spanish mackerel",
+          "cell": [
+            1344,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            853,
+            179,
+            152
+          ],
+          "cellVisibleAlphaBounds": [
+            1344,
+            869,
+            176,
+            89
+          ],
+          "visibleSpriteBounds": [
+            1337,
+            869,
+            183,
+            89
+          ],
+          "recommendedCrop": [
+            1334,
+            866,
+            189,
+            95
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8365,
+          "crossesNominalCell": true
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "file": "D:\\project\\englishlearning\\ecology-art\\aquatic-creatures-v2-b.png",
+      "sha256": "3c95075606d7b59cb783c9b6e3da6343bfe6cfdd6467d88048b329ef12199f2e",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "columns": 8,
+      "rows": 6,
+      "firstSlot": 48,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaMedian": 0.0,
+      "alphaZeroPercent": 52.70620981852213,
+      "alphaPixelPercentAtOrAbove": {
+        "1": 47.29379018147786,
+        "16": 33.24495951334636,
+        "64": 31.95813496907552,
+        "128": 31.116104125976562,
+        "200": 30.0625483194987,
+        "250": 21.091461181640625
+      },
+      "interiorBackgroundSamples": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 192,
+          "y": 170,
+          "alpha": 0
+        },
+        {
+          "x": 1535,
+          "y": 512,
+          "alpha": 0
+        },
+        {
+          "x": 1430,
+          "y": 900,
+          "alpha": 0
+        },
+        {
+          "x": 1500,
+          "y": 950,
+          "alpha": 0
+        },
+        {
+          "x": 768,
+          "y": 512,
+          "alpha": 0
+        }
+      ],
+      "sprites": [
+        {
+          "localIndex": 0,
+          "globalSlot": 48,
+          "subject": "Pacific saury",
+          "cell": [
+            0,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            14,
+            65,
+            178,
+            105
+          ],
+          "cellVisibleAlphaBounds": [
+            16,
+            72,
+            174,
+            47
+          ],
+          "visibleSpriteBounds": [
+            16,
+            72,
+            174,
+            47
+          ],
+          "recommendedCrop": [
+            13,
+            69,
+            180,
+            53
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 4959,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 1,
+          "globalSlot": 49,
+          "subject": "herring",
+          "cell": [
+            192,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            49,
+            192,
+            122
+          ],
+          "cellVisibleAlphaBounds": [
+            215,
+            54,
+            164,
+            78
+          ],
+          "visibleSpriteBounds": [
+            215,
+            54,
+            164,
+            78
+          ],
+          "recommendedCrop": [
+            212,
+            51,
+            170,
+            84
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6564,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 2,
+          "globalSlot": 50,
+          "subject": "sea bream",
+          "cell": [
+            384,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            40,
+            192,
+            130
+          ],
+          "cellVisibleAlphaBounds": [
+            400,
+            44,
+            163,
+            103
+          ],
+          "visibleSpriteBounds": [
+            400,
+            44,
+            163,
+            103
+          ],
+          "recommendedCrop": [
+            397,
+            41,
+            169,
+            109
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10211,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 3,
+          "globalSlot": 51,
+          "subject": "small grouper",
+          "cell": [
+            576,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            17,
+            192,
+            151
+          ],
+          "cellVisibleAlphaBounds": [
+            584,
+            45,
+            175,
+            103
+          ],
+          "visibleSpriteBounds": [
+            584,
+            45,
+            175,
+            103
+          ],
+          "recommendedCrop": [
+            581,
+            42,
+            181,
+            109
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11024,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 4,
+          "globalSlot": 52,
+          "subject": "flatfish",
+          "cell": [
+            768,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            21,
+            182,
+            149
+          ],
+          "cellVisibleAlphaBounds": [
+            778,
+            43,
+            168,
+            105
+          ],
+          "visibleSpriteBounds": [
+            778,
+            43,
+            168,
+            105
+          ],
+          "recommendedCrop": [
+            775,
+            40,
+            174,
+            111
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11598,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 5,
+          "globalSlot": 53,
+          "subject": "pufferfish",
+          "cell": [
+            960,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            961,
+            31,
+            191,
+            140
+          ],
+          "cellVisibleAlphaBounds": [
+            975,
+            40,
+            146,
+            116
+          ],
+          "visibleSpriteBounds": [
+            975,
+            40,
+            146,
+            116
+          ],
+          "recommendedCrop": [
+            972,
+            37,
+            152,
+            122
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11652,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 6,
+          "globalSlot": 54,
+          "subject": "eel",
+          "cell": [
+            1152,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            23,
+            192,
+            145
+          ],
+          "cellVisibleAlphaBounds": [
+            1159,
+            30,
+            168,
+            125
+          ],
+          "visibleSpriteBounds": [
+            1159,
+            30,
+            168,
+            125
+          ],
+          "recommendedCrop": [
+            1156,
+            27,
+            174,
+            131
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11656,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 7,
+          "globalSlot": 55,
+          "subject": "ricefield eel",
+          "cell": [
+            1344,
+            0,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            31,
+            166,
+            137
+          ],
+          "cellVisibleAlphaBounds": [
+            1349,
+            39,
+            157,
+            105
+          ],
+          "visibleSpriteBounds": [
+            1349,
+            39,
+            157,
+            105
+          ],
+          "recommendedCrop": [
+            1346,
+            36,
+            163,
+            111
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8258,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 8,
+          "globalSlot": 56,
+          "subject": "softshell turtle",
+          "cell": [
+            0,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            0,
+            207,
+            192,
+            110
+          ],
+          "cellVisibleAlphaBounds": [
+            16,
+            213,
+            176,
+            92
+          ],
+          "visibleSpriteBounds": [
+            16,
+            213,
+            187,
+            92
+          ],
+          "recommendedCrop": [
+            13,
+            210,
+            193,
+            98
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9664,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 9,
+          "globalSlot": 57,
+          "subject": "turtle",
+          "cell": [
+            192,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            192,
+            171,
+            192,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            192,
+            196,
+            188,
+            131
+          ],
+          "visibleSpriteBounds": [
+            206,
+            196,
+            174,
+            131
+          ],
+          "recommendedCrop": [
+            203,
+            193,
+            180,
+            137
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12109,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 10,
+          "globalSlot": 58,
+          "subject": "frog",
+          "cell": [
+            384,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            384,
+            171,
+            192,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            412,
+            205,
+            136,
+            113
+          ],
+          "visibleSpriteBounds": [
+            412,
+            205,
+            136,
+            113
+          ],
+          "recommendedCrop": [
+            409,
+            202,
+            142,
+            119
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10054,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 11,
+          "globalSlot": 59,
+          "subject": "bullfrog",
+          "cell": [
+            576,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            576,
+            180,
+            192,
+            156
+          ],
+          "cellVisibleAlphaBounds": [
+            585,
+            195,
+            165,
+            124
+          ],
+          "visibleSpriteBounds": [
+            585,
+            195,
+            165,
+            124
+          ],
+          "recommendedCrop": [
+            582,
+            192,
+            171,
+            130
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 14281,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 12,
+          "globalSlot": 60,
+          "subject": "crayfish",
+          "cell": [
+            768,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            768,
+            171,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            772,
+            184,
+            179,
+            140
+          ],
+          "visibleSpriteBounds": [
+            772,
+            184,
+            179,
+            140
+          ],
+          "recommendedCrop": [
+            769,
+            181,
+            185,
+            146
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9948,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 13,
+          "globalSlot": 61,
+          "subject": "small crab",
+          "cell": [
+            960,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            960,
+            171,
+            192,
+            151
+          ],
+          "cellVisibleAlphaBounds": [
+            966,
+            207,
+            175,
+            111
+          ],
+          "visibleSpriteBounds": [
+            966,
+            207,
+            175,
+            111
+          ],
+          "recommendedCrop": [
+            963,
+            204,
+            181,
+            117
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12248,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 14,
+          "globalSlot": 62,
+          "subject": "octopus",
+          "cell": [
+            1152,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1152,
+            183,
+            192,
+            158
+          ],
+          "cellVisibleAlphaBounds": [
+            1163,
+            189,
+            165,
+            141
+          ],
+          "visibleSpriteBounds": [
+            1163,
+            189,
+            165,
+            141
+          ],
+          "recommendedCrop": [
+            1160,
+            186,
+            171,
+            147
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 14748,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 15,
+          "globalSlot": 63,
+          "subject": "cuttlefish",
+          "cell": [
+            1344,
+            171,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1344,
+            171,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            1353,
+            202,
+            168,
+            124
+          ],
+          "visibleSpriteBounds": [
+            1353,
+            202,
+            168,
+            124
+          ],
+          "recommendedCrop": [
+            1350,
+            199,
+            174,
+            130
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12064,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 16,
+          "globalSlot": 64,
+          "subject": "squid",
+          "cell": [
+            0,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            15,
+            349,
+            177,
+            163
+          ],
+          "cellVisibleAlphaBounds": [
+            20,
+            351,
+            154,
+            151
+          ],
+          "visibleSpriteBounds": [
+            20,
+            351,
+            154,
+            151
+          ],
+          "recommendedCrop": [
+            17,
+            348,
+            160,
+            157
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8589,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 17,
+          "globalSlot": 65,
+          "subject": "sturgeon",
+          "cell": [
+            192,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            345,
+            192,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            193,
+            385,
+            191,
+            127
+          ],
+          "visibleSpriteBounds": [
+            193,
+            385,
+            197,
+            69
+          ],
+          "recommendedCrop": [
+            190,
+            382,
+            203,
+            75
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7766,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 18,
+          "globalSlot": 66,
+          "subject": "salmon",
+          "cell": [
+            384,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            343,
+            192,
+            163
+          ],
+          "cellVisibleAlphaBounds": [
+            384,
+            375,
+            185,
+            76
+          ],
+          "visibleSpriteBounds": [
+            402,
+            375,
+            167,
+            76
+          ],
+          "recommendedCrop": [
+            399,
+            372,
+            173,
+            82
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7643,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 19,
+          "globalSlot": 67,
+          "subject": "tuna",
+          "cell": [
+            576,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            347,
+            192,
+            165
+          ],
+          "cellVisibleAlphaBounds": [
+            588,
+            361,
+            169,
+            105
+          ],
+          "visibleSpriteBounds": [
+            588,
+            361,
+            169,
+            105
+          ],
+          "recommendedCrop": [
+            585,
+            358,
+            175,
+            111
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8888,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 20,
+          "globalSlot": 68,
+          "subject": "sailfish",
+          "cell": [
+            768,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            341,
+            192,
+            163
+          ],
+          "cellVisibleAlphaBounds": [
+            771,
+            353,
+            189,
+            124
+          ],
+          "visibleSpriteBounds": [
+            771,
+            353,
+            190,
+            124
+          ],
+          "recommendedCrop": [
+            768,
+            350,
+            196,
+            130
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8946,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 21,
+          "globalSlot": 69,
+          "subject": "swordfish",
+          "cell": [
+            960,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            960,
+            343,
+            192,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            960,
+            372,
+            192,
+            103
+          ],
+          "visibleSpriteBounds": [
+            960,
+            372,
+            198,
+            103
+          ],
+          "recommendedCrop": [
+            957,
+            369,
+            204,
+            109
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 5823,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 22,
+          "globalSlot": 70,
+          "subject": "reef shark",
+          "cell": [
+            1152,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            341,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            1152,
+            368,
+            192,
+            99
+          ],
+          "visibleSpriteBounds": [
+            1168,
+            368,
+            180,
+            99
+          ],
+          "recommendedCrop": [
+            1165,
+            365,
+            186,
+            105
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8122,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 23,
+          "globalSlot": 71,
+          "subject": "dolphin",
+          "cell": [
+            1344,
+            341,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            341,
+            175,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            1344,
+            363,
+            169,
+            149
+          ],
+          "visibleSpriteBounds": [
+            1353,
+            363,
+            160,
+            116
+          ],
+          "recommendedCrop": [
+            1350,
+            360,
+            166,
+            122
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7726,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 24,
+          "globalSlot": 72,
+          "subject": "seal",
+          "cell": [
+            0,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            0,
+            512,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            14,
+            528,
+            175,
+            155
+          ],
+          "visibleSpriteBounds": [
+            14,
+            528,
+            175,
+            115
+          ],
+          "recommendedCrop": [
+            11,
+            525,
+            181,
+            121
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10198,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 25,
+          "globalSlot": 73,
+          "subject": "sea lion",
+          "cell": [
+            192,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            512,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            206,
+            512,
+            165,
+            171
+          ],
+          "visibleSpriteBounds": [
+            206,
+            506,
+            165,
+            144
+          ],
+          "recommendedCrop": [
+            203,
+            503,
+            171,
+            150
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12987,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 26,
+          "globalSlot": 74,
+          "subject": "giant grouper",
+          "cell": [
+            384,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            516,
+            192,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            390,
+            530,
+            181,
+            153
+          ],
+          "visibleSpriteBounds": [
+            390,
+            530,
+            181,
+            106
+          ],
+          "recommendedCrop": [
+            387,
+            527,
+            187,
+            112
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12199,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 27,
+          "globalSlot": 75,
+          "subject": "giant catfish",
+          "cell": [
+            576,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            512,
+            192,
+            168
+          ],
+          "cellVisibleAlphaBounds": [
+            580,
+            527,
+            183,
+            110
+          ],
+          "visibleSpriteBounds": [
+            580,
+            527,
+            183,
+            110
+          ],
+          "recommendedCrop": [
+            577,
+            524,
+            189,
+            116
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12107,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 28,
+          "globalSlot": 76,
+          "subject": "alligator gar",
+          "cell": [
+            768,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            513,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            775,
+            554,
+            185,
+            129
+          ],
+          "visibleSpriteBounds": [
+            775,
+            554,
+            185,
+            69
+          ],
+          "recommendedCrop": [
+            772,
+            551,
+            191,
+            75
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 7043,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 29,
+          "globalSlot": 77,
+          "subject": "arapaima",
+          "cell": [
+            960,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            960,
+            512,
+            192,
+            154
+          ],
+          "cellVisibleAlphaBounds": [
+            967,
+            550,
+            182,
+            71
+          ],
+          "visibleSpriteBounds": [
+            967,
+            550,
+            182,
+            71
+          ],
+          "recommendedCrop": [
+            964,
+            547,
+            188,
+            77
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 9298,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 30,
+          "globalSlot": 78,
+          "subject": "Mekong giant catfish",
+          "cell": [
+            1152,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            512,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            1162,
+            516,
+            182,
+            167
+          ],
+          "visibleSpriteBounds": [
+            1162,
+            516,
+            199,
+            120
+          ],
+          "recommendedCrop": [
+            1159,
+            513,
+            205,
+            126
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 14096,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 31,
+          "globalSlot": 79,
+          "subject": "ocean sunfish",
+          "cell": [
+            1344,
+            512,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            512,
+            181,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            1344,
+            512,
+            173,
+            171
+          ],
+          "visibleSpriteBounds": [
+            1394,
+            493,
+            123,
+            174
+          ],
+          "recommendedCrop": [
+            1391,
+            490,
+            129,
+            180
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10865,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 32,
+          "globalSlot": 80,
+          "subject": "manta ray",
+          "cell": [
+            0,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            15,
+            683,
+            177,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            20,
+            683,
+            168,
+            170
+          ],
+          "visibleSpriteBounds": [
+            20,
+            676,
+            168,
+            111
+          ],
+          "recommendedCrop": [
+            17,
+            673,
+            174,
+            117
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 8940,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 33,
+          "globalSlot": 81,
+          "subject": "great white shark",
+          "cell": [
+            192,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            192,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            207,
+            683,
+            177,
+            170
+          ],
+          "visibleSpriteBounds": [
+            207,
+            672,
+            181,
+            127
+          ],
+          "recommendedCrop": [
+            204,
+            669,
+            187,
+            133
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 11432,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 34,
+          "globalSlot": 82,
+          "subject": "orca",
+          "cell": [
+            384,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            384,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            384,
+            683,
+            190,
+            170
+          ],
+          "visibleSpriteBounds": [
+            387,
+            677,
+            187,
+            129
+          ],
+          "recommendedCrop": [
+            384,
+            674,
+            193,
+            135
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10624,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 35,
+          "globalSlot": 83,
+          "subject": "blue whale",
+          "cell": [
+            576,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            576,
+            686,
+            192,
+            167
+          ],
+          "cellVisibleAlphaBounds": [
+            584,
+            690,
+            184,
+            163
+          ],
+          "visibleSpriteBounds": [
+            584,
+            690,
+            184,
+            110
+          ],
+          "recommendedCrop": [
+            581,
+            687,
+            190,
+            116
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10614,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 36,
+          "globalSlot": 84,
+          "subject": "megalodon",
+          "cell": [
+            768,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            768,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            779,
+            683,
+            180,
+            170
+          ],
+          "visibleSpriteBounds": [
+            779,
+            675,
+            180,
+            119
+          ],
+          "recommendedCrop": [
+            776,
+            672,
+            186,
+            125
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 10920,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 37,
+          "globalSlot": 85,
+          "subject": "basilosaurus",
+          "cell": [
+            960,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            960,
+            689,
+            192,
+            164
+          ],
+          "cellVisibleAlphaBounds": [
+            961,
+            701,
+            190,
+            152
+          ],
+          "visibleSpriteBounds": [
+            961,
+            701,
+            190,
+            81
+          ],
+          "recommendedCrop": [
+            958,
+            698,
+            196,
+            87
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 6573,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 38,
+          "globalSlot": 86,
+          "subject": "kraken",
+          "cell": [
+            1152,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1152,
+            683,
+            192,
+            170
+          ],
+          "cellVisibleAlphaBounds": [
+            1163,
+            683,
+            181,
+            170
+          ],
+          "visibleSpriteBounds": [
+            1163,
+            664,
+            179,
+            154
+          ],
+          "recommendedCrop": [
+            1160,
+            661,
+            185,
+            160
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 19109,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 39,
+          "globalSlot": 87,
+          "subject": "leviathan",
+          "cell": [
+            1344,
+            683,
+            192,
+            170
+          ],
+          "alphaBounds": [
+            1344,
+            683,
+            192,
+            169
+          ],
+          "cellVisibleAlphaBounds": [
+            1345,
+            683,
+            176,
+            131
+          ],
+          "visibleSpriteBounds": [
+            1345,
+            667,
+            176,
+            147
+          ],
+          "recommendedCrop": [
+            1342,
+            664,
+            182,
+            153
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 13237,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 40,
+          "globalSlot": 88,
+          "subject": "Kun",
+          "cell": [
+            0,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            0,
+            853,
+            192,
+            127
+          ],
+          "cellVisibleAlphaBounds": [
+            17,
+            853,
+            175,
+            124
+          ],
+          "visibleSpriteBounds": [
+            17,
+            833,
+            181,
+            144
+          ],
+          "recommendedCrop": [
+            14,
+            830,
+            187,
+            150
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 15758,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 41,
+          "globalSlot": 89,
+          "subject": "Chinese aquatic dragon",
+          "cell": [
+            192,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            192,
+            853,
+            192,
+            143
+          ],
+          "cellVisibleAlphaBounds": [
+            192,
+            853,
+            192,
+            135
+          ],
+          "visibleSpriteBounds": [
+            211,
+            830,
+            178,
+            158
+          ],
+          "recommendedCrop": [
+            208,
+            827,
+            184,
+            164
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 17451,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 42,
+          "globalSlot": 90,
+          "subject": "sea dragon",
+          "cell": [
+            384,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            384,
+            853,
+            192,
+            171
+          ],
+          "cellVisibleAlphaBounds": [
+            384,
+            853,
+            179,
+            137
+          ],
+          "visibleSpriteBounds": [
+            402,
+            828,
+            161,
+            162
+          ],
+          "recommendedCrop": [
+            399,
+            825,
+            167,
+            168
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 14335,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 43,
+          "globalSlot": 91,
+          "subject": "Poseidon",
+          "cell": [
+            576,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            576,
+            853,
+            192,
+            153
+          ],
+          "cellVisibleAlphaBounds": [
+            591,
+            853,
+            150,
+            129
+          ],
+          "visibleSpriteBounds": [
+            591,
+            820,
+            154,
+            162
+          ],
+          "recommendedCrop": [
+            588,
+            817,
+            160,
+            168
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 12656,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 44,
+          "globalSlot": 92,
+          "subject": "sea guardian creature",
+          "cell": [
+            768,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            768,
+            853,
+            192,
+            153
+          ],
+          "cellVisibleAlphaBounds": [
+            769,
+            853,
+            178,
+            122
+          ],
+          "visibleSpriteBounds": [
+            769,
+            843,
+            178,
+            132
+          ],
+          "recommendedCrop": [
+            766,
+            840,
+            184,
+            138
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 16267,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 45,
+          "globalSlot": 93,
+          "subject": "abyssal giantmouth",
+          "cell": [
+            960,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            960,
+            853,
+            192,
+            125
+          ],
+          "cellVisibleAlphaBounds": [
+            970,
+            853,
+            174,
+            122
+          ],
+          "visibleSpriteBounds": [
+            970,
+            832,
+            174,
+            143
+          ],
+          "recommendedCrop": [
+            967,
+            829,
+            180,
+            149
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 15061,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 46,
+          "globalSlot": 94,
+          "subject": "cosmic devourer",
+          "cell": [
+            1152,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1152,
+            853,
+            192,
+            137
+          ],
+          "cellVisibleAlphaBounds": [
+            1153,
+            853,
+            186,
+            128
+          ],
+          "visibleSpriteBounds": [
+            1153,
+            834,
+            186,
+            147
+          ],
+          "recommendedCrop": [
+            1150,
+            831,
+            192,
+            153
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 16569,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 47,
+          "globalSlot": 95,
+          "subject": null,
+          "cell": [
+            1344,
+            853,
+            192,
+            171
+          ],
+          "alphaBounds": [
+            1344,
+            853,
+            48,
+            93
+          ],
+          "cellVisibleAlphaBounds": null,
+          "visibleSpriteBounds": null,
+          "recommendedCrop": null,
+          "visibleComponentCount": 0,
+          "visiblePixels": 0,
+          "crossesNominalCell": false
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "file": "D:\\project\\englishlearning\\ecology-art\\snake-breeds-v2.png",
+      "sha256": "7b6a8c971ff41b5cfb407d348cb7889f3ebeea17cb0d50f0bf398902f163ab03",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "columns": 8,
+      "rows": 2,
+      "firstSlot": 0,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaMedian": 0.0,
+      "alphaZeroPercent": 69.1603978474935,
+      "alphaPixelPercentAtOrAbove": {
+        "1": 30.83960215250651,
+        "16": 28.327178955078125,
+        "64": 28.094863891601562,
+        "128": 27.893320719401043,
+        "200": 27.656936645507812,
+        "250": 26.471583048502605
+      },
+      "interiorBackgroundSamples": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 768,
+          "y": 128,
+          "alpha": 0
+        },
+        {
+          "x": 800,
+          "y": 900,
+          "alpha": 0
+        },
+        {
+          "x": 100,
+          "y": 510,
+          "alpha": 0
+        },
+        {
+          "x": 192,
+          "y": 512,
+          "alpha": 0
+        },
+        {
+          "x": 1535,
+          "y": 1023,
+          "alpha": 0
+        }
+      ],
+      "sprites": [
+        {
+          "localIndex": 0,
+          "globalSlot": 0,
+          "subject": "corn snake head",
+          "cell": [
+            0,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            14,
+            227,
+            178,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            18,
+            236,
+            174,
+            241
+          ],
+          "visibleSpriteBounds": [
+            18,
+            236,
+            184,
+            241
+          ],
+          "recommendedCrop": [
+            15,
+            233,
+            190,
+            247
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28822,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 1,
+          "globalSlot": 1,
+          "subject": "green tree python head",
+          "cell": [
+            192,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            192,
+            31,
+            192,
+            451
+          ],
+          "cellVisibleAlphaBounds": [
+            192,
+            231,
+            192,
+            243
+          ],
+          "visibleSpriteBounds": [
+            204,
+            231,
+            188,
+            243
+          ],
+          "recommendedCrop": [
+            201,
+            228,
+            194,
+            249
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28968,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 2,
+          "globalSlot": 2,
+          "subject": "ball python head",
+          "cell": [
+            384,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            384,
+            43,
+            192,
+            439
+          ],
+          "cellVisibleAlphaBounds": [
+            384,
+            235,
+            192,
+            241
+          ],
+          "visibleSpriteBounds": [
+            400,
+            235,
+            179,
+            241
+          ],
+          "recommendedCrop": [
+            397,
+            232,
+            185,
+            247
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28816,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 3,
+          "globalSlot": 3,
+          "subject": "milk snake head",
+          "cell": [
+            576,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            576,
+            46,
+            192,
+            434
+          ],
+          "cellVisibleAlphaBounds": [
+            576,
+            232,
+            192,
+            243
+          ],
+          "visibleSpriteBounds": [
+            583,
+            232,
+            189,
+            243
+          ],
+          "recommendedCrop": [
+            580,
+            229,
+            195,
+            249
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28827,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 4,
+          "globalSlot": 4,
+          "subject": "kingsnake head",
+          "cell": [
+            768,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            768,
+            27,
+            192,
+            453
+          ],
+          "cellVisibleAlphaBounds": [
+            768,
+            233,
+            192,
+            242
+          ],
+          "visibleSpriteBounds": [
+            766,
+            233,
+            195,
+            242
+          ],
+          "recommendedCrop": [
+            763,
+            230,
+            201,
+            248
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 29271,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 5,
+          "globalSlot": 5,
+          "subject": "garter snake head",
+          "cell": [
+            960,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            960,
+            55,
+            192,
+            425
+          ],
+          "cellVisibleAlphaBounds": [
+            960,
+            236,
+            192,
+            239
+          ],
+          "visibleSpriteBounds": [
+            963,
+            236,
+            189,
+            239
+          ],
+          "recommendedCrop": [
+            960,
+            233,
+            195,
+            245
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28660,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 6,
+          "globalSlot": 6,
+          "subject": "rainbow boa head",
+          "cell": [
+            1152,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            1152,
+            31,
+            192,
+            449
+          ],
+          "cellVisibleAlphaBounds": [
+            1155,
+            233,
+            189,
+            243
+          ],
+          "visibleSpriteBounds": [
+            1155,
+            233,
+            189,
+            243
+          ],
+          "recommendedCrop": [
+            1152,
+            230,
+            195,
+            249
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 29226,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 7,
+          "globalSlot": 7,
+          "subject": "sea snake head",
+          "cell": [
+            1344,
+            0,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            1344,
+            31,
+            192,
+            450
+          ],
+          "cellVisibleAlphaBounds": [
+            1351,
+            234,
+            179,
+            245
+          ],
+          "visibleSpriteBounds": [
+            1351,
+            234,
+            179,
+            245
+          ],
+          "recommendedCrop": [
+            1348,
+            231,
+            185,
+            251
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28588,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 8,
+          "globalSlot": 8,
+          "subject": "corn snake body segment",
+          "cell": [
+            0,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            0,
+            568,
+            192,
+            368
+          ],
+          "cellVisibleAlphaBounds": [
+            14,
+            572,
+            178,
+            189
+          ],
+          "visibleSpriteBounds": [
+            14,
+            572,
+            182,
+            189
+          ],
+          "recommendedCrop": [
+            11,
+            569,
+            188,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 27011,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 9,
+          "globalSlot": 9,
+          "subject": "green tree python body segment",
+          "cell": [
+            192,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            192,
+            568,
+            192,
+            416
+          ],
+          "cellVisibleAlphaBounds": [
+            192,
+            572,
+            192,
+            189
+          ],
+          "visibleSpriteBounds": [
+            206,
+            572,
+            179,
+            189
+          ],
+          "recommendedCrop": [
+            203,
+            569,
+            185,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26671,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 10,
+          "globalSlot": 10,
+          "subject": "ball python body segment",
+          "cell": [
+            384,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            384,
+            565,
+            192,
+            203
+          ],
+          "cellVisibleAlphaBounds": [
+            384,
+            572,
+            191,
+            189
+          ],
+          "visibleSpriteBounds": [
+            396,
+            572,
+            179,
+            189
+          ],
+          "recommendedCrop": [
+            393,
+            569,
+            185,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26697,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 11,
+          "globalSlot": 11,
+          "subject": "milk snake body segment",
+          "cell": [
+            576,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            576,
+            566,
+            192,
+            388
+          ],
+          "cellVisibleAlphaBounds": [
+            585,
+            572,
+            179,
+            189
+          ],
+          "visibleSpriteBounds": [
+            585,
+            572,
+            179,
+            189
+          ],
+          "recommendedCrop": [
+            582,
+            569,
+            185,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26714,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 12,
+          "globalSlot": 12,
+          "subject": "kingsnake body segment",
+          "cell": [
+            768,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            768,
+            569,
+            192,
+            359
+          ],
+          "cellVisibleAlphaBounds": [
+            774,
+            572,
+            180,
+            189
+          ],
+          "visibleSpriteBounds": [
+            774,
+            572,
+            180,
+            189
+          ],
+          "recommendedCrop": [
+            771,
+            569,
+            186,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26827,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 13,
+          "globalSlot": 13,
+          "subject": "garter snake body segment",
+          "cell": [
+            960,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            960,
+            568,
+            192,
+            410
+          ],
+          "cellVisibleAlphaBounds": [
+            964,
+            572,
+            180,
+            189
+          ],
+          "visibleSpriteBounds": [
+            964,
+            572,
+            180,
+            189
+          ],
+          "recommendedCrop": [
+            961,
+            569,
+            186,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26736,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 14,
+          "globalSlot": 14,
+          "subject": "rainbow boa body segment",
+          "cell": [
+            1152,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            1152,
+            568,
+            192,
+            352
+          ],
+          "cellVisibleAlphaBounds": [
+            1154,
+            572,
+            180,
+            189
+          ],
+          "visibleSpriteBounds": [
+            1154,
+            572,
+            180,
+            189
+          ],
+          "recommendedCrop": [
+            1151,
+            569,
+            186,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26963,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 15,
+          "globalSlot": 15,
+          "subject": "sea snake body segment",
+          "cell": [
+            1344,
+            512,
+            192,
+            512
+          ],
+          "alphaBounds": [
+            1344,
+            568,
+            182,
+            312
+          ],
+          "cellVisibleAlphaBounds": [
+            1344,
+            572,
+            179,
+            189
+          ],
+          "visibleSpriteBounds": [
+            1344,
+            572,
+            179,
+            189
+          ],
+          "recommendedCrop": [
+            1341,
+            569,
+            185,
+            195
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 26751,
+          "crossesNominalCell": false
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "file": "D:\\project\\englishlearning\\ecology-art\\adventure-cards-v2.png",
+      "sha256": "050793d4475d40e979988e9ab5467f78a9333e3d6729d58524ae37d3f31732f6",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "columns": 4,
+      "rows": 4,
+      "firstSlot": 0,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaMedian": 0.0,
+      "alphaZeroPercent": 56.98172251383463,
+      "alphaPixelPercentAtOrAbove": {
+        "1": 43.01827748616536,
+        "16": 38.98385365804036,
+        "64": 38.57237497965495,
+        "128": 38.256772359212235,
+        "200": 37.87879943847656,
+        "250": 35.73042551676433
+      },
+      "interiorBackgroundSamples": [
+        {
+          "x": 0,
+          "y": 0,
+          "alpha": 0
+        },
+        {
+          "x": 384,
+          "y": 256,
+          "alpha": 0
+        },
+        {
+          "x": 768,
+          "y": 256,
+          "alpha": 0
+        },
+        {
+          "x": 1152,
+          "y": 256,
+          "alpha": 0
+        },
+        {
+          "x": 768,
+          "y": 512,
+          "alpha": 0
+        },
+        {
+          "x": 1152,
+          "y": 768,
+          "alpha": 0
+        }
+      ],
+      "sprites": [
+        {
+          "localIndex": 0,
+          "globalSlot": 0,
+          "subject": "tree",
+          "cell": [
+            0,
+            0,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            65,
+            14,
+            313,
+            242
+          ],
+          "cellVisibleAlphaBounds": [
+            75,
+            17,
+            239,
+            238
+          ],
+          "visibleSpriteBounds": [
+            75,
+            17,
+            239,
+            238
+          ],
+          "recommendedCrop": [
+            72,
+            14,
+            245,
+            244
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 35651,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 1,
+          "globalSlot": 1,
+          "subject": "flower",
+          "cell": [
+            384,
+            0,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            393,
+            14,
+            335,
+            242
+          ],
+          "cellVisibleAlphaBounds": [
+            473,
+            16,
+            191,
+            240
+          ],
+          "visibleSpriteBounds": [
+            473,
+            16,
+            191,
+            240
+          ],
+          "recommendedCrop": [
+            470,
+            13,
+            197,
+            246
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 28986,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 2,
+          "globalSlot": 2,
+          "subject": "leaf",
+          "cell": [
+            768,
+            0,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            785,
+            18,
+            349,
+            238
+          ],
+          "cellVisibleAlphaBounds": [
+            843,
+            20,
+            217,
+            221
+          ],
+          "visibleSpriteBounds": [
+            843,
+            20,
+            217,
+            221
+          ],
+          "recommendedCrop": [
+            840,
+            17,
+            223,
+            227
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 32722,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 3,
+          "globalSlot": 3,
+          "subject": "grass",
+          "cell": [
+            1152,
+            0,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            1189,
+            31,
+            329,
+            223
+          ],
+          "cellVisibleAlphaBounds": [
+            1193,
+            34,
+            294,
+            210
+          ],
+          "visibleSpriteBounds": [
+            1193,
+            34,
+            294,
+            210
+          ],
+          "recommendedCrop": [
+            1190,
+            31,
+            300,
+            216
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 35992,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 4,
+          "globalSlot": 4,
+          "subject": "seed",
+          "cell": [
+            0,
+            256,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            45,
+            256,
+            275,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            86,
+            292,
+            229,
+            191
+          ],
+          "visibleSpriteBounds": [
+            86,
+            292,
+            229,
+            191
+          ],
+          "recommendedCrop": [
+            83,
+            289,
+            235,
+            197
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 31191,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 5,
+          "globalSlot": 5,
+          "subject": "rose",
+          "cell": [
+            384,
+            256,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            459,
+            256,
+            257,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            463,
+            267,
+            215,
+            244
+          ],
+          "visibleSpriteBounds": [
+            463,
+            267,
+            215,
+            244
+          ],
+          "recommendedCrop": [
+            460,
+            264,
+            221,
+            250
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 30928,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 6,
+          "globalSlot": 6,
+          "subject": "cactus",
+          "cell": [
+            768,
+            256,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            793,
+            256,
+            343,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            849,
+            265,
+            222,
+            238
+          ],
+          "visibleSpriteBounds": [
+            849,
+            265,
+            222,
+            238
+          ],
+          "recommendedCrop": [
+            846,
+            262,
+            228,
+            244
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 31108,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 7,
+          "globalSlot": 7,
+          "subject": "bush",
+          "cell": [
+            1152,
+            256,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            1185,
+            270,
+            325,
+            229
+          ],
+          "cellVisibleAlphaBounds": [
+            1198,
+            272,
+            289,
+            225
+          ],
+          "visibleSpriteBounds": [
+            1198,
+            272,
+            289,
+            225
+          ],
+          "recommendedCrop": [
+            1195,
+            269,
+            295,
+            231
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 48108,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 8,
+          "globalSlot": 8,
+          "subject": "bus",
+          "cell": [
+            0,
+            512,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            31,
+            512,
+            339,
+            240
+          ],
+          "cellVisibleAlphaBounds": [
+            33,
+            517,
+            326,
+            228
+          ],
+          "visibleSpriteBounds": [
+            33,
+            517,
+            326,
+            228
+          ],
+          "recommendedCrop": [
+            30,
+            514,
+            332,
+            234
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 58307,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 9,
+          "globalSlot": 9,
+          "subject": "car",
+          "cell": [
+            384,
+            512,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            413,
+            512,
+            347,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            418,
+            531,
+            329,
+            237
+          ],
+          "visibleSpriteBounds": [
+            418,
+            531,
+            329,
+            207
+          ],
+          "recommendedCrop": [
+            415,
+            528,
+            335,
+            213
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 45793,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 10,
+          "globalSlot": 10,
+          "subject": "boat",
+          "cell": [
+            768,
+            512,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            835,
+            512,
+            254,
+            256
+          ],
+          "cellVisibleAlphaBounds": [
+            840,
+            512,
+            247,
+            256
+          ],
+          "visibleSpriteBounds": [
+            840,
+            512,
+            247,
+            238
+          ],
+          "recommendedCrop": [
+            837,
+            509,
+            253,
+            244
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 34507,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 11,
+          "globalSlot": 11,
+          "subject": "plane",
+          "cell": [
+            1152,
+            512,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            1153,
+            519,
+            355,
+            237
+          ],
+          "cellVisibleAlphaBounds": [
+            1173,
+            547,
+            332,
+            198
+          ],
+          "visibleSpriteBounds": [
+            1173,
+            547,
+            332,
+            198
+          ],
+          "recommendedCrop": [
+            1170,
+            544,
+            338,
+            204
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 40867,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 12,
+          "globalSlot": 12,
+          "subject": "cup",
+          "cell": [
+            0,
+            768,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            83,
+            769,
+            263,
+            235
+          ],
+          "cellVisibleAlphaBounds": [
+            91,
+            777,
+            251,
+            213
+          ],
+          "visibleSpriteBounds": [
+            91,
+            777,
+            251,
+            213
+          ],
+          "recommendedCrop": [
+            88,
+            774,
+            257,
+            219
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 39510,
+          "crossesNominalCell": false
+        },
+        {
+          "localIndex": 13,
+          "globalSlot": 13,
+          "subject": "bed",
+          "cell": [
+            384,
+            768,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            425,
+            768,
+            341,
+            234
+          ],
+          "cellVisibleAlphaBounds": [
+            431,
+            768,
+            295,
+            229
+          ],
+          "visibleSpriteBounds": [
+            431,
+            767,
+            295,
+            230
+          ],
+          "recommendedCrop": [
+            428,
+            764,
+            301,
+            236
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 40506,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 14,
+          "globalSlot": 14,
+          "subject": "clock",
+          "cell": [
+            768,
+            768,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            773,
+            768,
+            335,
+            230
+          ],
+          "cellVisibleAlphaBounds": [
+            865,
+            768,
+            196,
+            227
+          ],
+          "visibleSpriteBounds": [
+            865,
+            764,
+            196,
+            231
+          ],
+          "recommendedCrop": [
+            862,
+            761,
+            202,
+            237
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 36731,
+          "crossesNominalCell": true
+        },
+        {
+          "localIndex": 15,
+          "globalSlot": 15,
+          "subject": "shoe",
+          "cell": [
+            1152,
+            768,
+            384,
+            256
+          ],
+          "alphaBounds": [
+            1183,
+            782,
+            322,
+            222
+          ],
+          "cellVisibleAlphaBounds": [
+            1191,
+            785,
+            308,
+            198
+          ],
+          "visibleSpriteBounds": [
+            1191,
+            785,
+            308,
+            198
+          ],
+          "recommendedCrop": [
+            1188,
+            782,
+            314,
+            204
+          ],
+          "visibleComponentCount": 1,
+          "visiblePixels": 42253,
+          "crossesNominalCell": false
+        }
+      ]
+    }
+  ],
+  "visualNotes": [
+    "The PNG RGB channels retain a colorful generated gradient under fully transparent pixels; interior background samples are alpha 0.",
+    "Atlas B local index 7 ricefield eel and local index 16 squid face left; consumer may mirror those sprites for uniform right-facing display.",
+    "Some snake heads extend a few pixels beyond nominal column boundaries; use recommendedCrop rather than clipping by the uniform cell.",
+    "Atlas B local index 47 is blank with no assigned visible sprite."
+  ]
+}

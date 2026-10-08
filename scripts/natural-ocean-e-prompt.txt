@@ -1,0 +1,10 @@
+Use case: photorealistic-natural
+Asset type: four independent REAL naturally colored fish cutouts for a children's English color-listening game.
+Primary request: A genuinely transparent PNG, target 2048x2048, exactly TWO equal columns by TWO equal rows, FOUR invisible equal cells. No grid lines, no gutters, no external margin, no labels, no text, no watermark, no solid background and no water rectangle.
+In each cell one complete photographic-quality actual fish, tail on the LEFT and HEAD on the RIGHT, natural horizontal swimming side view, centered with a generous 12% cell-width transparent safety margin, no cut-off fins, tail or mouth. Preserve exact natural fish shape and small realistic eyes. Actual fine skin/scales, natural gill lines, translucent fin detail and soft volumetric self-lighting only. Never giant eyes, smile, thick outline, toy plastic, white clay, generic repeated oval body or painting patches.
+STRICT ROW-MAJOR ORDER:
+TOP LEFT: one real RED swordtail aquarium fish, naturally vivid clear scarlet red body and red fins, slender natural livebearer silhouette, a lower-tail sword extension, no blue/green/yellow patches. Easy for a six-year-old to recognize as red.
+TOP RIGHT: one real BLUE damselfish (Chrysiptera cyanea), naturally vivid cobalt-blue body and blue fins, small natural eye, correct slim oval damselfish outline, no contrasting yellow tail. Easy to recognize as blue.
+BOTTOM LEFT: one real YELLOW tang (Zebrasoma flavescens), naturally unmistakable lemon-yellow entire body and fins, actual tall flattened tang silhouette with pointed snout, small real eye. Easy to recognize as yellow.
+BOTTOM RIGHT: one real GREEN chromis (Chromis viridis), naturally clear rich emerald-green / teal-green body and green translucent fins, realistic fine scales, natural forked tail, no large contrasting blue regions. Easy to recognize as green.
+Each of these is a separate genuinely naturally colored species, not one generic fish recolored. All four should look like real photographic aquarium fish cut out on transparent alpha. No cast shadows outside fish, bubble, plant, floor, backdrop, border or framing.

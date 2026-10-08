@@ -1,0 +1,126 @@
+{
+  "format": "RGBA",
+  "size": [
+    1536,
+    1024
+  ],
+  "alpha": {
+    "min": 0,
+    "max": 254,
+    "fully_transparent": 1219627,
+    "low_alpha_1_to_31": 25528
+  },
+  "bounds_convention": "[left,top,right,bottom], right and bottom exclusive; largest connected subject component alpha>=32",
+  "species": [
+    "corn snake",
+    "green tree python",
+    "ball python",
+    "milk snake",
+    "kingsnake",
+    "garter snake",
+    "rainbow boa",
+    "sea snake"
+  ],
+  "heads": [
+    [
+      16,
+      287,
+      208,
+      391
+    ],
+    [
+      210,
+      293,
+      395,
+      390
+    ],
+    [
+      400,
+      290,
+      576,
+      391
+    ],
+    [
+      583,
+      293,
+      769,
+      389
+    ],
+    [
+      775,
+      293,
+      960,
+      390
+    ],
+    [
+      965,
+      290,
+      1146,
+      391
+    ],
+    [
+      1153,
+      293,
+      1338,
+      390
+    ],
+    [
+      1344,
+      295,
+      1526,
+      391
+    ]
+  ],
+  "bodies": [
+    [
+      14,
+      571,
+      196,
+      759
+    ],
+    [
+      206,
+      571,
+      386,
+      759
+    ],
+    [
+      396,
+      571,
+      575,
+      759
+    ],
+    [
+      585,
+      571,
+      764,
+      759
+    ],
+    [
+      775,
+      571,
+      955,
+      759
+    ],
+    [
+      965,
+      571,
+      1145,
+      759
+    ],
+    [
+      1154,
+      570,
+      1335,
+      759
+    ],
+    [
+      1345,
+      570,
+      1524,
+      759
+    ]
+  ],
+  "original_generated_path": "C:\\Users\\LEGION\\.codex\\generated_images\\01a1098a-9c02-7c23-9757-231261721495\\exec-fd03b665-ca32-4e67-9f4c-bade0b22118a.png",
+  "saved_path": "D:\\project\\englishlearning\\snake-flat-art\\snake-breeds-flat-v3.png"
+}

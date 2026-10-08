@@ -1,0 +1,6386 @@
+{
+  "schemaVersion": 1,
+  "title": "萌宠英语探索岛 · 学习扩展包",
+  "createdAt": "2026-10-04",
+  "copyright": "本文件中的教学句子、故事、练习和观察标准为原创；只用官方词表和能力要求校准范围，未复制官方试题或插图。",
+  "status": "Pre-A1 基础拓展 + 部分 A1 衔接；不是完整 A1 课程，也不是剑桥官方等级认证。",
+  "assetPolicy": {
+    "primaryImages": "新增 40 词按 spriteIndex 对应原创词图；不使用 emoji 作为主要教学词图。",
+    "oldWordIds": [
+      "cat",
+      "dog",
+      "rabbit",
+      "apple",
+      "banana",
+      "milk",
+      "water",
+      "juice",
+      "ball",
+      "kite",
+      "bike"
+    ],
+    "sceneRendering": "组合原有或新增词图，用边框容器和位置绘制场景；颜色、数量和上下/内外位置必须真的画出来，不能仅显示中文答案。",
+    "ambiguityChecks": [
+      "brother / friend、mother / teacher 静态人物图可能重叠：学习示范可带角色徽标，测评需给明确关系语境。",
+      "desk 与 chair 要画出结构差异。",
+      "eat / drink / read / write 等动词必须有明显动作和道具。",
+      "head / arm / leg / foot 等身体部位需用局部高亮，不能共用同一全身人物。",
+      "天气 hot / cold 要画明显温度情境，不能只靠太阳判断冷热。"
+    ]
+  },
+  "dailyFlow": {
+    "durationMinutes": [
+      10,
+      15
+    ],
+    "steps": [
+      {
+        "id": "recall",
+        "titleZh": "旧朋友回忆",
+        "durationMinutes": [
+          2,
+          4
+        ],
+        "goalZh": "先完成到期复习，换顺序和选项位置，不先给答案。"
+      },
+      {
+        "id": "learn",
+        "titleZh": "今天的新任务",
+        "durationMinutes": [
+          5,
+          7
+        ],
+        "goalZh": "一次少量新词与一个表达，先听懂、再结合情境理解。"
+      },
+      {
+        "id": "express",
+        "titleZh": "我来告诉你",
+        "durationMinutes": [
+          2,
+          3
+        ],
+        "goalZh": "合上或遮住示范，独立说一个短句，或者写一个词句。"
+      }
+    ],
+    "reviewPolicy": {
+      "offsetDays": [
+        1,
+        3,
+        7
+      ],
+      "initialAnchor": "首次正确学习/完成日期（Asia/Shanghai 日历日）",
+      "retryRule": "首次答错或用了提示：记录为练习，次日安排该项再练；不要把提示后的正确回答当成独立掌握。",
+      "successRule": "只在未显示答案、未用提示且首次回答正确时记录独立回忆；每阶段至少隔一天，刷新和同日重玩不推进复习阶段。",
+      "variantRule": "至少重排选项和任务顺序；更充分的回忆任务应换场景和人物，不能宣称仅重排已测试的图片就是未见材料。"
+    },
+    "adultBridgeZh": "家长每天只需听孩子独立说一句话；不会说时先鼓励，再给一句示范。记录“独立/有提示”，不拿星星数量判断语言等级。"
+  },
+  "units": [
+    {
+      "id": "family",
+      "title": "家庭花园",
+      "goal": "介绍自己的家人和朋友",
+      "level": "Pre-A1",
+      "words": [
+        {
+          "id": "mother",
+          "en": "mother",
+          "zh": "妈妈",
+          "topicId": "family",
+          "spriteIndex": 0,
+          "level": "Pre-A1",
+          "audioText": "mother"
+        },
+        {
+          "id": "father",
+          "en": "father",
+          "zh": "爸爸",
+          "topicId": "family",
+          "spriteIndex": 1,
+          "level": "Pre-A1",
+          "audioText": "father"
+        },
+        {
+          "id": "brother",
+          "en": "brother",
+          "zh": "兄弟",
+          "topicId": "family",
+          "spriteIndex": 2,
+          "level": "Pre-A1",
+          "audioText": "brother"
+        },
+        {
+          "id": "sister",
+          "en": "sister",
+          "zh": "姐妹",
+          "topicId": "family",
+          "spriteIndex": 3,
+          "level": "Pre-A1",
+          "audioText": "sister"
+        },
+        {
+          "id": "grandma",
+          "en": "grandma",
+          "zh": "奶奶 / 外婆",
+          "topicId": "family",
+          "spriteIndex": 4,
+          "level": "Pre-A1",
+          "audioText": "grandma"
+        },
+        {
+          "id": "grandpa",
+          "en": "grandpa",
+          "zh": "爷爷 / 外公",
+          "topicId": "family",
+          "spriteIndex": 5,
+          "level": "Pre-A1",
+          "audioText": "grandpa"
+        },
+        {
+          "id": "baby",
+          "en": "baby",
+          "zh": "婴儿",
+          "topicId": "family",
+          "spriteIndex": 6,
+          "level": "Pre-A1",
+          "audioText": "baby"
+        },
+        {
+          "id": "friend",
+          "en": "friend",
+          "zh": "朋友",
+          "topicId": "family",
+          "spriteIndex": 7,
+          "level": "Pre-A1",
+          "audioText": "friend"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "This is my mother.",
+          "zh": "这是我的妈妈。",
+          "goal": "介绍家人",
+          "audioText": "This is my mother."
+        },
+        {
+          "en": "My brother has a ball.",
+          "zh": "我的兄弟有一个球。",
+          "goal": "介绍家人的物品",
+          "audioText": "My brother has a ball."
+        },
+        {
+          "en": "I play with my friend.",
+          "zh": "我和我的朋友一起玩。",
+          "goal": "描述与朋友的活动",
+          "audioText": "I play with my friend."
+        }
+      ],
+      "adultPromptZh": "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。",
+      "subtitle": "介绍自己的家人和朋友",
+      "activities": [
+        {
+          "id": "family-listen",
+          "title": "听音找朋友",
+          "skill": "listening",
+          "tasks": [
+            {
+              "id": "family-word-1",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word mother.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word mother.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“妈妈”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                },
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                },
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                }
+              ],
+              "answer": "mother"
+            },
+            {
+              "id": "family-word-2",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word father.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word father.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“爸爸”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                },
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                },
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                }
+              ],
+              "answer": "father"
+            },
+            {
+              "id": "family-word-3",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word brother.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word brother.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“兄弟”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                },
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                },
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                }
+              ],
+              "answer": "brother"
+            },
+            {
+              "id": "family-word-4",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word sister.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word sister.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“姐妹”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                },
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                },
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                }
+              ],
+              "answer": "sister"
+            },
+            {
+              "id": "family-word-5",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word grandma.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word grandma.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“奶奶 / 外婆”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                },
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                },
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                }
+              ],
+              "answer": "grandma"
+            },
+            {
+              "id": "family-word-6",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word grandpa.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word grandpa.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“爷爷 / 外公”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                },
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                },
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                }
+              ],
+              "answer": "grandpa"
+            },
+            {
+              "id": "family-word-7",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word baby.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word baby.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“婴儿”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                },
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                },
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                }
+              ],
+              "answer": "baby"
+            },
+            {
+              "id": "family-word-8",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word friend.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word friend.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“朋友”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                },
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                },
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                }
+              ],
+              "answer": "friend"
+            }
+          ]
+        },
+        {
+          "id": "family-read",
+          "title": "字卡探险",
+          "skill": "reading",
+          "tasks": [
+            {
+              "id": "family-read-1",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“妈妈”。",
+              "options": [
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                },
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                },
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                }
+              ],
+              "answer": "mother",
+              "stimulusEn": "mother"
+            },
+            {
+              "id": "family-read-2",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“爸爸”。",
+              "options": [
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                },
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                },
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                }
+              ],
+              "answer": "father",
+              "stimulusEn": "father"
+            },
+            {
+              "id": "family-read-3",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“兄弟”。",
+              "options": [
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                },
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                },
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                }
+              ],
+              "answer": "brother",
+              "stimulusEn": "brother"
+            },
+            {
+              "id": "family-read-4",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“姐妹”。",
+              "options": [
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                },
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                },
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                }
+              ],
+              "answer": "sister",
+              "stimulusEn": "sister"
+            },
+            {
+              "id": "family-read-5",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“奶奶 / 外婆”。",
+              "options": [
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                },
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                },
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                }
+              ],
+              "answer": "grandma",
+              "stimulusEn": "grandma"
+            },
+            {
+              "id": "family-read-6",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“爷爷 / 外公”。",
+              "options": [
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                },
+                {
+                  "id": "mother",
+                  "wordIds": [
+                    "mother"
+                  ]
+                },
+                {
+                  "id": "sister",
+                  "wordIds": [
+                    "sister"
+                  ]
+                }
+              ],
+              "answer": "grandpa",
+              "stimulusEn": "grandpa"
+            },
+            {
+              "id": "family-read-7",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“婴儿”。",
+              "options": [
+                {
+                  "id": "baby",
+                  "wordIds": [
+                    "baby"
+                  ]
+                },
+                {
+                  "id": "father",
+                  "wordIds": [
+                    "father"
+                  ]
+                },
+                {
+                  "id": "grandma",
+                  "wordIds": [
+                    "grandma"
+                  ]
+                }
+              ],
+              "answer": "baby",
+              "stimulusEn": "baby"
+            },
+            {
+              "id": "family-read-8",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“朋友”。",
+              "options": [
+                {
+                  "id": "friend",
+                  "wordIds": [
+                    "friend"
+                  ]
+                },
+                {
+                  "id": "brother",
+                  "wordIds": [
+                    "brother"
+                  ]
+                },
+                {
+                  "id": "grandpa",
+                  "wordIds": [
+                    "grandpa"
+                  ]
+                }
+              ],
+              "answer": "friend",
+              "stimulusEn": "friend"
+            }
+          ]
+        },
+        {
+          "id": "family-write",
+          "title": "单词工坊",
+          "skill": "writing",
+          "tasks": [
+            {
+              "id": "family-write-1",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 mother。",
+              "acceptedAnswers": [
+                "mother"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "mother",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "family-write-2",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 father。",
+              "acceptedAnswers": [
+                "father"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "father",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "family-write-3",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 brother。",
+              "acceptedAnswers": [
+                "brother"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "brother",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "family-write-4",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 sister。",
+              "acceptedAnswers": [
+                "sister"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "sister",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "family-speak",
+          "title": "我来告诉你",
+          "skill": "speaking",
+          "tasks": [
+            {
+              "id": "family-speak-1",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Tell me about your family.",
+              "promptZh": "介绍一位家人。",
+              "audioText": "Tell me about your family.",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "This is my mother.",
+                "I have a sister."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "family-speak-2",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Who do you play with?",
+              "promptZh": "说说你和谁一起玩。",
+              "audioText": "Who do you play with?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I play with my friend."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "family-speak-3",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "What does your brother or sister have?",
+              "promptZh": "介绍兄弟姐妹的一件物品，也可以介绍朋友。",
+              "audioText": "What does your brother or sister have?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "My brother has a ball.",
+                "My friend has a book."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "title": "校园书屋",
+      "goal": "认识课堂里的物品和人物",
+      "level": "Pre-A1",
+      "words": [
+        {
+          "id": "book",
+          "en": "book",
+          "zh": "书",
+          "topicId": "school",
+          "spriteIndex": 8,
+          "level": "Pre-A1",
+          "audioText": "book"
+        },
+        {
+          "id": "pen",
+          "en": "pen",
+          "zh": "钢笔 / 水笔",
+          "topicId": "school",
+          "spriteIndex": 9,
+          "level": "Pre-A1",
+          "audioText": "pen"
+        },
+        {
+          "id": "pencil",
+          "en": "pencil",
+          "zh": "铅笔",
+          "topicId": "school",
+          "spriteIndex": 10,
+          "level": "Pre-A1",
+          "audioText": "pencil"
+        },
+        {
+          "id": "bag",
+          "en": "bag",
+          "zh": "书包",
+          "topicId": "school",
+          "spriteIndex": 11,
+          "level": "Pre-A1",
+          "audioText": "bag"
+        },
+        {
+          "id": "desk",
+          "en": "desk",
+          "zh": "课桌",
+          "topicId": "school",
+          "spriteIndex": 12,
+          "level": "Pre-A1",
+          "audioText": "desk"
+        },
+        {
+          "id": "chair",
+          "en": "chair",
+          "zh": "椅子",
+          "topicId": "school",
+          "spriteIndex": 13,
+          "level": "Pre-A1",
+          "audioText": "chair"
+        },
+        {
+          "id": "teacher",
+          "en": "teacher",
+          "zh": "老师",
+          "topicId": "school",
+          "spriteIndex": 14,
+          "level": "Pre-A1",
+          "audioText": "teacher"
+        },
+        {
+          "id": "classroom",
+          "en": "classroom",
+          "zh": "教室",
+          "topicId": "school",
+          "spriteIndex": 15,
+          "level": "Pre-A1",
+          "audioText": "classroom"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "This is my teacher.",
+          "zh": "这是我的老师。",
+          "goal": "介绍人物",
+          "audioText": "This is my teacher."
+        },
+        {
+          "en": "My book is in my bag.",
+          "zh": "我的书在我的书包里。",
+          "goal": "描述物品位置",
+          "audioText": "My book is in my bag."
+        },
+        {
+          "en": "I can see two pencils.",
+          "zh": "我能看见两支铅笔。",
+          "goal": "说出数量",
+          "audioText": "I can see two pencils."
+        }
+      ],
+      "adultPromptZh": "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。",
+      "subtitle": "认识课堂里的物品和人物",
+      "activities": [
+        {
+          "id": "school-listen",
+          "title": "听音找朋友",
+          "skill": "listening",
+          "tasks": [
+            {
+              "id": "school-word-1",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word book.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word book.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“书”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                },
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                },
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                }
+              ],
+              "answer": "book"
+            },
+            {
+              "id": "school-word-2",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word pen.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word pen.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“钢笔 / 水笔”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                },
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                },
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                }
+              ],
+              "answer": "pen"
+            },
+            {
+              "id": "school-word-3",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word pencil.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word pencil.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“铅笔”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                },
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                },
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                }
+              ],
+              "answer": "pencil"
+            },
+            {
+              "id": "school-word-4",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word bag.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word bag.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“书包”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                },
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                },
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                }
+              ],
+              "answer": "bag"
+            },
+            {
+              "id": "school-word-5",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word desk.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word desk.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“课桌”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                },
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                },
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                }
+              ],
+              "answer": "desk"
+            },
+            {
+              "id": "school-word-6",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word chair.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word chair.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“椅子”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                },
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                },
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                }
+              ],
+              "answer": "chair"
+            },
+            {
+              "id": "school-word-7",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word teacher.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word teacher.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“老师”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                },
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                },
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                }
+              ],
+              "answer": "teacher"
+            },
+            {
+              "id": "school-word-8",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word classroom.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word classroom.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“教室”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                },
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                },
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                }
+              ],
+              "answer": "classroom"
+            }
+          ]
+        },
+        {
+          "id": "school-read",
+          "title": "字卡探险",
+          "skill": "reading",
+          "tasks": [
+            {
+              "id": "school-read-1",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“书”。",
+              "options": [
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                },
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                },
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                }
+              ],
+              "answer": "book",
+              "stimulusEn": "book"
+            },
+            {
+              "id": "school-read-2",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“钢笔 / 水笔”。",
+              "options": [
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                },
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                },
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                }
+              ],
+              "answer": "pen",
+              "stimulusEn": "pen"
+            },
+            {
+              "id": "school-read-3",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“铅笔”。",
+              "options": [
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                },
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                },
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                }
+              ],
+              "answer": "pencil",
+              "stimulusEn": "pencil"
+            },
+            {
+              "id": "school-read-4",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“书包”。",
+              "options": [
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                },
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                },
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                }
+              ],
+              "answer": "bag",
+              "stimulusEn": "bag"
+            },
+            {
+              "id": "school-read-5",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“课桌”。",
+              "options": [
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                },
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                },
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                }
+              ],
+              "answer": "desk",
+              "stimulusEn": "desk"
+            },
+            {
+              "id": "school-read-6",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“椅子”。",
+              "options": [
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                },
+                {
+                  "id": "book",
+                  "wordIds": [
+                    "book"
+                  ]
+                },
+                {
+                  "id": "bag",
+                  "wordIds": [
+                    "bag"
+                  ]
+                }
+              ],
+              "answer": "chair",
+              "stimulusEn": "chair"
+            },
+            {
+              "id": "school-read-7",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“老师”。",
+              "options": [
+                {
+                  "id": "teacher",
+                  "wordIds": [
+                    "teacher"
+                  ]
+                },
+                {
+                  "id": "pen",
+                  "wordIds": [
+                    "pen"
+                  ]
+                },
+                {
+                  "id": "desk",
+                  "wordIds": [
+                    "desk"
+                  ]
+                }
+              ],
+              "answer": "teacher",
+              "stimulusEn": "teacher"
+            },
+            {
+              "id": "school-read-8",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“教室”。",
+              "options": [
+                {
+                  "id": "classroom",
+                  "wordIds": [
+                    "classroom"
+                  ]
+                },
+                {
+                  "id": "pencil",
+                  "wordIds": [
+                    "pencil"
+                  ]
+                },
+                {
+                  "id": "chair",
+                  "wordIds": [
+                    "chair"
+                  ]
+                }
+              ],
+              "answer": "classroom",
+              "stimulusEn": "classroom"
+            }
+          ]
+        },
+        {
+          "id": "school-write",
+          "title": "单词工坊",
+          "skill": "writing",
+          "tasks": [
+            {
+              "id": "school-write-1",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 book。",
+              "acceptedAnswers": [
+                "book"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "book",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "school-write-2",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 pen。",
+              "acceptedAnswers": [
+                "pen"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "pen",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "school-write-3",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 pencil。",
+              "acceptedAnswers": [
+                "pencil"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "pencil",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "school-write-4",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 bag。",
+              "acceptedAnswers": [
+                "bag"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "bag",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "school-speak",
+          "title": "我来告诉你",
+          "skill": "speaking",
+          "tasks": [
+            {
+              "id": "school-speak-1",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "What can you see in your classroom?",
+              "promptZh": "说说教室里的一件东西。",
+              "audioText": "What can you see in your classroom?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I can see a desk.",
+                "This is my book."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "school-speak-2",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Where is your book?",
+              "promptZh": "介绍你的书在哪里。",
+              "audioText": "Where is your book?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "My book is in my bag.",
+                "My book is on the desk."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "school-speak-3",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Tell me about your teacher.",
+              "promptZh": "介绍你的老师。",
+              "audioText": "Tell me about your teacher.",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "This is my teacher.",
+                "My teacher has a book."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "title": "身体运动场",
+      "goal": "认识身体部位并听懂简单指令",
+      "level": "Pre-A1",
+      "words": [
+        {
+          "id": "head",
+          "en": "head",
+          "zh": "头",
+          "topicId": "body",
+          "spriteIndex": 16,
+          "level": "Pre-A1",
+          "audioText": "head"
+        },
+        {
+          "id": "hand",
+          "en": "hand",
+          "zh": "手",
+          "topicId": "body",
+          "spriteIndex": 17,
+          "level": "Pre-A1",
+          "audioText": "hand"
+        },
+        {
+          "id": "arm",
+          "en": "arm",
+          "zh": "胳膊",
+          "topicId": "body",
+          "spriteIndex": 18,
+          "level": "Pre-A1",
+          "audioText": "arm"
+        },
+        {
+          "id": "leg",
+          "en": "leg",
+          "zh": "腿",
+          "topicId": "body",
+          "spriteIndex": 19,
+          "level": "Pre-A1",
+          "audioText": "leg"
+        },
+        {
+          "id": "foot",
+          "en": "foot",
+          "zh": "脚",
+          "topicId": "body",
+          "spriteIndex": 20,
+          "level": "Pre-A1",
+          "audioText": "foot"
+        },
+        {
+          "id": "eye",
+          "en": "eye",
+          "zh": "眼睛",
+          "topicId": "body",
+          "spriteIndex": 21,
+          "level": "Pre-A1",
+          "audioText": "eye"
+        },
+        {
+          "id": "nose",
+          "en": "nose",
+          "zh": "鼻子",
+          "topicId": "body",
+          "spriteIndex": 22,
+          "level": "Pre-A1",
+          "audioText": "nose"
+        },
+        {
+          "id": "mouth",
+          "en": "mouth",
+          "zh": "嘴",
+          "topicId": "body",
+          "spriteIndex": 23,
+          "level": "Pre-A1",
+          "audioText": "mouth"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "Point to your nose.",
+          "zh": "指一指你的鼻子。",
+          "goal": "听懂身体部位指令",
+          "audioText": "Point to your nose."
+        },
+        {
+          "en": "I have two hands.",
+          "zh": "我有两只手。",
+          "goal": "用复数描述身体",
+          "audioText": "I have two hands."
+        },
+        {
+          "en": "My mouth is small.",
+          "zh": "我的嘴很小。",
+          "goal": "用形容词描述身体部位",
+          "audioText": "My mouth is small."
+        }
+      ],
+      "adultPromptZh": "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。",
+      "subtitle": "认识身体部位并听懂简单指令",
+      "activities": [
+        {
+          "id": "body-listen",
+          "title": "听音找朋友",
+          "skill": "listening",
+          "tasks": [
+            {
+              "id": "body-word-1",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word head.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word head.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“头”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                },
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                },
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                }
+              ],
+              "answer": "head"
+            },
+            {
+              "id": "body-word-2",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word hand.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word hand.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“手”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                },
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                },
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                }
+              ],
+              "answer": "hand"
+            },
+            {
+              "id": "body-word-3",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word arm.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word arm.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“胳膊”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                },
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                },
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                }
+              ],
+              "answer": "arm"
+            },
+            {
+              "id": "body-word-4",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word leg.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word leg.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“腿”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                },
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                },
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                }
+              ],
+              "answer": "leg"
+            },
+            {
+              "id": "body-word-5",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word foot.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word foot.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“脚”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                },
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                },
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                }
+              ],
+              "answer": "foot"
+            },
+            {
+              "id": "body-word-6",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word eye.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word eye.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“眼睛”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                },
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                },
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                }
+              ],
+              "answer": "eye"
+            },
+            {
+              "id": "body-word-7",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word nose.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word nose.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“鼻子”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                },
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                },
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                }
+              ],
+              "answer": "nose"
+            },
+            {
+              "id": "body-word-8",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word mouth.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word mouth.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“嘴”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                },
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                },
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                }
+              ],
+              "answer": "mouth"
+            }
+          ]
+        },
+        {
+          "id": "body-read",
+          "title": "字卡探险",
+          "skill": "reading",
+          "tasks": [
+            {
+              "id": "body-read-1",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“头”。",
+              "options": [
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                },
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                },
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                }
+              ],
+              "answer": "head",
+              "stimulusEn": "head"
+            },
+            {
+              "id": "body-read-2",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“手”。",
+              "options": [
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                },
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                },
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                }
+              ],
+              "answer": "hand",
+              "stimulusEn": "hand"
+            },
+            {
+              "id": "body-read-3",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“胳膊”。",
+              "options": [
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                },
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                },
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                }
+              ],
+              "answer": "arm",
+              "stimulusEn": "arm"
+            },
+            {
+              "id": "body-read-4",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“腿”。",
+              "options": [
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                },
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                },
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                }
+              ],
+              "answer": "leg",
+              "stimulusEn": "leg"
+            },
+            {
+              "id": "body-read-5",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“脚”。",
+              "options": [
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                },
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                },
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                }
+              ],
+              "answer": "foot",
+              "stimulusEn": "foot"
+            },
+            {
+              "id": "body-read-6",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“眼睛”。",
+              "options": [
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                },
+                {
+                  "id": "head",
+                  "wordIds": [
+                    "head"
+                  ]
+                },
+                {
+                  "id": "leg",
+                  "wordIds": [
+                    "leg"
+                  ]
+                }
+              ],
+              "answer": "eye",
+              "stimulusEn": "eye"
+            },
+            {
+              "id": "body-read-7",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“鼻子”。",
+              "options": [
+                {
+                  "id": "nose",
+                  "wordIds": [
+                    "nose"
+                  ]
+                },
+                {
+                  "id": "hand",
+                  "wordIds": [
+                    "hand"
+                  ]
+                },
+                {
+                  "id": "foot",
+                  "wordIds": [
+                    "foot"
+                  ]
+                }
+              ],
+              "answer": "nose",
+              "stimulusEn": "nose"
+            },
+            {
+              "id": "body-read-8",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“嘴”。",
+              "options": [
+                {
+                  "id": "mouth",
+                  "wordIds": [
+                    "mouth"
+                  ]
+                },
+                {
+                  "id": "arm",
+                  "wordIds": [
+                    "arm"
+                  ]
+                },
+                {
+                  "id": "eye",
+                  "wordIds": [
+                    "eye"
+                  ]
+                }
+              ],
+              "answer": "mouth",
+              "stimulusEn": "mouth"
+            }
+          ]
+        },
+        {
+          "id": "body-write",
+          "title": "单词工坊",
+          "skill": "writing",
+          "tasks": [
+            {
+              "id": "body-write-1",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 head。",
+              "acceptedAnswers": [
+                "head"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "head",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "body-write-2",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 hand。",
+              "acceptedAnswers": [
+                "hand"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "hand",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "body-write-3",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 arm。",
+              "acceptedAnswers": [
+                "arm"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "arm",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "body-write-4",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 leg。",
+              "acceptedAnswers": [
+                "leg"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "leg",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "body-speak",
+          "title": "我来告诉你",
+          "skill": "speaking",
+          "tasks": [
+            {
+              "id": "body-speak-1",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "How many hands do you have?",
+              "promptZh": "说说你有几只手。",
+              "audioText": "How many hands do you have?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I have two hands."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "body-speak-2",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Tell me about your eyes.",
+              "promptZh": "说说你的眼睛。",
+              "audioText": "Tell me about your eyes.",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I have two eyes.",
+                "My eyes are brown."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "body-speak-3",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "Point to your nose and tell me what it is.",
+              "promptZh": "指一指鼻子，再用英语介绍它。",
+              "audioText": "Point to your nose and tell me what it is.",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "This is my nose."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "title": "日常时光站",
+      "goal": "描述自己会做和正在做的活动",
+      "level": "Pre-A1",
+      "words": [
+        {
+          "id": "eat",
+          "en": "eat",
+          "zh": "吃",
+          "topicId": "daily",
+          "spriteIndex": 24,
+          "level": "Pre-A1",
+          "audioText": "eat"
+        },
+        {
+          "id": "drink",
+          "en": "drink",
+          "zh": "喝",
+          "topicId": "daily",
+          "spriteIndex": 25,
+          "level": "Pre-A1",
+          "audioText": "drink"
+        },
+        {
+          "id": "read",
+          "en": "read",
+          "zh": "阅读",
+          "topicId": "daily",
+          "spriteIndex": 26,
+          "level": "Pre-A1",
+          "audioText": "read"
+        },
+        {
+          "id": "write",
+          "en": "write",
+          "zh": "书写",
+          "topicId": "daily",
+          "spriteIndex": 27,
+          "level": "Pre-A1",
+          "audioText": "write"
+        },
+        {
+          "id": "sleep",
+          "en": "sleep",
+          "zh": "睡觉",
+          "topicId": "daily",
+          "spriteIndex": 28,
+          "level": "Pre-A1",
+          "audioText": "sleep"
+        },
+        {
+          "id": "play",
+          "en": "play",
+          "zh": "玩耍",
+          "topicId": "daily",
+          "spriteIndex": 29,
+          "level": "Pre-A1",
+          "audioText": "play"
+        },
+        {
+          "id": "run",
+          "en": "run",
+          "zh": "跑步",
+          "topicId": "daily",
+          "spriteIndex": 30,
+          "level": "Pre-A1",
+          "audioText": "run"
+        },
+        {
+          "id": "walk",
+          "en": "walk",
+          "zh": "走路",
+          "topicId": "daily",
+          "spriteIndex": 31,
+          "level": "Pre-A1",
+          "audioText": "walk"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "I can run.",
+          "zh": "我会跑步。",
+          "goal": "表达能力",
+          "audioText": "I can run."
+        },
+        {
+          "en": "I am reading a book.",
+          "zh": "我正在读一本书。",
+          "goal": "描述正在发生的活动",
+          "audioText": "I am reading a book."
+        },
+        {
+          "en": "I drink water every day.",
+          "zh": "我每天喝水。",
+          "goal": "描述日常习惯",
+          "audioText": "I drink water every day."
+        }
+      ],
+      "adultPromptZh": "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。",
+      "subtitle": "描述自己会做和正在做的活动",
+      "activities": [
+        {
+          "id": "daily-listen",
+          "title": "听音找朋友",
+          "skill": "listening",
+          "tasks": [
+            {
+              "id": "daily-word-1",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word eat.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word eat.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“吃”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                },
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                },
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                }
+              ],
+              "answer": "eat"
+            },
+            {
+              "id": "daily-word-2",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word drink.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word drink.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“喝”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                },
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                },
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                }
+              ],
+              "answer": "drink"
+            },
+            {
+              "id": "daily-word-3",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word read.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word read.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“阅读”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                },
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                },
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                }
+              ],
+              "answer": "read"
+            },
+            {
+              "id": "daily-word-4",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word write.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word write.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“书写”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                },
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                },
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                }
+              ],
+              "answer": "write"
+            },
+            {
+              "id": "daily-word-5",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word sleep.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word sleep.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“睡觉”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                },
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                },
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                }
+              ],
+              "answer": "sleep"
+            },
+            {
+              "id": "daily-word-6",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word play.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word play.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“玩耍”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                },
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                },
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                }
+              ],
+              "answer": "play"
+            },
+            {
+              "id": "daily-word-7",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word run.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word run.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“跑步”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                },
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                },
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                }
+              ],
+              "answer": "run"
+            },
+            {
+              "id": "daily-word-8",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word walk.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word walk.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“走路”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                },
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                },
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                }
+              ],
+              "answer": "walk"
+            }
+          ]
+        },
+        {
+          "id": "daily-read",
+          "title": "字卡探险",
+          "skill": "reading",
+          "tasks": [
+            {
+              "id": "daily-read-1",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“吃”。",
+              "options": [
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                },
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                },
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                }
+              ],
+              "answer": "eat",
+              "stimulusEn": "eat"
+            },
+            {
+              "id": "daily-read-2",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“喝”。",
+              "options": [
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                },
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                },
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                }
+              ],
+              "answer": "drink",
+              "stimulusEn": "drink"
+            },
+            {
+              "id": "daily-read-3",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“阅读”。",
+              "options": [
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                },
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                },
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                }
+              ],
+              "answer": "read",
+              "stimulusEn": "read"
+            },
+            {
+              "id": "daily-read-4",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“书写”。",
+              "options": [
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                },
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                },
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                }
+              ],
+              "answer": "write",
+              "stimulusEn": "write"
+            },
+            {
+              "id": "daily-read-5",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“睡觉”。",
+              "options": [
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                },
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                },
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                }
+              ],
+              "answer": "sleep",
+              "stimulusEn": "sleep"
+            },
+            {
+              "id": "daily-read-6",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“玩耍”。",
+              "options": [
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                },
+                {
+                  "id": "eat",
+                  "wordIds": [
+                    "eat"
+                  ]
+                },
+                {
+                  "id": "write",
+                  "wordIds": [
+                    "write"
+                  ]
+                }
+              ],
+              "answer": "play",
+              "stimulusEn": "play"
+            },
+            {
+              "id": "daily-read-7",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“跑步”。",
+              "options": [
+                {
+                  "id": "run",
+                  "wordIds": [
+                    "run"
+                  ]
+                },
+                {
+                  "id": "drink",
+                  "wordIds": [
+                    "drink"
+                  ]
+                },
+                {
+                  "id": "sleep",
+                  "wordIds": [
+                    "sleep"
+                  ]
+                }
+              ],
+              "answer": "run",
+              "stimulusEn": "run"
+            },
+            {
+              "id": "daily-read-8",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“走路”。",
+              "options": [
+                {
+                  "id": "walk",
+                  "wordIds": [
+                    "walk"
+                  ]
+                },
+                {
+                  "id": "read",
+                  "wordIds": [
+                    "read"
+                  ]
+                },
+                {
+                  "id": "play",
+                  "wordIds": [
+                    "play"
+                  ]
+                }
+              ],
+              "answer": "walk",
+              "stimulusEn": "walk"
+            }
+          ]
+        },
+        {
+          "id": "daily-write",
+          "title": "单词工坊",
+          "skill": "writing",
+          "tasks": [
+            {
+              "id": "daily-write-1",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 eat。",
+              "acceptedAnswers": [
+                "eat"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "eat",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "daily-write-2",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 drink。",
+              "acceptedAnswers": [
+                "drink"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "drink",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "daily-write-3",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 read。",
+              "acceptedAnswers": [
+                "read"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "read",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "daily-write-4",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 write。",
+              "acceptedAnswers": [
+                "write"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "write",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "daily-speak",
+          "title": "我来告诉你",
+          "skill": "speaking",
+          "tasks": [
+            {
+              "id": "daily-speak-1",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "What can you do?",
+              "promptZh": "说说你会做的一件事。",
+              "audioText": "What can you do?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I can run.",
+                "I can read."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "daily-speak-2",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "What do you like to do?",
+              "promptZh": "说说你喜欢做的事。",
+              "audioText": "What do you like to do?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I like to play.",
+                "I like to read."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "daily-speak-3",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "Pre-A1",
+              "promptEn": "What do you drink every day?",
+              "promptZh": "说说你每天喝什么。",
+              "audioText": "What do you drink every day?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I drink water every day.",
+                "I drink milk every day."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "title": "天气观察台",
+      "goal": "从启蒙词句迈向 A1 的天气表达",
+      "level": "A1-bridge",
+      "words": [
+        {
+          "id": "sun",
+          "en": "sun",
+          "zh": "太阳",
+          "topicId": "weather",
+          "spriteIndex": 32,
+          "level": "Pre-A1",
+          "audioText": "sun"
+        },
+        {
+          "id": "cloud",
+          "en": "cloud",
+          "zh": "云",
+          "topicId": "weather",
+          "spriteIndex": 33,
+          "level": "A1",
+          "audioText": "cloud"
+        },
+        {
+          "id": "rain",
+          "en": "rain",
+          "zh": "雨",
+          "topicId": "weather",
+          "spriteIndex": 34,
+          "level": "A1",
+          "audioText": "rain"
+        },
+        {
+          "id": "snow",
+          "en": "snow",
+          "zh": "雪",
+          "topicId": "weather",
+          "spriteIndex": 35,
+          "level": "A1",
+          "audioText": "snow"
+        },
+        {
+          "id": "wind",
+          "en": "wind",
+          "zh": "风",
+          "topicId": "weather",
+          "spriteIndex": 36,
+          "level": "A1",
+          "audioText": "wind"
+        },
+        {
+          "id": "rainbow",
+          "en": "rainbow",
+          "zh": "彩虹",
+          "topicId": "weather",
+          "spriteIndex": 37,
+          "level": "A1",
+          "audioText": "rainbow"
+        },
+        {
+          "id": "hot",
+          "en": "hot",
+          "zh": "炎热",
+          "topicId": "weather",
+          "spriteIndex": 38,
+          "level": "A1",
+          "audioText": "hot"
+        },
+        {
+          "id": "cold",
+          "en": "cold",
+          "zh": "寒冷",
+          "topicId": "weather",
+          "spriteIndex": 39,
+          "level": "A1",
+          "audioText": "cold"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "It is hot today.",
+          "zh": "今天很热。",
+          "goal": "描述天气",
+          "audioText": "It is hot today."
+        },
+        {
+          "en": "I can see a rainbow.",
+          "zh": "我能看见一道彩虹。",
+          "goal": "描述自然景物",
+          "audioText": "I can see a rainbow."
+        },
+        {
+          "en": "It is cold today.",
+          "zh": "今天很冷。",
+          "goal": "描述天气",
+          "audioText": "It is cold today."
+        }
+      ],
+      "adultPromptZh": "学完后，把平板放下，指一指身边的实物，用今天的一句话说给家长听。",
+      "subtitle": "从启蒙词句迈向 A1 的天气表达",
+      "activities": [
+        {
+          "id": "weather-listen",
+          "title": "听音找朋友",
+          "skill": "listening",
+          "tasks": [
+            {
+              "id": "weather-word-1",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Find the picture for the word sun.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word sun.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“太阳”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                },
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                },
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                }
+              ],
+              "answer": "sun"
+            },
+            {
+              "id": "weather-word-2",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word cloud.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word cloud.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“云”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                },
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                },
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                }
+              ],
+              "answer": "cloud"
+            },
+            {
+              "id": "weather-word-3",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word rain.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word rain.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“雨”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                },
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                },
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                }
+              ],
+              "answer": "rain"
+            },
+            {
+              "id": "weather-word-4",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word snow.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word snow.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“雪”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                },
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                },
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                }
+              ],
+              "answer": "snow"
+            },
+            {
+              "id": "weather-word-5",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word wind.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word wind.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“风”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                },
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                },
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                }
+              ],
+              "answer": "wind"
+            },
+            {
+              "id": "weather-word-6",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word rainbow.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word rainbow.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“彩虹”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                },
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                },
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                }
+              ],
+              "answer": "rainbow"
+            },
+            {
+              "id": "weather-word-7",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word hot.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word hot.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“炎热”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                },
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                },
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                }
+              ],
+              "answer": "hot"
+            },
+            {
+              "id": "weather-word-8",
+              "skill": "listening",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Find the picture for the word cold.",
+              "promptZh": "听英语，点对应的图片。",
+              "audioText": "Find the picture for the word cold.",
+              "captionMode": "always",
+              "goal": "听懂常见单词",
+              "hintZh": "目标是“寒冷”。听一遍，再找图片。",
+              "options": [
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                },
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                },
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                }
+              ],
+              "answer": "cold"
+            }
+          ]
+        },
+        {
+          "id": "weather-read",
+          "title": "字卡探险",
+          "skill": "reading",
+          "tasks": [
+            {
+              "id": "weather-read-1",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "Pre-A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“太阳”。",
+              "options": [
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                },
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                },
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                }
+              ],
+              "answer": "sun",
+              "stimulusEn": "sun"
+            },
+            {
+              "id": "weather-read-2",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“云”。",
+              "options": [
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                },
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                },
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                }
+              ],
+              "answer": "cloud",
+              "stimulusEn": "cloud"
+            },
+            {
+              "id": "weather-read-3",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“雨”。",
+              "options": [
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                },
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                },
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                }
+              ],
+              "answer": "rain",
+              "stimulusEn": "rain"
+            },
+            {
+              "id": "weather-read-4",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“雪”。",
+              "options": [
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                },
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                },
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                }
+              ],
+              "answer": "snow",
+              "stimulusEn": "snow"
+            },
+            {
+              "id": "weather-read-5",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“风”。",
+              "options": [
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                },
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                },
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                }
+              ],
+              "answer": "wind",
+              "stimulusEn": "wind"
+            },
+            {
+              "id": "weather-read-6",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“彩虹”。",
+              "options": [
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                },
+                {
+                  "id": "sun",
+                  "wordIds": [
+                    "sun"
+                  ]
+                },
+                {
+                  "id": "snow",
+                  "wordIds": [
+                    "snow"
+                  ]
+                }
+              ],
+              "answer": "rainbow",
+              "stimulusEn": "rainbow"
+            },
+            {
+              "id": "weather-read-7",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“炎热”。",
+              "options": [
+                {
+                  "id": "hot",
+                  "wordIds": [
+                    "hot"
+                  ]
+                },
+                {
+                  "id": "cloud",
+                  "wordIds": [
+                    "cloud"
+                  ]
+                },
+                {
+                  "id": "wind",
+                  "wordIds": [
+                    "wind"
+                  ]
+                }
+              ],
+              "answer": "hot",
+              "stimulusEn": "hot"
+            },
+            {
+              "id": "weather-read-8",
+              "skill": "reading",
+              "kind": "choose",
+              "level": "A1",
+              "promptEn": "Which picture matches this word?",
+              "promptZh": "读英文单词，选出对应的图片。",
+              "audioText": "Which picture matches this word?",
+              "captionMode": "always",
+              "goal": "把书面词和意义联系起来",
+              "hintZh": "这个词表示“寒冷”。",
+              "options": [
+                {
+                  "id": "cold",
+                  "wordIds": [
+                    "cold"
+                  ]
+                },
+                {
+                  "id": "rain",
+                  "wordIds": [
+                    "rain"
+                  ]
+                },
+                {
+                  "id": "rainbow",
+                  "wordIds": [
+                    "rainbow"
+                  ]
+                }
+              ],
+              "answer": "cold",
+              "stimulusEn": "cold"
+            }
+          ]
+        },
+        {
+          "id": "weather-write",
+          "title": "单词工坊",
+          "skill": "writing",
+          "tasks": [
+            {
+              "id": "weather-write-1",
+              "skill": "writing",
+              "kind": "type",
+              "level": "Pre-A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 sun。",
+              "acceptedAnswers": [
+                "sun"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "sun",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "weather-write-2",
+              "skill": "writing",
+              "kind": "type",
+              "level": "A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 cloud。",
+              "acceptedAnswers": [
+                "cloud"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "cloud",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "weather-write-3",
+              "skill": "writing",
+              "kind": "type",
+              "level": "A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 rain。",
+              "acceptedAnswers": [
+                "rain"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "rain",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "weather-write-4",
+              "skill": "writing",
+              "kind": "type",
+              "level": "A1",
+              "promptEn": "Write the word for this picture.",
+              "promptZh": "看图，输入对应的英文单词。",
+              "audioText": "Write the word for this picture.",
+              "captionMode": "always",
+              "goal": "独立拼写常见词",
+              "hintZh": "它的英文是 snow。",
+              "acceptedAnswers": [
+                "snow"
+              ],
+              "scenes": [
+                {
+                  "objects": [
+                    {
+                      "wordId": "snow",
+                      "count": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "weather-speak",
+          "title": "我来告诉你",
+          "skill": "speaking",
+          "tasks": [
+            {
+              "id": "weather-speak-1",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "A1-bridge",
+              "promptEn": "What is the weather like today?",
+              "promptZh": "看看窗外，介绍今天的天气。",
+              "audioText": "What is the weather like today?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "It is hot today.",
+                "It is cold today."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "weather-speak-2",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "A1-bridge",
+              "promptEn": "What can you see in the sky?",
+              "promptZh": "看看天空，说出一种景物。",
+              "audioText": "What can you see in the sky?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I can see a cloud.",
+                "I can see the sun."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            },
+            {
+              "id": "weather-speak-3",
+              "skill": "speaking",
+              "kind": "speak",
+              "level": "A1-bridge",
+              "promptEn": "What do you drink when it is hot?",
+              "promptZh": "说说天热时你喝什么。",
+              "audioText": "What do you drink when it is hot?",
+              "captionMode": "always",
+              "goal": "在熟悉语境独立表达短句",
+              "hintZh": "先试着自己说。需要帮助时可以听示范，但这次会记录为有提示的练习。",
+              "exampleAnswers": [
+                "I drink water."
+              ],
+              "exampleAnswersVisibility": "after-attempt"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "cat-blue-ball",
+      "title": "小猫找球",
+      "titleEn": "The Cat and the Blue Ball",
+      "level": "Pre-A1",
+      "pages": [
+        {
+          "en": "This is a cat.",
+          "zh": "这是一只小猫。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "cat",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "This is a cat.",
+          "wordIds": [
+            "cat"
+          ]
+        },
+        {
+          "en": "The cat can see a blue ball.",
+          "zh": "小猫看见了一个蓝色的球。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "cat",
+                "count": 1
+              },
+              {
+                "wordId": "ball",
+                "count": 1,
+                "color": "blue"
+              }
+            ]
+          },
+          "audioText": "The cat can see a blue ball.",
+          "wordIds": [
+            "cat",
+            "ball"
+          ]
+        },
+        {
+          "en": "The ball is under the chair.",
+          "zh": "球在椅子下面。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "ball",
+                "count": 1,
+                "color": "blue",
+                "position": "under"
+              },
+              {
+                "wordId": "chair",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "The ball is under the chair.",
+          "wordIds": [
+            "ball",
+            "chair"
+          ]
+        },
+        {
+          "en": "The cat is happy.",
+          "zh": "小猫很开心。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "cat",
+                "count": 1
+              },
+              {
+                "wordId": "ball",
+                "count": 1,
+                "color": "blue"
+              }
+            ],
+            "mood": "happy"
+          },
+          "audioText": "The cat is happy.",
+          "wordIds": [
+            "cat",
+            "ball"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "story-cat-read",
+          "skill": "reading",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "What colour is the ball?",
+          "promptZh": "读故事，找出球的颜色。",
+          "audioText": "What colour is the ball?",
+          "captionMode": "always",
+          "goal": "理解短故事中的细节",
+          "hintZh": "再看故事的第二页。",
+          "options": [
+            {
+              "id": "blue",
+              "textEn": "blue"
+            },
+            {
+              "id": "red",
+              "textEn": "red"
+            },
+            {
+              "id": "green",
+              "textEn": "green"
+            }
+          ],
+          "answer": "blue"
+        },
+        {
+          "id": "story-cat-listen",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "The ball is under the chair.",
+          "promptZh": "听句子，选出正确的图片。",
+          "audioText": "The ball is under the chair.",
+          "captionMode": "always",
+          "goal": "把故事语言与位置联系起来",
+          "hintZh": "under 表示在下面。",
+          "options": [
+            {
+              "id": "under",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "ball",
+                    "count": 1,
+                    "position": "under"
+                  },
+                  {
+                    "wordId": "chair",
+                    "count": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "on",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "ball",
+                    "count": 1,
+                    "position": "on"
+                  },
+                  {
+                    "wordId": "chair",
+                    "count": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "in",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "ball",
+                    "count": 1,
+                    "position": "in"
+                  },
+                  {
+                    "wordId": "bag",
+                    "count": 1
+                  }
+                ]
+              }
+            }
+          ],
+          "answer": "under"
+        },
+        {
+          "id": "story-cat-write",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Complete the sentence.",
+          "promptZh": "回想故事，用一个英文单词填空。",
+          "audioText": "Complete the sentence.",
+          "captionMode": "always",
+          "goal": "拼写常见物品词",
+          "hintZh": "球的英文有四个字母。",
+          "acceptedAnswers": [
+            "ball"
+          ],
+          "stimulusEn": "The cat can see a blue ___."
+        }
+      ]
+    },
+    {
+      "id": "family-picnic",
+      "title": "我们的野餐包",
+      "titleEn": "Our Picnic Bag",
+      "level": "Pre-A1",
+      "pages": [
+        {
+          "en": "My brother has a bag.",
+          "zh": "我的兄弟有一个包。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "brother",
+                "count": 1
+              },
+              {
+                "wordId": "bag",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "My brother has a bag.",
+          "wordIds": [
+            "brother",
+            "bag"
+          ]
+        },
+        {
+          "en": "Two apples are in the bag.",
+          "zh": "两个苹果在包里。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "apple",
+                "count": 2,
+                "position": "in"
+              },
+              {
+                "wordId": "bag",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "Two apples are in the bag.",
+          "wordIds": [
+            "apple",
+            "bag"
+          ]
+        },
+        {
+          "en": "My sister has some water.",
+          "zh": "我的姐妹有一些水。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "sister",
+                "count": 1
+              },
+              {
+                "wordId": "water",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "My sister has some water.",
+          "wordIds": [
+            "sister",
+            "water"
+          ]
+        },
+        {
+          "en": "We eat and drink with our friends.",
+          "zh": "我们和朋友们一起吃喝。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 2
+              },
+              {
+                "wordId": "apple",
+                "count": 2
+              },
+              {
+                "wordId": "water",
+                "count": 1
+              }
+            ],
+            "actionWordId": "eat"
+          },
+          "audioText": "We eat and drink with our friends.",
+          "wordIds": [
+            "friend",
+            "apple",
+            "water"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "story-picnic-read",
+          "skill": "reading",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "How many apples are in the bag?",
+          "promptZh": "读故事，找到苹果的数量。",
+          "audioText": "How many apples are in the bag?",
+          "captionMode": "always",
+          "goal": "理解数量信息",
+          "hintZh": "再读故事的第二页。",
+          "options": [
+            {
+              "id": "one",
+              "textEn": "one",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "apple",
+                    "count": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "two",
+              "textEn": "two",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "apple",
+                    "count": 2
+                  }
+                ]
+              }
+            },
+            {
+              "id": "three",
+              "textEn": "three",
+              "scene": {
+                "objects": [
+                  {
+                    "wordId": "apple",
+                    "count": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "answer": "two"
+        },
+        {
+          "id": "story-picnic-speak",
+          "skill": "speaking",
+          "kind": "speak",
+          "level": "Pre-A1",
+          "promptEn": "What do you like to eat?",
+          "promptZh": "说说你喜欢吃什么。",
+          "audioText": "What do you like to eat?",
+          "captionMode": "always",
+          "goal": "把故事内容联系到自己",
+          "hintZh": "用 I like 开头，接你喜欢的食物。",
+          "exampleAnswers": [
+            "I like apples.",
+            "I like bananas."
+          ]
+        },
+        {
+          "id": "story-picnic-write",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Complete the sentence.",
+          "promptZh": "回想故事，用一个英文单词填空。",
+          "audioText": "Complete the sentence.",
+          "captionMode": "always",
+          "goal": "拼写家庭成员词",
+          "hintZh": "故事里拿着水的是姐妹。",
+          "acceptedAnswers": [
+            "sister"
+          ],
+          "stimulusEn": "My ___ has some water."
+        }
+      ]
+    },
+    {
+      "id": "rainy-school-day",
+      "title": "雨天的书屋",
+      "titleEn": "A Rainy School Day",
+      "level": "A1-bridge",
+      "pages": [
+        {
+          "en": "The children are in the classroom.",
+          "zh": "孩子们在教室里。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "classroom",
+                "count": 1
+              },
+              {
+                "wordId": "friend",
+                "count": 2
+              }
+            ]
+          },
+          "audioText": "The children are in the classroom.",
+          "wordIds": [
+            "classroom",
+            "friend"
+          ]
+        },
+        {
+          "en": "They can see rain outside.",
+          "zh": "他们看见外面在下雨。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "classroom",
+                "count": 1
+              },
+              {
+                "wordId": "rain",
+                "count": 1
+              }
+            ]
+          },
+          "audioText": "They can see rain outside.",
+          "wordIds": [
+            "classroom",
+            "rain"
+          ]
+        },
+        {
+          "en": "Their teacher reads a book.",
+          "zh": "他们的老师读一本书。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "teacher",
+                "count": 1
+              },
+              {
+                "wordId": "book",
+                "count": 1
+              }
+            ],
+            "actionWordId": "read"
+          },
+          "audioText": "Their teacher reads a book.",
+          "wordIds": [
+            "teacher",
+            "book"
+          ]
+        },
+        {
+          "en": "The children listen and smile.",
+          "zh": "孩子们听着，露出笑容。",
+          "scene": {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 2
+              }
+            ],
+            "mood": "happy"
+          },
+          "audioText": "The children listen and smile.",
+          "wordIds": [
+            "friend"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "story-rain-read",
+          "skill": "reading",
+          "kind": "choose",
+          "level": "A1",
+          "promptEn": "Where are the children?",
+          "promptZh": "读故事，找出孩子们在哪里。",
+          "audioText": "Where are the children?",
+          "captionMode": "always",
+          "goal": "理解故事场所",
+          "hintZh": "再读第一句话。",
+          "options": [
+            {
+              "id": "classroom",
+              "wordIds": [
+                "classroom"
+              ]
+            },
+            {
+              "id": "bag",
+              "wordIds": [
+                "bag"
+              ]
+            },
+            {
+              "id": "desk",
+              "wordIds": [
+                "desk"
+              ]
+            }
+          ],
+          "answer": "classroom"
+        },
+        {
+          "id": "story-rain-listen",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "A1",
+          "promptEn": "Their teacher reads a book.",
+          "promptZh": "听句子，选出老师做的活动。",
+          "audioText": "Their teacher reads a book.",
+          "captionMode": "always",
+          "goal": "理解动作信息",
+          "hintZh": "reads a book 表示读书。",
+          "options": [
+            {
+              "id": "read",
+              "wordIds": [
+                "read"
+              ]
+            },
+            {
+              "id": "run",
+              "wordIds": [
+                "run"
+              ]
+            },
+            {
+              "id": "sleep",
+              "wordIds": [
+                "sleep"
+              ]
+            }
+          ],
+          "answer": "read"
+        },
+        {
+          "id": "story-rain-write",
+          "skill": "writing",
+          "kind": "type",
+          "level": "A1",
+          "promptEn": "Complete the sentence.",
+          "promptZh": "回想故事，用一个英文单词填空。",
+          "audioText": "Complete the sentence.",
+          "captionMode": "always",
+          "goal": "从故事中找信息并拼写",
+          "hintZh": "故事里外面正在下雨。",
+          "acceptedAnswers": [
+            "rain"
+          ],
+          "stimulusEn": "They can see ___ outside."
+        }
+      ]
+    }
+  ],
+  "phonics": [
+    {
+      "id": "at",
+      "title": "拼读小火车 · -at",
+      "focus": "-at",
+      "level": "Pre-A1",
+      "letters": [
+        "c",
+        "a",
+        "t",
+        "h"
+      ],
+      "words": [
+        "cat",
+        "hat"
+      ],
+      "audioText": "cat, hat.",
+      "audioTexts": [
+        "cat",
+        "hat"
+      ],
+      "teacherNoteZh": "听 cat 和 hat 的整词发音。它们末尾的 -at 相同。再点字母拼出 cat。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-at",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to cat. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to cat. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 cat 和 hat 的整词发音。它们末尾的 -at 相同。再点字母拼出 cat。",
+          "options": [
+            {
+              "id": "hat",
+              "textEn": "hat",
+              "wordIds": [
+                "hat"
+              ]
+            },
+            {
+              "id": "sun",
+              "textEn": "sun",
+              "wordIds": [
+                "sun"
+              ]
+            },
+            {
+              "id": "pen",
+              "textEn": "pen",
+              "wordIds": [
+                "pen"
+              ]
+            }
+          ],
+          "answer": "hat"
+        },
+        {
+          "id": "blend-at",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word cat.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word cat.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "cat"
+          ],
+          "letterTiles": [
+            "c",
+            "a",
+            "t"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    },
+    {
+      "id": "an",
+      "title": "拼读小火车 · -an",
+      "focus": "-an",
+      "level": "Pre-A1",
+      "letters": [
+        "c",
+        "a",
+        "n",
+        "m"
+      ],
+      "words": [
+        "can",
+        "man"
+      ],
+      "audioText": "can, man.",
+      "audioTexts": [
+        "can",
+        "man"
+      ],
+      "teacherNoteZh": "听 can 和 man 的整词发音。注意相同的 -an，can 在这里使用完整重读读音。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-an",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to can. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to can. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 can 和 man 的整词发音。注意相同的 -an，can 在这里使用完整重读读音。",
+          "options": [
+            {
+              "id": "man",
+              "textEn": "man",
+              "wordIds": [
+                "man"
+              ]
+            },
+            {
+              "id": "cat",
+              "textEn": "cat",
+              "wordIds": [
+                "cat"
+              ]
+            },
+            {
+              "id": "run",
+              "textEn": "run",
+              "wordIds": [
+                "run"
+              ]
+            }
+          ],
+          "answer": "man"
+        },
+        {
+          "id": "blend-an",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word can.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word can.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "can"
+          ],
+          "letterTiles": [
+            "c",
+            "a",
+            "n"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    },
+    {
+      "id": "un",
+      "title": "拼读小火车 · -un",
+      "focus": "-un",
+      "level": "Pre-A1",
+      "letters": [
+        "s",
+        "u",
+        "n",
+        "r"
+      ],
+      "words": [
+        "sun",
+        "run"
+      ],
+      "audioText": "sun, run.",
+      "audioTexts": [
+        "sun",
+        "run"
+      ],
+      "teacherNoteZh": "听 sun 和 run 的整词发音。注意相同的 -un，再试着拼出 sun。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-un",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to sun. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to sun. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 sun 和 run 的整词发音。注意相同的 -un，再试着拼出 sun。",
+          "options": [
+            {
+              "id": "run",
+              "textEn": "run",
+              "wordIds": [
+                "run"
+              ]
+            },
+            {
+              "id": "cat",
+              "textEn": "cat",
+              "wordIds": [
+                "cat"
+              ]
+            },
+            {
+              "id": "pen",
+              "textEn": "pen",
+              "wordIds": [
+                "pen"
+              ]
+            }
+          ],
+          "answer": "run"
+        },
+        {
+          "id": "blend-un",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word sun.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word sun.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "sun"
+          ],
+          "letterTiles": [
+            "s",
+            "u",
+            "n"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    },
+    {
+      "id": "it",
+      "title": "拼读小火车 · -it",
+      "focus": "-it",
+      "level": "Pre-A1",
+      "letters": [
+        "s",
+        "i",
+        "t",
+        "h"
+      ],
+      "words": [
+        "sit",
+        "hit"
+      ],
+      "audioText": "sit, hit.",
+      "audioTexts": [
+        "sit",
+        "hit"
+      ],
+      "teacherNoteZh": "听 sit 和 hit 的整词发音。注意相同的 -it，再试着拼出 sit。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-it",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to sit. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to sit. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 sit 和 hit 的整词发音。注意相同的 -it，再试着拼出 sit。",
+          "options": [
+            {
+              "id": "hit",
+              "textEn": "hit",
+              "wordIds": [
+                "hit"
+              ]
+            },
+            {
+              "id": "sun",
+              "textEn": "sun",
+              "wordIds": [
+                "sun"
+              ]
+            },
+            {
+              "id": "cat",
+              "textEn": "cat",
+              "wordIds": [
+                "cat"
+              ]
+            }
+          ],
+          "answer": "hit"
+        },
+        {
+          "id": "blend-it",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word sit.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word sit.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "sit"
+          ],
+          "letterTiles": [
+            "s",
+            "i",
+            "t"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    },
+    {
+      "id": "ed",
+      "title": "拼读小火车 · -ed",
+      "focus": "-ed",
+      "level": "Pre-A1",
+      "letters": [
+        "r",
+        "e",
+        "d",
+        "b"
+      ],
+      "words": [
+        "red",
+        "bed"
+      ],
+      "audioText": "red, bed.",
+      "audioTexts": [
+        "red",
+        "bed"
+      ],
+      "teacherNoteZh": "听 red 和 bed 的整词发音。这里是单词末尾 -ed 的词家族，不是过去式词尾发音规则。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-ed",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to red. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to red. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 red 和 bed 的整词发音。这里是单词末尾 -ed 的词家族，不是过去式词尾发音规则。",
+          "options": [
+            {
+              "id": "bed",
+              "textEn": "bed",
+              "wordIds": [
+                "bed"
+              ]
+            },
+            {
+              "id": "sun",
+              "textEn": "sun",
+              "wordIds": [
+                "sun"
+              ]
+            },
+            {
+              "id": "can",
+              "textEn": "can",
+              "wordIds": [
+                "can"
+              ]
+            }
+          ],
+          "answer": "bed"
+        },
+        {
+          "id": "blend-ed",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word red.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word red.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "red"
+          ],
+          "letterTiles": [
+            "r",
+            "e",
+            "d"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    },
+    {
+      "id": "en",
+      "title": "拼读小火车 · -en",
+      "focus": "-en",
+      "level": "Pre-A1",
+      "letters": [
+        "p",
+        "e",
+        "n",
+        "t"
+      ],
+      "words": [
+        "pen",
+        "ten"
+      ],
+      "audioText": "pen, ten.",
+      "audioTexts": [
+        "pen",
+        "ten"
+      ],
+      "teacherNoteZh": "听 pen 和 ten 的整词发音。注意相同的 -en，再试着拼出 pen。",
+      "audioProductionNote": "不要把 IPA 符号交给普通 TTS 直接朗读。当前用真人风格的完整词音频示范；孤立字母音需另行制作并逐条听校。",
+      "tasks": [
+        {
+          "id": "phonics-en",
+          "skill": "listening",
+          "kind": "choose",
+          "level": "Pre-A1",
+          "promptEn": "Listen to pen. Which word has the same ending sound?",
+          "promptZh": "听例词，再找出末尾声音相同的词。",
+          "audioText": "Listen to pen. Which word has the same ending sound?",
+          "captionMode": "always",
+          "goal": "辨认声音对应关系",
+          "hintZh": "听 pen 和 ten 的整词发音。注意相同的 -en，再试着拼出 pen。",
+          "options": [
+            {
+              "id": "ten",
+              "textEn": "ten",
+              "wordIds": [
+                "ten"
+              ]
+            },
+            {
+              "id": "cat",
+              "textEn": "cat",
+              "wordIds": [
+                "cat"
+              ]
+            },
+            {
+              "id": "sun",
+              "textEn": "sun",
+              "wordIds": [
+                "sun"
+              ]
+            }
+          ],
+          "answer": "ten"
+        },
+        {
+          "id": "blend-en",
+          "skill": "writing",
+          "kind": "type",
+          "level": "Pre-A1",
+          "promptEn": "Build the word pen.",
+          "promptZh": "听完整单词，试着按声音拼出它。",
+          "audioText": "Build the word pen.",
+          "captionMode": "always",
+          "goal": "从声音尝试拼写短词",
+          "hintZh": "可以先听整词，再把每一个声音对应到字母。",
+          "acceptedAnswers": [
+            "pen"
+          ],
+          "letterTiles": [
+            "p",
+            "e",
+            "n"
+          ],
+          "audioProductionNote": "用完整单词音频。不要将单字母名称当作拼读音。"
+        }
+      ]
+    }
+  ],
+  "diagnostic": {
+    "id": "a1-readiness-24",
+    "title": "四技能探索检查",
+    "notOfficial": true,
+    "taskCount": 24,
+    "descriptionZh": "原创的有限范围学习诊断，帮助找到下一步练习重点。内容覆盖并不完整，不能据此宣称通过 A1 或直接获得 A2 入学资格。",
+    "administration": {
+      "listeningCaptions": "听力作答前不显示英语原文或中文翻译；重听不算答案提示；作答后可以显示完整句子。",
+      "readingAudio": "默认不自动朗读阅读材料；若点“听材料”，记录 readingAudioUsed 并归入有帮助的练习。",
+      "writingKeyboard": "使用英文软键盘或系统键盘；完整句子允许合理表达，未被机器答案表收录的回答标记“请家长复核”，不能直接判成不会。",
+      "speakingObserver": "口语由家长或老师观察，提供 0/1/2 原创观察标准；示例只在观察完成后在家长区显示。",
+      "helpAccounting": "提示、答案示范、中文翻译均单独记录。口语提问重复可单独记录重复次数；不把跟读次数当能力分。",
+      "breaks": "可以分听、读、写、说四次完成；提供休息，避免一次 24 题疲劳影响表现。"
+    },
+    "normalization": {
+      "caseSensitive": false,
+      "trim": true,
+      "collapseSpaces": true,
+      "ignoreFinalPunctuation": true,
+      "spellings": "单词填空要求目标词拼写；句子如有其他合理表达，进入成人复核，避免误判。"
+    },
+    "reportPolicy": {
+      "presentBySkill": true,
+      "separateIndependentAndHelped": true,
+      "cefrCertificate": false,
+      "avoidLabels": [
+        "已通过 A1",
+        "已完成 A1",
+        "达到 A2",
+        "官方等级分数"
+      ],
+      "recommendationZh": "结合每技能独立表现、隔日回忆和成人口语观察选择练习；表现稳定时尝试官方 A1 Movers 样题，再与老师讨论 A2 Flyers 的学习准备。",
+      "coverageLimitZh": "本检查仅有每技能 6 个任务，不能替代完整内容覆盖、陌生语境迁移或标准化测评。"
+    },
+    "tasks": [
+      {
+        "id": "a1-listening-1",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Please put the red ball under the chair.",
+        "promptZh": "听英语，选出正确的图片。",
+        "audioText": "Please put the red ball under the chair.",
+        "captionMode": "after-answer",
+        "goal": "理解颜色和位置的组合信息",
+        "hintZh": "这句话里有颜色和位置两个线索。",
+        "options": [
+          {
+            "id": "red-under",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "ball",
+                  "count": 1,
+                  "color": "red",
+                  "position": "under"
+                },
+                {
+                  "wordId": "chair",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "red-on",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "ball",
+                  "count": 1,
+                  "color": "red",
+                  "position": "on"
+                },
+                {
+                  "wordId": "chair",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "blue-under",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "ball",
+                  "count": 1,
+                  "color": "blue",
+                  "position": "under"
+                },
+                {
+                  "wordId": "chair",
+                  "count": 1
+                }
+              ]
+            }
+          }
+        ],
+        "answer": "red-under"
+      },
+      {
+        "id": "a1-listening-2",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Anna has two pencils. Her brother has one book. Which things are Anna's?",
+        "promptZh": "听短描述，找出安娜的东西。",
+        "audioText": "Anna has two pencils. Her brother has one book. Which things are Anna's?",
+        "captionMode": "after-answer",
+        "goal": "区分人物、物品和数量",
+        "hintZh": "注意听 Anna has 后面的信息。",
+        "options": [
+          {
+            "id": "two-pencils",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "pencil",
+                  "count": 2
+                }
+              ]
+            }
+          },
+          {
+            "id": "one-book",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "book",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "two-books",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "book",
+                  "count": 2
+                }
+              ]
+            }
+          }
+        ],
+        "answer": "two-pencils"
+      },
+      {
+        "id": "a1-listening-3",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Tom: Would you like some juice? Anna: No, thank you. Can I have some water, please?",
+        "promptZh": "听对话，选出安娜想喝的东西。",
+        "audioText": "Tom: Would you like some juice? Anna: No, thank you. Can I have some water, please?",
+        "captionMode": "after-answer",
+        "goal": "理解简短对话中的拒绝和请求",
+        "hintZh": "安娜拒绝了第一种饮料，又提出了自己的请求。",
+        "options": [
+          {
+            "id": "juice",
+            "wordIds": [
+              "juice"
+            ]
+          },
+          {
+            "id": "water",
+            "wordIds": [
+              "water"
+            ]
+          },
+          {
+            "id": "milk",
+            "wordIds": [
+              "milk"
+            ]
+          }
+        ],
+        "answer": "water",
+        "voiceSegments": [
+          {
+            "speaker": "Tom",
+            "text": "Would you like some juice?"
+          },
+          {
+            "speaker": "Anna",
+            "text": "No, thank you. Can I have some water, please?"
+          }
+        ]
+      },
+      {
+        "id": "a1-listening-4",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "The girl is reading. The boy is running. What is the girl doing?",
+        "promptZh": "听描述，选出女孩正在做的事。",
+        "audioText": "The girl is reading. The boy is running. What is the girl doing?",
+        "captionMode": "after-answer",
+        "goal": "分辨人物与正在进行的动作",
+        "hintZh": "先找 girl，再听她做的活动。",
+        "options": [
+          {
+            "id": "read",
+            "wordIds": [
+              "read"
+            ]
+          },
+          {
+            "id": "run",
+            "wordIds": [
+              "run"
+            ]
+          },
+          {
+            "id": "write",
+            "wordIds": [
+              "write"
+            ]
+          }
+        ],
+        "answer": "read"
+      },
+      {
+        "id": "a1-listening-5",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "The sun is out, and it is hot. What can you see in the sky?",
+        "promptZh": "听描述，选出天空里的景物。",
+        "audioText": "The sun is out, and it is hot. What can you see in the sky?",
+        "captionMode": "after-answer",
+        "goal": "理解天气与自然景物的描述",
+        "hintZh": "听这段话开头提到的天空景物。",
+        "options": [
+          {
+            "id": "snow",
+            "wordIds": [
+              "snow"
+            ]
+          },
+          {
+            "id": "cloud",
+            "wordIds": [
+              "cloud"
+            ]
+          },
+          {
+            "id": "sun",
+            "wordIds": [
+              "sun"
+            ]
+          }
+        ],
+        "answer": "sun"
+      },
+      {
+        "id": "a1-listening-6",
+        "skill": "listening",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Tom: Where is my book? Anna: It is in your bag.",
+        "promptZh": "听对话，选出书的位置。",
+        "audioText": "Tom: Where is my book? Anna: It is in your bag.",
+        "captionMode": "after-answer",
+        "goal": "理解常见地点问答",
+        "hintZh": "听安娜回答里的位置。",
+        "options": [
+          {
+            "id": "in-bag",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "book",
+                  "count": 1,
+                  "position": "in"
+                },
+                {
+                  "wordId": "bag",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "on-desk",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "book",
+                  "count": 1,
+                  "position": "on"
+                },
+                {
+                  "wordId": "desk",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "under-chair",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "book",
+                  "count": 1,
+                  "position": "under"
+                },
+                {
+                  "wordId": "chair",
+                  "count": 1
+                }
+              ]
+            }
+          }
+        ],
+        "answer": "in-bag",
+        "voiceSegments": [
+          {
+            "speaker": "Tom",
+            "text": "Where is my book?"
+          },
+          {
+            "speaker": "Anna",
+            "text": "It is in your bag."
+          }
+        ]
+      },
+      {
+        "id": "a1-reading-1",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Where does the book go?",
+        "promptZh": "读提示牌，选出书应该放在哪里。",
+        "audioText": "Where does the book go?",
+        "captionMode": "always",
+        "goal": "理解简单指令或提示牌",
+        "hintZh": "寻找 put 后面的物品和 in 后面的位置。",
+        "options": [
+          {
+            "id": "desk",
+            "wordIds": [
+              "desk"
+            ]
+          },
+          {
+            "id": "bag",
+            "wordIds": [
+              "bag"
+            ]
+          },
+          {
+            "id": "chair",
+            "wordIds": [
+              "chair"
+            ]
+          }
+        ],
+        "answer": "bag",
+        "stimulusEn": "Please put your book in your bag."
+      },
+      {
+        "id": "a1-reading-2",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Where is Tom?",
+        "promptZh": "读短消息，找出汤姆在哪里。",
+        "audioText": "Where is Tom?",
+        "captionMode": "always",
+        "goal": "从短消息中找到具体信息",
+        "hintZh": "寻找 I am 后面描述的地点。",
+        "options": [
+          {
+            "id": "classroom",
+            "wordIds": [
+              "classroom"
+            ]
+          },
+          {
+            "id": "bed",
+            "textEn": "in bed",
+            "wordIds": [
+              "sleep"
+            ]
+          },
+          {
+            "id": "home",
+            "textEn": "at home",
+            "wordIds": [
+              "mother"
+            ]
+          }
+        ],
+        "answer": "classroom",
+        "stimulusEn": "Hi Anna! I am in the classroom. My class starts at nine. See you later! Tom"
+      },
+      {
+        "id": "a1-reading-3",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "How many pencils does she have?",
+        "promptZh": "读描述，选择正确的数量。",
+        "audioText": "How many pencils does she have?",
+        "captionMode": "always",
+        "goal": "理解人物和数量细节",
+        "hintZh": "pencils 前面的词表示数量。",
+        "options": [
+          {
+            "id": "one",
+            "textEn": "one",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "pencil",
+                  "count": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "two",
+            "textEn": "two",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "pencil",
+                  "count": 2
+                }
+              ]
+            }
+          },
+          {
+            "id": "three",
+            "textEn": "three",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "pencil",
+                  "count": 3
+                }
+              ]
+            }
+          }
+        ],
+        "answer": "two",
+        "stimulusEn": "This is my sister. She has a red bag and two pencils."
+      },
+      {
+        "id": "a1-reading-4",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "What can Ben do?",
+        "promptZh": "读句子，找到本会做的事情。",
+        "audioText": "What can Ben do?",
+        "captionMode": "always",
+        "goal": "理解肯定与否定的能力表达",
+        "hintZh": "can 与 cannot 表达的意思不同。",
+        "options": [
+          {
+            "id": "ride",
+            "textEn": "ride a bike",
+            "wordIds": [
+              "bike"
+            ]
+          },
+          {
+            "id": "write",
+            "textEn": "write",
+            "wordIds": [
+              "write"
+            ]
+          },
+          {
+            "id": "run",
+            "textEn": "run",
+            "wordIds": [
+              "run"
+            ]
+          }
+        ],
+        "answer": "run",
+        "stimulusEn": "Ben can run, but he cannot ride a bike."
+      },
+      {
+        "id": "a1-reading-5",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "Why are the children inside?",
+        "promptZh": "读短文，选择孩子们在室内的原因。",
+        "audioText": "Why are the children inside?",
+        "captionMode": "always",
+        "goal": "理解短事实文本中的简单原因",
+        "hintZh": "看看短文前两句说的天气。",
+        "options": [
+          {
+            "id": "cold",
+            "textEn": "It is cold.",
+            "wordIds": [
+              "cold"
+            ]
+          },
+          {
+            "id": "hot",
+            "textEn": "It is hot.",
+            "wordIds": [
+              "hot"
+            ]
+          },
+          {
+            "id": "rainbow",
+            "textEn": "There is a rainbow.",
+            "wordIds": [
+              "rainbow"
+            ]
+          }
+        ],
+        "answer": "cold",
+        "stimulusEn": "Today it is cold. There is snow. The children are inside the classroom."
+      },
+      {
+        "id": "a1-reading-6",
+        "skill": "reading",
+        "kind": "choose",
+        "level": "A1-readiness",
+        "promptEn": "What is the dog doing?",
+        "promptZh": "读短故事，选出狗正在做的事情。",
+        "audioText": "What is the dog doing?",
+        "captionMode": "always",
+        "goal": "追踪短故事中不同角色的行动",
+        "hintZh": "找到 The dog 开头的句子。",
+        "options": [
+          {
+            "id": "sleep",
+            "textEn": "Sleeping under a chair.",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "cat",
+                  "count": 1,
+                  "position": "under"
+                },
+                {
+                  "wordId": "chair",
+                  "count": 1
+                }
+              ],
+              "actionWordId": "sleep"
+            }
+          },
+          {
+            "id": "play",
+            "textEn": "Playing with a ball.",
+            "scene": {
+              "objects": [
+                {
+                  "wordId": "dog",
+                  "count": 1
+                },
+                {
+                  "wordId": "ball",
+                  "count": 1
+                }
+              ],
+              "actionWordId": "play"
+            }
+          },
+          {
+            "id": "read",
+            "textEn": "Reading a book.",
+            "wordIds": [
+              "read"
+            ]
+          }
+        ],
+        "answer": "play",
+        "stimulusEn": "Kim has a cat and a dog. The dog is playing with a ball. The cat is sleeping under a chair."
+      },
+      {
+        "id": "a1-writing-1",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "What is this?",
+        "promptZh": "看图，输入这个物品的英文名称。",
+        "audioText": "What is this?",
+        "captionMode": "always",
+        "goal": "独立拼写熟悉物品",
+        "hintZh": "这是铅笔。",
+        "acceptedAnswers": [
+          "pencil"
+        ],
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "pencil",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a1-writing-2",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "What is this?",
+        "promptZh": "看图，输入这个身体部位的英文名称。",
+        "audioText": "What is this?",
+        "captionMode": "always",
+        "goal": "独立拼写身体部位",
+        "hintZh": "图里是一只脚，用单数。",
+        "acceptedAnswers": [
+          "foot"
+        ],
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "foot",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a1-writing-3",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "Complete the sentence.",
+        "promptZh": "看图，用一个英文单词填空。",
+        "audioText": "Complete the sentence.",
+        "captionMode": "always",
+        "goal": "在句子里正确使用常见复数",
+        "hintZh": "一个 book，两个要加 s。",
+        "acceptedAnswers": [
+          "books"
+        ],
+        "stimulusEn": "Two ___ are on the desk.",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "book",
+                "count": 2,
+                "position": "on"
+              },
+              {
+                "wordId": "desk",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a1-writing-4",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "Complete the sentence.",
+        "promptZh": "看图，填入正确的位置词。",
+        "audioText": "Complete the sentence.",
+        "captionMode": "always",
+        "goal": "在短句中表达位置",
+        "hintZh": "球在椅子下面。",
+        "acceptedAnswers": [
+          "under"
+        ],
+        "stimulusEn": "The ball is ___ the chair.",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "ball",
+                "count": 1,
+                "position": "under"
+              },
+              {
+                "wordId": "chair",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a1-writing-5",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "Write a sentence about the picture.",
+        "promptZh": "用 book、bag、in 写一个完整句子。",
+        "audioText": "Write a sentence about the picture.",
+        "captionMode": "always",
+        "goal": "用简单句描述图片",
+        "hintZh": "可以用 The book is 开头。",
+        "acceptedAnswers": [
+          "The book is in the bag.",
+          "A book is in the bag."
+        ],
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "book",
+                "count": 1,
+                "position": "in"
+              },
+              {
+                "wordId": "bag",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "wordCues": [
+          "book",
+          "bag",
+          "in"
+        ],
+        "adultReviewRecommended": true
+      },
+      {
+        "id": "a1-writing-6",
+        "skill": "writing",
+        "kind": "type",
+        "level": "A1-readiness",
+        "promptEn": "What is the boy doing?",
+        "promptZh": "看图，用一个英语句子说明男孩正在做什么。",
+        "audioText": "What is the boy doing?",
+        "captionMode": "always",
+        "goal": "用完整短句描述正在进行的动作",
+        "hintZh": "可以用 The boy is 开头。",
+        "acceptedAnswers": [
+          "The boy is reading a book.",
+          "A boy is reading a book.",
+          "He is reading a book.",
+          "The boy is reading.",
+          "A boy is reading.",
+          "He is reading."
+        ],
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 1
+              },
+              {
+                "wordId": "book",
+                "count": 1
+              }
+            ],
+            "actionWordId": "read",
+            "actorLabelZh": "男孩"
+          }
+        ],
+        "adultReviewRecommended": true
+      },
+      {
+        "id": "a1-speaking-1",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "What do you like to do at school?",
+        "promptZh": "说一说你在学校喜欢做什么。",
+        "audioText": "What do you like to do at school?",
+        "captionMode": "always",
+        "goal": "回答熟悉的个人问题",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "exampleAnswers": [
+          "I like to read.",
+          "I like playing with my friends."
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "回答与学校活动有关",
+            "表达一个有意义的短句，语法小错不妨碍理解"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      },
+      {
+        "id": "a1-speaking-2",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "What is the boy doing?",
+        "promptZh": "看图，说出男孩正在做什么。",
+        "audioText": "What is the boy doing?",
+        "captionMode": "always",
+        "goal": "描述图片中的动作",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 1
+              },
+              {
+                "wordId": "book",
+                "count": 1
+              }
+            ],
+            "actionWordId": "read",
+            "actorLabelZh": "男孩"
+          }
+        ],
+        "exampleAnswers": [
+          "He is reading a book.",
+          "The boy is reading."
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "说出读书这个动作",
+            "至少用一个可理解的短语或句子表达"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      },
+      {
+        "id": "a1-speaking-3",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "Look at these two pictures. What is different?",
+        "promptZh": "看两张图，说出两个不同的地方。",
+        "audioText": "Look at these two pictures. What is different?",
+        "captionMode": "always",
+        "goal": "描述图片之间的差异",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "ball",
+                "count": 1,
+                "color": "red",
+                "position": "on"
+              },
+              {
+                "wordId": "chair",
+                "count": 1
+              }
+            ],
+            "label": "A"
+          },
+          {
+            "objects": [
+              {
+                "wordId": "ball",
+                "count": 1,
+                "color": "blue",
+                "position": "under"
+              },
+              {
+                "wordId": "chair",
+                "count": 1
+              }
+            ],
+            "label": "B"
+          }
+        ],
+        "exampleAnswers": [
+          "This ball is red. That ball is blue.",
+          "Here the ball is on the chair. There it is under the chair."
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "描述颜色差异",
+            "描述位置差异；两处差异均需独立表达"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      },
+      {
+        "id": "a1-speaking-4",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "Tell me about these pictures.",
+        "promptZh": "按顺序讲一个小故事。",
+        "audioText": "Tell me about these pictures.",
+        "captionMode": "always",
+        "goal": "用图片串联一个简单故事",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "sun",
+                "count": 1
+              },
+              {
+                "wordId": "hot",
+                "count": 1
+              }
+            ],
+            "label": "1"
+          },
+          {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 1
+              },
+              {
+                "wordId": "water",
+                "count": 1
+              }
+            ],
+            "actionWordId": "drink",
+            "label": "2"
+          },
+          {
+            "objects": [
+              {
+                "wordId": "friend",
+                "count": 1
+              }
+            ],
+            "mood": "happy",
+            "label": "3"
+          }
+        ],
+        "exampleAnswers": [
+          "It is hot. The boy drinks water. He is happy."
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "至少说出两幅图里的相关信息",
+            "按图片顺序表达；不要求与示例完全一样"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      },
+      {
+        "id": "a1-speaking-5",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "Which picture is different? Why?",
+        "promptZh": "找出不同类的图片，并说说原因。",
+        "audioText": "Which picture is different? Why?",
+        "captionMode": "always",
+        "goal": "分类并说明简单理由",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "scenes": [
+          {
+            "objects": [
+              {
+                "wordId": "cat",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "objects": [
+              {
+                "wordId": "dog",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "objects": [
+              {
+                "wordId": "rabbit",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "objects": [
+              {
+                "wordId": "apple",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "exampleAnswers": [
+          "The apple is different. It is food.",
+          "These are animals. The apple is not an animal."
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "选择苹果",
+            "用英文给出一个可理解的分类理由"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      },
+      {
+        "id": "a1-speaking-6",
+        "skill": "speaking",
+        "kind": "speak",
+        "level": "A1-readiness",
+        "promptEn": "Ask me a question about my favourite food.",
+        "promptZh": "请向家长提一个关于喜爱食物的英语问题。",
+        "audioText": "Ask me a question about my favourite food.",
+        "captionMode": "always",
+        "goal": "主动提出简单问题",
+        "hintZh": "家长可以重复问题或提供一句示范；使用帮助后，本题计入练习，不计入独立完成。",
+        "exampleAnswers": [
+          "What food do you like?",
+          "Do you like apples?",
+          "What is your favourite food?"
+        ],
+        "exampleAnswersVisibility": "adult-only-after-observation",
+        "adultRubric": {
+          "criteria": [
+            "用英语提出与食物喜好有关的问题",
+            "家长自然回答后，观察孩子能否理解；不要先示范问题"
+          ],
+          "ratings": [
+            {
+              "value": 0,
+              "labelZh": "还没有独立表达",
+              "descriptionZh": "沉默、偏题，或只跟读示例，尚未表达题意。"
+            },
+            {
+              "value": 1,
+              "labelZh": "提示后完成",
+              "descriptionZh": "需要翻译、示范或关键词支持才能表达。"
+            },
+            {
+              "value": 2,
+              "labelZh": "独立表达",
+              "descriptionZh": "无需翻译或答案示范，能以可理解的英语表达题意；允许停顿、口音与不影响理解的小错。"
+            }
+          ],
+          "pronunciationPolicy": "不按母语口音打分；观察是否能理解。当前录音只回放，不自动给发音分。"
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Cambridge 2025 Starters, Movers and Flyers wordlists",
+      "url": "https://www.cambridgeenglish.org/Images/739104-starters-movers-flyers-word-list-2025.pdf",
+      "usedFor": "40 个词的级别归属和话题范围"
+    },
+    {
+      "title": "Pre A1 Starters Digital and A1 Movers Digital Can Do Statements",
+      "url": "https://www.cambridgeenglish.org/Images/722674-can-do-statements-for-pre-a1-starters-digital-and-a1-movers-digital.pdf",
+      "usedFor": "听故事、熟悉话题问答、简短阅读、图片描述与简单写作的能力方向"
+    },
+    {
+      "title": "A1 Movers exam format",
+      "url": "https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/paper/movers/format/",
+      "usedFor": "口语方向包括图片差异、讲图故事、分类理由与个人问题；本包题目为原创，没有复刻官方试题"
+    },
+    {
+      "title": "A1 Movers preparation",
+      "url": "https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/paper/movers/preparation/",
+      "usedFor": "下一步官方样题与准备资源入口"
+    }
+  ]
+}

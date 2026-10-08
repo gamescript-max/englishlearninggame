@@ -1,0 +1,12 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+const root = path.resolve(import.meta.dirname, "..");
+const incoming = JSON.parse(await fs.readFile(path.join(root,"../expanded-audio/expanded-manifest.json"),"utf8"));
+const manifest = JSON.parse(await fs.readFile(path.join(root,"lib/audio-manifest.json"),"utf8"));
+for (const lang of ["en","zh"]) Object.assign(manifest.speech[lang], incoming.speech[lang], incoming.existingReferences?.[lang] ?? {});
+manifest.assetRevision = "teacher-learning-20261004-v1";
+manifest.learningExpansion = { englishVoice:"en-US-JennyNeural", chineseVoice:"zh-CN-XiaoxiaoNeural", format:"PCM WAV mono 22050 Hz 16 bit", manuallyAuditioned:false, synthesizedTextCount:456 };
+for (const file of await fs.readdir(path.join(root,"../expanded-audio/speech"))) if(file.endsWith(".wav")) await fs.copyFile(path.join(root,"../expanded-audio/speech",file),path.join(root,"public/audio",file));
+for (const file of ["lib/audio-manifest.json","public/audio/manifest.json"]) await fs.writeFile(path.join(root,file),JSON.stringify(manifest,null,2)+"\n");
+for (const file of ["expanded-report.json","coverage-verification.json","checksums.sha256","retained-assets-report.json","all-expanded-checksums.sha256"]) await fs.copyFile(path.join(root,"../expanded-audio",file),path.join(root,"scripts/teacher-audio",`learning-${file}`));
+console.log(`Teaching audio: ${Object.keys(manifest.speech.en).length} English + ${Object.keys(manifest.speech.zh).length} Mandarin texts.`);

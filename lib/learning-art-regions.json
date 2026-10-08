@@ -1,0 +1,822 @@
+{
+  "schemaVersion": 1,
+  "alphaThreshold": 16,
+  "paddingPixels": 6,
+  "coordinateSystem": "original PNG pixels; crop rectangles are half-open (x,y,x+width,y+height)",
+  "base": [
+    {
+      "index": 0,
+      "word": "mother",
+      "x": 32,
+      "y": 11,
+      "width": 129,
+      "height": 242,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 1,
+      "word": "father",
+      "x": 236,
+      "y": 4,
+      "width": 130,
+      "height": 243,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 2,
+      "word": "brother",
+      "x": 449,
+      "y": 16,
+      "width": 104,
+      "height": 227,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 3,
+      "word": "sister",
+      "x": 617,
+      "y": 20,
+      "width": 153,
+      "height": 223,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 4,
+      "word": "grandma",
+      "x": 836,
+      "y": 16,
+      "width": 111,
+      "height": 231,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 5,
+      "word": "grandpa",
+      "x": 1039,
+      "y": 9,
+      "width": 108,
+      "height": 237,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 6,
+      "word": "baby",
+      "x": 1217,
+      "y": 44,
+      "width": 151,
+      "height": 179,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 7,
+      "word": "friend",
+      "x": 1404,
+      "y": 33,
+      "width": 164,
+      "height": 197,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 8,
+      "word": "book",
+      "x": 20,
+      "y": 262,
+      "width": 168,
+      "height": 175,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 9,
+      "word": "pen",
+      "x": 226,
+      "y": 251,
+      "width": 144,
+      "height": 189,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 10,
+      "word": "pencil",
+      "x": 416,
+      "y": 252,
+      "width": 151,
+      "height": 185,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 11,
+      "word": "school bag",
+      "x": 606,
+      "y": 243,
+      "width": 172,
+      "height": 197,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 12,
+      "word": "school desk",
+      "x": 802,
+      "y": 268,
+      "width": 188,
+      "height": 170,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 13,
+      "word": "chair",
+      "x": 1024,
+      "y": 255,
+      "width": 139,
+      "height": 192,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 14,
+      "word": "teacher",
+      "x": 1183,
+      "y": 239,
+      "width": 202,
+      "height": 219,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 15,
+      "word": "classroom",
+      "x": 1386,
+      "y": 251,
+      "width": 194,
+      "height": 186,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 16,
+      "word": "head",
+      "x": 18,
+      "y": 452,
+      "width": 162,
+      "height": 168,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 17,
+      "word": "hand",
+      "x": 209,
+      "y": 450,
+      "width": 161,
+      "height": 166,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 18,
+      "word": "arm",
+      "x": 402,
+      "y": 449,
+      "width": 173,
+      "height": 159,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 19,
+      "word": "leg",
+      "x": 623,
+      "y": 444,
+      "width": 140,
+      "height": 183,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 20,
+      "word": "foot",
+      "x": 798,
+      "y": 461,
+      "width": 172,
+      "height": 162,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 21,
+      "word": "eye",
+      "x": 1006,
+      "y": 465,
+      "width": 165,
+      "height": 156,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 22,
+      "word": "nose",
+      "x": 1221,
+      "y": 463,
+      "width": 132,
+      "height": 152,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 23,
+      "word": "mouth",
+      "x": 1393,
+      "y": 490,
+      "width": 180,
+      "height": 112,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 24,
+      "word": "child eating",
+      "x": 32,
+      "y": 620,
+      "width": 137,
+      "height": 196,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 25,
+      "word": "child drinking",
+      "x": 213,
+      "y": 623,
+      "width": 163,
+      "height": 190,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 26,
+      "word": "child reading",
+      "x": 423,
+      "y": 612,
+      "width": 148,
+      "height": 208,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 27,
+      "word": "child writing",
+      "x": 594,
+      "y": 627,
+      "width": 190,
+      "height": 193,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 28,
+      "word": "child sleeping",
+      "x": 796,
+      "y": 653,
+      "width": 196,
+      "height": 167,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 29,
+      "word": "child playing",
+      "x": 1018,
+      "y": 628,
+      "width": 158,
+      "height": 191,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 30,
+      "word": "child running",
+      "x": 1209,
+      "y": 619,
+      "width": 164,
+      "height": 197,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 31,
+      "word": "child walking",
+      "x": 1428,
+      "y": 617,
+      "width": 117,
+      "height": 199,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 32,
+      "word": "sun",
+      "x": 19,
+      "y": 816,
+      "width": 167,
+      "height": 162,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 33,
+      "word": "cloud",
+      "x": 212,
+      "y": 834,
+      "width": 178,
+      "height": 126,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 34,
+      "word": "rain",
+      "x": 414,
+      "y": 820,
+      "width": 162,
+      "height": 161,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 35,
+      "word": "snow",
+      "x": 612,
+      "y": 820,
+      "width": 159,
+      "height": 162,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 36,
+      "word": "wind",
+      "x": 796,
+      "y": 826,
+      "width": 189,
+      "height": 153,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 37,
+      "word": "rainbow",
+      "x": 985,
+      "y": 836,
+      "width": 214,
+      "height": 131,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 38,
+      "word": "hot weather child",
+      "x": 1205,
+      "y": 816,
+      "width": 178,
+      "height": 171,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 39,
+      "word": "cold weather child",
+      "x": 1391,
+      "y": 816,
+      "width": 174,
+      "height": 172,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    }
+  ],
+  "review": [
+    {
+      "index": 0,
+      "word": "mother",
+      "x": 48,
+      "y": 5,
+      "width": 113,
+      "height": 236,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 1,
+      "word": "father",
+      "x": 236,
+      "y": 1,
+      "width": 120,
+      "height": 239,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 2,
+      "word": "brother",
+      "x": 447,
+      "y": 17,
+      "width": 99,
+      "height": 217,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 3,
+      "word": "sister",
+      "x": 637,
+      "y": 19,
+      "width": 120,
+      "height": 216,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 4,
+      "word": "grandma",
+      "x": 848,
+      "y": 4,
+      "width": 90,
+      "height": 234,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 5,
+      "word": "grandpa",
+      "x": 1032,
+      "y": 6,
+      "width": 114,
+      "height": 231,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 6,
+      "word": "baby",
+      "x": 1217,
+      "y": 49,
+      "width": 145,
+      "height": 175,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 7,
+      "word": "friend",
+      "x": 1389,
+      "y": 36,
+      "width": 162,
+      "height": 192,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 8,
+      "word": "book",
+      "x": 4,
+      "y": 273,
+      "width": 202,
+      "height": 139,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 9,
+      "word": "pen",
+      "x": 226,
+      "y": 247,
+      "width": 145,
+      "height": 187,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 10,
+      "word": "pencil",
+      "x": 423,
+      "y": 245,
+      "width": 141,
+      "height": 185,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 11,
+      "word": "school bag",
+      "x": 604,
+      "y": 242,
+      "width": 177,
+      "height": 189,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 12,
+      "word": "school desk",
+      "x": 806,
+      "y": 265,
+      "width": 172,
+      "height": 166,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 13,
+      "word": "chair",
+      "x": 1021,
+      "y": 248,
+      "width": 139,
+      "height": 192,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 14,
+      "word": "teacher",
+      "x": 1194,
+      "y": 235,
+      "width": 187,
+      "height": 208,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 15,
+      "word": "classroom",
+      "x": 1381,
+      "y": 249,
+      "width": 205,
+      "height": 184,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 16,
+      "word": "head",
+      "x": 18,
+      "y": 445,
+      "width": 166,
+      "height": 176,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 17,
+      "word": "hand",
+      "x": 215,
+      "y": 444,
+      "width": 172,
+      "height": 182,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 18,
+      "word": "arm",
+      "x": 421,
+      "y": 437,
+      "width": 162,
+      "height": 187,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 19,
+      "word": "leg",
+      "x": 637,
+      "y": 434,
+      "width": 125,
+      "height": 197,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 20,
+      "word": "foot",
+      "x": 826,
+      "y": 455,
+      "width": 161,
+      "height": 173,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 21,
+      "word": "eye",
+      "x": 1002,
+      "y": 448,
+      "width": 177,
+      "height": 174,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 22,
+      "word": "nose",
+      "x": 1223,
+      "y": 448,
+      "width": 131,
+      "height": 174,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 23,
+      "word": "mouth",
+      "x": 1391,
+      "y": 479,
+      "width": 188,
+      "height": 121,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 24,
+      "word": "child eating",
+      "x": 21,
+      "y": 628,
+      "width": 157,
+      "height": 180,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 25,
+      "word": "child drinking",
+      "x": 196,
+      "y": 632,
+      "width": 200,
+      "height": 176,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 26,
+      "word": "child reading",
+      "x": 415,
+      "y": 624,
+      "width": 149,
+      "height": 188,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 27,
+      "word": "child writing",
+      "x": 602,
+      "y": 631,
+      "width": 184,
+      "height": 181,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 28,
+      "word": "child sleeping",
+      "x": 792,
+      "y": 640,
+      "width": 206,
+      "height": 169,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 29,
+      "word": "child playing",
+      "x": 1009,
+      "y": 636,
+      "width": 173,
+      "height": 173,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 30,
+      "word": "child running",
+      "x": 1212,
+      "y": 622,
+      "width": 152,
+      "height": 186,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 31,
+      "word": "child walking",
+      "x": 1430,
+      "y": 618,
+      "width": 113,
+      "height": 189,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 32,
+      "word": "sun",
+      "x": 11,
+      "y": 808,
+      "width": 175,
+      "height": 177,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 33,
+      "word": "cloud",
+      "x": 202,
+      "y": 825,
+      "width": 193,
+      "height": 143,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 34,
+      "word": "rain",
+      "x": 406,
+      "y": 812,
+      "width": 178,
+      "height": 171,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 35,
+      "word": "snow",
+      "x": 611,
+      "y": 812,
+      "width": 171,
+      "height": 170,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 36,
+      "word": "wind",
+      "x": 802,
+      "y": 834,
+      "width": 180,
+      "height": 142,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 37,
+      "word": "rainbow",
+      "x": 990,
+      "y": 829,
+      "width": 207,
+      "height": 127,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 38,
+      "word": "hot weather child",
+      "x": 1205,
+      "y": 808,
+      "width": 179,
+      "height": 180,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    },
+    {
+      "index": 39,
+      "word": "cold weather child",
+      "x": 1400,
+      "y": 807,
+      "width": 174,
+      "height": 181,
+      "imageWidth": 1586,
+      "imageHeight": 992
+    }
+  ],
+  "warnings": {
+    "base": [],
+    "review": [
+      {
+        "index": 15,
+        "word": "classroom",
+        "touches": {
+          "originalRightEdge": 19
+        }
+      }
+    ]
+  }
+}

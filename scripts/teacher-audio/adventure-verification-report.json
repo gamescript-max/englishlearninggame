@@ -1,0 +1,921 @@
+{
+  "createdAt": "2026-10-04T16:25:07.261899+00:00",
+  "voices": {
+    "en": {
+      "voice": "en-US-JennyNeural",
+      "rate": "-12%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    },
+    "zh": {
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-7%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    }
+  },
+  "format": {
+    "sampleRate": 22050,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "encoding": "PCM"
+  },
+  "manualListeningPerformed": false,
+  "files": [
+    {
+      "lang": "en",
+      "text": "Find the red fish.",
+      "url": "/audio/adventure-en-001.wav",
+      "filename": "adventure-en-001.wav",
+      "frames": 55037,
+      "durationMs": 2496.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.599579,
+      "rms": 0.068749,
+      "nonSilentSamples": 28311,
+      "clippedSamples": 0,
+      "sha256": "641f4abe346fe6730d4dd3b407e42d1bccdbbc1565252450a598c4bab9e78ff8"
+    },
+    {
+      "lang": "en",
+      "text": "Find the blue fish.",
+      "url": "/audio/adventure-en-002.wav",
+      "filename": "adventure-en-002.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.581421,
+      "rms": 0.065956,
+      "nonSilentSamples": 27833,
+      "clippedSamples": 0,
+      "sha256": "69485a52dd9527f68a7c3aec95f3cb1b30e6cde78b4e4404441c595b29ce7a16"
+    },
+    {
+      "lang": "en",
+      "text": "Find the yellow fish.",
+      "url": "/audio/adventure-en-003.wav",
+      "filename": "adventure-en-003.wav",
+      "frames": 57153,
+      "durationMs": 2591.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.637939,
+      "rms": 0.070675,
+      "nonSilentSamples": 30604,
+      "clippedSamples": 0,
+      "sha256": "4c99483102d4a4da9d2190d95da33367b018a49b7ea86108c5027997e22628e5"
+    },
+    {
+      "lang": "en",
+      "text": "Find the green fish.",
+      "url": "/audio/adventure-en-004.wav",
+      "filename": "adventure-en-004.wav",
+      "frames": 56096,
+      "durationMs": 2544.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.599762,
+      "rms": 0.068732,
+      "nonSilentSamples": 29385,
+      "clippedSamples": 0,
+      "sha256": "a6df79361e8fd20103f18ebf34e924506f966b8eca484e28b34aa950ea4b328a"
+    },
+    {
+      "lang": "en",
+      "text": "Find one red fish.",
+      "url": "/audio/adventure-en-005.wav",
+      "filename": "adventure-en-005.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.64328,
+      "rms": 0.071355,
+      "nonSilentSamples": 33114,
+      "clippedSamples": 0,
+      "sha256": "0a93e920f7e0590cbe7bc674c972447ee72b392e2d6191b575b71b06ae011680"
+    },
+    {
+      "lang": "en",
+      "text": "Find two red fish.",
+      "url": "/audio/adventure-en-006.wav",
+      "filename": "adventure-en-006.wav",
+      "frames": 58212,
+      "durationMs": 2640.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.569702,
+      "rms": 0.073089,
+      "nonSilentSamples": 31707,
+      "clippedSamples": 0,
+      "sha256": "d0ee8c680d332984f440a699aab46f5f3547d0d5d33068a7d53337cabd1925d7"
+    },
+    {
+      "lang": "en",
+      "text": "Find three red fish.",
+      "url": "/audio/adventure-en-007.wav",
+      "filename": "adventure-en-007.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.604675,
+      "rms": 0.071009,
+      "nonSilentSamples": 32865,
+      "clippedSamples": 0,
+      "sha256": "7bd7000c2e8cf06cbb54ef802c37a7d4e21db7a912c4a1f176b4f21cacd4ad41"
+    },
+    {
+      "lang": "en",
+      "text": "Find one blue fish.",
+      "url": "/audio/adventure-en-008.wav",
+      "filename": "adventure-en-008.wav",
+      "frames": 58212,
+      "durationMs": 2640.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.629852,
+      "rms": 0.067521,
+      "nonSilentSamples": 31682,
+      "clippedSamples": 0,
+      "sha256": "8ed2251a407e0cc1516c2fe6e881f11131eedbcf2ac4247bb0efbb94f2de4238"
+    },
+    {
+      "lang": "en",
+      "text": "Find two blue fish.",
+      "url": "/audio/adventure-en-009.wav",
+      "filename": "adventure-en-009.wav",
+      "frames": 56625,
+      "durationMs": 2568.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.610474,
+      "rms": 0.06828,
+      "nonSilentSamples": 29785,
+      "clippedSamples": 0,
+      "sha256": "fc4b3ec0afa3c9de9e84b3f09d2070aad071f1eedb3dd4b9aed565b5783e5390"
+    },
+    {
+      "lang": "en",
+      "text": "Find three blue fish.",
+      "url": "/audio/adventure-en-010.wav",
+      "filename": "adventure-en-010.wav",
+      "frames": 58742,
+      "durationMs": 2664.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.621185,
+      "rms": 0.064944,
+      "nonSilentSamples": 32097,
+      "clippedSamples": 0,
+      "sha256": "9bdb84d835236e3c7e9f319c37ca4ecb3e54635026a5c692a28050f50cb273b2"
+    },
+    {
+      "lang": "en",
+      "text": "Find one yellow fish.",
+      "url": "/audio/adventure-en-011.wav",
+      "filename": "adventure-en-011.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.633362,
+      "rms": 0.070289,
+      "nonSilentSamples": 33927,
+      "clippedSamples": 0,
+      "sha256": "7eb243e23c29bd719a325a4cb5db5e4090c6fb35bff774d3cc46beae251097e1"
+    },
+    {
+      "lang": "en",
+      "text": "Find two yellow fish.",
+      "url": "/audio/adventure-en-012.wav",
+      "filename": "adventure-en-012.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.602844,
+      "rms": 0.071714,
+      "nonSilentSamples": 33134,
+      "clippedSamples": 0,
+      "sha256": "30ce6544fbd3957d572fe4086663298e10cc8424eac75727beba0ef14f4be27c"
+    },
+    {
+      "lang": "en",
+      "text": "Find three yellow fish.",
+      "url": "/audio/adventure-en-013.wav",
+      "filename": "adventure-en-013.wav",
+      "frames": 60858,
+      "durationMs": 2760.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.645844,
+      "rms": 0.072261,
+      "nonSilentSamples": 34340,
+      "clippedSamples": 0,
+      "sha256": "065a456f9177611136246254cd2d0541c9e1d33e1f35ac1f7ced0ba4dbe761f9"
+    },
+    {
+      "lang": "en",
+      "text": "Find one green fish.",
+      "url": "/audio/adventure-en-014.wav",
+      "filename": "adventure-en-014.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.669708,
+      "rms": 0.071489,
+      "nonSilentSamples": 33671,
+      "clippedSamples": 0,
+      "sha256": "feb8e641b0c7e97e39d52729b5d1a3553eee5eb4bb9f3f171037aacb087ff2e2"
+    },
+    {
+      "lang": "en",
+      "text": "Find two green fish.",
+      "url": "/audio/adventure-en-015.wav",
+      "filename": "adventure-en-015.wav",
+      "frames": 58742,
+      "durationMs": 2664.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.619171,
+      "rms": 0.068784,
+      "nonSilentSamples": 31703,
+      "clippedSamples": 0,
+      "sha256": "68a6148963ab14743f567c69984778458bb45cd08678ea154332a32333892bf9"
+    },
+    {
+      "lang": "en",
+      "text": "Find three green fish.",
+      "url": "/audio/adventure-en-016.wav",
+      "filename": "adventure-en-016.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.64093,
+      "rms": 0.069894,
+      "nonSilentSamples": 33550,
+      "clippedSamples": 0,
+      "sha256": "c0ae92e2cc2df4034a2624313559414302f24abc895fd7be5ba4fff18b59a51e"
+    },
+    {
+      "lang": "en",
+      "text": "Find the small fish.",
+      "url": "/audio/adventure-en-017.wav",
+      "filename": "adventure-en-017.wav",
+      "frames": 57153,
+      "durationMs": 2591.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.652679,
+      "rms": 0.066163,
+      "nonSilentSamples": 30621,
+      "clippedSamples": 0,
+      "sha256": "5d6b9fd4798db905aac9e1de25f7775a1cc48de8025c84d934fdea11585a7379"
+    },
+    {
+      "lang": "en",
+      "text": "Find the big fish.",
+      "url": "/audio/adventure-en-018.wav",
+      "filename": "adventure-en-018.wav",
+      "frames": 54507,
+      "durationMs": 2471.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.592194,
+      "rms": 0.067056,
+      "nonSilentSamples": 27611,
+      "clippedSamples": 0,
+      "sha256": "5b6ed3b98a7c083b9a379fb793ab70ec9f784a2c4828ce8b3eb31d338142a324"
+    },
+    {
+      "lang": "zh",
+      "text": "拖动手指，小鱼就会跟着你游。吃普通小鱼慢慢长大，听英语找到带贝壳标记的任务鱼。",
+      "url": "/audio/adventure-zh-001.wav",
+      "filename": "adventure-zh-001.wav",
+      "frames": 205329,
+      "durationMs": 9311.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.62561,
+      "rms": 0.101225,
+      "nonSilentSamples": 165485,
+      "clippedSamples": 0,
+      "sha256": "e1d47ed9289772bedc4d14f1289e7c0ec803105d32d91e8d190ed89deaae4d4c"
+    },
+    {
+      "lang": "zh",
+      "text": "拖动手指，带着小蛇去冒险。听英语吃到正确的图卡，图片会留在蛇的身体上。比你小的电脑蛇也能吃哦。",
+      "url": "/audio/adventure-zh-002.wav",
+      "filename": "adventure-zh-002.wav",
+      "frames": 256133,
+      "durationMs": 11616.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.51651,
+      "rms": 0.090343,
+      "nonSilentSamples": 201794,
+      "clippedSamples": 0,
+      "sha256": "1e1204508235c37ef32362d4a04572239723df9dfc4068c3ad942f8312292ce3"
+    },
+    {
+      "lang": "zh",
+      "text": "再听一遍，乐乐来帮你找。带亮光的就是这次的英语目标。",
+      "url": "/audio/adventure-zh-003.wav",
+      "filename": "adventure-zh-003.wav",
+      "frames": 140238,
+      "durationMs": 6360.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.650848,
+      "rms": 0.10616,
+      "nonSilentSamples": 104756,
+      "clippedSamples": 0,
+      "sha256": "131d2083182aca2b02c82645643279623fd431d2d649d801ada6152e241d988e"
+    },
+    {
+      "lang": "zh",
+      "text": "再找找看，你可以重听英语。乐乐会陪你一起找到目标。",
+      "url": "/audio/adventure-zh-004.wav",
+      "filename": "adventure-zh-004.wav",
+      "frames": 135476,
+      "durationMs": 6144.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.670898,
+      "rms": 0.109586,
+      "nonSilentSamples": 101107,
+      "clippedSamples": 0,
+      "sha256": "e046b25259ce2d78a788c12c6f601a1ad1e3d790702584fb2edab8d1986edf20"
+    },
+    {
+      "lang": "zh",
+      "text": "真棒！这一轮完成啦，下一轮英语冒险马上开始。你也可以休息一下。",
+      "url": "/audio/adventure-zh-005.wav",
+      "filename": "adventure-zh-005.wav",
+      "frames": 169344,
+      "durationMs": 7680.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.799988,
+      "rms": 0.08478,
+      "nonSilentSamples": 122344,
+      "clippedSamples": 0,
+      "sha256": "1db55bea991228a1124da3f4587637b7b2c0fe781abb24eca20e9cc07f23e96e"
+    }
+  ],
+  "reusedReferences": [
+    {
+      "lang": "en",
+      "text": "Listen and find the cat.",
+      "url": "/audio/en-035.wav",
+      "filename": "en-035.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.581573,
+      "rms": 0.069586,
+      "nonSilentSamples": 34385,
+      "clippedSamples": 0,
+      "sha256": "d34aca8c357e66807641ec9cea37fe433cd3ea265c49ab47aa4cbf713f09f2a5"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the dog.",
+      "url": "/audio/en-040.wav",
+      "filename": "en-040.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.607666,
+      "rms": 0.071059,
+      "nonSilentSamples": 33990,
+      "clippedSamples": 0,
+      "sha256": "96fb05bd2fc20679cf276c3c4cefcf9b801039cba164be33f087aef0b5edb6c3"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the bird.",
+      "url": "/audio/en-045.wav",
+      "filename": "en-045.wav",
+      "frames": 57683,
+      "durationMs": 2616.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.554626,
+      "rms": 0.067986,
+      "nonSilentSamples": 31965,
+      "clippedSamples": 0,
+      "sha256": "d8beb059fef88aa8524f4200a2b5930ca9c26cd011800bdb0421a256f62fb32e"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the fish.",
+      "url": "/audio/en-050.wav",
+      "filename": "en-050.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.570007,
+      "rms": 0.066747,
+      "nonSilentSamples": 34909,
+      "clippedSamples": 0,
+      "sha256": "0e10c2f837f863ee1a9e074616af89166938a252925097f6227abc6ea30a971f"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the frog.",
+      "url": "/audio/en-055.wav",
+      "filename": "en-055.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.589233,
+      "rms": 0.071567,
+      "nonSilentSamples": 34413,
+      "clippedSamples": 0,
+      "sha256": "ca169b5c95eabedbc7ac3a7698e94c0a0e20addcf5e2a864bc381f5abf23be96"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the duck.",
+      "url": "/audio/en-060.wav",
+      "filename": "en-060.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.627869,
+      "rms": 0.070196,
+      "nonSilentSamples": 33138,
+      "clippedSamples": 0,
+      "sha256": "eb8b59546466342c0879ff8c250cd544ca8ece43686c878050ea1ca4df0d65d5"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the horse.",
+      "url": "/audio/en-065.wav",
+      "filename": "en-065.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.530762,
+      "rms": 0.064352,
+      "nonSilentSamples": 35267,
+      "clippedSamples": 0,
+      "sha256": "24cd3659f17d6b1383f6aaa8544932ade4be9f55df50206858d63e61b00c205f"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the rabbit.",
+      "url": "/audio/en-070.wav",
+      "filename": "en-070.wav",
+      "frames": 60329,
+      "durationMs": 2736.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.538696,
+      "rms": 0.068783,
+      "nonSilentSamples": 34151,
+      "clippedSamples": 0,
+      "sha256": "0068f87d5e1f353380fda0bdb3783f1aa35dee62f1e155121c84f69d80e22d13"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the apple.",
+      "url": "/audio/en-075.wav",
+      "filename": "en-075.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.547791,
+      "rms": 0.07041,
+      "nonSilentSamples": 33116,
+      "clippedSamples": 0,
+      "sha256": "b4b45fd3862ed56acd336180d1f72a17e8c9c1f2a44a9aa56a6a31a909964a7c"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the banana.",
+      "url": "/audio/en-080.wav",
+      "filename": "en-080.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.585571,
+      "rms": 0.075761,
+      "nonSilentSamples": 35391,
+      "clippedSamples": 0,
+      "sha256": "2b7bd01491eb962f805b2393bad164da905d57a9122abed616740a09f323c345"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the orange.",
+      "url": "/audio/en-085.wav",
+      "filename": "en-085.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.555145,
+      "rms": 0.071063,
+      "nonSilentSamples": 35176,
+      "clippedSamples": 0,
+      "sha256": "1c32ee16af3b4c5bf6e1aed6318d50de8c90ed0d1d3d10d5a1f4cd4f73f06dd6"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the bread.",
+      "url": "/audio/en-090.wav",
+      "filename": "en-090.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.60202,
+      "rms": 0.069793,
+      "nonSilentSamples": 33584,
+      "clippedSamples": 0,
+      "sha256": "33f6c8b78eaafb32357edc3c0a79bbb18449eb39cdd05e7e41a30d8bf8f6319e"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the milk.",
+      "url": "/audio/en-095.wav",
+      "filename": "en-095.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.559448,
+      "rms": 0.062128,
+      "nonSilentSamples": 32858,
+      "clippedSamples": 0,
+      "sha256": "c34a3058c4f478a9cd0eb23b7757d5aedd2a7396981cfcbdefb136648a0e13ec"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the water.",
+      "url": "/audio/en-100.wav",
+      "filename": "en-100.wav",
+      "frames": 59271,
+      "durationMs": 2688.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.542358,
+      "rms": 0.0669,
+      "nonSilentSamples": 32896,
+      "clippedSamples": 0,
+      "sha256": "f423cdc9a76b11377dbd621412796446ae72212e3e206fb2675aec0472b097a3"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the juice.",
+      "url": "/audio/en-105.wav",
+      "filename": "en-105.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.570465,
+      "rms": 0.071888,
+      "nonSilentSamples": 35236,
+      "clippedSamples": 0,
+      "sha256": "c047b672558b8fc136098e24d7cd676ef505769bf82bbfd0653b5b127e7a774b"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the cake.",
+      "url": "/audio/en-110.wav",
+      "filename": "en-110.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.598572,
+      "rms": 0.068624,
+      "nonSilentSamples": 33857,
+      "clippedSamples": 0,
+      "sha256": "a04ec76cf6c52030131f71907ca69846dc97590a36e14f83d469bb5ddd88f632"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the ball.",
+      "url": "/audio/en-115.wav",
+      "filename": "en-115.wav",
+      "frames": 58742,
+      "durationMs": 2664.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.564697,
+      "rms": 0.069898,
+      "nonSilentSamples": 32686,
+      "clippedSamples": 0,
+      "sha256": "31f6b7a7b1fcb056da42055b2a56414464cd1d303e6f69eb8331ef9f4db3a4cd"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the doll.",
+      "url": "/audio/en-120.wav",
+      "filename": "en-120.wav",
+      "frames": 58742,
+      "durationMs": 2664.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.588074,
+      "rms": 0.068954,
+      "nonSilentSamples": 32768,
+      "clippedSamples": 0,
+      "sha256": "83abb37fa115eaab4a6b855f6236006bff45a86a2cb7399fa578d4d1b8670636"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the kite.",
+      "url": "/audio/en-125.wav",
+      "filename": "en-125.wav",
+      "frames": 61388,
+      "durationMs": 2784.036,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.566345,
+      "rms": 0.066478,
+      "nonSilentSamples": 34542,
+      "clippedSamples": 0,
+      "sha256": "06a77d4bc2cb4734f845a4667f0171e658120ec854722505056de4b830eb7eb3"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the robot.",
+      "url": "/audio/en-130.wav",
+      "filename": "en-130.wav",
+      "frames": 61917,
+      "durationMs": 2808.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.617981,
+      "rms": 0.070521,
+      "nonSilentSamples": 35529,
+      "clippedSamples": 0,
+      "sha256": "bbfddf7a6af69fc39bfe5748f04a5de03abf426c4f2ce47f0848e035563aaf1d"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the bike.",
+      "url": "/audio/en-135.wav",
+      "filename": "en-135.wav",
+      "frames": 59799,
+      "durationMs": 2711.973,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.567719,
+      "rms": 0.070246,
+      "nonSilentSamples": 32661,
+      "clippedSamples": 0,
+      "sha256": "912a84d4472de944689e5aa1e8ee8b5b03a089948368f3d994c87ad4c436aa7c"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the train.",
+      "url": "/audio/en-140.wav",
+      "filename": "en-140.wav",
+      "frames": 59271,
+      "durationMs": 2688.027,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.552429,
+      "rms": 0.069628,
+      "nonSilentSamples": 33680,
+      "clippedSamples": 0,
+      "sha256": "097ca9caa1b421b67ffdd50d764020424711d9a56d440b4a2bd9c1128031d462"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the teddy bear.",
+      "url": "/audio/en-145.wav",
+      "filename": "en-145.wav",
+      "frames": 66150,
+      "durationMs": 3000.0,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.56012,
+      "rms": 0.070976,
+      "nonSilentSamples": 39554,
+      "clippedSamples": 0,
+      "sha256": "cae0f1ab65162331227fe4b4c56ea6031d356bb43b3f938c4308b7ef2a857658"
+    },
+    {
+      "lang": "en",
+      "text": "Listen and find the toy car.",
+      "url": "/audio/en-150.wav",
+      "filename": "en-150.wav",
+      "frames": 65621,
+      "durationMs": 2976.009,
+      "format": {
+        "sampleRate": 22050,
+        "channels": 1,
+        "bitsPerSample": 16,
+        "encoding": "PCM"
+      },
+      "peak": 0.551727,
+      "rms": 0.0712,
+      "nonSilentSamples": 39072,
+      "clippedSamples": 0,
+      "sha256": "89e46e03e976f8bd9aa61c868052cacf9268a911a99512542cc472f279634f34"
+    }
+  ]
+}

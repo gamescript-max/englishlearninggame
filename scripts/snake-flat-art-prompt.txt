@@ -1,0 +1,21 @@
+Use case: precise-object-edit.
+Asset type: transparent PNG sprite atlas for a continuous Snake game, 1536 x 1024 pixels, exactly 2 rows by 8 columns.
+Input image 1 is the edit target. Preserve the soft, rounded, dimensional, adorable 3D snake style, big friendly eyes, detailed small scales, dark navy contour, warm creamy undersides, and the eight species identities.
+
+Primary edit: replace ONLY the eight upright snake head-and-neck sprites in the FIRST ROW with eight HORIZONTAL, forward-slithering snake head sprites, each facing RIGHT. Their head-and-neck centerline must be completely horizontal from the left attachment end to the right snout. The neck extends straight LEFT behind the head in the same plane, like a snake lying flat and traveling forward along the ground or water surface. The head should sit inline with the neck and body, with no head perched above the neck. Absolutely no vertical neck, no raised pose, no cobra pose, no upright chest, no S-shaped or curved neck. Each sprite is just a head with a short straight horizontal neck, a naturally rounded fully visible rear end, and a smooth horizontal silhouette that can join the circular body pieces behind it seamlessly. Keep a small cute smile. No legs, fins, props, terrain, or water.
+
+Atlas invariants: exactly 16 individual sprites, 8 heads on row 1 and 8 body segments on row 2. Eight columns are centered at x=96,288,480,672,864,1056,1248,1440. Keep each sprite completely inside its 192-pixel column, with clear transparent gutters and 12-18px padding at both sides; no cropping, no clipping, no content at image edges. Horizontal head-and-neck sprites occupy approximately y=285 to y=435, centered near y=360. Leave generous transparent whitespace above, between rows, and below.
+Keep the SECOND ROW's eight round 3D body segments, their corresponding patterns, colors, relative positions and sizes as close to the edit target as possible (centered near y=667, each roughly 172px diameter). Do not redesign the body pieces.
+
+The species order left to right in BOTH rows must remain:
+1. corn snake — warm orange and red patches with cream underside;
+2. green tree python — bright leafy green and small cream dots;
+3. ball python — dark brown with tan/golden spots;
+4. milk snake — red, black, and cream bands;
+5. kingsnake — charcoal black and cream bands;
+6. garter snake — dark olive green with yellow stripes;
+7. rainbow boa — warm orange with dark brown ring markings and subtle iridescent sheen;
+8. sea snake — pale icy blue and navy blue bands.
+Maintain each head's recognizable matching coloring and scales.
+
+Background: genuinely transparent alpha everywhere outside the 16 sprites. Remove the reference's blurred colored dark backdrop completely. Do not paint a checkerboard, solid color, fog, colored glow, ground shadow, or halo. No lettering, labels, grid lines, numbers, watermark, or extra snakes. Output a complete, clean 1536x1024 RGBA sprite sheet.

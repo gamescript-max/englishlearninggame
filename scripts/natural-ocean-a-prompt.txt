@@ -1,0 +1,31 @@
+Use case: photorealistic-natural
+Asset type: ORIGINAL transparent wildlife cutout atlas for an underwater English-learning game. This must look like actual fish and aquatic animals, NOT cartoon mascots, NOT primitive 3D models, NOT a texture collage.
+Primary request: One landscape PNG image, target 3072x2048, exact 3:2 aspect ratio. EXACT SIX columns by FOUR rows, 24 equally sized invisible cells, tightly covering the image without external margins or gutters. Each non-empty cell contains exactly ONE fully visible, separate aquatic animal cutout, naturally colored and anatomically recognizable. Genuine transparent background (RGBA alpha), absolutely no background blocks, tiles, studio backdrop or water rectangle. No text, numbers, labels, logos, border or drawn grid.
+Composition: Put each animal centered within its own cell with a generous transparent 12% cell-width safety margin; no overlap, no clipped fins, tail, limbs or antennae. Animals should mostly be LEFT-TAIL / RIGHT-HEAD side views, bodies swimming horizontally. Preserve each species' REAL natural aspect ratio: eels/hairtail/gar/swordfish/saury remain long and thin; carp/goldfish remain naturally fish-shaped; octopuses/turtles/jellyfish/seahorses retain their own distinct anatomy. Do not reuse the same wide rounded generic fish body for different species. For inherently upright/flat radial animals use a natural slightly three-quarter pose and orient the head toward the right when meaningful. Long animals fit the cell width while staying thin, never widen them into ovals. Animals can have a very gentle natural tail curve, but must not be bent into a circle.
+Style: photographic-quality aquarium / underwater wildlife cutout, genuine natural skin, fine fish scales, crisp fins, accurate subtle wet surface detail, volumetric natural form from soft light illuminating the animal itself. Small natural realistic eyes in correct anatomical location. No enormous eyes, no smile, no facial expression, no thick outline, no toy plastic, no clay, no white untextured model, no pseudo-random painted scale collage. Natural dorsal-back and paler ventral-belly colors for each species, clearly detailed fish fins/tails and gill lines. The image should look like real aquatic life photographed closely, isolated on transparency. No cast drop-shadow or shadow plane outside animal, no water particles, no bubbles, no plants.
+Grid order: strict ROW-MAJOR, first six subjects on top row from left to right, next six on row 2, next six row 3, last six bottom row. The following ordered list is an instruction, not text to draw:
+1. Plankton: one translucent green-blue copepod-like microscopic organism with delicate appendages
+2. Fish eggs: one small cluster of translucent round amber fish eggs with visible embryo specks
+3. Fish fry: one tiny translucent slender juvenile fish with a clearly visible backbone, small realistic eye
+4. Tadpole: one olive-brown tadpole with oval body and long thin tapering tail
+5. Brine shrimp: one translucent coral-orange Artemia with segmented body and delicate swimming limbs
+6. Water flea: one transparent oval Daphnia with tiny appendages and inner structures
+7. Mosquito larva: one slender curved brown segmented aquatic mosquito larva
+8. Tiny shrimp: one translucent pink-brown tiny freshwater shrimp with antennae
+9. River minnow: one slender silver-blue freshwater minnow
+10. Guppy: one real male guppy with slender silver-teal body and orange-blue fan tail
+11. Zebrafish: one slender real zebrafish with longitudinal navy and silver stripes
+12. Red-and-blue tetra: one cardinal tetra with bright blue lateral band and strong red lower body
+13. Neon tetra: one neon tetra with blue lateral stripe and red rear lower half
+14. Mosquitofish: one modest slender gray-silver mosquitofish with rounded tail
+15. Japanese rice fish: one slender silver-gold medaka fish with translucent fins
+16. Goldfish: one unmistakable orange-gold real goldfish with naturally shaped flared fins, not a circular toy
+17. Betta: one beautiful real blue-and-crimson male betta with long rippling fins
+18. Molly: one realistic silver-and-black dalmatian molly
+19. Pearl gourami: one flat-sided silver-brown pearl gourami with pearly spots and delicate threadlike ventral fins
+20. Cory catfish: one bronze spotted corydoras with small whiskers and armored short body
+21. Tetra: one realistic lemon tetra, silver-yellow body and subtle black-edged fins
+22. Bitterling: one small iridescent silver-purple bitterling with rose flank
+23. Topmouth gudgeon: one small slender brown-silver topmouth gudgeon
+24. Young crucian carp: one small silver-bronze deep-bodied juvenile crucian carp
+Final constraints: exact 6×4 grid and exact listed order are crucial. Transparent space surrounds every independent complete silhouette. Never replace distinct animals with identical oval bodies. No visible grid, text, labels, solid background, large cartoon eyes, painted texture patches, geometric substitutes or repeated generic fish.

@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "asset": "fish-skin-atlas-v1.png",
+  "width": 1254,
+  "height": 1254,
+  "columns": 4,
+  "rows": 4,
+  "alpha": false,
+  "sha256": "6d37682af92816fe92e1a0f282ec342e0ea75923e662a70c96d38c5f4e3cc0dc",
+  "generation": "built-in image_gen",
+  "original": "C:\\Users\\LEGION\\.codex\\generated_images\\01a109b5-dbdf-7c30-8f0d-1822189304f7\\exec-30e6ed61-830a-4420-97f6-173697c26d35.png",
+  "prompt": "fish-skin-atlas-prompt.txt",
+  "notes": [
+    "Raw original retained without image editing or resampling.",
+    "Use normalized UV quarters; image dimensions are 1254 squared, so nominal tile boundaries fall at half pixels.",
+    "Inset UV sample by 2 source pixels (0.001595 on whole atlas) to prevent neighboring cell bleed.",
+    "This is a diffuse/color surface atlas, not fish sprites. Use it on an actual volumetric fish mesh with fins, eyes and species form.",
+    "Left/right horizontal seam is prompted; inspect seam in 3D and use mirrored wrapping if needed."
+  ],
+  "entries": [
+    {
+      "index": 0,
+      "id": "goldfish",
+      "zh": "橙金金鱼鳞",
+      "column": 0,
+      "row": 0,
+      "uvTopOrigin": {
+        "u": 0,
+        "v": 0,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 0,
+        "y": 0,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 1,
+      "id": "silver-blue",
+      "zh": "银蓝淡水鱼鳞",
+      "column": 1,
+      "row": 0,
+      "uvTopOrigin": {
+        "u": 0.25,
+        "v": 0,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 313.5,
+        "y": 0,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 2,
+      "id": "zebrafish",
+      "zh": "斑马鱼横条",
+      "column": 2,
+      "row": 0,
+      "uvTopOrigin": {
+        "u": 0.5,
+        "v": 0,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 627,
+        "y": 0,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 3,
+      "id": "guppy",
+      "zh": "孔雀鱼虹彩",
+      "column": 3,
+      "row": 0,
+      "uvTopOrigin": {
+        "u": 0.75,
+        "v": 0,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 940.5,
+        "y": 0,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 4,
+      "id": "neon-tetra",
+      "zh": "霓虹灯蓝红",
+      "column": 0,
+      "row": 1,
+      "uvTopOrigin": {
+        "u": 0,
+        "v": 0.25,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 0,
+        "y": 313.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 5,
+      "id": "betta",
+      "zh": "斗鱼蓝红虹彩",
+      "column": 1,
+      "row": 1,
+      "uvTopOrigin": {
+        "u": 0.25,
+        "v": 0.25,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 313.5,
+        "y": 313.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 6,
+      "id": "carp",
+      "zh": "绿棕鲤鱼鳞",
+      "column": 2,
+      "row": 1,
+      "uvTopOrigin": {
+        "u": 0.5,
+        "v": 0.25,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 627,
+        "y": 313.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 7,
+      "id": "mandarin-fish",
+      "zh": "金黄黑斑鳜鱼",
+      "column": 3,
+      "row": 1,
+      "uvTopOrigin": {
+        "u": 0.75,
+        "v": 0.25,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 940.5,
+        "y": 313.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 8,
+      "id": "shark",
+      "zh": "蓝灰鲨鱼细皮",
+      "column": 0,
+      "row": 2,
+      "uvTopOrigin": {
+        "u": 0,
+        "v": 0.5,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 0,
+        "y": 627,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 9,
+      "id": "tuna",
+      "zh": "深蓝银金金枪鱼",
+      "column": 1,
+      "row": 2,
+      "uvTopOrigin": {
+        "u": 0.25,
+        "v": 0.5,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 313.5,
+        "y": 627,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 10,
+      "id": "eel",
+      "zh": "深棕鳗鱼细皮",
+      "column": 2,
+      "row": 2,
+      "uvTopOrigin": {
+        "u": 0.5,
+        "v": 0.5,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 627,
+        "y": 627,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 11,
+      "id": "orca",
+      "zh": "虎鲸黑白皮",
+      "column": 3,
+      "row": 2,
+      "uvTopOrigin": {
+        "u": 0.75,
+        "v": 0.5,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 940.5,
+        "y": 627,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 12,
+      "id": "blue-whale",
+      "zh": "蓝鲸蓝灰斑驳",
+      "column": 0,
+      "row": 3,
+      "uvTopOrigin": {
+        "u": 0,
+        "v": 0.75,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 0,
+        "y": 940.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 13,
+      "id": "octopus",
+      "zh": "章鱼珊瑚橙点斑",
+      "column": 1,
+      "row": 3,
+      "uvTopOrigin": {
+        "u": 0.25,
+        "v": 0.75,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 313.5,
+        "y": 940.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 14,
+      "id": "turtle",
+      "zh": "深绿褐龟甲",
+      "column": 2,
+      "row": 3,
+      "uvTopOrigin": {
+        "u": 0.5,
+        "v": 0.75,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 627,
+        "y": 940.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    },
+    {
+      "index": 15,
+      "id": "manta-ray",
+      "zh": "蝠鲼暗紫蓝粗皮",
+      "column": 3,
+      "row": 3,
+      "uvTopOrigin": {
+        "u": 0.75,
+        "v": 0.75,
+        "width": 0.25,
+        "height": 0.25
+      },
+      "nominalPixels": {
+        "x": 940.5,
+        "y": 940.5,
+        "width": 313.5,
+        "height": 313.5
+      }
+    }
+  ]
+}
