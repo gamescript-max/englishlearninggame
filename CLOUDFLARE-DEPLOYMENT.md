@@ -10,9 +10,37 @@
 - 首页预渲染的是空白学习档案的真实地图，包含搜索标题、简介、canonical、分享标签、WebSite 结构化数据、robots.txt 和 sitemap.xml。
 - 离线副本带 `noindex`，不加入 sitemap；家长记录不会进入公开网页源码。
 - 已修复完整离线清单中音效及许可证文件被白名单拒绝的问题。
-- 本次浏览器操作由用户按 Esc 停止，尚未上传到 Cloudflare 或接入域名；原 Sites 网站的访问设置未修改。
+- 最初的浏览器操作由用户按 Esc 停止。随后用户在 Cloudflare 连接 Git 仓库，截图确认创建的是 Workers Builds；线上部署仍待重新构建验证，原 Sites 网站的访问设置未修改。
 
-## 上传到 Cloudflare Pages
+## 当前 Git 部署：Cloudflare Workers Builds
+
+页面同时有“构建命令”和“部署命令”时，是 Workers Builds。当前 Worker 名称已由站长确认是 `englishlearninggame`，无需重新创建 Pages 项目。
+
+后台 **Settings → Builds → Build configuration** 使用以下设置：
+
+| 设置 | 值 |
+| --- | --- |
+| 构建命令 | `npm run build:public` |
+| 部署命令 | `npm run deploy:public` |
+| 根目录 | `/`（Git 仓库根目录） |
+| 生产分支 | `main` |
+
+保存后重新运行最新提交的构建。若后台有旧构建缓存，可先清除缓存。`deploy:public` 直接调用项目内锁定的 Wrangler 4.92.0，并通过 `--config wrangler.cloudflare.jsonc` 明确读取 Workers 静态资源配置。它只部署 `public-dist`，不使用 Sites 服务端、账号验证或数据库。已有 `_headers` 保留缓存及离线页面的 `noindex`；不存在的地址返回 `404.html` 和404状态。
+
+此次 `ERESOLVE` 的原因是原部署命令 `npx wrangler deploy` 未指定现有的非默认配置文件，触发自动项目配置，尝试安装 `wrangler@latest`（4.148.0）。该版本要求 `@cloudflare/workers-types ^5.20261006.1`，与仓库锁定的 4.20260515.1 冲突。仓库的 Wrangler 4.92.0 和 types 4.20260515.1 本来兼容；无需使用 `--force` 或 `--legacy-peer-deps`。
+
+本地构建及无上传预检：
+
+```sh
+npm run build:public
+npm run deploy:public -- --dry-run
+```
+
+部署成功后，先打开后台实际给出的 `workers.dev` 地址验证，再在该 Worker 的 **Settings → Domains & Routes → Add → Custom Domain** 添加 `englishlearninggame.online`。域名需在同一 Cloudflare 账户的有效 zone 中；按后台提示完成 DNS 和证书配置。配置文件未预设域名路由，不会直接修改域名解析。
+
+官方说明：[Workers Builds 配置与自动配置](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)、[静态资源及404页面](https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/)、[静态资源响应头](https://developers.cloudflare.com/workers/static-assets/headers/)、[Workers 自定义域名](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)。
+
+## 另一种托管方式：上传到 Cloudflare Pages
 
 1. 登录购买域名的 Cloudflare 管理后台，在 **Workers & Pages** 创建 **Pages** 应用，选择直接上传文件。
 2. 项目名称可用 `englishlearninggame`，如果被占用则选择其他可用名称。
@@ -35,7 +63,7 @@ npm run build:public
 
 脚本先构建最新离线课程，再构建并预渲染公开网页，最后复制所有 `public` 资源。`public-dist` 不含源代码、Sites 托管配置、密钥或设备学习档案。保留第三方署名文件 `THIRD_PARTY_NOTICES.txt` 和 `licenses/three.txt`。
 
-更新后重新上传 `public-dist` 的内容。不要用 `npm run build:mobile` 的产物替代公开网站；它是安卓包入口，缺少完整网页离线配置。
+Workers Git 集成更新后会构建 `main` 的提交；手工 Pages 上传则重新上传 `public-dist` 的内容。不要用 `npm run build:mobile` 的产物替代公开网站；它是安卓包入口，缺少完整网页离线配置。`wrangler.public.jsonc` 专供 Pages，`wrangler.cloudflare.jsonc` 专供当前 Workers 部署，不能混用。
 
 本地检查构建后的同一版本可运行 `npm run preview:public`，地址为 `http://127.0.0.1:5173/`，无需 Cloudflare 登录。
 

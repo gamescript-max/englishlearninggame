@@ -1,3 +1,13 @@
+# Cloudflare Workers 部署修复验证（2026-10-08）
+
+用户提供的后台截图确认当前项目是 Workers Builds，Worker 名称确认是 `englishlearninggame`。新增独立静态资源配置 `wrangler.cloudflare.jsonc` 和 `npm run deploy:public`，直接调用仓库锁定的 Wrangler 4.92.0 并明确指定配置，避免无配置的自动安装升级。依赖及 lockfile 未修改；兼容日期使用本机同版本 runtime 支持的 `2026-05-15`。原 Sites 构建配置与 Pages 配置保留。
+
+`npm run build:public` 退出0，生成928文件及908项完整离线资源；`npm run deploy:public -- --dry-run` 使用 Wrangler 4.92.0 退出0，没有执行上传或出现 ERESOLVE。通过同一配置启动本地 Workers runtime（127.0.0.1:8788），实际请求首页、离线入口、sw.js、离线清单、robots.txt、sitemap.xml、进食声音、许可证及不存在地址，共9项检查全部通过。验证首页可见预渲染地图及正确 canonical、离线入口 noindex、SW及清单 no-cache、资源 MIME 和自定义404状态；5条响应头规则成功解析。
+
+此验证仅覆盖构建、部署预检及本地 HTTP 响应。Cloudflare 后台部署命令仍需由站长改为 `npm run deploy:public`，重新部署最新提交；本轮未修改后台设置、上传线上资源或绑定域名。
+
+---
+
 # 50/100成长奖励与四个追加形态验证（2026-10-05）
 
 234项自动测试全部通过，本轮改动文件ESLint及全项目TypeScript检查通过；发布流程另执行TypeScript与站点构建。两款英语卡改为每张直接增加50成长，蛇仍只长一节；海洋完整贝壳目标额外增加100，带词卡的完整目标合计150，计数中间目标不提前发整项奖励。重复拾取、未听清或错误目标、保存冲突均按原规则处理，原有2/4倍速度和6秒有效时间保持。

@@ -1,6 +1,6 @@
 # 萌宠英语探索岛
 
-**独立公开网站：**新域名为 `englishlearninggame.online`，核心关键词为 `english learning game`。执行 `npm run build:public` 生成不需要访客账号的 Cloudflare Pages 部署包，完整步骤和域名迁移说明见 [CLOUDFLARE-DEPLOYMENT.md](./CLOUDFLARE-DEPLOYMENT.md)。目前已完成本地构建准备，尚未部署到新域名。
+**独立公开网站：**新域名为 `englishlearninggame.online`，核心关键词为 `english learning game`。执行 `npm run build:public` 生成不需要访客账号的 Cloudflare 静态网站部署包。当前 Workers 构建设置使用构建命令 `npm run build:public`、部署命令 `npm run deploy:public`，明确读取 `wrangler.cloudflare.jsonc` 和项目锁定的 Wrangler。完整步骤、Pages 上传方式和域名迁移说明见 [CLOUDFLARE-DEPLOYMENT.md](./CLOUDFLARE-DEPLOYMENT.md)。尚未确认新域名上线。
 
 **吃鱼和连续版贪吃蛇进入时默认全屏大地图：**英语句子、重听、暂停、图鉴、声音设置和方向按钮浮在地图上。浏览器拒绝自动进入原生全屏时，页面内仍铺满视口，首次触控或方向操作会再尝试隐藏浏览器栏。点右上角退出后，后续操作不会强制重新全屏；可主动点“全屏”恢复，不会重置成长或改变暂停状态。兼容平板横竖屏。
 
